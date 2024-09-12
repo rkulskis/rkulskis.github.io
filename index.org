@@ -13,8 +13,8 @@ Hello! My name is Ross, I am a senior at Boston University studying
 computer science. I'm in my final year of the BA/MS, so I will be completing
 my master's along with my bachelor's in May of 2025.
 
-I love operating systems, my favorite things to use are Emacs and C; however, I
-do dabble in cloud engineering  (e.g. Kubernetes, CI/CD). I will be
+I love operating systems, my favorite things to use are Emacs and C. I also
+dabble in cloud engineering (e.g. Kubernetes, CI/CD). I will be
 applying to PhD programs this fall and hope to become Dr. Ross in the near future!
 
 Outside of computer science, I play the trumpet in the New Jazz Orchestra
