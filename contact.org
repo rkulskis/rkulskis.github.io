@@ -1,0 +1,7 @@
+#+OPTIONS: toc:nil num:nil
+
+[[file:index.html][About me]] | [[file:resume/rossMikulskisResume.pdf][CV]] | [[file:work-experience.html][Work experience]] | [[file:projects.html][Projects]] | [[file:contact.html][Contact]]
+
+* Contact
+  - [[https://www.linkedin.com/in/ross-mikulskis/][www.linkedin.com/in/ross-mikulskis/]]
+  - [[mailto:rkulskis@gmail.com][rkulskis@gmail.com]]

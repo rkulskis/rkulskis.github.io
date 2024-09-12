@@ -1,0 +1,23 @@
+#+OPTIONS: toc:nil num:nil
+
+[[file:index.html][About me]] | [[file:resume/rossMikulskisResume.pdf][CV]] | [[file:work-experience.html][Work experience]] | [[file:projects.html][Projects]] | [[file:contact.html][Contact]]
+* Ross A. Mikulskis
+
+#+ATTR_HTML: :width 300
+[[./profile.jpg]]
+
+#+ATTR_HTML: :width 200
+[[https://bitsofcs.com/][Bits of CS (my computer science textbook)]]
+
+Hello! My name is Ross, I am a senior at Boston University studying
+computer science. I'm in my final year of the BA/MS, so I will be completing
+my master's along with my bachelor's in May of 2025.
+
+I love operating systems, my favorite things to use are Emacs and C; however, I
+do dabble in cloud engineering  (e.g. Kubernetes, CI/CD). I will be
+applying to PhD programs this fall and hope to become Dr. Ross in the near future!
+
+Outside of computer science, I play the trumpet in the New Jazz Orchestra
+around Cambridge, MA. I also have been a big brother in the Boston Big Brothers
+Big Sisters program for the past year. I have a dog named Winnie (picture above),
+and I'm a proud brother of Phi Kappa Tau. 
