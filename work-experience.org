@@ -1,0 +1,33 @@
+#+OPTIONS: toc:nil num:nil
+
+[[file:index.html][About me]] | [[file:resume/rossMikulskisResume.pdf][CV]] | [[file:work-experience.html][Work experience]] | [[file:projects.html][Projects]] | [[file:contact.html][Contact]]
+
+* Work experience
+** Systems Researcher
+   BU Student Researcher under Rich West
+   07/2024 - Present
+   - **RT-DDS**: Built a publisher-subscriber real-time data distribution
+     service on the Quest real-time OS and tested with DSP at 44kHz or 25
+     microseconds. Aiming to publish the paper for this in RTAS this fall.
+     - RT-DDS is the only data distribution service on a real-time OS, meaning
+       it can provide unparalleled timing and predictability guarantees in
+       contrast to gstreamer or ROS/ROS2.
+   
+   BU Red Hat Collaboratory
+   09/2023 - 07/2024
+   - **Unikernel Linux**: Hacked Linux to dynamically link applications to
+     the kernel for performance gains in industrial workloads (e.g., improved
+     Redis throughput by 22%)
+   - **OPE Gradescope Bridge**: Implemented scalable OpenShift service
+     REST API for grading student assignment code in Open Education Framework
+   - **OPE Testing**: Automated testing in container build process with GitHub
+      Actions shell and Jupyter Notebook tests; reduced container build time by
+       70% using mamba
+
+** Teaching Assistant
+   Boston University, Boston, MA
+   09/2022 - Present
+   - Taught CS 131 (Combinatorics) for two semesters and CS 330 (Algorithms) for four semesters
+   - Led 2 hours of classroom discussions and 3 office hours each week
+   - Curated weekly problem sets in graph analysis and dynamic programming
+   - Graded student exams

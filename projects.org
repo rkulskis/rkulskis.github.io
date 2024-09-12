@@ -1,0 +1,25 @@
+#+OPTIONS: toc:nil num:nil
+
+[[file:index.html][About me]] | [[file:resume/rossMikulskisResume.pdf][CV]] | [[file:work-experience.html][Work experience]] | [[file:projects.html][Projects]] | [[file:contact.html][Contact]]
+
+* Projects ([[https://github.com/rkulskis/]])
+
+** Fraternity App
+   Independent
+   01/2024 - Present
+   - Leading an agile team in developing an app in FlutterFlow to help Greek life organizations orchestrate events with a shared calendar and send messages
+   - Prototyped designs in Figma for Phi Kappa Tau
+     
+** Bits of CS Inc.
+   Independent
+   03/2023 - Present
+   - Founded 501(c)(3) nonprofit for free online education
+   - Authoring a computer science textbook covering college-level curricula:
+      [[https://bitsofcs.com]]
+   - Earned $700 from BU Student Academic Enhancement Fund
+
+** Standalone Operating System
+   School
+   12/2023
+   - Co-developed a virtual disk in C and Assembly on Intel i386 architecture with FIFO thread scheduling, inode-based file system, dual-mode system calls, and memory mapping
+     

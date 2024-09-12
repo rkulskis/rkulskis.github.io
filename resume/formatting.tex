@@ -1,0 +1,55 @@
+\usepackage{ragged2e}
+\usepackage{makecell} 
+\usepackage{blindtext}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{comment}
+\usepackage{microtype}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks = true,
+    allcolors = black
+}
+
+% Adjust margins
+\usepackage[]{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=20mm,
+ top=14mm,
+ }
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+    \leaders\vrule width \textwidth\vskip1pt
+    \vspace{-20pt}\scshape\raggedright
+}{}{0em}{}[\color{black}\vspace{-6pt}]
+
+\newcommand\dunderline[3][-1pt]{{%
+  \sbox0{#3}%
+  \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+\titleformat{\section}
+   {\vspace{0em}\bfseries}{}{0em}{}[{\titlerule[1pt]}\vspace{0.75em}]
+\titlespacing{\section}{0em}{*1}{*1}
+
+\newcommand{\entry}[3]{\vspace{-0.75em}\textbf{#1}, #2 \hfill #3\\ \vspace{-0.75em}}
+\newcommand{\ncentry}[3]{\vspace{-0.75em}#1 #2 \hfill #3\\ \vspace{-0.75em}}
+\newcommand{\honor}[3]{\textbf{#1}, #2 \hfill #3}
+\newcommand{\project}[2]{\vspace{-0.75em}\textbf{#1}\textit{ - #2}\\ \vspace{-0.75em}}
+
+\setlist[itemize]{itemsep=-0.25em, topsep=0.5em, partopsep=0.25em}
+\sloppy
