@@ -7,3 +7,7 @@
 ** Assignment 0: Dummy test program
  * This assignment simply adds two numbers together and prints their sum to stdout.
  * [[https://github.com/rkulskis/rkulskis-assignment-0][Github Link]]
+** Assignment 1: Data Collection and Analysis
+ * This assignment deduces where the best spot in CDS is to wait for elevators.
+ * [[https://github.com/rkulskis/rkulskis-assignment-1][Github Link]]
+	 
