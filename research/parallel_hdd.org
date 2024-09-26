@@ -23,19 +23,19 @@ We need a faster, more mechanically robust way to store and read data.
 Rather than having a magnetic reader at a per-track granularity, remove the
 mechanical movement of the head so it is fixed. We line the arm of the head
 with a magnetic reader that spans all $k$ tracks of the platter. Then we can have
-a bandwidth of $k*|B|$ per sector rotation where $|B|=block\_size$.
+a bandwidth of $k*|B|$ per sector rotation where $|B|=$ block size.
 
 We store files in a vertical manner, e.g. file size $|F|$ blocks starts in
-sector $s$ and spans tracks $[i,i+|F|%k)$ for sectors $[s,s+|F|/k)$.
+sector $s$ and spans tracks $[i,i+|F|\%k)$ for sectors $[s,s+|F|/k)$.
 
 ** Blueprint
 
 *** Magnetic reader arm
 
 e.g. if we have 4 tracks in our platter, we can have an arm with $m=2$ slots for
-R/W so that when we read one sector the data goes into the $curr\_slot$ row
-then when we reach the next sector we read into $curr\_slot=(curr\_slot+1)\%m$.
-While this is reading, we flush the data in the previous slot to memory.
+R/W so that when we read one sector the data goes into the $curr\_row$ row
+then when we reach the next sector we read into $curr\_row=(curr\_row+1)\%m$.
+While this is reading, we flush the data of the previous row to memory.
 
 We can choose $m$ based on our throughput capabilities of the memory bus so that
 it rate matches the magnetic arm's speed.
@@ -57,7 +57,10 @@ memory bus.
 
 *** Cost breakdown
 
-TBD. We are assuming eliminating the cost of a moving arm and adding on the cost
+TBD (I need to call seagate or western digital to inquire about component costs
+because I'm struggling to find this data online).
+
+We are assuming eliminating the cost of a moving arm and adding on the cost
 of a magnetic head which spans all tracks of a platter is small enough to be
 worth the substantial throughput gains and mechanical robustness of less
 moving pieces in our HDD.
