@@ -1,0 +1,75 @@
+#+ATTR_HTML: :width 300px
+
+* Parallel HDD magnetic reader
+
+** Problem statement
+#+CAPTION: Traditional HDD
+#+NAME:   fig:disk
+[[./disk.webp]]
+
+#+CAPTION: HDD logical bird's eye view
+#+NAME:   fig:hdd_logic
+[[./hdd_logic.jpg]]
+
+
+The R/W head is problematic in traditional HDDs for three reasons:
+ 1. First component to break on the disk (i.e. weakest link in chain)
+ 2. Seek time is expensive to align head with proper track
+ 3. Bandwith is limited to 1 block per sector rotation.
+
+We need a faster, more mechanically robust way to store and read data.
+
+** Solution
+Rather than having a magnetic reader at a per-track granularity, remove the
+mechanical movement of the head so it is fixed. We line the arm of the head
+with a magnetic reader that spans all $k$ tracks of the platter. Then we can have
+a bandwidth of $k*|B|$ per sector rotation where $|B|=block\_size$.
+
+We store files in a vertical manner, e.g. file size $|F|$ blocks starts in
+sector $s$ and spans tracks $[i,i+|F|%k)$ for sectors $[s,s+|F|/k)$.
+
+** Blueprint
+
+*** Magnetic reader arm
+
+e.g. if we have 4 tracks in our platter, we can have an arm with $m=2$ slots for
+R/W so that when we read one sector the data goes into the $curr\_slot$ row
+then when we reach the next sector we read into $curr\_slot=(curr\_slot+1)\%m$.
+While this is reading, we flush the data in the previous slot to memory.
+
+We can choose $m$ based on our throughput capabilities of the memory bus so that
+it rate matches the magnetic arm's speed.
+
+In the example below if we are reading file *alphabet.txt* from disk, for our
+first sector we read $[a,b,c,d]$ into row 0, then when we reach the next sector
+we simultaneously:
+ 1. flush $[a,b,c,d]$ over the memory bus and
+ 2. read $[e,f,g]$ into row 1.
+
+Then when the platter rotates to the next sector, we flush $[e,f,g]$ to the
+memory bus.
+
+*Magnetic reader arm diagram:* row = modulo; columns = slot indices
+|     | *1* | *2* | *3* | *4* |
+|-----+-----+-----+-----+-----|
+| *0* | a   | b   | c   | d   |
+| *1* | e   | f   | g   |     |
+
+*** Cost breakdown
+
+TBD. We are assuming eliminating the cost of a moving arm and adding on the cost
+of a magnetic head which spans all tracks of a platter is small enough to be
+worth the substantial throughput gains and mechanical robustness of less
+moving pieces in our HDD.
+
+** Throughput gains
+e.g. 10KRPM, 4KB block size, 10,000 tracks, 100 geometric sectors
+
+ * Traditional HDD:
+   * \(tput=\frac{10,000revolution}{1m}*\frac{m}{60,000ms}* \
+     \frac{100sectors}{revolution}*\frac{1block}{sector}* \
+     \frac{4KB}{block}=67KB/ms\)
+ * Parallel HDD:
+   * Same calculation except multiply by # tracks (10,000): $tput=67MB/ms$
+   * Furthermore, we can eliminate seek time of the arm since its position is
+     static and spans all the tracks of our disk.
