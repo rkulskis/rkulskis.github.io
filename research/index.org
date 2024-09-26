@@ -1,0 +1,4 @@
+#+OPTIONS: toc:nil num:nil ^:nil
+
+* Ideas
+[[file:parallel_hdd.html][parallel_hdd]]
