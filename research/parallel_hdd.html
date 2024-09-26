@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2024-09-26 Thu 14:59 -->
+<!-- 2024-09-26 Thu 15:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -232,39 +232,39 @@
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents" role="doc-toc">
 <ul>
-<li><a href="#org40d5014">1. Parallel HDD magnetic reader</a>
+<li><a href="#org0e11411">1. Parallel HDD magnetic reader</a>
 <ul>
-<li><a href="#org3c0040e">1.1. Problem statement</a></li>
-<li><a href="#org34d6905">1.2. Solution</a></li>
-<li><a href="#org7f9dd0c">1.3. Blueprint</a>
+<li><a href="#orga5f5b70">1.1. Problem statement</a></li>
+<li><a href="#org383b334">1.2. Solution</a></li>
+<li><a href="#orgfa52d13">1.3. Blueprint</a>
 <ul>
-<li><a href="#org55bcf13">1.3.1. Magnetic reader arm</a></li>
-<li><a href="#orgbbf1861">1.3.2. Cost breakdown</a></li>
+<li><a href="#orgae20517">1.3.1. Magnetic reader arm</a></li>
+<li><a href="#orgff35842">1.3.2. Cost breakdown</a></li>
 </ul>
 </li>
-<li><a href="#org92c283d">1.4. Throughput gains</a></li>
+<li><a href="#orgdd81806">1.4. Throughput gains</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org40d5014" class="outline-2">
-<h2 id="org40d5014"><span class="section-number-2">1.</span> Parallel HDD magnetic reader</h2>
+<div id="outline-container-org0e11411" class="outline-2">
+<h2 id="org0e11411"><span class="section-number-2">1.</span> Parallel HDD magnetic reader</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org3c0040e" class="outline-3">
-<h3 id="org3c0040e"><span class="section-number-3">1.1.</span> Problem statement</h3>
+<div id="outline-container-orga5f5b70" class="outline-3">
+<h3 id="orga5f5b70"><span class="section-number-3">1.1.</span> Problem statement</h3>
 <div class="outline-text-3" id="text-1-1">
 
-<div id="org8408fb3" class="figure">
+<div id="org13a6d63" class="figure">
 <p><img src="./disk.webp" alt="disk.webp" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Traditional HDD</p>
 </div>
 
 
-<div id="orgd1b1854" class="figure">
+<div id="orga15677c" class="figure">
 <p><img src="./hdd_logic.jpg" alt="hdd_logic.jpg" />
 </p>
 <p><span class="figure-number">Figure 2: </span>HDD logical bird's eye view</p>
@@ -286,35 +286,35 @@ We need a faster, more mechanically robust way to store and read data.
 </div>
 </div>
 
-<div id="outline-container-org34d6905" class="outline-3">
-<h3 id="org34d6905"><span class="section-number-3">1.2.</span> Solution</h3>
+<div id="outline-container-org383b334" class="outline-3">
+<h3 id="org383b334"><span class="section-number-3">1.2.</span> Solution</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Rather than having a magnetic reader at a per-track granularity, remove the
 mechanical movement of the head so it is fixed. We line the arm of the head
 with a magnetic reader that spans all \(k\) tracks of the platter. Then we can have
-a bandwidth of \(k*|B|\) per sector rotation where \(|B|=block\_size\).
+a bandwidth of \(k*|B|\) per sector rotation where \(|B|=\) block size.
 </p>
 
 <p>
 We store files in a vertical manner, e.g. file size \(|F|\) blocks starts in
-sector \(s\) and spans tracks \([i,i+|F|%k)\) for sectors \([s,s+|F|/k)\).
+sector \(s\) and spans tracks \([i,i+|F|\%k)\) for sectors \([s,s+|F|/k)\).
 </p>
 </div>
 </div>
 
-<div id="outline-container-org7f9dd0c" class="outline-3">
-<h3 id="org7f9dd0c"><span class="section-number-3">1.3.</span> Blueprint</h3>
+<div id="outline-container-orgfa52d13" class="outline-3">
+<h3 id="orgfa52d13"><span class="section-number-3">1.3.</span> Blueprint</h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org55bcf13" class="outline-4">
-<h4 id="org55bcf13"><span class="section-number-4">1.3.1.</span> Magnetic reader arm</h4>
+<div id="outline-container-orgae20517" class="outline-4">
+<h4 id="orgae20517"><span class="section-number-4">1.3.1.</span> Magnetic reader arm</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <p>
 e.g. if we have 4 tracks in our platter, we can have an arm with \(m=2\) slots for
-R/W so that when we read one sector the data goes into the \(curr\_slot\) row
-then when we reach the next sector we read into \(curr\_slot=(curr\_slot+1)\%m\).
-While this is reading, we flush the data in the previous slot to memory.
+R/W so that when we read one sector the data goes into the \(curr\_row\) row
+then when we reach the next sector we read into \(curr\_row=(curr\_row+1)\%m\).
+While this is reading, we flush the data of the previous row to memory.
 </p>
 
 <p>
@@ -384,11 +384,16 @@ memory bus.
 </div>
 </div>
 
-<div id="outline-container-orgbbf1861" class="outline-4">
-<h4 id="orgbbf1861"><span class="section-number-4">1.3.2.</span> Cost breakdown</h4>
+<div id="outline-container-orgff35842" class="outline-4">
+<h4 id="orgff35842"><span class="section-number-4">1.3.2.</span> Cost breakdown</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
-TBD. We are assuming eliminating the cost of a moving arm and adding on the cost
+TBD (I need to call seagate or western digital to inquire about component costs
+because I'm struggling to find this data online).
+</p>
+
+<p>
+We are assuming eliminating the cost of a moving arm and adding on the cost
 of a magnetic head which spans all tracks of a platter is small enough to be
 worth the substantial throughput gains and mechanical robustness of less
 moving pieces in our HDD.
@@ -397,8 +402,8 @@ moving pieces in our HDD.
 </div>
 </div>
 
-<div id="outline-container-org92c283d" class="outline-3">
-<h3 id="org92c283d"><span class="section-number-3">1.4.</span> Throughput gains</h3>
+<div id="outline-container-orgdd81806" class="outline-3">
+<h3 id="orgdd81806"><span class="section-number-3">1.4.</span> Throughput gains</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 e.g. 10KRPM, 4KB block size, 10,000 tracks, 100 geometric sectors
@@ -424,7 +429,7 @@ static and spans all the tracks of our disk.</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ross</p>
-<p class="date">Created: 2024-09-26 Thu 14:59</p>
+<p class="date">Created: 2024-09-26 Thu 15:11</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
