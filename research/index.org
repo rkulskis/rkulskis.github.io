@@ -1,4 +1,6 @@
 #+OPTIONS: toc:nil num:nil ^:nil
 
+[[file:~/dev/rkulskis.github.io/index.html][About me]] | [[file:~/dev/rkulskis.github.io/resume/rossMikulskisResume.pdf][CV]] | [[file:~/dev/rkulskis.github.io/work-experience.html][Work experience]] | [[file:~/dev/rkulskis.github.io/projects.html][Projects]] | [[file:index.html][Research ideas]] | [[file:~/dev/rkulskis.github.io/contact.html][Contact]]
+
 * Ideas
 [[file:parallel_hdd.html][parallel_hdd]]

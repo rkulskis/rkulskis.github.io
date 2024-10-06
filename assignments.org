@@ -1,6 +1,6 @@
 #+OPTIONS: toc:nil num:nil
 
-[[file:index.html][About me]] | [[file:resume/rossMikulskisResume.pdf][CV]] | [[file:work-experience.html][Work experience]] | [[file:projects.html][Projects]] | [[file:contact.html][Contact]]
+[[file:index.html][About me]] | [[file:resume/rossMikulskisResume.pdf][CV]] | [[file:work-experience.html][Work experience]] | [[file:projects.html][Projects]] | [[file:research/index.html][Research ideas]] | [[file:contact.html][Contact]]
 
 * Assignments
 
@@ -14,3 +14,9 @@
  * This assignment allows users to experience kmeans in an interactive
 	 manner running on localhost:3000.
  * [[https://github.com/rkulskis/rkulskis-assignment-2][Github Link]]
+** Assignment 3: MNIST SVD
+ * This assignment implements SVD on the MNIST dataset to detect digits
+	 [0-9]. We visualize the top 5 singular vectors as 28x28 grayscale images
+	 for each differing number of components and draw conclusions about the
+	 feature extraction.
+ * [[https://github.com/rkulskis/rkulskis-assignment-3][Github Link]]
