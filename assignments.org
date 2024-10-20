@@ -20,3 +20,7 @@
 	 for each differing number of components and draw conclusions about the
 	 feature extraction.
  * [[https://github.com/rkulskis/rkulskis-assignment-3][Github Link]]
+** Assignment 5: KNN
+ * This assignment KNN for a kaggle binary classification.
+ * [[https://github.com/rkulskis/rkulskis-assignment-5][Github Link]]
+	 
