@@ -23,4 +23,8 @@
 ** Assignment 5: KNN
  * This assignment KNN for a kaggle binary classification.
  * [[https://github.com/rkulskis/rkulskis-assignment-5][Github Link]]
+** Midterm
+ * I use random forest to classify movie reviews and helpfulness metrics of these
+	 reviews to classify the movies into 1-5 star scores.
+ * [[https://github.com/rkulskis/rkulskis-506-midterm][Github Link]]
 	 
