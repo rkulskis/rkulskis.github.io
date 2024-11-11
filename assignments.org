@@ -28,5 +28,11 @@
 	 reviews to classify the movies into 1-5 star scores.
  * [[https://github.com/rkulskis/rkulskis-506-midterm][Github Link]]
 ** Assignment 6: Linear regression
- * This is a dynamic flask app for generating linear regression visualizations
+ * This is a dynamic flask app for generating linear regression visualizations.
  * [[https://github.com/rkulskis/rkulskis-assignment-6][Github Link]]
+
+** Assignment 7: Linear regression Hypothesis and Confidence Intervals
+ * This adds onto assignment 6 with hypothesis calucations, p_values, and
+	 confidence intervals.
+ * [[https://github.com/rkulskis/rkulskis-assignment-7][Github Link]]
+	 
