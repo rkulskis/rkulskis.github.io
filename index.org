@@ -1,6 +1,5 @@
 #+OPTIONS: toc:nil num:nil
-
-[[file:index.html][About me]] | [[file:resume/rossMikulskisResume.pdf][CV]] | [[file:work-experience.html][Work experience]] | [[file:projects.html][Projects]] | [[file:research/index.html][Research ideas]] | [[https://github.com/rkulskis][GitHub]] | [[file:contact.html][Contact]]
+ [[file:assignments.html][Assignments]] | [[file:contact.html][Contact]] | [[file:cv/rossMikulskisResume.pdf][CV]] | [[file:index.html][About Me]] | [[file:projects.html][Projects]] | [[file:research/][Research]] | [[file:work_experience.html][WorkExperience]] |
 
 * Ross A. Mikulskis
 
