@@ -1,6 +1,5 @@
 #+OPTIONS: toc:nil num:nil
-
-[[file:index.html][About me]] | [[file:resume/rossMikulskisResume.pdf][CV]] | [[file:work-experience.html][Work experience]] | [[file:projects.html][Projects]] | [[file:research/index.html][Research ideas]] | [[file:contact.html][Contact]]
+ [[file:assignments.html][Assignments]] | [[file:contact.html][Contact]] | [[file:cv/rossMikulskisResume.pdf][CV]] | [[file:index.html][About Me]] | [[file:projects.html][Projects]] | [[file:research/][Research]] | [[file:work_experience.html][WorkExperience]] |
 
 * Assignments
 
@@ -35,4 +34,6 @@
  * This adds onto assignment 6 with hypothesis calucations, p_values, and
 	 confidence intervals.
  * [[https://github.com/rkulskis/rkulskis-assignment-7][Github Link]]
-	 
+** Assignment 8: Logistic regression and shift distance
+ * Plots relationships between logistic regression params and shift distance.
+ * [[https://github.com/rkulskis/rkulskis-assignment-8][Github Link]]
