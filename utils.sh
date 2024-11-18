@@ -32,10 +32,10 @@ capitalize() {
 add_header() {
     local file="$1"
     local prefix=$(generate_prefix "$file")
+    local dir=$(dirname "$file")
 
     local HEADER="#+OPTIONS: toc:nil num:nil\n"
-
-    local dir=$(dirname "$file")
+		
     for item in "$dir"/*; do
         if [ -d "$item" ]; then
             local dir_name=$(basename "$item")
