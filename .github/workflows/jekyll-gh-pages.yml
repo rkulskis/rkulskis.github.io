@@ -1,6 +1,3 @@
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
-name: Deploy Jekyll with GitHub Pages dependencies preinstalled
-
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -25,6 +22,8 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
+    container:
+      image: silex/emacs-base:latest # since compiling emacs org mode to html
     steps:
       - name: Checkout
         uses: actions/checkout@v4
