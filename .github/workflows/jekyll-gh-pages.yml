@@ -22,8 +22,7 @@ jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
-    container:
-      image: silex/emacs-base:latest # since compiling emacs org mode to html
+      image: silex/emacs:29.4-ci # has emacs, make, git
     steps:
       - name: Checkout
         uses: actions/checkout@v4
