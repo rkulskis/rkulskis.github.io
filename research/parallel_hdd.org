@@ -1,5 +1,5 @@
+| [[file:../index.html][../]] | [[file:index.html][Index]] | [[file:parallel_hdd.html][ParallelHdd]] | 
 #+OPTIONS: toc:nil num:nil
- [[file:../index.html][About Me]] | [[file:../parallel_hdd.html][ParallelHdd]] |
 * Parallel HDD magnetic reader
 
 ** Problem statement

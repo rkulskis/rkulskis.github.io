@@ -1,6 +1,5 @@
+| [[file:assignments.html][Assignments]] | [[file:contact.html][Contact]] | [[file:index.html][Index]] | [[file:projects.html][Projects]] | [[file:work_experience.html][WorkExperience]] | [[file:cv/rossMikulskisResume.pdf][CV]] | [[file:research/index.html][Research/]] | 
 #+OPTIONS: toc:nil num:nil
- [[file:assignments.html][Assignments]] | [[file:contact.html][Contact]] | [[file:cv/rossMikulskisResume.pdf][CV]] | [[file:index.html][About Me]] | [[file:projects.html][Projects]] | [[file:research/][Research]] | [[file:work_experience.html][WorkExperience]] |
-
 * Assignments
 
 ** Assignment 0: Dummy test program
@@ -37,3 +36,6 @@
 ** Assignment 8: Logistic regression and shift distance
  * Plots relationships between logistic regression params and shift distance.
  * [[https://github.com/rkulskis/rkulskis-assignment-8][Github Link]]
+** Assignment 9: Visualizing neural network
+ * Plots neural network visualizations during training over step sizes.
+ * [[https://github.com/rkulskis/rkulskis-assignment-9][Github Link]]
