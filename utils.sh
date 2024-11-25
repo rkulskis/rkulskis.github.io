@@ -1,71 +1,69 @@
 #!/bin/bash
 
-generate_prefix() {
-    local depth=$(echo "$1" | grep -o "/" | wc -l)
-    local prefix=""
-    for ((i=2; i<depth; i++)); do
-        prefix="../$prefix"
-    done
-    echo "$prefix"
-}
+HEADER="| "
+TOP_DIR="$(pwd)"
 
 clear_header() {
-    local file="$1"
-    if grep -q "contact\.html" "$file"; then
-        sed -i '1,/contact\.html/d' "$file"
-    else
-        echo "contact.html not found in $file. No lines cleared."
-    fi
+    file="$1"
+		if grep -q '^#+OPTIONS: toc:nil num:nil' "$file"; then
+				sed -i '0,/^#+OPTIONS: toc:nil num:nil/d' "$file"
+		fi
 }
 
 declare -A EXCEPTIONS=(
-    ["index.html"]="About Me"
-    ["cv"]="[[file:${prefix}cv/rossMikulskisResume.pdf][CV]]"
-    ["research"]="[[file:${prefix}research/][Research]]"		
+    ["cv"]="[[file:cv/rossMikulskisResume.pdf][CV]]"
 )
 
 capitalize() {
-    local input="$1"
+    input="$1"
     echo "$input" | sed -E 's/(^|_)([a-z])/\U\2/g'
 }
 
-add_header() {
-    local file="$1"
-    local prefix=$(generate_prefix "$file")
-    local dir=$(dirname "$file")
+generate_header() {
+    dir="$1"
+    is_top="$2"
+    header="$HEADER"
 
-    local HEADER="#+OPTIONS: toc:nil num:nil\n"
-		
-    for item in "$dir"/*; do
-        if [ -d "$item" ]; then
-            local dir_name=$(basename "$item")
-            if [[ -n "${EXCEPTIONS[$dir_name]}" ]]; then
-                HEADER="$HEADER ${EXCEPTIONS[$dir_name]} |"
-            else
-                local dir_item=$(capitalize "$dir_name")
-                HEADER="$HEADER \
-[[file:${prefix}${dir_name}/index.html][$dir_item]] |"
-            fi
-        elif [ -f "$item" ] && [[ "$item" == *.org ]]; then
-            local file_name=$(basename "$item" .org)
-            local html_name="${file_name}.html"
-            if [[ -n "${EXCEPTIONS[$html_name]}" ]]; then
-                HEADER="$HEADER \
-[[file:${prefix}${html_name}][${EXCEPTIONS[$html_name]}]] |"
-            else
-                local file_item=$(capitalize "$file_name")
-                HEADER="$HEADER [[file:${prefix}${html_name}][$file_item]] |"
-            fi
+    if [[ "$is_top" -eq 0 ]]; then
+        header+="[[file:../index.html][../]] | "
+    fi
+
+    for file in $(find "$dir" -mindepth 1 -maxdepth 1 -type f -name "*.org" ! -name ".*" | sort); do
+        filename=$(basename "$file" .org)
+        if [[ -n "${EXCEPTIONS[$filename]}" ]]; then
+            header+="${EXCEPTIONS[$filename]} | "
+        else
+            filename_capitalized=$(capitalize "$filename")
+            header+="[[file:$filename.html][$filename_capitalized]] | "
         fi
     done
 
-    if ! grep -q "About Me" "$file"; then
-        echo -e "$HEADER\n$(cat "$file")" > "$file"
-    fi
+    for subdir in $(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort); do
+        subname=$(basename "$subdir")
+        if [[ -n "${EXCEPTIONS[$subname]}" ]]; then
+            header+="${EXCEPTIONS[$subname]} | "
+        else
+            subname_capitalized=$(capitalize "$subname")
+            header+="[[file:$subname/index.html][$subname_capitalized/]] | "
+        fi
+    done
+
+    echo "$header\n#+OPTIONS: toc:nil num:nil"
+}
+
+add_header() {
+    dir="$1"
+    is_top="$2"
+    header=$(generate_header "$dir" "$is_top")
+
+    for file in "$dir"/*.org; do
+        [ -e "$file" ] || continue
+        echo -e "$header\n$(cat "$file")" > "$file"
+    done
 }
 
 export_html() {
-    local org_file="$1"
+    org_file="$1"
     emacs --batch "$org_file" \
           --eval "(progn
                      (require 'org)
@@ -74,20 +72,30 @@ export_html() {
 }
 
 process_files() {
-    local dir="$1"
-    local operation="$2"
+    dir="$1"
+    operation="$2"
+    is_top="$3"
 
-    for file in "$dir"/*.org; do
-        [ -e "$file" ] || continue
-        case "$operation" in
-            clear_header) clear_header "$file" ;;
-            add_header) add_header "$file" ;;
-            html_export) export_html "$file" ;;
-        esac
-    done
+    case "$operation" in
+        clear_header)
+            for file in "$dir"/*.org; do
+                [ -e "$file" ] || continue
+                clear_header "$file"
+            done
+            ;;
+        add_header)
+            add_header "$dir" "$is_top"
+            ;;
+        html_export)
+            for file in "$dir"/*.org; do
+                [ -e "$file" ] || continue
+                export_html "$file"
+            done
+            ;;
+    esac
 
     for subdir in "$dir"/*/; do
-        [ -d "$subdir" ] && process_files "$subdir" "$operation"
+        [ -d "$subdir" ] && process_files "$subdir" "$operation" 0
     done
 }
 
@@ -97,6 +105,6 @@ if [[ $# -ne 1 ]]; then
 fi
 
 case "$1" in
-    clear_header|add_header|html_export) process_files "." "$1" ;;
+    clear_header|add_header|html_export) process_files "." "$1" 1 ;;
     *) echo "Invalid argument. Use clear_header, add_header, or html_export."; exit 1 ;;
 esac

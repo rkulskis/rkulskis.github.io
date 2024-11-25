@@ -1,6 +1,5 @@
+| [[file:assignments.html][Assignments]] | [[file:contact.html][Contact]] | [[file:index.html][Index]] | [[file:projects.html][Projects]] | [[file:work_experience.html][WorkExperience]] | [[file:cv/rossMikulskisResume.pdf][CV]] | [[file:research/index.html][Research/]] | 
 #+OPTIONS: toc:nil num:nil
- [[file:assignments.html][Assignments]] | [[file:contact.html][Contact]] | [[file:cv/rossMikulskisResume.pdf][CV]] | [[file:index.html][About Me]] | [[file:projects.html][Projects]] | [[file:research/][Research]] | [[file:work_experience.html][WorkExperience]] |
-
 * Contact
   - [[https://www.linkedin.com/in/ross-mikulskis/][www.linkedin.com/in/ross-mikulskis/]]
   - [[mailto:rkulskis@gmail.com][rkulskis@gmail.com]]

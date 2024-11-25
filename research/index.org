@@ -1,4 +1,3 @@
+| [[file:../index.html][../]] | [[file:index.html][Index]] | [[file:parallel_hdd.html][ParallelHdd]] | 
 #+OPTIONS: toc:nil num:nil
- [[file:../index.html][About Me]] | [[file:../parallel_hdd.html][ParallelHdd]] |
-* Ideas
- * [[file:parallel_hdd.html][Parallel HDD]]
+
