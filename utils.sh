@@ -93,6 +93,13 @@ process_files() {
             done
             ;;
     esac
+    # if index.org does not exist, create a symlink for index.html
+    if [ ! -e "$dir/index.org" ]; then
+        html_file=$(find "$dir" -maxdepth 1 -type f -name "*.html" | head -n 1)
+        if [ -n "$html_file" ]; then
+            ln -sf "$(basename "$html_file")" "$dir/index.html"
+        fi
+    fi		
 
     for subdir in "$dir"/*/; do
         [ -d "$subdir" ] && process_files "$subdir" "$operation" 0
@@ -103,6 +110,8 @@ if [[ $# -ne 1 ]]; then
     echo "Usage: $0 {clear_header|add_header|html_export}"
     exit 1
 fi
+
+rm -rf _minted-index
 
 case "$1" in
     clear_header|add_header|html_export) process_files "." "$1" 1 ;;
