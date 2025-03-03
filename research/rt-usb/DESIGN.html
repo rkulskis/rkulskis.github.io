@@ -1,0 +1,577 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2025-03-03 Mon 13:53 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>RT-USB Streaming Protocol</title>
+<meta name="author" content="Ross Mikulskis" />
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<script>
+  window.MathJax = {
+    tex: {
+      ams: {
+        multlineWidth: '85%'
+      },
+      tags: 'ams',
+      tagSide: 'right',
+      tagIndent: '.8em'
+    },
+    chtml: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    svg: {
+      scale: 1.0,
+      displayAlign: 'center',
+      displayIndent: '0em'
+    },
+    output: {
+      font: 'mathjax-modern',
+      displayOverflow: 'overflow'
+    }
+  };
+</script>
+
+<script
+  id="MathJax-script"
+  async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+</head>
+<body>
+<div id="content" class="content">
+<h1 class="title">RT-USB Streaming Protocol</h1>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left"><a href="../index.html">../</a></td>
+<td class="org-left"><a href="DESIGN.html">DESIGN</a></td>
+</tr>
+</tbody>
+</table>
+<div id="outline-container-org9791e6d" class="outline-2">
+<h2 id="org9791e6d">Problem statement</h2>
+<div class="outline-text-2" id="text-org9791e6d">
+</div>
+<div id="outline-container-org643feb7" class="outline-3">
+<h3 id="org643feb7">Problem definition</h3>
+<div class="outline-text-3" id="text-org643feb7">
+<p>
+Safety-critical systems and manufacturing workloads in factories require
+timing and predictability guarantees for proper execution. For example, an
+autonomous car reading lidar sensor data requires end-to-end latency guarantees
+within a margin to be able to stop when detecting a pedestrian. Similarly, in
+precision manufacturing pipelines of microprocessors, robots need to be
+synchronized to a high degree degree of accuracy to ensure no anamolies in
+coordinated execution.
+</p>
+
+<p>
+Currently, ROS2 (Robot Operating System 2) is the de-facto pub-sub framework for
+robotics systems. The issue with ROS2 is that there may be hardware interrupts
+that disrupt proper execution flow, so end-to-end latency guarantees are
+weak.
+</p>
+
+<p>
+The problem is that there is no data distribution service (DDS) that provides
+real-time guarantees.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgce824c4" class="outline-3">
+<h3 id="orgce824c4">Problem importance</h3>
+<div class="outline-text-3" id="text-orgce824c4">
+<p>
+We need a real-time DDS for safety critical systems to ensure predictability
+guarantees in workload executions. The aformentioned examples of factories and
+autonomous vehicles are clear demonstrations of this need; however, a real-time
+DDS also has many applications in optimizing workloads in e.g. high frequency
+stock trading, or cluster coordinated execution. Scheduling work on nodes with
+time as a first-class resource enables power efficiency and deterministic CPU
+utilization (c.f. Rate-Monotonic Scheduling). Therefore, a real-time DDS that
+scales across nodes may lay the groundwork for building a scalable,
+highly-efficient supercomputer.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4031388" class="outline-3">
+<h3 id="org4031388">Who benefits from solving this?</h3>
+</div>
+</div>
+<div id="outline-container-orgff5ccf2" class="outline-2">
+<h2 id="orgff5ccf2">Proposed solution</h2>
+<div class="outline-text-2" id="text-orgff5ccf2">
+<p>
+In the Quest Lab we have been developing RT-DDS, a real-time pub-sub data
+distribution service, which provides strong end-to-end latency and throughput
+guarantees through exploiting the Quest VCPU (Virtucal CPU) construct that
+ensures timing and predictability in task execution. Upon an interrupt, Quest
+spawns an IO VCPU with equal priority to the Main VCPU that was preempted, and
+handles the bottom-half of the interrupt in parallel to allow for near-seamless
+execution of the Main VCPU's task.
+</p>
+
+<p>
+We propose RT-DDS across hosts as the first real-time DDS to span hosts and
+provide coordinated execution with end-to-end latency requirements. We will
+use USB links to connect nodes and communicate host-to-host using the
+USB extensible debug cabability (xDbC), first on Linux, then on Quest to provide
+stronger timing and predictability guarantees than ROS2. Using xDbC we will need
+to construct a real-time USB protocol which incorporates acknowledgements for
+replicating the state of the endpoint buffers on each host as well as provide
+a scheduling mechanism at the OS USB driver level for rate-matched transfers.
+</p>
+
+
+<div id="orga7056a0" class="figure">
+<p><img src="./vcpu_hierarchy.png" alt="vcpu_hierarchy.png" width="800px" />    
+</p>
+<p><span class="figure-number">Figure 1: </span>From boomerang paper; processes which contain thread(s) bound to a VCPU (Main), which is bound to a PCPU (core). Each Main VCPU may have a corresponding IO VCPU with the same budget C and period T to handle the bottom-half of interrupts.</p>
+</div>
+
+<p>
+We can guarantee end-to-end latency requirements because of the Quest VCPU
+construct because Quest schedules processes with RMS (Rate Monotonic Scheduling)
+using the Liu &amp; Layland upper bound, which guarantees that a feasible schedule
+that will always meet deadlines exists if the CPU utilization is below a specific
+bound. Additionally, the bottom half of interrupts are handled by IO VCPUs
+so Main VCPUs can execute with negligible performance impact upon an interrupt.
+</p>
+
+<p>
+With these timing and predictability guarantees at the operating system level,
+given an end-to-end latency \(e\), RT-DDS binds each task in the pipeline to a
+VCPU of period \(T=e/num\_pipeline\_stages\) to rate match all services
+in the pipeline (they produce 1 unit of work, reading from all inputs, processing
+the inputs, and writing to all outputs, at the same rate)
+oand \(C=max\_execution\_time(f)\)
+where \(f\) is the service's function and a pipeline stage is a stage in the
+pipeline where the services in it can execute in parallel (i.e. they have all the
+data they need). c.f. topological sort, see <a href="#orge710d28">2</a> where the 4 pipeline stages are
+vertically aligned; services \(B\) and \(C\) are in the same stage.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4c4e358" class="outline-2">
+<h2 id="org4c4e358">Expectations</h2>
+<div class="outline-text-2" id="text-org4c4e358">
+</div>
+<div id="outline-container-orgc94f00f" class="outline-3">
+<h3 id="orgc94f00f">Pub-sub with end-to-end and throughput latency guarantees</h3>
+<div class="outline-text-3" id="text-orgc94f00f">
+<p>
+Currently RT-DDS is limited to a single host, with
+data streaming across shared memory communication; however, enabling RT-DDS to
+span across hosts on Linux will situate it as a mainstream alternative DDS to
+ROS2. Upon completion of this project, strong real-time guarantees will become
+available for cluster-level coordinated execution for the first time.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3736f5e" class="outline-2">
+<h2 id="org3736f5e">Experimental plan</h2>
+<div class="outline-text-2" id="text-org3736f5e">
+<p>
+Linux does not provide the same timing guarantees as Quest; however, for fair
+comparison we will first compare RT-DDS on Linux against ROS2 on Linux. Then
+we will do a comparison of RT-DDS on Quest against ROS2 on Linux to demonstrate
+the strength of running the DDS on a real-time OS.
+</p>
+</div>
+
+<div id="outline-container-orgaa7ad12" class="outline-3">
+<h3 id="orgaa7ad12">Datasets</h3>
+<div class="outline-text-3" id="text-orgaa7ad12">
+<p>
+All of our data will be audio data, which on which we will apply digital
+signal processing (DSP) functions from the soundpipe library. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05b47bc" class="outline-3">
+<h3 id="org05b47bc">Experiments</h3>
+<div class="outline-text-3" id="text-org05b47bc">
+<p>
+All experiments will aim to minimize the end-to-end latency, so hopefully
+on the order of magnitude of 100s of microseconds per audio sample batch.
+44khz is 25 microseconds per sample, but if we cannot achieve that, then
+we can batch samples at a lower frequency.
+</p>
+<ol class="org-ol">
+<li>1khz sine wave (unsigned 16 bit), 2 services:
+<ol class="org-ol">
+<li>Pub1 (Host 1): read and stream <code>1khz_sine.raw</code></li>
+<li>Sub1 (Host 2): read from Pub1 over USB and flush to a Teensy 4.1 board
+connected to an audio sink to play the audio data</li>
+</ol></li>
+<li>complex DAG with synchronized merging of audio (from 1):
+\[A|B,C|D|E\] where | is a subscription, and B|C,D|E means C and D subscribes to
+B and E subscribes to C and D (See the figure below)</li>
+</ol>
+
+
+<div id="orge710d28" class="figure">
+<p><img src="./pipeline.png" alt="pipeline.png" width="800px" />
+</p>
+<p><span class="figure-number">Figure 2: </span>Diagram of \(A|B,C|D|E\). Bidirectional communication over xDbC for acks on buffer state. (Simpson's) 4-slot buffers are for asynchronous communication and ring buffers for synchronous.</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgda4d0d3" class="outline-3">
+<h3 id="orgda4d0d3">Deploy environment</h3>
+<div class="outline-text-3" id="text-orgda4d0d3">
+<p>
+We will be running experiments on 64-bit Ubuntu Linux standalone for ROS2 and
+32-bit Yocto Linux as a guest on the Quest-V hypervisor, or possibly standalone
+Linux if time allows, for RT-DDS. For a Quest RT-DDS workload, we will do this
+on both Quest standalone, and Quest as a Quest-V guest to demonstrate minimal
+overhead.
+</p>
+</div>
+</div>
+<div id="outline-container-org82c5e05" class="outline-3">
+<h3 id="org82c5e05">How confirm hypothesis</h3>
+<div class="outline-text-3" id="text-org82c5e05">
+<ol class="org-ol">
+<li>Measure end-to-end latency and throughput of DDS during both normal
+execution and under background process interrupts, e.g. heavy I/O reading
+other files in tasks outside of the pipeline.</li>
+<li>Spectrum analyzer for teensy audio sink to see that the 1khz sine is
+preserved and pure.</li>
+<li>Audio sample sounds good to the ear, we may use a pop song to demonstrate
+the synchronization of the split and merge in experiment 2.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org3a04153" class="outline-3">
+<h3 id="org3a04153">Equipment</h3>
+<div class="outline-text-3" id="text-org3a04153">
+<ul class="org-ul">
+<li>2 DX1100 32-bit hosts</li>
+<li>USB link</li>
+<li>Teensy microcontroller</li>
+<li>audio sink</li>
+<li>spectrum analyzer (currently have an oscilloscope, need to ask to borrow
+from Professor Mancuso possibly)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org641cc71" class="outline-2">
+<h2 id="org641cc71">Success indicators</h2>
+<div class="outline-text-2" id="text-org641cc71">
+</div>
+<div id="outline-container-org1c27e85" class="outline-3">
+<h3 id="org1c27e85">Outcome of work</h3>
+<div class="outline-text-3" id="text-org1c27e85">
+<p>
+RT-DDS works across hosts over USB xDbC. First implemented real-time
+DDS available.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org596b857" class="outline-2">
+<h2 id="org596b857">Task assignment/milestones</h2>
+<div class="outline-text-2" id="text-org596b857">
+</div>
+<div id="outline-container-org14bb7b0" class="outline-3">
+<h3 id="org14bb7b0">[2/23, 3/02)</h3>
+<div class="outline-text-3" id="text-org14bb7b0">
+<ul class="org-ul">
+<li>RT-DDS working on Linux over Quest-V, single host</li>
+<li>draft of USB RT-packet streaming protocol</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb2168d9" class="outline-3">
+<h3 id="orgb2168d9">[3/02, 3/09)</h3>
+<div class="outline-text-3" id="text-orgb2168d9">
+<ul class="org-ul">
+<li>begin implementation of USB RT-packet streaming protocol</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6264c32" class="outline-3">
+<h3 id="org6264c32">[3/07, 3/14)</h3>
+<div class="outline-text-3" id="text-org6264c32">
+<ul class="org-ul">
+<li>finish implementation of USB RT-packet streaming protocol</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org22bc417" class="outline-3">
+<h3 id="org22bc417">[3/14, 3/20)</h3>
+<div class="outline-text-3" id="text-org22bc417">
+<ul class="org-ul">
+<li>implement both experiments for RT-DDS</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0be39c7" class="outline-3">
+<h3 id="org0be39c7">3/20: Midterm presentation due</h3>
+</div>
+<div id="outline-container-org77eaff8" class="outline-3">
+<h3 id="org77eaff8">[3/21, 3/28)</h3>
+<div class="outline-text-3" id="text-org77eaff8">
+<ul class="org-ul">
+<li>implement both experiments on ROS2</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org51275ca" class="outline-3">
+<h3 id="org51275ca">[3/28, 4/04)</h3>
+<div class="outline-text-3" id="text-org51275ca">
+<ul class="org-ul">
+<li>Spectrum analyzer analysis and timing analysis of experiments</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org76137d3" class="outline-3">
+<h3 id="org76137d3">[4/04, 4/11)</h3>
+<div class="outline-text-3" id="text-org76137d3">
+<ul class="org-ul">
+<li>RT-DDS on Linux standalone</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge5903a4" class="outline-3">
+<h3 id="orge5903a4">[4/11, 4/18)</h3>
+<div class="outline-text-3" id="text-orge5903a4">
+<ul class="org-ul">
+<li>Write up presentation</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0ef62d4" class="outline-3">
+<h3 id="org0ef62d4">[4/18, 4/22)</h3>
+<div class="outline-text-3" id="text-org0ef62d4">
+<ul class="org-ul">
+<li>Finish any unfinished tasks</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0b30ff6" class="outline-3">
+<h3 id="org0b30ff6">4/23: Final presentation due</h3>
+</div>
+</div>
+
+<div id="outline-container-org4814301" class="outline-2">
+<h2 id="org4814301">Relevant papers</h2>
+<div class="outline-text-2" id="text-org4814301">
+<ol class="org-ol">
+<li>A. Eisenklam, W. Hedgecock and B. C. Ward, "Job-Level Batching for Software-Defined Radio on Multi-Core," in 2024 IEEE Real-Time Systems Symposium (RTSS), York, United Kingdom, 2024, pp. 375-387, doi: 10.1109/RTSS62706.2024.00039.</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Ross Mikulskis</p>
+<p class="date">Created: 2025-03-03 Mon 13:53</p>
+<p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

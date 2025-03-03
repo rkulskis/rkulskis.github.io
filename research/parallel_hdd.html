@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-02-04 Tue 21:48 -->
+<!-- 2025-03-03 Mon 13:52 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -249,22 +249,22 @@
 </tr>
 </tbody>
 </table>
-<div id="outline-container-orgad88331" class="outline-2">
-<h2 id="orgad88331">Parallel HDD magnetic reader</h2>
-<div class="outline-text-2" id="text-orgad88331">
+<div id="outline-container-org5ab0d5e" class="outline-2">
+<h2 id="org5ab0d5e">Parallel HDD magnetic reader</h2>
+<div class="outline-text-2" id="text-org5ab0d5e">
 </div>
-<div id="outline-container-org3b8c01c" class="outline-3">
-<h3 id="org3b8c01c">Problem statement</h3>
-<div class="outline-text-3" id="text-org3b8c01c">
+<div id="outline-container-orgc6a68eb" class="outline-3">
+<h3 id="orgc6a68eb">Problem statement</h3>
+<div class="outline-text-3" id="text-orgc6a68eb">
 
-<div id="orgb24d1d2" class="figure">
+<div id="org287017e" class="figure">
 <p><img src="./disk.webp" alt="disk.webp" />
 </p>
 <p><span class="figure-number">Figure 1: </span>Traditional HDD</p>
 </div>
 
 
-<div id="orgc1e92e7" class="figure">
+<div id="org4636056" class="figure">
 <p><img src="./hdd_logic.jpg" alt="hdd_logic.jpg" />
 </p>
 <p><span class="figure-number">Figure 2: </span>HDD logical bird's eye view</p>
@@ -286,9 +286,9 @@ We need a faster, more mechanically robust way to store and read data.
 </div>
 </div>
 
-<div id="outline-container-orgfc141f7" class="outline-3">
-<h3 id="orgfc141f7">Solution</h3>
-<div class="outline-text-3" id="text-orgfc141f7">
+<div id="outline-container-orgeef96da" class="outline-3">
+<h3 id="orgeef96da">Solution</h3>
+<div class="outline-text-3" id="text-orgeef96da">
 <p>
 Rather than having a magnetic reader at a per-track granularity, remove the
 mechanical movement of the head so it is fixed. We line the arm of the head
@@ -303,13 +303,13 @@ sector \(s\) and spans tracks \([i,i+|F|\%|T|)\) for sectors \([s,s+|F|/|T|)\).
 </div>
 </div>
 
-<div id="outline-container-org3b8bdb8" class="outline-3">
-<h3 id="org3b8bdb8">Blueprint</h3>
-<div class="outline-text-3" id="text-org3b8bdb8">
+<div id="outline-container-org994b501" class="outline-3">
+<h3 id="org994b501">Blueprint</h3>
+<div class="outline-text-3" id="text-org994b501">
 </div>
-<div id="outline-container-org28684ca" class="outline-4">
-<h4 id="org28684ca">Magnetic reader arm</h4>
-<div class="outline-text-4" id="text-org28684ca">
+<div id="outline-container-orge65027b" class="outline-4">
+<h4 id="orge65027b">Magnetic reader arm</h4>
+<div class="outline-text-4" id="text-orge65027b">
 <p>
 e.g. if we have 4 tracks in our platter, we can have an arm with \(m=2\) rows for
 R/W so that when we read one sector the data goes into the \(curr\_row\) row
@@ -384,9 +384,9 @@ memory bus.
 </div>
 </div>
 
-<div id="outline-container-org2be3eeb" class="outline-4">
-<h4 id="org2be3eeb">Cost breakdown</h4>
-<div class="outline-text-4" id="text-org2be3eeb">
+<div id="outline-container-orga965ebd" class="outline-4">
+<h4 id="orga965ebd">Cost breakdown</h4>
+<div class="outline-text-4" id="text-orga965ebd">
 <p>
 TBD (I need to call seagate or western digital to inquire about component costs
 because I'm struggling to find this data online).
@@ -402,9 +402,9 @@ moving pieces in our HDD.
 </div>
 </div>
 
-<div id="outline-container-orgbe370be" class="outline-3">
-<h3 id="orgbe370be">Throughput gains</h3>
-<div class="outline-text-3" id="text-orgbe370be">
+<div id="outline-container-org915b73b" class="outline-3">
+<h3 id="org915b73b">Throughput gains</h3>
+<div class="outline-text-3" id="text-org915b73b">
 <p>
 e.g. 10KRPM, 4KB block size, 10,000 tracks, 100 geometric sectors
 </p>
@@ -429,7 +429,7 @@ static and spans all the tracks of our disk.</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ross Mikulskis</p>
-<p class="date">Created: 2025-02-04 Tue 21:48</p>
+<p class="date">Created: 2025-03-03 Mon 13:52</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
