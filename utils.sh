@@ -67,7 +67,7 @@ add_header() {
 
 export_html() {
     local org_file="$1"
-    emacs --batch --load ~/.emacs.d/my-htmlize.el "$org_file"
+    emacs --batch --load ./batch-htmlize.el "$org_file"
 }
 
 process_files() {
