@@ -1,5 +1,5 @@
 ;; Add htmlize to load-path dynamically
-(let* ((default-directory (expand-file-name "~/.emacs.d/elpa/"))
+(let* ((default-directory (expand-file-name "./.emacs.d/elpa/"))
        (htmlize-dir (car (directory-files default-directory t "^htmlize-[0-9.]+$"))))
   (when htmlize-dir
     (add-to-list 'load-path htmlize-dir)))
