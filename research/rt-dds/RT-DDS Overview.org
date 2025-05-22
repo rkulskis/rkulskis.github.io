@@ -296,7 +296,7 @@ to the boomerang work of having pipelines go into a sandbox from one
 then back into the starting sandbox.
 
 #+NAME: fig:dsp_bench_pipeline
-#+CAPTION: Losless stereo Digital Signal Processing (DSP) pipeline at 44kHz with 25 microsecond end-to-end latency. We benchmark the pipeline with RT-DDS service bench, which has no QoS (assigned to best-effort OS scheduler) and a 100% loss rate to signify it uses async communication. This percent value can be any non-zero value.
+#+CAPTION: Lossless stereo Digital Signal Processing (DSP) pipeline at 44kHz with 25 microsecond end-to-end latency. We benchmark the pipeline with RT-DDS service bench, which has no QoS (assigned to best-effort OS scheduler) and a 100% loss rate to signify it uses async communication. This percent value can be any non-zero value.
 #+ATTR_HTML: :style max-height:600px
 [[file:images/7_dsp_bench_pipeline.svg]]
 
