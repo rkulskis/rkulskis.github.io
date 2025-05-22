@@ -3,13 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-03-09 Sun 12:16 -->
+<!-- 2025-05-22 Thu 15:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>RT-USB Streaming Protocol</title>
-<meta name="author" content="Ross Mikulskis" />
+<meta name="author" content="Ross" />
 <meta name="generator" content="Org Mode" />
-<style>
+<style type="text/css">
   #content { max-width: 60em; margin: auto; }
   .title  { text-align: center;
              margin-bottom: .2em; }
@@ -244,13 +244,13 @@
 </tr>
 </tbody>
 </table>
-<div id="outline-container-org49d5d31" class="outline-2">
-<h2 id="org49d5d31">Problem statement</h2>
-<div class="outline-text-2" id="text-org49d5d31">
+<div id="outline-container-orgef2aae0" class="outline-2">
+<h2 id="orgef2aae0">Problem statement</h2>
+<div class="outline-text-2" id="text-orgef2aae0">
 </div>
-<div id="outline-container-orgc25cd21" class="outline-3">
-<h3 id="orgc25cd21">Problem definition</h3>
-<div class="outline-text-3" id="text-orgc25cd21">
+<div id="outline-container-org0653f2b" class="outline-3">
+<h3 id="org0653f2b">Problem definition</h3>
+<div class="outline-text-3" id="text-org0653f2b">
 <p>
 Safety-critical systems and manufacturing workloads in factories require
 timing and predictability guarantees for proper execution. For example, an
@@ -274,10 +274,9 @@ real-time guarantees.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org7a369bc" class="outline-3">
-<h3 id="org7a369bc">Problem importance</h3>
-<div class="outline-text-3" id="text-org7a369bc">
+<div id="outline-container-org3ceb434" class="outline-3">
+<h3 id="org3ceb434">Problem importance</h3>
+<div class="outline-text-3" id="text-org3ceb434">
 <p>
 We need a real-time DDS for safety critical systems to ensure predictability
 guarantees in workload executions. The aformentioned examples of factories and
@@ -291,14 +290,13 @@ highly-efficient supercomputer.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org1e9420c" class="outline-3">
-<h3 id="org1e9420c">Who benefits from solving this?</h3>
+<div id="outline-container-org41cbfe7" class="outline-3">
+<h3 id="org41cbfe7">Who benefits from solving this?</h3>
 </div>
 </div>
-<div id="outline-container-org1281db6" class="outline-2">
-<h2 id="org1281db6">Proposed solution</h2>
-<div class="outline-text-2" id="text-org1281db6">
+<div id="outline-container-org8a6ced9" class="outline-2">
+<h2 id="org8a6ced9">Proposed solution</h2>
+<div class="outline-text-2" id="text-org8a6ced9">
 <p>
 In the Quest Lab we have been developing RT-DDS, a real-time pub-sub data
 distribution service, which provides strong end-to-end latency and throughput
@@ -321,7 +319,7 @@ a scheduling mechanism at the OS USB driver level for rate-matched transfers.
 </p>
 
 
-<div id="org775cef7" class="figure">
+<div id="org50c9e28" class="figure">
 <p><img src="./vcpu_hierarchy.png" alt="vcpu_hierarchy.png" width="800px" />    
 </p>
 <p><span class="figure-number">Figure 1: </span>From boomerang paper; processes which contain thread(s) bound to a VCPU (Main), which is bound to a PCPU (core). Each Main VCPU may have a corresponding IO VCPU with the same budget C and period T to handle the bottom-half of interrupts.</p>
@@ -345,19 +343,18 @@ the inputs, and writing to all outputs, at the same rate)
 oand \(C=max\_execution\_time(f)\)
 where \(f\) is the service's function and a pipeline stage is a stage in the
 pipeline where the services in it can execute in parallel (i.e. they have all the
-data they need). c.f. topological sort, see <a href="#orge28e35f">2</a> where the 4 pipeline stages are
+data they need). c.f. topological sort, see <a href="#org53f51bb">2</a> where the 4 pipeline stages are
 vertically aligned; services \(B\) and \(C\) are in the same stage.
 </p>
 </div>
 </div>
-
-<div id="outline-container-org7d4fd0b" class="outline-2">
-<h2 id="org7d4fd0b">Expectations</h2>
-<div class="outline-text-2" id="text-org7d4fd0b">
+<div id="outline-container-orgcf08c2a" class="outline-2">
+<h2 id="orgcf08c2a">Expectations</h2>
+<div class="outline-text-2" id="text-orgcf08c2a">
 </div>
-<div id="outline-container-org2f060e4" class="outline-3">
-<h3 id="org2f060e4">Pub-sub with end-to-end and throughput latency guarantees</h3>
-<div class="outline-text-3" id="text-org2f060e4">
+<div id="outline-container-org8ea6e2e" class="outline-3">
+<h3 id="org8ea6e2e">Pub-sub with end-to-end and throughput latency guarantees</h3>
+<div class="outline-text-3" id="text-org8ea6e2e">
 <p>
 Currently RT-DDS is limited to a single host, with
 data streaming across shared memory communication; however, enabling RT-DDS to
@@ -368,10 +365,9 @@ available for cluster-level coordinated execution for the first time.
 </div>
 </div>
 </div>
-
-<div id="outline-container-orgef5b8a0" class="outline-2">
-<h2 id="orgef5b8a0">Experimental plan</h2>
-<div class="outline-text-2" id="text-orgef5b8a0">
+<div id="outline-container-orgb34ec63" class="outline-2">
+<h2 id="orgb34ec63">Experimental plan</h2>
+<div class="outline-text-2" id="text-orgb34ec63">
 <p>
 Linux does not provide the same timing guarantees as Quest; however, for fair
 comparison we will first compare RT-DDS on Linux against ROS2 on Linux. Then
@@ -379,20 +375,18 @@ we will do a comparison of RT-DDS on Quest against ROS2 on Linux to demonstrate
 the strength of running the DDS on a real-time OS.
 </p>
 </div>
-
-<div id="outline-container-org84a6390" class="outline-3">
-<h3 id="org84a6390">Datasets</h3>
-<div class="outline-text-3" id="text-org84a6390">
+<div id="outline-container-org027dd94" class="outline-3">
+<h3 id="org027dd94">Datasets</h3>
+<div class="outline-text-3" id="text-org027dd94">
 <p>
 All of our data will be audio data, which on which we will apply digital
 signal processing (DSP) functions from the soundpipe library. 
 </p>
 </div>
 </div>
-
-<div id="outline-container-org3aa15b6" class="outline-3">
-<h3 id="org3aa15b6">Experiments</h3>
-<div class="outline-text-3" id="text-org3aa15b6">
+<div id="outline-container-org6284438" class="outline-3">
+<h3 id="org6284438">Experiments</h3>
+<div class="outline-text-3" id="text-org6284438">
 <p>
 All experiments will aim to minimize the end-to-end latency, so hopefully
 on the order of magnitude of 100s of microseconds per audio sample batch.
@@ -412,17 +406,16 @@ B and E subscribes to C and D (See the figure below)</li>
 </ol>
 
 
-<div id="orge28e35f" class="figure">
+<div id="org53f51bb" class="figure">
 <p><img src="./pipeline.png" alt="pipeline.png" width="800px" />
 </p>
 <p><span class="figure-number">Figure 2: </span>Diagram of \(A|B,C|D|E\). Bidirectional communication over xDbC for acks on buffer state. (Simpson's) 4-slot buffers are for asynchronous communication and ring buffers for synchronous.</p>
 </div>
 </div>
 </div>
-
-<div id="outline-container-org94cfc03" class="outline-3">
-<h3 id="org94cfc03">Deploy environment</h3>
-<div class="outline-text-3" id="text-org94cfc03">
+<div id="outline-container-org984bd29" class="outline-3">
+<h3 id="org984bd29">Deploy environment</h3>
+<div class="outline-text-3" id="text-org984bd29">
 <p>
 We will be running experiments on 64-bit Ubuntu Linux standalone for ROS2 and
 32-bit Yocto Linux as a guest on the Quest-V hypervisor, or possibly standalone
@@ -432,9 +425,9 @@ overhead.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd21817a" class="outline-3">
-<h3 id="orgd21817a">How confirm hypothesis</h3>
-<div class="outline-text-3" id="text-orgd21817a">
+<div id="outline-container-orgb095af0" class="outline-3">
+<h3 id="orgb095af0">How confirm hypothesis</h3>
+<div class="outline-text-3" id="text-orgb095af0">
 <ol class="org-ol">
 <li>Measure end-to-end latency and throughput of DDS during both normal
 execution and under background process interrupts, e.g. heavy I/O reading
@@ -446,9 +439,9 @@ the synchronization of the split and merge in experiment 2.</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org10a6dc5" class="outline-3">
-<h3 id="org10a6dc5">Equipment</h3>
-<div class="outline-text-3" id="text-org10a6dc5">
+<div id="outline-container-orgea1e32f" class="outline-3">
+<h3 id="orgea1e32f">Equipment</h3>
+<div class="outline-text-3" id="text-orgea1e32f">
 <ul class="org-ul">
 <li>2 DX1100 32-bit hosts</li>
 <li>USB link</li>
@@ -460,13 +453,13 @@ from Professor Mancuso possibly)</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgdbbe5ed" class="outline-2">
-<h2 id="orgdbbe5ed">Success indicators</h2>
-<div class="outline-text-2" id="text-orgdbbe5ed">
+<div id="outline-container-org2188014" class="outline-2">
+<h2 id="org2188014">Success indicators</h2>
+<div class="outline-text-2" id="text-org2188014">
 </div>
-<div id="outline-container-org8012de7" class="outline-3">
-<h3 id="org8012de7">Outcome of work</h3>
-<div class="outline-text-3" id="text-org8012de7">
+<div id="outline-container-org2c63dce" class="outline-3">
+<h3 id="org2c63dce">Outcome of work</h3>
+<div class="outline-text-3" id="text-org2c63dce">
 <p>
 RT-DDS works across hosts over USB xDbC. First implemented real-time
 DDS available.
@@ -474,94 +467,93 @@ DDS available.
 </div>
 </div>
 </div>
-<div id="outline-container-org73b987a" class="outline-2">
-<h2 id="org73b987a">Task assignment/milestones</h2>
-<div class="outline-text-2" id="text-org73b987a">
+<div id="outline-container-orgce1a659" class="outline-2">
+<h2 id="orgce1a659">Task assignment/milestones</h2>
+<div class="outline-text-2" id="text-orgce1a659">
 </div>
-<div id="outline-container-org992e43a" class="outline-3">
-<h3 id="org992e43a">[2/23, 3/02)</h3>
-<div class="outline-text-3" id="text-org992e43a">
+<div id="outline-container-orgc119b83" class="outline-3">
+<h3 id="orgc119b83">[2/23, 3/02)</h3>
+<div class="outline-text-3" id="text-orgc119b83">
 <ul class="org-ul">
 <li>RT-DDS working on Linux over Quest-V, single host</li>
 <li>draft of USB RT-packet streaming protocol</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfadac98" class="outline-3">
-<h3 id="orgfadac98">[3/02, 3/09)</h3>
-<div class="outline-text-3" id="text-orgfadac98">
+<div id="outline-container-org56a9a19" class="outline-3">
+<h3 id="org56a9a19">[3/02, 3/09)</h3>
+<div class="outline-text-3" id="text-org56a9a19">
 <ul class="org-ul">
 <li>begin implementation of USB RT-packet streaming protocol</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org2f9f081" class="outline-3">
-<h3 id="org2f9f081">[3/07, 3/14)</h3>
-<div class="outline-text-3" id="text-org2f9f081">
+<div id="outline-container-org9144101" class="outline-3">
+<h3 id="org9144101">[3/07, 3/14)</h3>
+<div class="outline-text-3" id="text-org9144101">
 <ul class="org-ul">
 <li>finish implementation of USB RT-packet streaming protocol</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd0df143" class="outline-3">
-<h3 id="orgd0df143">[3/14, 3/20)</h3>
-<div class="outline-text-3" id="text-orgd0df143">
+<div id="outline-container-org0e9f587" class="outline-3">
+<h3 id="org0e9f587">[3/14, 3/20)</h3>
+<div class="outline-text-3" id="text-org0e9f587">
 <ul class="org-ul">
 <li>implement both experiments for RT-DDS</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org636afae" class="outline-3">
-<h3 id="org636afae">3/20: Midterm presentation due</h3>
+<div id="outline-container-org70f9197" class="outline-3">
+<h3 id="org70f9197">3/20: Midterm presentation due</h3>
 </div>
-<div id="outline-container-org784e202" class="outline-3">
-<h3 id="org784e202">[3/21, 3/28)</h3>
-<div class="outline-text-3" id="text-org784e202">
+<div id="outline-container-org02ca6b9" class="outline-3">
+<h3 id="org02ca6b9">[3/21, 3/28)</h3>
+<div class="outline-text-3" id="text-org02ca6b9">
 <ul class="org-ul">
 <li>implement both experiments on ROS2</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgcad2b28" class="outline-3">
-<h3 id="orgcad2b28">[3/28, 4/04)</h3>
-<div class="outline-text-3" id="text-orgcad2b28">
+<div id="outline-container-org6c9385e" class="outline-3">
+<h3 id="org6c9385e">[3/28, 4/04)</h3>
+<div class="outline-text-3" id="text-org6c9385e">
 <ul class="org-ul">
 <li>Spectrum analyzer analysis and timing analysis of experiments</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf515c17" class="outline-3">
-<h3 id="orgf515c17">[4/04, 4/11)</h3>
-<div class="outline-text-3" id="text-orgf515c17">
+<div id="outline-container-orga994994" class="outline-3">
+<h3 id="orga994994">[4/04, 4/11)</h3>
+<div class="outline-text-3" id="text-orga994994">
 <ul class="org-ul">
 <li>RT-DDS on Linux standalone</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9199144" class="outline-3">
-<h3 id="org9199144">[4/11, 4/18)</h3>
-<div class="outline-text-3" id="text-org9199144">
+<div id="outline-container-orgb9c67c6" class="outline-3">
+<h3 id="orgb9c67c6">[4/11, 4/18)</h3>
+<div class="outline-text-3" id="text-orgb9c67c6">
 <ul class="org-ul">
 <li>Write up presentation</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge7c45b0" class="outline-3">
-<h3 id="orge7c45b0">[4/18, 4/22)</h3>
-<div class="outline-text-3" id="text-orge7c45b0">
+<div id="outline-container-org59c2f07" class="outline-3">
+<h3 id="org59c2f07">[4/18, 4/22)</h3>
+<div class="outline-text-3" id="text-org59c2f07">
 <ul class="org-ul">
 <li>Finish any unfinished tasks</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfd3a289" class="outline-3">
-<h3 id="orgfd3a289">4/23: Final presentation due</h3>
+<div id="outline-container-orgcefff0a" class="outline-3">
+<h3 id="orgcefff0a">4/23: Final presentation due</h3>
 </div>
 </div>
-
-<div id="outline-container-orgd369c04" class="outline-2">
-<h2 id="orgd369c04">Relevant papers</h2>
-<div class="outline-text-2" id="text-orgd369c04">
+<div id="outline-container-org6f8029b" class="outline-2">
+<h2 id="org6f8029b">Relevant papers</h2>
+<div class="outline-text-2" id="text-org6f8029b">
 <ol class="org-ol">
 <li>A. Eisenklam, W. Hedgecock and B. C. Ward, "Job-Level Batching for Software-Defined Radio on Multi-Core," in 2024 IEEE Real-Time Systems Symposium (RTSS), York, United Kingdom, 2024, pp. 375-387, doi: 10.1109/RTSS62706.2024.00039.</li>
 </ol>
@@ -569,8 +561,8 @@ DDS available.
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Ross Mikulskis</p>
-<p class="date">Created: 2025-03-09 Sun 12:16</p>
+<p class="author">Author: Ross</p>
+<p class="date">Created: 2025-05-22 Thu 15:19</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

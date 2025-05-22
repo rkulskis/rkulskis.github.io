@@ -1,4 +1,4 @@
-| [[file:../index.html][../]] | [[file:index.html][Index]] | [[file:parallel_hdd.html][ParallelHdd]] | [[file:rt-usb/index.html][Rt-usb/]] | 
+| [[file:../index.html][../]] | [[file:index.html][Index]] | [[file:parallel_hdd.html][ParallelHdd]] | [[file:rt-dds/index.html][Rt-dds/]] | [[file:rt-usb/index.html][Rt-usb/]] | 
 #+OPTIONS: toc:nil num:nil
 * Parallel HDD magnetic reader
 
