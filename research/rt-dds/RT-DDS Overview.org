@@ -192,7 +192,7 @@ current scheduling heuristics.
 | *loss*  | comm_flags=ASYNC; T_stage1 = x, T_not_stage1 = y            | comm_flags=SYNC; T = latn / num_stages |
 | *tput*  | Scale batch_sz until batch_sz / (min(T) * 1e-9 s/ns) ≥ tput | batch_sz = 1                           |
 
-It is important to note that scaling batch\_sz to match throughput is the
+It is important to note that scaling batch_sz to match throughput is the
 final step of the scheduling algorithm because this does not change the
 period of each service, only the budget.
 
@@ -228,10 +228,12 @@ Two non-trivial observations of figure [[fig:rtdds_agents_swimlane]] are
 that (1) we can instantiate cyclic pipelines because of the
 checkpointing in CHP1:open(CREAT) all inputs then CHP2:open(CONNECT)
 all subscribers, and (2) the downtime between swapping an old service
-out for a new one is 2T in the best case and 4T in the worst case due
-to phase-alignment; the red CHP3 is like a pipeline of rate matched
-s_new->s_old->s_new. Upon swapping at CHP3 with s_new, s_old destroys
-its VCPU.
+out for a new one is 3T in the worst case with phase alignment and 6T
+without phase-alignment; the red CHP3 is like a pipeline of rate
+matched s_new->s_old->s_new. This means that swapping may cause a
+jitter of up to 6 voided end-to-end batches in synchronous dataflow
+graphs and 6 stale end-to-end batches in asynchronous ones. Upon
+swapping at CHP3 with s_new, s_old destroys its VCPU.
 
 * Marshalling
 
