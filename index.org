@@ -3,7 +3,7 @@
 * Ross A. Mikulskis
 
 #+ATTR_HTML: :width 200
-[[./profile.jpg]]
+[[./images/profile.jpg]]
 
 #+ATTR_HTML: :width 200
 [[https://bitsofcs.com/][Bits of CS (my computer science textbook)]]
