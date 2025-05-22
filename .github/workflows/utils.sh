@@ -67,7 +67,7 @@ add_header() {
 
 export_html() {
     local org_file="$1"
-    emacs --batch --load ./batch-htmlize.el "$org_file"
+    emacs --batch --load ./.github/workflows/elisp/batch-htmlize.el "$org_file"
 }
 
 process_files() {
