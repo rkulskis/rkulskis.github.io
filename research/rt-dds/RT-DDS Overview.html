@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2025-05-22 Thu 15:19 -->
+<!-- 2025-05-22 Thu 15:23 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>RT-DDS Overview</title>
@@ -215,13 +215,13 @@
 </tr>
 </tbody>
 </table>
-<div id="outline-container-org926d300" class="outline-2">
-<h2 id="org926d300">Introduction</h2>
-<div class="outline-text-2" id="text-org926d300">
+<div id="outline-container-org97d6393" class="outline-2">
+<h2 id="org97d6393">Introduction</h2>
+<div class="outline-text-2" id="text-org97d6393">
 </div>
-<div id="outline-container-org54faf96" class="outline-3">
-<h3 id="org54faf96">General Overview</h3>
-<div class="outline-text-3" id="text-org54faf96">
+<div id="outline-container-org2d59664" class="outline-3">
+<h3 id="org2d59664">General Overview</h3>
+<div class="outline-text-3" id="text-org2d59664">
 <p>
 This document serves as an overview for <b>RT-DDS (Real-Time Data
 Distribution Service)</b>, which is a pub-sub framework for scheduling
@@ -265,9 +265,9 @@ however, the overall logic is captured.
 </p>
 </div>
 </div>
-<div id="outline-container-org98c492c" class="outline-3">
-<h3 id="org98c492c">Formatting and abbreviation</h3>
-<div class="outline-text-3" id="text-org98c492c">
+<div id="outline-container-orgd850382" class="outline-3">
+<h3 id="orgd850382">Formatting and abbreviation</h3>
+<div class="outline-text-3" id="text-orgd850382">
 <p>
 All coloring is consistent throughout, and all graphics are scalable
 vector graphics (SVGs), allowing for zoom without quality
@@ -277,13 +277,13 @@ abbreviation, is presented in the format: <b>name (abbreviation)</b>.
 </div>
 </div>
 </div>
-<div id="outline-container-orge6fb113" class="outline-2">
-<h2 id="orge6fb113">Tuned Pipes (tpipes)</h2>
-<div class="outline-text-2" id="text-orge6fb113">
+<div id="outline-container-org9a3ed28" class="outline-2">
+<h2 id="org9a3ed28">Tuned Pipes (tpipes)</h2>
+<div class="outline-text-2" id="text-org9a3ed28">
 </div>
-<div id="outline-container-org63a6756" class="outline-3">
-<h3 id="org63a6756">Computational Model</h3>
-<div class="outline-text-3" id="text-org63a6756">
+<div id="outline-container-org84ce68a" class="outline-3">
+<h3 id="org84ce68a">Computational Model</h3>
+<div class="outline-text-3" id="text-org84ce68a">
 <p>
 Every service in RT-DDS is associated with a <b>tuned pipe (tpipe)</b>. A
 tpipe is a pthread possibly bound to a <b>virtual CPU (Quest, VCPU)</b> or
@@ -296,16 +296,16 @@ endpoint in the same manner.
 </p>
 
 
-<div id="org96ec43a" class="figure">
+<div id="orgfa5ec53" class="figure">
 <p><img src="images/0_tpipe_ctx.svg" alt="0_tpipe_ctx.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 1: </span>tpipe context.</p>
 </div>
 </div>
 </div>
-<div id="outline-container-orga19cb29" class="outline-3">
-<h3 id="orga19cb29">Tpipe Endpoints - Inputs and Subscribers</h3>
-<div class="outline-text-3" id="text-orga19cb29">
+<div id="outline-container-orgceb5ae5" class="outline-3">
+<h3 id="orgceb5ae5">Tpipe Endpoints - Inputs and Subscribers</h3>
+<div class="outline-text-3" id="text-orgceb5ae5">
 <p>
 The <b>tpipe_endpoint (tpipe_ep_t)</b> allows for subscriptions across
 communication types (e.g. <b>shared memory communication (shmcomm)</b> or
@@ -328,7 +328,7 @@ as <b><b>intra-marshalling</b></b> of metadata.
 </p>
 
 
-<div id="org09ff981" class="figure">
+<div id="org3552710" class="figure">
 <p><img src="images/1_tpipe_ep.svg" alt="1_tpipe_ep.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 2: </span>A tpipe_ep_t</p>
@@ -336,18 +336,18 @@ as <b><b>intra-marshalling</b></b> of metadata.
 </div>
 </div>
 </div>
-<div id="outline-container-org1ccc7e2" class="outline-2">
-<h2 id="org1ccc7e2">Gather-Compute-Scatter (gcs)</h2>
-<div class="outline-text-2" id="text-org1ccc7e2">
+<div id="outline-container-org0a419ad" class="outline-2">
+<h2 id="org0a419ad">Gather-Compute-Scatter (gcs)</h2>
+<div class="outline-text-2" id="text-org0a419ad">
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 1: </span>Every RT-DDS service executes a gcs function. Here is an example of gcs_sum_u16.</label><pre class="src src-c" id="orgfea65b0"><span style="color: #0000ff;">GCS</span>(gcs_sum_u16,                <span style="color: #b22222;">/* </span><span style="color: #b22222;">name</span><span style="color: #b22222;"> */</span>
+<label class="org-src-name"><span class="listing-number">Listing 1: </span>Every RT-DDS service executes a gcs function. Here is an example of gcs_sum_u16.</label><pre class="src src-c" id="orgeb54f35"><span style="color: #0000ff;">GCS</span>(gcs_sum_u16,                <span style="color: #b22222;">/* </span><span style="color: #b22222;">name</span><span style="color: #b22222;"> */</span>
     <span style="color: #228b22;">uint16_t</span>,                   <span style="color: #b22222;">/* </span><span style="color: #b22222;">in type (post-conversion)</span><span style="color: #b22222;"> */</span>
     <span style="color: #228b22;">uint16_t</span>,                   <span style="color: #b22222;">/* </span><span style="color: #b22222;">out type</span><span style="color: #b22222;"> */</span>
     {unmarshall1, unmarshall2, ...}, <span style="color: #b22222;">/* </span><span style="color: #b22222;">unmarshall funcs</span><span style="color: #b22222;"> */</span>
     {marshall1, marshall2, ...},     <span style="color: #b22222;">/* </span><span style="color: #b22222;">marshall funcs</span><span style="color: #b22222;"> */</span>
     {float_to_u16, uint32_to_u16})   <span style="color: #b22222;">/* </span><span style="color: #b22222;">allowed unmarshall conversions</span><span style="color: #b22222;"> */</span>
 { 
-  <span style="color: #228b22;">uint16_t</span> *<span style="color: #a0522d; font-weight: bold;">in</span>, *<span style="color: #a0522d; font-weight: bold;">out</span>;
+  <span style="color: #228b22;">uint16_t</span> *<span style="color: #a0522d;">in</span>, *<span style="color: #a0522d;">out</span>;
   PER_SLOT {                    <span style="color: #b22222;">/* </span><span style="color: #b22222;">foreach input slot</span><span style="color: #b22222;"> */</span>
     PER_EL {                    <span style="color: #b22222;">/* </span><span style="color: #b22222;">if batch_sz &gt; 1, multiple elements in slot</span><span style="color: #b22222;"> */</span>
       out[el] *= (slot &gt; 0);
@@ -382,20 +382,20 @@ scatters the output to subscribers and updates endpoint states with
 </p>
 
 
-<div id="org3708098" class="figure">
+<div id="orgd374f2c" class="figure">
 <p><img src="images/2_gcs_algo.svg" alt="2_gcs_algo.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 3: </span>tpipe_gcs()</p>
 </div>
 </div>
 </div>
-<div id="outline-container-org441f6fd" class="outline-2">
-<h2 id="org441f6fd">Agents: Broker, Forker</h2>
-<div class="outline-text-2" id="text-org441f6fd">
+<div id="outline-container-org923b43f" class="outline-2">
+<h2 id="org923b43f">Agents: Broker, Forker</h2>
+<div class="outline-text-2" id="text-org923b43f">
 </div>
-<div id="outline-container-org0324584" class="outline-3">
-<h3 id="org0324584">Agent overview</h3>
-<div class="outline-text-3" id="text-org0324584">
+<div id="outline-container-org8d96f36" class="outline-3">
+<h3 id="org8d96f36">Agent overview</h3>
+<div class="outline-text-3" id="text-org8d96f36">
 <p>
 RT-DDS uses several agents across sandboxes/nodes:
 </p>
@@ -419,15 +419,15 @@ swap it with the old.
 </p>
 
 
-<div id="orgbbe4d66" class="figure">
+<div id="orgae93296" class="figure">
 <p><img src="images/3_rtdds_agents.svg" alt="3_rtdds_agents.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 4: </span>RT-DDS agents</p>
 </div>
 
 <p>
-Figure <a href="#org2bf9f48">5</a>, deepens the understanding from
-figure <a href="#orgbbe4d66">4</a>, covering the logic for use cases of
+Figure <a href="#orga0b015a">5</a>, deepens the understanding from
+figure <a href="#orgae93296">4</a>, covering the logic for use cases of
 instantiating:
 </p>
 
@@ -444,21 +444,21 @@ service isolation and dynamic updates via WRKR daemons.
 </p>
 </div>
 </div>
-<div id="outline-container-org155f9d2" class="outline-3">
-<h3 id="org155f9d2">Agent coordination</h3>
-<div class="outline-text-3" id="text-org155f9d2">
+<div id="outline-container-orga9ba149" class="outline-3">
+<h3 id="orga9ba149">Agent coordination</h3>
+<div class="outline-text-3" id="text-orga9ba149">
 
-<div id="org2bf9f48" class="figure">
+<div id="orga0b015a" class="figure">
 <p><img src="images/4_rtdds_agents_swimlane.svg" alt="4_rtdds_agents_swimlane.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 5: </span>RT-DDS agent swimlane logic.</p>
 </div>
 </div>
-<div id="outline-container-org1ef0a7b" class="outline-4">
-<h4 id="org1ef0a7b">Benchmarking</h4>
-<div class="outline-text-4" id="text-org1ef0a7b">
+<div id="outline-container-org20e0170" class="outline-4">
+<h4 id="org20e0170">Benchmarking</h4>
+<div class="outline-text-4" id="text-org20e0170">
 <p>
-Checkpoint 2 (figure <a href="#org2bf9f48">5</a>) involves benchmarking
+Checkpoint 2 (figure <a href="#orga0b015a">5</a>) involves benchmarking
 each service individually using the read <b>timestamp counter (rdtsc)</b>
 opcode, after all of its inputs and subscribers have been
 initialized. This is done using the <code>tpipe_gcs()</code> function, where each
@@ -472,18 +472,18 @@ error.
 </p>
 </div>
 </div>
-<div id="outline-container-orgba258a1" class="outline-4">
-<h4 id="orgba258a1">Scheduling</h4>
-<div class="outline-text-4" id="text-orgba258a1">
+<div id="outline-container-orgd2a1df7" class="outline-4">
+<h4 id="orgd2a1df7">Scheduling</h4>
+<div class="outline-text-4" id="text-orgd2a1df7">
 <p>
 We assume phase-alignment and calculate the periods and batch_sz for a
 pipeline in the broker. However, you can recompile RT-DDS to use your
 own scheduling algorithm given the dataflow graph and [tput|loss,latn]
-QoS. Table <a href="#org6bf8f09">1</a> and listing <a href="#org18aa085">2</a> detail the
+QoS. Table <a href="#orgf3355d4">1</a> and listing <a href="#orga97361a">2</a> detail the
 current scheduling heuristics.
 </p>
 
-<table id="org6bf8f09" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<table id="orgf3355d4" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 <caption class="t-above"><span class="table-number">Table 1:</span> Broker scheduling. Stages are topological stages, i.e. we run topological sort, then move each service node as far-left as possible. A stage is a set of services at the same position along X-axis. Even though we specify the Qos as [tput|loss,latn], the calculations associated with each are processed in reverse order.</caption>
 
 <colgroup>
@@ -527,7 +527,7 @@ period of each service, only the budget.
 </p>
 
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 2: </span>Pseudocode for calculating T given loss&gt;0</label><pre class="src src-nil" id="org18aa085">INPUT:  Pipeline with k stages, l (latn), r (loss)
+<label class="org-src-name"><span class="listing-number">Listing 2: </span>Pseudocode for calculating T given loss&gt;0</label><pre class="src src-nil" id="orga97361a">INPUT:  Pipeline with k stages, l (latn), r (loss)
 OUTPUT: Period T_{stage_1}=x for stage 1 services and
         Period T_{note_stage1}=y for rest
 
@@ -551,11 +551,11 @@ x = -(r-1)*y
 </div>
 </div>
 </div>
-<div id="outline-container-orgfb0a237" class="outline-4">
-<h4 id="orgfb0a237">Other observations</h4>
-<div class="outline-text-4" id="text-orgfb0a237">
+<div id="outline-container-org358992e" class="outline-4">
+<h4 id="org358992e">Other observations</h4>
+<div class="outline-text-4" id="text-org358992e">
 <p>
-Two non-trivial observations of figure <a href="#org2bf9f48">5</a> are
+Two non-trivial observations of figure <a href="#orga0b015a">5</a> are
 that (1) we can instantiate cyclic pipelines because of the
 checkpointing in CHP1:open(CREAT) all inputs then CHP2:open(CONNECT)
 all subscribers, and (2) the downtime between swapping an old service
@@ -568,9 +568,9 @@ its VCPU.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf6b8117" class="outline-2">
-<h2 id="orgf6b8117">Marshalling</h2>
-<div class="outline-text-2" id="text-orgf6b8117">
+<div id="outline-container-org8f5d99a" class="outline-2">
+<h2 id="org8f5d99a">Marshalling</h2>
+<div class="outline-text-2" id="text-org8f5d99a">
 <p>
 Inputs may not match the expected <code>out_type</code>, but conversions can
 allow reuse (e.g. <code>u16_sum_u16</code> accepts <code>uint8_t</code> or <code>float</code>,
@@ -593,33 +593,33 @@ function.</li>
 </ul>
 
 
-<div id="orgea71ea7" class="figure">
+<div id="orgb87a423" class="figure">
 <p><img src="images/5_marshalling.svg" alt="5_marshalling.svg" class="org-svg" />
 </p>
 <p><span class="figure-number">Figure 6: </span>Marshalling</p>
 </div>
 
 <p>
-In figure <a href="#orgea71ea7">6</a>, intra marshalling is made possible by
+In figure <a href="#orgb87a423">6</a>, intra marshalling is made possible by
 keeping state in the tpipe_context (ctx). The "for s in S" has S as
 either every service in the pipeline or just the source and sink. This
-can be configured by the user through the RT-DDS API. Figure <a href="#orga4828e2">7</a> shows
+can be configured by the user through the RT-DDS API. Figure <a href="#orgd21dfdc">7</a> shows
 a generic implmenetation of benchmarking an RT-DDS pipeline.
 </p>
 
 
-<div id="orga4828e2" class="figure">
+<div id="orgd21dfdc" class="figure">
 <p><img src="images/6_bench.svg" alt="6_bench.svg" class="org-svg" style="max-height:400px" />
 </p>
 <p><span class="figure-number">Figure 7: </span>Benchmarking an arbitrary pipeline. Because service "bench" has asynchronous interaction with the pipeline, it doesn't cause blocking.</p>
 </div>
 </div>
 </div>
-<div id="outline-container-org162ced7" class="outline-2">
-<h2 id="org162ced7">Examples</h2>
-<div class="outline-text-2" id="text-org162ced7">
+<div id="outline-container-org206458d" class="outline-2">
+<h2 id="org206458d">Examples</h2>
+<div class="outline-text-2" id="text-org206458d">
 <div class="org-src-container">
-<label class="org-src-name"><span class="listing-number">Listing 3: </span>Pipeline string specification for broker queries. See figure <a href="#org55a9945">8</a> for an example.</label><pre class="src src-nil" id="org5d40f45">CNTRL_USAGE: ./rtdds_cntrl RTDDS_PIPELINE_STR
+<label class="org-src-name"><span class="listing-number">Listing 3: </span>Pipeline string specification for broker queries. See figure <a href="#orgc5587fa">8</a> for an example.</label><pre class="src src-nil" id="org84bc78f">CNTRL_USAGE: ./rtdds_cntrl RTDDS_PIPELINE_STR
   ()  = Pipeline scope; last service continues flow
   {}  = bash-like expansion
   &gt;   = Delimiters for argument. Can be applied to service or scope
@@ -639,7 +639,7 @@ a generic implmenetation of benchmarking an RT-DDS pipeline.
 </div>
 
 <p>
-Figure <a href="#org55a9945">8</a> is an example of the resulting state
+Figure <a href="#orgc5587fa">8</a> is an example of the resulting state
 from two pipeline string queries to the broker over the public control
 channel.  Each <code>tpipe_ep_t</code> is colored as <code>shmcomm</code> (blue) and has the
 corresponding buffer type: 4slot or FIFO ring. This figure is similar
@@ -648,25 +648,25 @@ then back into the starting sandbox.
 </p>
 
 
-<div id="org55a9945" class="figure">
+<div id="orgc5587fa" class="figure">
 <p><img src="images/7_dsp_bench_pipeline.svg" alt="7_dsp_bench_pipeline.svg" class="org-svg" style="max-height:600px" />
 </p>
 <p><span class="figure-number">Figure 8: </span>Losless stereo Digital Signal Processing (DSP) pipeline at 44kHz with 25 microsecond end-to-end latency. We benchmark the pipeline with RT-DDS service bench, which has no QoS (assigned to best-effort OS scheduler) and a 100% loss rate to signify it uses async communication. This percent value can be any non-zero value.</p>
 </div>
 </div>
 </div>
-<div id="outline-container-orgeb7e60b" class="outline-2">
-<h2 id="orgeb7e60b">State: Tables and Types</h2>
-<div class="outline-text-2" id="text-orgeb7e60b">
+<div id="outline-container-orga820e5d" class="outline-2">
+<h2 id="orga820e5d">State: Tables and Types</h2>
+<div class="outline-text-2" id="text-orga820e5d">
 <p>
 All GCS functions and marshall functions are in constant, global
 tables with corresponding metadata information coupled for run-time
-type-checking and proper buffer-sizing. Figure <a href="#orgbc014cd">9</a> details
+type-checking and proper buffer-sizing. Figure <a href="#org4514dd9">9</a> details
 these tables.
 </p>
 
 
-<div id="orgbc014cd" class="figure">
+<div id="org4514dd9" class="figure">
 <p><img src="images/8_state_types.svg" alt="8_state_types.svg" class="org-svg" style="max-height:600px" />
 </p>
 <p><span class="figure-number">Figure 9: </span>RT-DDS State tables and types. There are minor things omitted such as physical CPU, VCPU, and tpipe ids in the rtdds_services table. The point is to capture the logic. The comm_interfaces all implement the same functions to support a generic tpipe_ep_function() call.</p>
@@ -679,13 +679,13 @@ hashmaps for O(1) updates.
 </p>
 </div>
 </div>
-<div id="outline-container-orga30c7d9" class="outline-2">
-<h2 id="orga30c7d9">Future Direction</h2>
-<div class="outline-text-2" id="text-orga30c7d9">
+<div id="outline-container-org388290c" class="outline-2">
+<h2 id="org388290c">Future Direction</h2>
+<div class="outline-text-2" id="text-org388290c">
 </div>
-<div id="outline-container-org0b0c342" class="outline-3">
-<h3 id="org0b0c342">Isochronous USB</h3>
-<div class="outline-text-3" id="text-org0b0c342">
+<div id="outline-container-org9c3fbf5" class="outline-3">
+<h3 id="org9c3fbf5">Isochronous USB</h3>
+<div class="outline-text-3" id="text-org9c3fbf5">
 <p>
 Previously, it was stated that there was support for cross-node
 pipelines. This is not yet implemented. Additionally, we want to be
@@ -695,7 +695,7 @@ endpoints</b>. This should later be implemented.
 </p>
 
 
-<div id="org1043faa" class="figure">
+<div id="org946b3df" class="figure">
 <p><img src="images/9_isochronous_usb.svg" alt="9_isochronous_usb.svg" class="org-svg" style="max-height:400px" />
 </p>
 <p><span class="figure-number">Figure 10: </span>Isochronous USB endpoints</p>
@@ -706,7 +706,7 @@ endpoints</b>. This should later be implemented.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Ross</p>
-<p class="date">Created: 2025-05-22 Thu 15:19</p>
+<p class="date">Created: 2025-05-22 Thu 15:23</p>
 <p class="validation"><a href="https://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
