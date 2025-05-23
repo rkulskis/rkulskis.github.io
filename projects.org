@@ -1,4 +1,4 @@
-| [[file:assignments.html][Assignments]] | [[file:contact.html][Contact]] | [[file:index.html][Index]] | [[file:projects.html][Projects]] | [[file:work_experience.html][WorkExperience]] | [[file:cv/rossMikulskisResume.pdf][CV]] | [[file:research/index.html][Research/]] | 
+| [[file:assignments.html][Assignments]] | [[file:contact.html][Contact]] | [[file:index.html][Index]] | [[file:projects.html][Projects]] | [[file:work_experience.html][WorkExperience]] | [[file:cv/rossMikulskisResume.pdf][CV]] |  | [[file:research/index.html][Research/]] | 
 #+OPTIONS: toc:nil num:nil
 * Projects ([[https://github.com/rkulskis/]])
 

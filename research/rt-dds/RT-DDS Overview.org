@@ -298,7 +298,7 @@ to the boomerang work of having pipelines go into a sandbox from one
 then back into the starting sandbox.
 
 #+NAME: fig:dsp_bench_pipeline
-#+CAPTION: Lossless stereo Digital Signal Processing (DSP) pipeline at 44kHz with 25 microsecond end-to-end latency. We benchmark the pipeline with RT-DDS service bench, which has no QoS (assigned to best-effort OS scheduler) and a 100% loss rate to signify it uses async communication. This percent value can be any non-zero value.
+#+CAPTION: Lossless stereo Digital Signal Processing (DSP) pipeline operating on 1kHz sine wave with 25 microsecond end-to-end latency (44kHz sample rate). We benchmark the pipeline with RT-DDS service bench, which has no QoS (assigned to best-effort OS scheduler) and a 100% loss rate to signify it uses async communication and is independent of the QoS for A, L, and R - if it wasn't we would have to assign a T to bench which yields the loss rate specified. B and C are part of libsoundpipe, which operates on s24_le samples, but this is no problem for connecting the services because we convert between types using unmarshall functions.
 #+ATTR_HTML: :style max-height:600px
 [[file:images/7_dsp_bench_pipeline.svg]]
 
