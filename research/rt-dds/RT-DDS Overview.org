@@ -251,6 +251,8 @@ Marshalling may:
   tuples)
 - Perform filters or transforms associated with the tpipe's gcs
   function.
+- Handle differing produce/consume rates between publishers and
+  subscribers.
 
 #+NAME: fig:marshalling
 #+CAPTION: Marshalling
@@ -261,6 +263,10 @@ keeping state in the tpipe_context (ctx). The "for s in S" has S as
 either every service in the pipeline or just the source and sink. This
 can be configured by the user through the RT-DDS API. Figure [[fig:bench]] shows
 a generic implmenetation of benchmarking an RT-DDS pipeline.
+
+#+NAME: fig:pc_rates
+#+CAPTION: In addition to the marshall buffer we may have a consume buf for differing produce/consume rates. The publisher has the same produce rate=batch_sz of its published data, and the consume rates are specific to each subscription.
+[[file:images/10_pc_rates.svg]]
 
 #+NAME: fig:bench
 #+CAPTION: Benchmarking an arbitrary pipeline. Because service "bench" has asynchronous interaction with the pipeline, it doesn't cause blocking.
