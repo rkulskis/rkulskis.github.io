@@ -1,22 +1,26 @@
-| [[file:assignments.html][Assignments]] | [[file:contact.html][Contact]] | [[file:index.html][Index]] | [[file:projects.html][Projects]] | [[file:work_experience.html][WorkExperience]] | [[file:cv/rossMikulskisResume.pdf][CV]] | [[file:research/index.html][Research/]] | 
+| [[file:./index.html][./]] | [[file:cv/rossMikulskisResume.pdf][CV]] |  | [[file:research/index.html][Research/]] | 
 #+OPTIONS: toc:nil num:nil
 * Ross A. Mikulskis
 
 #+ATTR_HTML: :width 200
-[[./profile.jpg]]
+[[./images/profile.jpg]]
 
 #+ATTR_HTML: :width 200
 [[https://bitsofcs.com/][Bits of CS (my computer science textbook)]]
 
-Hello! My name is Ross, I am a senior at Boston University studying
-computer science. I'm in my final year of the BA/MS, so I will be completing
-my master's along with my bachelor's in May of 2025.
+Hello! My name is Ross, and I'm a PhD student at Boston University
+studying Computer Science with a focus in real-time operating systems
+under the advisory of Doctor Rich West, PhD.
 
-I love operating systems, my favorite things to use are Emacs and C. I also
-dabble in cloud engineering (e.g. Kubernetes, CI/CD). I will be
-applying to PhD programs this fall and hope to become Dr. Ross in the near future!
+I love operating systems, my favorite things to use are Emacs and C. I
+also dabble in cloud engineering (e.g. Kubernetes, CI/CD). Code should
+"just work", and I build all of my projects with this in mind - as well
+as the SOLID principles.
 
-Outside of computer science, I play the trumpet in the New Jazz Orchestra
-around Cambridge, MA. I also have been a big brother in the Boston Big Brothers
-Big Sisters program for the past year. I have a dog named Winnie (picture above),
-and I'm a proud brother of Phi Kappa Tau. 
+Outside of computer science, I play the trumpet, having performed in
+the New Jazz Orchestra around Cambridge, MA. I also have been a big
+brother in the Boston Big Brothers Big Sisters program since fall 2024, and
+have a dog named Winnie (picture above).
+
+/"Making the simple complicated is commonplace; making the complicated/
+/simple, awesomely simple, that's creativity." - Charles Mingus/

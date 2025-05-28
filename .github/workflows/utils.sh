@@ -12,6 +12,8 @@ clear_header() {
 
 declare -A EXCEPTIONS=(
     ["cv"]="[[file:cv/rossMikulskisResume.pdf][CV]]"
+    ["images"]=""
+    ["index"]="[[file:./index.html][./]]"
 )
 
 capitalize() {
@@ -28,25 +30,27 @@ generate_header() {
         header+="[[file:../index.html][../]] | "
     fi
 
-    for file in $(find "$dir" -mindepth 1 -maxdepth 1 -type f -name "*.org" ! -name ".*" | sort); do
+    # Files loop
+    while IFS= read -r -d '' file; do
         filename=$(basename "$file" .org)
-        if [[ -n "${EXCEPTIONS[$filename]}" ]]; then
+        if [[ ${EXCEPTIONS[$filename]+_} ]]; then
             header+="${EXCEPTIONS[$filename]} | "
         else
             filename_capitalized=$(capitalize "$filename")
             header+="[[file:$filename.html][$filename_capitalized]] | "
         fi
-    done
+    done < <(find "$dir" -mindepth 1 -maxdepth 1 -type f -name "*.org" ! -name ".*" -print0 | sort -z)
 
-    for subdir in $(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" | sort); do
+    # Directories loop
+    while IFS= read -r -d '' subdir; do
         subname=$(basename "$subdir")
-        if [[ -n "${EXCEPTIONS[$subname]}" ]]; then
+        if [[ ${EXCEPTIONS[$subname]+_} ]]; then
             header+="${EXCEPTIONS[$subname]} | "
         else
             subname_capitalized=$(capitalize "$subname")
             header+="[[file:$subname/index.html][$subname_capitalized/]] | "
         fi
-    done
+    done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" -print0 | sort -z)
 
     echo "$header\n#+OPTIONS: toc:nil num:nil"
 }
@@ -63,12 +67,8 @@ add_header() {
 }
 
 export_html() {
-    org_file="$1"
-    emacs --batch "$org_file" \
-          --eval "(progn
-                     (require 'org)
-                     (let ((output (org-html-export-to-html)))
-                       (message \"Exported %s to %s\" \"$org_file\" output)))"
+    local org_file="$1"
+    emacs --batch --load ./.github/workflows/elisp/batch-htmlize.el "$org_file"
 }
 
 process_files() {
