@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ross A. Mikulskis</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .header {
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+    .nav {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .nav a {
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      background-color: #007acc;
+      color: white;
+      border-radius: 5px;
+      display: inline-block;
+    }
+    .nav a:hover {
+      background-color: #005a99;
+    }
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 20px 0;
+    }
+    .quote {
+      font-style: italic;
+      text-align: center;
+      margin: 30px 0;
+      color: #666;
+    }
+    .projects {
+      background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+    .projects h2 {
+      color: #333;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 10px;
+    }
+    .project-link {
+      display: block;
+      padding: 15px;
+      margin: 10px 0;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #333;
+      border-left: 4px solid #007acc;
+    }
+    .project-link:hover {
+      background-color: #e8e8e8;
+    }
+    .project-title {
+      font-weight: bold;
+      color: #007acc;
+    }
+    .project-desc {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Ross A. Mikulskis</h1>
+  </div>
+
+  <div class="nav">
+    <a href="./index.html">./</a>
+    <a href="cv/rossMikulskisResume.pdf">CV</a>
+    <a href="research/index.html">Research/</a>
+    <a href="philsaxioms/">PhilsAxioms</a>
+  </div>
+
+  <div style="text-align: center;">
+    <img src="./images/profile.jpg" alt="Profile" class="profile-img">
+  </div>
+
+  <div style="text-align: center; margin: 20px 0;">
+    <a href="https://bitsofcs.com/" style="text-decoration: none;">
+      <img src="./images/bitsofcs.svg" alt="Bits of CS" style="width: 200px;">
+      <div style="margin-top: 10px; color: #007acc;">Bits of CS (my computer science textbook)</div>
+    </a>
+  </div>
+
+  <p>Hello! My name is Ross, and I'm a PhD student at Boston University studying Computer Science with a focus in real-time operating systems under the advisory of Doctor Rich West, PhD.</p>
+
+  <p>I love operating systems, my favorite things to use are Emacs and C. I also dabble in cloud engineering (e.g. Kubernetes, CI/CD). Code should "just work", and I build all of my projects with this in mind - as well as the SOLID principles.</p>
+
+  <p>Outside of computer science, I play the trumpet, having performed in the New Jazz Orchestra around Cambridge, MA. I also have been a big brother in the Boston Big Brothers Big Sisters program since fall 2024, and have a dog named Winnie (picture above).</p>
+
+  <div class="projects">
+    <h2>Featured Projects</h2>
+    
+    <a href="philsaxioms/" class="project-link">
+      <div class="project-title">PhilsAxioms - Philosophical Framework Builder</div>
+      <div class="project-desc">Interactive tool for exploring philosophical axioms and building consistent worldviews through visual argument graphs. Desktop-optimized with real-time validation.</div>
+    </a>
+    
+    <a href="research/index.html" class="project-link">
+      <div class="project-title">Research Portfolio</div>
+      <div class="project-desc">Real-time systems research including RT-DDS, parallel HDD optimization, and real-time USB frameworks.</div>
+    </a>
+  </div>
+
+  <div class="quote">
+    <p>"Making the simple complicated is commonplace; making the complicated simple, awesomely simple, that's creativity." - Charles Mingus</p>
+  </div>
+</body>
+</html>
