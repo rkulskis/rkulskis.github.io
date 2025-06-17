@@ -1,0 +1,98 @@
+[
+  {
+    "axiomId": "something_exists",
+    "question": "Do you believe that something exists right now - at minimum, your thoughts or experiences?",
+    "explanation": "This is the most basic claim about reality - that there is some form of existence occurring",
+    "category": "metaphysics"
+  },
+  {
+    "axiomId": "logic_works",
+    "question": "Do you think basic logic is reliable - that contradictions indicate error?",
+    "explanation": "This is about whether you trust that if something is true, its opposite cannot also be true in the same way",
+    "category": "logic"
+  },
+  {
+    "axiomId": "patterns_exist",
+    "question": "Do you believe that patterns and regularities exist in your experience?",
+    "explanation": "This is about whether you notice that some things happen more predictably than others",
+    "category": "epistemology"
+  },
+  {
+    "axiomId": "differences_matter",
+    "question": "Do you think some differences matter more than others?",
+    "explanation": "This is about whether you believe that not all states, outcomes, or experiences are equivalent",
+    "category": "ethics"
+  },
+  {
+    "axiomId": "minds_can_reason",
+    "question": "Do you believe that careful thinking can sometimes lead to more accurate conclusions than random guessing?",
+    "explanation": "This is about whether reasoning and analysis can actually discover truth",
+    "category": "epistemology"
+  },
+  {
+    "axiomId": "actions_have_consequences",
+    "question": "Do you believe that your actions affect what happens next?",
+    "explanation": "This is about whether what you do influences outcomes and whether choices lead to different results",
+    "category": "ethics"
+  },
+  {
+    "axiomId": "suffering_exists",
+    "question": "Do you believe that suffering, pain, and distress are real experiences that actually occur?",
+    "explanation": "This is about whether negative experiences like pain and emotional distress are genuine phenomena",
+    "category": "ethics"
+  },
+  {
+    "axiomId": "communication_possible",
+    "question": "Do you believe that ideas and meanings can be shared between different people?",
+    "explanation": "This is about whether meaningful communication and understanding between minds is possible",
+    "category": "epistemology"
+  },
+  {
+    "axiomId": "choice_exists",
+    "question": "Do you believe that you sometimes have different options available and can choose between them?",
+    "explanation": "This is about whether genuine choice and selection between alternatives is possible",
+    "category": "consciousness"
+  },
+  {
+    "axiomId": "cooperation_possible",
+    "question": "Do you believe that different people can work together toward shared goals for mutual benefit?",
+    "explanation": "This is about whether collaboration and mutual assistance between people is achievable",
+    "category": "political"
+  },
+  {
+    "axiomId": "ethics_reasoning_valid",
+    "question": "Do you believe that logical reasoning and inference can produce valid conclusions in the domain of ethics?",
+    "explanation": "This question explores whether you accept the foundational principle: Logical reasoning and inference can produce valid conclusions in the domain of ethics",
+    "category": "ethics"
+  },
+  {
+    "axiomId": "ethics_domain_valid",
+    "question": "Do you believe that moral reasoning can distinguish between right and wrong actions?",
+    "explanation": "This question explores whether you accept the foundational principle: Moral reasoning can distinguish between right and wrong actions",
+    "category": "ethics"
+  },
+  {
+    "axiomId": "consciousness_reasoning_valid",
+    "question": "Do you believe that logical reasoning and inference can produce valid conclusions in the domain of consciousness?",
+    "explanation": "This question explores whether you accept the foundational principle: Logical reasoning and inference can produce valid conclusions in the domain of consciousness",
+    "category": "consciousness"
+  },
+  {
+    "axiomId": "consciousness_domain_valid",
+    "question": "Do you believe that consciousness and mental phenomena are valid subjects of investigation?",
+    "explanation": "This question explores whether you accept the foundational principle: Consciousness and mental phenomena are valid subjects of investigation",
+    "category": "consciousness"
+  },
+  {
+    "axiomId": "political_reasoning_valid",
+    "question": "Do you think that logical reasoning and inference can produce valid conclusions in the domain of political?",
+    "explanation": "This question explores whether you accept the foundational principle: Logical reasoning and inference can produce valid conclusions in the domain of political",
+    "category": "political"
+  },
+  {
+    "axiomId": "political_domain_valid",
+    "question": "Do you think that political and social arrangements can be evaluated and improved?",
+    "explanation": "This question explores whether you accept the foundational principle: Political and social arrangements can be evaluated and improved",
+    "category": "political"
+  }
+]
