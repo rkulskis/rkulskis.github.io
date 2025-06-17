@@ -4,3022 +4,1798 @@
       "id": "metaphysics",
       "name": "Metaphysics",
       "color": "#8B5CF6",
-      "description": "Fundamental questions about reality, existence, and being"
+      "description": "Being, existence, causation, and the fundamental structure of reality"
     },
     {
       "id": "epistemology",
       "name": "Epistemology",
       "color": "#06B6D4",
-      "description": "Nature of knowledge, belief, and justified truth"
-    },
-    {
-      "id": "ethics",
-      "name": "Ethics",
-      "color": "#EF4444",
-      "description": "Moral principles, values, and right vs wrong"
+      "description": "Knowledge, truth, and the powers and limits of human reason"
     },
     {
       "id": "logic",
       "name": "Logic",
       "color": "#10B981",
-      "description": "Principles of valid reasoning and inference"
+      "description": "Principles of valid reasoning, logical demonstration, and rational inference"
     },
     {
-      "id": "political",
-      "name": "Political Philosophy",
+      "id": "theology",
+      "name": "Theology",
       "color": "#F59E0B",
-      "description": "Government, justice, rights, and social organization"
+      "description": "Rational study of God, divine attributes, and religious truth"
     },
     {
-      "id": "consciousness",
-      "name": "Philosophy of Mind",
+      "id": "philosophy",
+      "name": "Philosophy",
+      "color": "#6B7280",
+      "description": "General philosophical arguments including naturalistic and skeptical positions"
+    },
+    {
+      "id": "ethics",
+      "name": "Ethics",
+      "color": "#EF4444",
+      "description": "Moral principles, natural law, and the human good"
+    },
+    {
+      "id": "anthropology",
+      "name": "Philosophical Anthropology",
       "color": "#EC4899",
-      "description": "Nature of consciousness, mind, and mental states"
+      "description": "Human nature, the soul, personal identity, and human destiny"
     }
   ],
   "axioms": [
     {
       "id": "something_exists",
       "title": "Something exists",
-      "description": "At minimum, my thoughts, experiences, or some form of existence is occurring right now.",
+      "description": "At minimum, I exist as a thinking being. This is self-evident and cannot be coherently denied.",
       "category": "metaphysics",
       "metadata": {
         "tags": [
           "existence",
           "being",
-          "reality"
+          "self-evidence"
         ],
         "difficulty": "basic",
-        "source": "Descartes, universal intuition",
+        "source": "Aristotelian-Thomistic tradition",
         "attribution": [
-          "descartes",
-          "empiricism"
+          "aquinas",
+          "aristotle",
+          "descartes"
         ],
-        "acceptability": 0.95
+        "acceptability": 0.99
       }
     },
     {
-      "id": "logic_works",
-      "title": "Basic logic is reliable",
-      "description": "Contradictions indicate error. If something is true, its opposite cannot also be true in the same way.",
+      "id": "non_contradiction",
+      "title": "Principle of non-contradiction",
+      "description": "Something cannot both be and not be in the same respect at the same time. Contradictory statements cannot both be true.",
       "category": "logic",
       "metadata": {
         "tags": [
           "logic",
           "contradiction",
-          "consistency"
+          "truth"
         ],
         "difficulty": "basic",
-        "source": "Law of non-contradiction",
+        "source": "Aristotelian logic",
         "attribution": [
           "aristotle",
-          "rationalism"
-        ],
-        "acceptability": 0.9
-      }
-    },
-    {
-      "id": "patterns_exist",
-      "title": "Patterns and regularities exist",
-      "description": "Some things happen more predictably than others. There are observable regularities in experience.",
-      "category": "epistemology",
-      "metadata": {
-        "tags": [
-          "patterns",
-          "regularity",
-          "causation"
-        ],
-        "difficulty": "basic",
-        "source": "Empirical observation",
-        "attribution": [
-          "empiricism",
-          "simons"
-        ],
-        "acceptability": 0.85
-      }
-    },
-    {
-      "id": "differences_matter",
-      "title": "Some differences matter more than others",
-      "description": "Not all states, outcomes, or experiences are equivalent. Some distinctions have significance.",
-      "category": "ethics",
-      "metadata": {
-        "tags": [
-          "value",
-          "significance",
-          "difference"
-        ],
-        "difficulty": "basic",
-        "source": "Practical experience",
-        "attribution": [
-          "virtue_ethics",
-          "aristotle"
-        ],
-        "acceptability": 0.8
-      }
-    },
-    {
-      "id": "minds_can_reason",
-      "title": "Reasoning can discover truth",
-      "description": "Careful thinking and analysis can sometimes lead to more accurate conclusions than random guessing.",
-      "category": "epistemology",
-      "metadata": {
-        "tags": [
-          "reason",
-          "truth",
-          "thinking"
-        ],
-        "difficulty": "basic",
-        "source": "Rational experience",
-        "attribution": [
-          "rationalism",
-          "kant",
-          "simons"
-        ],
-        "acceptability": 0.88
-      }
-    },
-    {
-      "id": "actions_have_consequences",
-      "title": "Actions have consequences",
-      "description": "What we do affects what happens next. Choices and behaviors lead to different outcomes.",
-      "category": "ethics",
-      "metadata": {
-        "tags": [
-          "causation",
-          "responsibility",
-          "consequences"
-        ],
-        "difficulty": "basic",
-        "source": "Universal experience",
-        "attribution": [
-          "empiricism",
-          "utilitarianism"
+          "aquinas"
         ],
         "acceptability": 0.95
       }
     },
     {
-      "id": "suffering_exists",
-      "title": "Suffering exists",
-      "description": "Pain, distress, and unwanted experiences are real phenomena that occur.",
-      "category": "ethics",
-      "metadata": {
-        "tags": [
-          "suffering",
-          "pain",
-          "experience"
-        ],
-        "difficulty": "basic",
-        "source": "Direct experience",
-        "attribution": [
-          "utilitarianism",
-          "mill",
-          "jesus"
-        ],
-        "acceptability": 0.98
-      }
-    },
-    {
-      "id": "communication_possible",
-      "title": "Communication between minds is possible",
-      "description": "Ideas, meanings, and information can be shared between different thinking beings.",
+      "id": "senses_reliable",
+      "title": "Senses provide knowledge of reality",
+      "description": "Our senses, though sometimes mistaken, generally provide reliable information about the external world.",
       "category": "epistemology",
       "metadata": {
         "tags": [
-          "communication",
-          "language",
-          "understanding"
+          "sensation",
+          "knowledge",
+          "empiricism"
         ],
         "difficulty": "basic",
-        "source": "Linguistic experience",
+        "source": "Aristotelian epistemology",
         "attribution": [
-          "empiricism",
-          "social_contract"
-        ],
-        "acceptability": 0.92
-      }
-    },
-    {
-      "id": "choice_exists",
-      "title": "Choices can be made",
-      "description": "There are situations where different options are available and selection between them is possible.",
-      "category": "consciousness",
-      "metadata": {
-        "tags": [
-          "choice",
-          "freedom",
-          "options"
-        ],
-        "difficulty": "basic",
-        "source": "Decision experience",
-        "attribution": [
-          "existentialism",
-          "trump"
-        ],
-        "acceptability": 0.75
-      }
-    },
-    {
-      "id": "cooperation_possible",
-      "title": "Cooperation is possible",
-      "description": "Different agents can work together toward shared goals and mutual benefit.",
-      "category": "political",
-      "metadata": {
-        "tags": [
-          "cooperation",
-          "collaboration",
-          "mutual benefit"
-        ],
-        "difficulty": "basic",
-        "source": "Social experience",
-        "attribution": [
-          "social_contract",
-          "dimon",
-          "rousseau"
+          "aristotle",
+          "aquinas"
         ],
         "acceptability": 0.85
       }
     },
     {
-      "id": "ethics_reasoning_valid",
-      "title": "Reasoning in Ethics is valid",
-      "description": "Logical reasoning and inference can produce valid conclusions in the domain of ethics",
-      "category": "ethics",
+      "id": "causation_principle",
+      "title": "Principle of causation",
+      "description": "Every effect has a cause. Nothing comes into being without a sufficient reason for its existence.",
+      "category": "metaphysics",
       "metadata": {
-        "auto_generated": true,
-        "for_argument": "technological_intervention_permissible",
-        "bridges_to": [
-          "technology_must_serve_humanity",
-          "moral_progress_possible"
+        "tags": [
+          "causation",
+          "sufficient reason",
+          "dependency"
         ],
-        "difficulty": "intermediate"
-      }
-    },
-    {
-      "id": "ethics_domain_valid",
-      "title": "Ethics domain is valid",
-      "description": "Moral reasoning can distinguish between right and wrong actions",
-      "category": "ethics",
-      "metadata": {
-        "auto_generated": true,
-        "for_argument": "technological_intervention_permissible",
-        "difficulty": "basic"
-      }
-    },
-    {
-      "id": "consciousness_reasoning_valid",
-      "title": "Reasoning in Consciousness is valid",
-      "description": "Logical reasoning and inference can produce valid conclusions in the domain of consciousness",
-      "category": "consciousness",
-      "metadata": {
-        "auto_generated": true,
-        "for_argument": "death_optional_future",
-        "bridges_to": [
-          "scientific_method_valid",
-          "technological_intervention_permissible"
+        "difficulty": "basic",
+        "source": "Aristotelian metaphysics",
+        "attribution": [
+          "aristotle",
+          "aquinas"
         ],
-        "difficulty": "intermediate"
+        "acceptability": 0.9
       }
     },
     {
-      "id": "consciousness_domain_valid",
-      "title": "Consciousness domain is valid",
-      "description": "Consciousness and mental phenomena are valid subjects of investigation",
-      "category": "consciousness",
+      "id": "change_occurs",
+      "title": "Change and motion occur",
+      "description": "We observe that things change, move, and are actualized from potency to act. This is evident to our senses.",
+      "category": "metaphysics",
       "metadata": {
-        "auto_generated": true,
-        "for_argument": "death_optional_future",
-        "difficulty": "basic"
-      }
-    },
-    {
-      "id": "political_reasoning_valid",
-      "title": "Reasoning in Political is valid",
-      "description": "Logical reasoning and inference can produce valid conclusions in the domain of political",
-      "category": "political",
-      "metadata": {
-        "auto_generated": true,
-        "for_argument": "international_cooperation_possible",
-        "bridges_to": [
-          "global_cooperation_achievable",
-          "liberal_democracy_optimal"
+        "tags": [
+          "change",
+          "motion",
+          "actuality",
+          "potency"
         ],
-        "difficulty": "intermediate"
+        "difficulty": "basic",
+        "source": "Aristotelian physics",
+        "attribution": [
+          "aristotle",
+          "aquinas"
+        ],
+        "acceptability": 0.95
       }
     },
     {
-      "id": "political_domain_valid",
-      "title": "Political domain is valid",
-      "description": "Political and social arrangements can be evaluated and improved",
-      "category": "political",
+      "id": "contingent_necessary_distinction",
+      "title": "Distinction between contingent and necessary existence",
+      "description": "Some things exist but could have not existed (contingent), while other things, if they exist, must exist (necessary).",
+      "category": "metaphysics",
       "metadata": {
-        "auto_generated": true,
-        "for_argument": "international_cooperation_possible",
-        "difficulty": "basic"
+        "tags": [
+          "contingency",
+          "necessity",
+          "existence",
+          "dependency"
+        ],
+        "difficulty": "intermediate",
+        "source": "Medieval metaphysics",
+        "attribution": [
+          "aquinas",
+          "avicenna"
+        ],
+        "acceptability": 0.75
+      }
+    },
+    {
+      "id": "degrees_of_perfection",
+      "title": "Degrees of perfection exist",
+      "description": "We observe that some things are more perfect, good, true, or noble than others. There are degrees of excellence.",
+      "category": "metaphysics",
+      "metadata": {
+        "tags": [
+          "perfection",
+          "goodness",
+          "hierarchy",
+          "excellence"
+        ],
+        "difficulty": "intermediate",
+        "source": "Platonic-Aristotelian tradition",
+        "attribution": [
+          "plato",
+          "aristotle",
+          "aquinas"
+        ],
+        "acceptability": 0.7
+      }
+    },
+    {
+      "id": "teleological_order",
+      "title": "Things are ordered toward ends",
+      "description": "Natural things appear to act for specific purposes or ends, even when they lack intelligence to direct themselves.",
+      "category": "metaphysics",
+      "metadata": {
+        "tags": [
+          "teleology",
+          "purpose",
+          "final causation",
+          "order"
+        ],
+        "difficulty": "intermediate",
+        "source": "Aristotelian teleology",
+        "attribution": [
+          "aristotle",
+          "aquinas"
+        ],
+        "acceptability": 0.65
+      }
+    },
+    {
+      "id": "reason_discovers_truth",
+      "title": "Human reason can discover truth",
+      "description": "Through careful reasoning and logic, humans can attain genuine knowledge about reality, including metaphysical truths.",
+      "category": "epistemology",
+      "metadata": {
+        "tags": [
+          "reason",
+          "truth",
+          "knowledge",
+          "intellect"
+        ],
+        "difficulty": "basic",
+        "source": "Scholastic tradition",
+        "attribution": [
+          "aquinas",
+          "aristotle"
+        ],
+        "acceptability": 0.8
       }
     }
   ],
   "arguments": [
     {
-      "id": "objective_reality_exists",
-      "title": "Objective reality exists",
-      "description": "If something exists and logic works, then there must be an objective reality that exists independently of any particular mind's beliefs about it.",
-      "conclusion": "Reality is objective and mind-independent",
+      "id": "external_world_exists",
+      "title": "An external world exists",
+      "description": "Given that our senses are generally reliable and we observe consistent patterns, there exists a world of material objects external to our minds.",
+      "conclusion": "Material reality exists independently of our consciousness",
       "category": "metaphysics",
       "level": 1,
-      "dependencies": [
-        "something_exists",
-        "logic_works"
-      ],
       "activation_conditions": {
         "required_axioms": [
           "something_exists",
-          "logic_works"
+          "senses_reliable",
+          "non_contradiction"
         ]
       },
-      "metadata": {
-        "tags": [
-          "objectivity",
-          "reality",
-          "independence"
-        ],
-        "strength": 0.8,
-        "source": "Realist philosophy",
-        "attribution": [
-          "materialism",
-          "aristotle"
-        ],
-        "controversy": 0.3
-      }
-    },
-    {
-      "id": "knowledge_is_possible",
-      "title": "Knowledge is possible",
-      "description": "If patterns exist and reasoning can discover truth, then it's possible to gain genuine knowledge about reality through observation and thinking.",
-      "conclusion": "Humans can acquire reliable knowledge about the world",
-      "category": "epistemology",
-      "level": 1,
       "dependencies": [
-        "patterns_exist",
-        "minds_can_reason"
+        "something_exists",
+        "senses_reliable"
       ],
-      "activation_conditions": {
-        "required_axioms": [
-          "patterns_exist",
-          "minds_can_reason"
-        ]
-      },
       "metadata": {
         "tags": [
-          "knowledge",
-          "epistemology",
-          "truth"
+          "external world",
+          "material reality",
+          "objectivity"
         ],
-        "strength": 0.9,
-        "source": "Empirical rationalism",
+        "strength": 0.85,
+        "source": "Aristotelian realism",
         "attribution": [
-          "empiricism",
-          "rationalism",
-          "kant"
-        ],
-        "controversy": 0.2
-      }
-    },
-    {
-      "id": "moral_facts_exist",
-      "title": "Moral facts exist",
-      "description": "If differences matter and suffering exists, then it matters whether suffering occurs or not, creating objective moral facts.",
-      "conclusion": "Some actions are objectively better or worse than others",
-      "category": "ethics",
-      "level": 1,
-      "metadata": {
-        "tags": [
-          "moral realism",
-          "objectivity",
-          "ethics"
-        ],
-        "strength": 0.7,
-        "source": "Moral realism",
-        "attribution": [
-          "virtue_ethics",
-          "deontology",
+          "aristotle",
           "aquinas"
-        ],
-        "controversy": 0.5
-      },
-      "dependencies": [
-        "differences_matter",
-        "suffering_exists"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "differences_matter",
-          "suffering_exists"
         ]
       }
     },
     {
-      "id": "moral_responsibility_exists",
-      "title": "Moral responsibility exists",
-      "description": "If actions have consequences and choices can be made, then agents can be held responsible for the outcomes of their freely chosen actions.",
-      "conclusion": "People are morally responsible for their choices",
-      "category": "ethics",
-      "level": 1,
-      "metadata": {
-        "tags": [
-          "responsibility",
-          "freedom",
-          "accountability"
-        ],
-        "strength": 0.8,
-        "source": "Libertarian ethics",
-        "attribution": [
-          "deontology",
-          "virtue_ethics",
-          "kant"
-        ],
-        "controversy": 0.4
-      },
-      "dependencies": [
-        "actions_have_consequences",
-        "choice_exists"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "actions_have_consequences",
-          "choice_exists"
-        ]
-      }
-    },
-    {
-      "id": "rational_discourse_possible",
-      "title": "Rational discourse is possible",
-      "description": "If communication between minds is possible and reasoning can discover truth, then people can share ideas and potentially reach agreement through rational discussion.",
-      "conclusion": "Meaningful dialogue and persuasion are possible",
-      "category": "epistemology",
-      "level": 1,
-      "metadata": {
-        "tags": [
-          "discourse",
-          "rationality",
-          "communication"
-        ],
-        "strength": 0.8,
-        "source": "Rational dialogue tradition",
-        "attribution": [
-          "rationalism",
-          "empiricism",
-          "voltaire"
-        ],
-        "controversy": 0.2
-      },
-      "dependencies": [
-        "communication_possible",
-        "minds_can_reason"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "communication_possible",
-          "minds_can_reason"
-        ]
-      }
-    },
-    {
-      "id": "social_contracts_possible",
-      "title": "Social cooperation and agreements are possible",
-      "description": "If cooperation is possible and actions have consequences, then people can form mutually beneficial agreements and social structures.",
-      "conclusion": "Society and governance can be legitimately organized",
-      "category": "political",
-      "level": 1,
-      "metadata": {
-        "tags": [
-          "cooperation",
-          "society",
-          "agreements"
-        ],
-        "strength": 0.8,
-        "source": "Social contract theory",
-        "attribution": [
-          "social_contract",
-          "locke",
-          "rousseau"
-        ],
-        "controversy": 0.3
-      },
-      "dependencies": [
-        "cooperation_possible",
-        "actions_have_consequences"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "cooperation_possible",
-          "actions_have_consequences"
-        ]
-      }
-    },
-    {
-      "id": "causal_laws_exist",
-      "title": "Causal laws govern reality",
-      "description": "If patterns exist and actions have consequences, then reality operates according to discoverable causal laws and regularities.",
-      "conclusion": "The universe operates according to natural laws",
+      "id": "causal_series_exist",
+      "title": "Causal series exist in nature",
+      "description": "Since change occurs and every effect has a cause, there exist chains of causation connecting events in the natural world.",
+      "conclusion": "Reality is structured by causal relationships",
       "category": "metaphysics",
       "level": 1,
+      "activation_conditions": {
+        "required_axioms": [
+          "change_occurs",
+          "causation_principle",
+          "senses_reliable"
+        ]
+      },
+      "dependencies": [
+        "change_occurs",
+        "causation_principle"
+      ],
       "metadata": {
         "tags": [
           "causation",
-          "natural laws",
-          "regularity"
-        ],
-        "strength": 0.8,
-        "source": "Scientific naturalism",
-        "attribution": [
-          "empiricism",
-          "materialism",
-          "hume"
-        ],
-        "controversy": 0.2
-      },
-      "dependencies": [
-        "patterns_exist",
-        "actions_have_consequences"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "patterns_exist",
-          "actions_have_consequences"
-        ]
-      }
-    },
-    {
-      "id": "stable_reality_exists",
-      "title": "Reality has stable structure",
-      "description": "If something exists and patterns exist, then reality has some stable, persistent structure that enables consistent patterns.",
-      "conclusion": "The world has an underlying stable structure",
-      "category": "metaphysics",
-      "level": 1,
-      "metadata": {
-        "tags": [
-          "stability",
-          "structure",
-          "persistence"
-        ],
-        "strength": 0.8,
-        "source": "Structural realism",
-        "attribution": [
-          "materialism",
-          "empiricism"
-        ],
-        "controversy": 0.2
-      },
-      "dependencies": [
-        "something_exists",
-        "patterns_exist"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "something_exists",
-          "patterns_exist"
-        ]
-      }
-    },
-    {
-      "id": "values_guide_choices",
-      "title": "Values can guide rational choice",
-      "description": "If choices can be made and differences matter, then rational agents can use values and preferences to guide their decision-making.",
-      "conclusion": "Rational value-based decision making is possible",
-      "category": "ethics",
-      "level": 1,
-      "metadata": {
-        "tags": [
-          "values",
-          "choice",
-          "rationality"
-        ],
-        "strength": 0.8,
-        "source": "Rational choice theory",
-        "attribution": [
-          "virtue_ethics",
-          "existentialism"
-        ],
-        "controversy": 0.3
-      },
-      "dependencies": [
-        "choice_exists",
-        "differences_matter"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "choice_exists",
-          "differences_matter"
-        ]
-      }
-    },
-    {
-      "id": "harm_prevention_matters",
-      "title": "Preventing unnecessary harm matters",
-      "description": "If suffering exists and actions have consequences, then actions that prevent or reduce unnecessary suffering have moral significance.",
-      "conclusion": "We have moral reasons to prevent unnecessary suffering",
-      "category": "ethics",
-      "level": 1,
-      "metadata": {
-        "tags": [
-          "harm prevention",
-          "suffering",
-          "moral duty"
+          "causal series",
+          "natural order"
         ],
         "strength": 0.9,
-        "source": "Utilitarian tradition",
+        "source": "Aristotelian metaphysics",
         "attribution": [
-          "utilitarianism",
-          "mill",
-          "jesus"
-        ],
-        "controversy": 0.2
-      },
-      "dependencies": [
-        "suffering_exists",
-        "actions_have_consequences"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "suffering_exists",
-          "actions_have_consequences"
-        ]
-      }
-    },
-    {
-      "id": "shared_reasoning_possible",
-      "title": "Shared standards of reasoning are possible",
-      "description": "If logic is reliable and communication between minds is possible, then people can share and apply common standards of reasoning.",
-      "conclusion": "Universal logical principles can guide human thought",
-      "category": "logic",
-      "level": 1,
-      "metadata": {
-        "tags": [
-          "shared reasoning",
-          "logical standards",
-          "universality"
-        ],
-        "strength": 0.9,
-        "source": "Logic and rationality",
-        "attribution": [
-          "rationalism",
-          "empiricism"
-        ],
-        "controversy": 0.2
-      },
-      "dependencies": [
-        "logic_works",
-        "communication_possible"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "logic_works",
-          "communication_possible"
-        ]
-      }
-    },
-    {
-      "id": "justice_possible",
-      "title": "Justice and fairness are achievable",
-      "description": "If cooperation is possible and moral facts exist, then people can work together to create just institutions based on objective moral principles.",
-      "conclusion": "Just societies can be established and maintained",
-      "category": "political",
-      "level": 1,
-      "metadata": {
-        "tags": [
-          "justice",
-          "fairness",
-          "institutions"
-        ],
-        "strength": 0.7,
-        "source": "Political philosophy",
-        "attribution": [
-          "social_contract",
-          "rawls",
-          "aristotle"
-        ],
-        "controversy": 0.4
-      },
-      "dependencies": [
-        "cooperation_possible",
-        "moral_facts_exist"
-      ],
-      "activation_conditions": {
-        "required_axioms": [
-          "cooperation_possible"
-        ],
-        "required_arguments": [
-          "moral_facts_exist"
-        ]
-      }
-    },
-    {
-      "id": "scientific_method_valid",
-      "title": "Scientific method discovers objective truths",
-      "description": "If knowledge is possible and objective reality exists, then systematic empirical investigation can discover objective truths about the natural world.",
-      "conclusion": "Science provides reliable knowledge about reality",
-      "category": "epistemology",
-      "level": 2,
-      "metadata": {
-        "tags": [
-          "science",
-          "empiricism",
-          "truth discovery"
-        ],
-        "strength": 0.8,
-        "source": "Scientific realism",
-        "attribution": [
-          "empiricism",
-          "simons"
-        ],
-        "controversy": 0.1
-      },
-      "dependencies": [
-        "knowledge_is_possible",
-        "objective_reality_exists"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "knowledge_is_possible",
-          "objective_reality_exists"
-        ]
-      }
-    },
-    {
-      "id": "moral_progress_possible",
-      "title": "Moral progress is possible",
-      "description": "If moral facts exist and rational discourse is possible, then humanity can make genuine progress in understanding and implementing moral truths.",
-      "conclusion": "Moral knowledge and practice can improve over time",
-      "category": "ethics",
-      "level": 2,
-      "metadata": {
-        "tags": [
-          "moral progress",
-          "improvement",
-          "historical development"
-        ],
-        "strength": 0.7,
-        "source": "Moral progressivism",
-        "attribution": [
-          "utilitarianism",
-          "kant",
-          "voltaire"
-        ],
-        "controversy": 0.4
-      },
-      "dependencies": [
-        "moral_facts_exist",
-        "rational_discourse_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "moral_facts_exist",
-          "rational_discourse_possible"
-        ]
-      }
-    },
-    {
-      "id": "prediction_and_control_possible",
-      "title": "Prediction and control of nature is possible",
-      "description": "If causal laws govern reality and knowledge is possible, then we can predict future events and control natural processes through understanding.",
-      "conclusion": "Technology and engineering are fundamentally sound enterprises",
-      "category": "epistemology",
-      "level": 2,
-      "metadata": {
-        "tags": [
-          "prediction",
-          "control",
-          "technology"
-        ],
-        "strength": 0.9,
-        "source": "Applied science",
-        "attribution": [
-          "empiricism",
-          "materialism"
-        ],
-        "controversy": 0.2
-      },
-      "dependencies": [
-        "causal_laws_exist",
-        "knowledge_is_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "causal_laws_exist",
-          "knowledge_is_possible"
-        ]
-      }
-    },
-    {
-      "id": "legitimate_government_possible",
-      "title": "Legitimate government is possible",
-      "description": "If justice is achievable and social cooperation is possible, then legitimate political authority can be established through just institutions.",
-      "conclusion": "Good governance based on consent and justice is achievable",
-      "category": "political",
-      "level": 2,
-      "metadata": {
-        "tags": [
-          "legitimacy",
-          "government",
-          "political authority"
-        ],
-        "strength": 0.7,
-        "source": "Democratic theory",
-        "attribution": [
-          "social_contract",
-          "locke",
-          "rawls"
-        ],
-        "controversy": 0.3
-      },
-      "dependencies": [
-        "justice_possible",
-        "social_contracts_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "justice_possible",
-          "social_contracts_possible"
-        ]
-      }
-    },
-    {
-      "id": "ethical_obligations_exist",
-      "title": "We have ethical obligations to others",
-      "description": "If moral responsibility exists and preventing harm matters, then we have genuine obligations to consider the welfare of other moral agents.",
-      "conclusion": "Ethics involves duties to others, not just personal preferences",
-      "category": "ethics",
-      "level": 2,
-      "metadata": {
-        "tags": [
-          "obligations",
-          "duties",
-          "other-regarding ethics"
-        ],
-        "strength": 0.8,
-        "source": "Deontological ethics",
-        "attribution": [
-          "deontology",
-          "utilitarianism",
-          "kant"
-        ],
-        "controversy": 0.3
-      },
-      "dependencies": [
-        "moral_responsibility_exists",
-        "harm_prevention_matters"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "moral_responsibility_exists",
-          "harm_prevention_matters"
-        ]
-      }
-    },
-    {
-      "id": "metaphysical_realism_true",
-      "title": "Metaphysical realism is true",
-      "description": "If objective reality exists and reality has stable structure, then there exists a mind-independent world with definite properties and structures.",
-      "conclusion": "The world exists independently of human thought and has objective features",
-      "category": "metaphysics",
-      "level": 2,
-      "metadata": {
-        "tags": [
-          "metaphysical realism",
-          "mind-independence",
-          "objective properties"
-        ],
-        "strength": 0.8,
-        "source": "Metaphysical realism",
-        "attribution": [
-          "materialism",
-          "aristotle"
-        ],
-        "controversy": 0.4
-      },
-      "dependencies": [
-        "objective_reality_exists",
-        "stable_reality_exists"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "objective_reality_exists",
-          "stable_reality_exists"
-        ]
-      }
-    },
-    {
-      "id": "objective_values_exist",
-      "title": "Objective values exist",
-      "description": "If values can guide rational choice and moral facts exist, then there are objective values that provide genuine reasons for action.",
-      "conclusion": "Some values are objectively better than others",
-      "category": "ethics",
-      "level": 2,
-      "metadata": {
-        "tags": [
-          "objective values",
-          "reasons for action",
-          "value theory"
-        ],
-        "strength": 0.6,
-        "source": "Value realism",
-        "attribution": [
-          "virtue_ethics",
-          "natural_law",
+          "aristotle",
           "aquinas"
-        ],
-        "controversy": 0.6
-      },
-      "dependencies": [
-        "values_guide_choices",
-        "moral_facts_exist"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "values_guide_choices",
-          "moral_facts_exist"
         ]
       }
     },
     {
-      "id": "universal_rationality_possible",
-      "title": "Universal standards of rationality are possible",
-      "description": "If shared reasoning standards are possible and knowledge is achievable, then universal principles of rational thought can be identified and applied.",
-      "conclusion": "Reason provides universal criteria for evaluating beliefs and arguments",
-      "category": "logic",
-      "level": 2,
+      "id": "actual_vs_potential",
+      "title": "Distinction between actual and potential",
+      "description": "Since change occurs, there must be a real distinction between what something actually is and what it potentially could become.",
+      "conclusion": "Actuality and potentiality are fundamental aspects of reality",
+      "category": "metaphysics",
+      "level": 1,
+      "activation_conditions": {
+        "required_axioms": [
+          "change_occurs",
+          "non_contradiction",
+          "reason_discovers_truth"
+        ]
+      },
+      "dependencies": [
+        "change_occurs"
+      ],
       "metadata": {
         "tags": [
-          "universal rationality",
-          "rational standards",
-          "cognitive norms"
+          "actuality",
+          "potentiality",
+          "metaphysical principles"
         ],
         "strength": 0.8,
-        "source": "Rationalist epistemology",
+        "source": "Aristotelian metaphysics",
         "attribution": [
-          "rationalism",
-          "kant"
-        ],
-        "controversy": 0.4
-      },
-      "dependencies": [
-        "shared_reasoning_possible",
-        "knowledge_is_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "shared_reasoning_possible",
-          "knowledge_is_possible"
+          "aristotle",
+          "aquinas"
         ]
       }
     },
     {
-      "id": "philosophical_inquiry_valuable",
-      "title": "Philosophical inquiry has value",
-      "description": "If rational discourse is possible and moral progress is achievable, then philosophical reflection and debate can contribute to human understanding and improvement.",
-      "conclusion": "Philosophy can make genuine contributions to human knowledge and welfare",
+      "id": "hierarchy_of_being",
+      "title": "Hierarchy of being exists",
+      "description": "Given degrees of perfection and the reliability of our rational judgments, there exists a real hierarchy in the order of being.",
+      "conclusion": "Some beings are more perfect or excellent than others",
+      "category": "metaphysics",
+      "level": 1,
+      "activation_conditions": {
+        "required_axioms": [
+          "degrees_of_perfection",
+          "reason_discovers_truth",
+          "something_exists"
+        ]
+      },
+      "dependencies": [
+        "degrees_of_perfection"
+      ],
+      "metadata": {
+        "tags": [
+          "hierarchy",
+          "being",
+          "perfection",
+          "excellence"
+        ],
+        "strength": 0.75,
+        "source": "Platonic-Thomistic tradition",
+        "attribution": [
+          "plato",
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "natural_teleology",
+      "title": "Natural processes are teleologically ordered",
+      "description": "Since things are ordered toward ends and our reason can discern this order, natural processes exhibit genuine purposiveness.",
+      "conclusion": "Nature displays inherent purposiveness and order",
+      "category": "metaphysics",
+      "level": 1,
+      "activation_conditions": {
+        "required_axioms": [
+          "teleological_order",
+          "reason_discovers_truth",
+          "senses_reliable"
+        ]
+      },
+      "dependencies": [
+        "teleological_order"
+      ],
+      "metadata": {
+        "tags": [
+          "teleology",
+          "natural order",
+          "purpose",
+          "design"
+        ],
+        "strength": 0.7,
+        "source": "Aristotelian teleology",
+        "attribution": [
+          "aristotle",
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "contingent_beings_exist",
+      "title": "Contingent beings exist",
+      "description": "Using the distinction between contingent and necessary existence, and observing material things that come into being and pass away, we can identify contingent beings.",
+      "conclusion": "Some beings exist but could have not existed",
+      "category": "metaphysics",
+      "level": 1,
+      "activation_conditions": {
+        "required_axioms": [
+          "contingent_necessary_distinction",
+          "senses_reliable",
+          "change_occurs"
+        ]
+      },
+      "dependencies": [
+        "contingent_necessary_distinction",
+        "change_occurs"
+      ],
+      "metadata": {
+        "tags": [
+          "contingency",
+          "material beings",
+          "dependency"
+        ],
+        "strength": 0.85,
+        "source": "Medieval metaphysics",
+        "attribution": [
+          "aquinas",
+          "avicenna"
+        ]
+      }
+    },
+    {
+      "id": "rational_knowledge_possible",
+      "title": "Rational knowledge of reality is possible",
+      "description": "Since reason can discover truth and we can distinguish real from apparent contradictions, genuine metaphysical knowledge is attainable.",
+      "conclusion": "Human reason can know the fundamental structure of reality",
       "category": "epistemology",
-      "level": 2,
-      "metadata": {
-        "tags": [
-          "philosophy",
-          "inquiry",
-          "intellectual progress"
-        ],
-        "strength": 0.7,
-        "source": "Philosophical tradition",
-        "attribution": [
-          "rationalism",
-          "empiricism",
-          "voltaire"
-        ],
-        "controversy": 0.2
+      "level": 1,
+      "activation_conditions": {
+        "required_axioms": [
+          "reason_discovers_truth",
+          "non_contradiction",
+          "something_exists"
+        ]
       },
       "dependencies": [
-        "rational_discourse_possible",
-        "moral_progress_possible"
+        "reason_discovers_truth"
       ],
-      "activation_conditions": {
-        "required_arguments": [
-          "rational_discourse_possible",
-          "moral_progress_possible"
-        ]
-      }
-    },
-    {
-      "id": "natural_kinds_exist",
-      "title": "Natural kinds and essences exist",
-      "description": "If reality has stable structure and causal laws exist, then nature is organized into real kinds with essential properties that ground causal powers.",
-      "conclusion": "Scientific classification reflects objective features of reality",
-      "category": "metaphysics",
-      "level": 2,
       "metadata": {
         "tags": [
-          "natural kinds",
-          "essentialism",
-          "scientific classification"
-        ],
-        "strength": 0.6,
-        "source": "Scientific essentialism",
-        "attribution": [
-          "materialism",
-          "empiricism"
-        ],
-        "controversy": 0.6
-      },
-      "dependencies": [
-        "stable_reality_exists",
-        "causal_laws_exist"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "stable_reality_exists",
-          "causal_laws_exist"
-        ]
-      }
-    },
-    {
-      "id": "rule_of_law_essential",
-      "title": "Rule of law is essential for justice",
-      "description": "If legitimate government is possible and social cooperation requires agreements, then consistent application of just laws is necessary for social order.",
-      "conclusion": "Legal institutions must operate according to impartial, consistent principles",
-      "category": "political",
-      "level": 2,
-      "metadata": {
-        "tags": [
-          "rule of law",
-          "legal institutions",
-          "consistency"
+          "rational knowledge",
+          "metaphysical knowledge",
+          "truth"
         ],
         "strength": 0.8,
-        "source": "Legal philosophy",
+        "source": "Scholastic epistemology",
         "attribution": [
-          "social_contract",
-          "locke"
-        ],
-        "controversy": 0.2
-      },
-      "dependencies": [
-        "social_contracts_possible",
-        "legitimate_government_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "social_contracts_possible",
-          "legitimate_government_possible"
+          "aquinas",
+          "aristotle"
         ]
       }
     },
     {
-      "id": "human_rights_universal",
-      "title": "Universal human rights exist",
-      "description": "If we have ethical obligations to others and legitimate government is possible, then all humans possess fundamental rights that just governments must protect.",
-      "conclusion": "Human rights provide universal moral and political standards",
-      "category": "political",
-      "level": 2,
+      "id": "efficient_causation",
+      "title": "Efficient causation operates in nature",
+      "description": "Given that causal series exist and we can observe agents producing effects, efficient causation is a real principle governing natural processes.",
+      "conclusion": "Agents actively cause effects in the natural world",
+      "category": "metaphysics",
+      "level": 1,
+      "activation_conditions": {
+        "required_axioms": [
+          "causation_principle",
+          "senses_reliable",
+          "change_occurs"
+        ],
+        "required_arguments": [
+          "causal_series_exist"
+        ]
+      },
+      "dependencies": [
+        "causal_series_exist"
+      ],
       "metadata": {
         "tags": [
-          "human rights",
-          "universality",
-          "fundamental rights"
+          "efficient causation",
+          "agency",
+          "natural processes"
         ],
-        "strength": 0.7,
-        "source": "Human rights theory",
+        "strength": 0.85,
+        "source": "Aristotelian causation theory",
         "attribution": [
-          "natural_law",
-          "kant",
-          "locke"
-        ],
-        "controversy": 0.4
-      },
-      "dependencies": [
-        "ethical_obligations_exist",
-        "legitimate_government_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "ethical_obligations_exist",
-          "legitimate_government_possible"
+          "aristotle",
+          "aquinas"
         ]
       }
     },
     {
-      "id": "naturalism_well_supported",
-      "title": "Naturalism is well-supported",
-      "description": "If science discovers objective truths and metaphysical realism is true, then the naturalistic worldview that relies on scientific methods is strongly supported.",
-      "conclusion": "The natural world as described by science is likely all that exists",
+      "id": "infinite_regress_impossible",
+      "title": "Infinite regress in essential causation is impossible",
+      "description": "If causal series exist and efficient causation operates, an infinite regress of essential causes is metaphysically impossible - there must be a first cause.",
+      "conclusion": "Essential causal series require a first uncaused cause",
       "category": "metaphysics",
+      "level": 2,
+      "activation_conditions": {
+        "required_axioms": [
+          "causation_principle",
+          "reason_discovers_truth",
+          "non_contradiction"
+        ],
+        "required_arguments": [
+          "efficient_causation",
+          "causal_series_exist"
+        ]
+      },
+      "dependencies": [
+        "efficient_causation",
+        "causal_series_exist"
+      ],
+      "metadata": {
+        "tags": [
+          "infinite regress",
+          "first cause",
+          "essential causation"
+        ],
+        "strength": 0.8,
+        "source": "Aristotelian-Thomistic metaphysics",
+        "attribution": [
+          "aristotle",
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "prime_mover_necessary",
+      "title": "A Prime Mover is necessary",
+      "description": "Given that change occurs, actual vs potential distinction exists, and infinite regress is impossible, there must be a first unmoved mover.",
+      "conclusion": "There exists a first principle of motion that is itself unmoved",
+      "category": "metaphysics",
+      "level": 2,
+      "activation_conditions": {
+        "required_axioms": [
+          "change_occurs",
+          "non_contradiction"
+        ],
+        "required_arguments": [
+          "actual_vs_potential",
+          "infinite_regress_impossible"
+        ]
+      },
+      "dependencies": [
+        "actual_vs_potential",
+        "infinite_regress_impossible"
+      ],
+      "metadata": {
+        "tags": [
+          "prime mover",
+          "unmoved mover",
+          "first principle"
+        ],
+        "strength": 0.75,
+        "source": "Aristotelian metaphysics",
+        "attribution": [
+          "aristotle",
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "necessary_being_exists",
+      "title": "A necessary being exists",
+      "description": "Since contingent beings exist and infinite regress is impossible, there must exist at least one being that exists necessarily.",
+      "conclusion": "There exists a being whose essence involves existence",
+      "category": "metaphysics",
+      "level": 2,
+      "activation_conditions": {
+        "required_axioms": [
+          "contingent_necessary_distinction",
+          "non_contradiction"
+        ],
+        "required_arguments": [
+          "contingent_beings_exist",
+          "infinite_regress_impossible"
+        ]
+      },
+      "dependencies": [
+        "contingent_beings_exist",
+        "infinite_regress_impossible"
+      ],
+      "metadata": {
+        "tags": [
+          "necessary being",
+          "essence",
+          "existence"
+        ],
+        "strength": 0.8,
+        "source": "Medieval metaphysics",
+        "attribution": [
+          "aquinas",
+          "avicenna"
+        ]
+      }
+    },
+    {
+      "id": "supreme_perfection_exists",
+      "title": "A supremely perfect being exists",
+      "description": "Given the hierarchy of being and degrees of perfection, there must be a most perfect being that serves as the standard for all degrees of goodness.",
+      "conclusion": "There exists a being of maximum perfection",
+      "category": "metaphysics",
+      "level": 2,
+      "activation_conditions": {
+        "required_axioms": [
+          "degrees_of_perfection",
+          "reason_discovers_truth"
+        ],
+        "required_arguments": [
+          "hierarchy_of_being",
+          "rational_knowledge_possible"
+        ]
+      },
+      "dependencies": [
+        "hierarchy_of_being"
+      ],
+      "metadata": {
+        "tags": [
+          "supreme perfection",
+          "maximum being",
+          "goodness"
+        ],
+        "strength": 0.7,
+        "source": "Platonic-Thomistic tradition",
+        "attribution": [
+          "plato",
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "intelligent_designer_exists",
+      "title": "An intelligent designer exists",
+      "description": "Since natural teleology exists and things lacking intelligence cannot direct themselves toward ends, there must be an intelligent cause ordering nature.",
+      "conclusion": "There exists an intelligence that orders natural processes toward their ends",
+      "category": "metaphysics",
+      "level": 2,
+      "activation_conditions": {
+        "required_axioms": [
+          "teleological_order",
+          "reason_discovers_truth"
+        ],
+        "required_arguments": [
+          "natural_teleology",
+          "efficient_causation"
+        ]
+      },
+      "dependencies": [
+        "natural_teleology",
+        "efficient_causation"
+      ],
+      "metadata": {
+        "tags": [
+          "intelligent design",
+          "teleological order",
+          "natural ends"
+        ],
+        "strength": 0.65,
+        "source": "Aristotelian-Thomistic teleology",
+        "attribution": [
+          "aristotle",
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "material_insufficient_explanation",
+      "title": "Material causes alone are insufficient",
+      "description": "Given that rational knowledge is possible and we observe formal structure, final causation, and efficient agency, purely material explanations are inadequate.",
+      "conclusion": "Reality requires non-material principles of explanation",
+      "category": "metaphysics",
+      "level": 2,
+      "activation_conditions": {
+        "required_axioms": [
+          "reason_discovers_truth",
+          "causation_principle"
+        ],
+        "required_arguments": [
+          "rational_knowledge_possible",
+          "natural_teleology",
+          "efficient_causation"
+        ]
+      },
+      "dependencies": [
+        "rational_knowledge_possible",
+        "natural_teleology"
+      ],
+      "metadata": {
+        "tags": [
+          "materialism",
+          "formal causation",
+          "immaterial reality"
+        ],
+        "strength": 0.7,
+        "source": "Aristotelian four causes",
+        "attribution": [
+          "aristotle",
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "unity_of_first_principles",
+      "title": "First principles converge in unity",
+      "description": "Since rational knowledge is possible and we have identified multiple first principles (Prime Mover, First Cause, Necessary Being, etc.), reason suggests these converge in one supreme principle.",
+      "conclusion": "The various first principles are unified in one supreme being",
+      "category": "metaphysics",
+      "level": 2,
+      "activation_conditions": {
+        "required_arguments": [
+          "prime_mover_necessary",
+          "necessary_being_exists",
+          "supreme_perfection_exists",
+          "intelligent_designer_exists"
+        ]
+      },
+      "dependencies": [
+        "prime_mover_necessary",
+        "necessary_being_exists",
+        "supreme_perfection_exists"
+      ],
+      "metadata": {
+        "tags": [
+          "unity",
+          "convergence",
+          "supreme principle"
+        ],
+        "strength": 0.75,
+        "source": "Thomistic synthesis",
+        "attribution": [
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "contingency_requires_explanation",
+      "title": "Contingent existence requires explanation",
+      "description": "Since contingent beings exist and the principle of sufficient reason applies, the existence of contingent reality as a whole requires explanation by something non-contingent.",
+      "conclusion": "The totality of contingent existence requires a necessary ground",
+      "category": "metaphysics",
+      "level": 2,
+      "activation_conditions": {
+        "required_axioms": [
+          "causation_principle",
+          "contingent_necessary_distinction"
+        ],
+        "required_arguments": [
+          "contingent_beings_exist",
+          "necessary_being_exists"
+        ]
+      },
+      "dependencies": [
+        "contingent_beings_exist",
+        "necessary_being_exists"
+      ],
+      "metadata": {
+        "tags": [
+          "contingency",
+          "sufficient reason",
+          "existential dependency"
+        ],
+        "strength": 0.8,
+        "source": "Principle of sufficient reason",
+        "attribution": [
+          "aquinas",
+          "leibniz"
+        ]
+      }
+    },
+    {
+      "id": "god_exists_first_mover",
+      "title": "God exists as the First Mover (First Way)",
+      "description": "Since a Prime Mover is necessary and first principles converge in unity, this unmoved mover is what we call God - pure actuality without potency.",
+      "conclusion": "God exists as the pure actualized being who moves all things",
+      "category": "theology",
       "level": 3,
+      "activation_conditions": {
+        "required_arguments": [
+          "prime_mover_necessary",
+          "unity_of_first_principles"
+        ]
+      },
+      "dependencies": [
+        "prime_mover_necessary",
+        "unity_of_first_principles"
+      ],
+      "metadata": {
+        "tags": [
+          "God",
+          "first mover",
+          "pure actuality",
+          "theism"
+        ],
+        "strength": 0.8,
+        "source": "Aquinas First Way",
+        "attribution": [
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "god_exists_first_cause",
+      "title": "God exists as the First Efficient Cause (Second Way)",
+      "description": "Since infinite regress is impossible and unity of first principles holds, the uncaused first cause is God - the source of all efficient causation.",
+      "conclusion": "God exists as the first uncaused cause of all effects",
+      "category": "theology",
+      "level": 3,
+      "activation_conditions": {
+        "required_arguments": [
+          "infinite_regress_impossible",
+          "unity_of_first_principles"
+        ]
+      },
+      "dependencies": [
+        "infinite_regress_impossible",
+        "unity_of_first_principles"
+      ],
+      "metadata": {
+        "tags": [
+          "God",
+          "first cause",
+          "efficient causation",
+          "theism"
+        ],
+        "strength": 0.8,
+        "source": "Aquinas Second Way",
+        "attribution": [
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "god_exists_necessary_being",
+      "title": "God exists as the Necessary Being (Third Way)",
+      "description": "Since a necessary being exists and first principles converge, this necessary being whose essence is existence is God.",
+      "conclusion": "God exists as the being whose very essence is to exist",
+      "category": "theology",
+      "level": 3,
+      "activation_conditions": {
+        "required_arguments": [
+          "necessary_being_exists",
+          "unity_of_first_principles"
+        ]
+      },
+      "dependencies": [
+        "necessary_being_exists",
+        "unity_of_first_principles"
+      ],
+      "metadata": {
+        "tags": [
+          "God",
+          "necessary being",
+          "essence",
+          "existence"
+        ],
+        "strength": 0.8,
+        "source": "Aquinas Third Way",
+        "attribution": [
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "god_exists_perfect_being",
+      "title": "God exists as the Most Perfect Being (Fourth Way)",
+      "description": "Since a supremely perfect being exists and first principles converge, this most perfect being is God - the source of all goodness and truth.",
+      "conclusion": "God exists as the most perfect being and source of all perfection",
+      "category": "theology",
+      "level": 3,
+      "activation_conditions": {
+        "required_arguments": [
+          "supreme_perfection_exists",
+          "unity_of_first_principles"
+        ]
+      },
+      "dependencies": [
+        "supreme_perfection_exists",
+        "unity_of_first_principles"
+      ],
+      "metadata": {
+        "tags": [
+          "God",
+          "perfection",
+          "goodness",
+          "truth"
+        ],
+        "strength": 0.75,
+        "source": "Aquinas Fourth Way",
+        "attribution": [
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "god_exists_intelligent_governor",
+      "title": "God exists as the Intelligent Governor (Fifth Way)",
+      "description": "Since an intelligent designer exists and first principles converge, this supreme intelligence governing natural order is God.",
+      "conclusion": "God exists as the supreme intelligence governing all natural processes",
+      "category": "theology",
+      "level": 3,
+      "activation_conditions": {
+        "required_arguments": [
+          "intelligent_designer_exists",
+          "unity_of_first_principles"
+        ]
+      },
+      "dependencies": [
+        "intelligent_designer_exists",
+        "unity_of_first_principles"
+      ],
+      "metadata": {
+        "tags": [
+          "God",
+          "intelligence",
+          "governance",
+          "natural order"
+        ],
+        "strength": 0.7,
+        "source": "Aquinas Fifth Way",
+        "attribution": [
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "naturalism_sufficient",
+      "title": "Naturalism provides sufficient explanation",
+      "description": "If material causes and natural processes can account for observed phenomena without invoking non-material principles, then naturalistic explanations are sufficient.",
+      "conclusion": "Natural processes alone can explain reality without supernatural intervention",
+      "category": "philosophy",
+      "level": 3,
+      "activation_conditions": {
+        "required_axioms": [
+          "senses_reliable",
+          "reason_discovers_truth"
+        ],
+        "forbidden_arguments": [
+          "material_insufficient_explanation"
+        ]
+      },
+      "dependencies": [],
       "metadata": {
         "tags": [
           "naturalism",
-          "scientific worldview",
-          "metaphysics"
-        ],
-        "strength": 0.7,
-        "source": "Scientific naturalism",
-        "attribution": [
           "materialism",
-          "empiricism",
-          "simons"
-        ],
-        "controversy": 0.4
-      },
-      "dependencies": [
-        "scientific_method_valid",
-        "metaphysical_realism_true"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "scientific_method_valid",
-          "metaphysical_realism_true"
-        ]
-      }
-    },
-    {
-      "id": "enlightenment_project_valid",
-      "title": "The Enlightenment project is valid",
-      "description": "If moral progress is possible and universal rationality exists, then the Enlightenment goal of using reason to improve human conditions is a valid and achievable project.",
-      "conclusion": "Reason can guide humanity toward better societies and institutions",
-      "category": "political",
-      "level": 3,
-      "metadata": {
-        "tags": [
-          "enlightenment",
-          "reason",
-          "progress"
-        ],
-        "strength": 0.7,
-        "source": "Enlightenment philosophy",
-        "attribution": [
-          "rationalism",
-          "voltaire",
-          "kant"
-        ],
-        "controversy": 0.3
-      },
-      "dependencies": [
-        "moral_progress_possible",
-        "universal_rationality_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "moral_progress_possible",
-          "universal_rationality_possible"
-        ]
-      }
-    },
-    {
-      "id": "technology_must_serve_humanity",
-      "title": "Technology must serve human dignity",
-      "description": "If prediction and control of nature is possible and universal human rights exist, then technological development should be guided by respect for human dignity and rights.",
-      "conclusion": "Technological progress must be ethically constrained",
-      "category": "ethics",
-      "level": 3,
-      "dependencies": [
-        "prediction_and_control_possible",
-        "human_rights_universal"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "prediction_and_control_possible",
-          "human_rights_universal"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "technology ethics",
-          "human dignity",
-          "responsible innovation"
-        ],
-        "strength": 0.8,
-        "source": "Technology ethics",
-        "attribution": [
-          "kant",
-          "natural_law"
-        ],
-        "controversy": 0.3
-      }
-    },
-    {
-      "id": "constitutional_democracy_optimal",
-      "title": "Constitutional democracy is optimal",
-      "description": "If legitimate government is possible and rule of law is essential, then constitutional democracies that limit power through law provide the best form of government.",
-      "conclusion": "Constitutional democratic systems best protect liberty and enable flourishing",
-      "category": "political",
-      "level": 3,
-      "metadata": {
-        "tags": [
-          "constitutional democracy",
-          "separation of powers",
-          "optimal government"
-        ],
-        "strength": 0.7,
-        "source": "Democratic constitutionalism",
-        "attribution": [
-          "social_contract",
-          "locke",
-          "rawls"
-        ],
-        "controversy": 0.3
-      },
-      "dependencies": [
-        "legitimate_government_possible",
-        "rule_of_law_essential"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "legitimate_government_possible",
-          "rule_of_law_essential"
-        ]
-      }
-    },
-    {
-      "id": "virtue_ethics_valid",
-      "title": "Virtue ethics provides moral guidance",
-      "description": "If we have ethical obligations to others and objective values exist, then cultivating virtuous character traits that align with objective values is morally important.",
-      "conclusion": "Character development and virtue cultivation are central to ethics",
-      "category": "ethics",
-      "level": 3,
-      "metadata": {
-        "tags": [
-          "virtue ethics",
-          "character",
-          "moral development"
+          "atheism",
+          "scientific explanation"
         ],
         "strength": 0.6,
-        "source": "Aristotelian virtue ethics",
+        "source": "Modern naturalism",
         "attribution": [
-          "virtue_ethics",
-          "aristotle"
-        ],
-        "controversy": 0.4
-      },
-      "dependencies": [
-        "ethical_obligations_exist",
-        "objective_values_exist"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "ethical_obligations_exist",
-          "objective_values_exist"
+          "hume",
+          "darwin",
+          "dennett"
         ]
       }
     },
     {
-      "id": "interdisciplinary_inquiry_valuable",
-      "title": "Interdisciplinary inquiry enhances understanding",
-      "description": "If philosophical inquiry has value and science discovers truths, then combining philosophical reflection with scientific investigation yields deeper understanding.",
-      "conclusion": "Philosophy and science should collaborate to address fundamental questions",
-      "category": "epistemology",
+      "id": "infinite_regress_permissible",
+      "title": "Infinite regress may be metaphysically permissible",
+      "description": "If our understanding of causation and infinity is limited, infinite causal chains might not be logically impossible, eliminating the need for a first cause.",
+      "conclusion": "Infinite causal series are metaphysically possible",
+      "category": "philosophy",
       "level": 3,
-      "metadata": {
-        "tags": [
-          "interdisciplinary",
-          "philosophy of science",
-          "collaboration"
-        ],
-        "strength": 0.8,
-        "source": "Philosophy of science",
-        "attribution": [
-          "empiricism",
-          "rationalism"
-        ],
-        "controversy": 0.2
-      },
-      "dependencies": [
-        "philosophical_inquiry_valuable",
-        "scientific_method_valid"
-      ],
       "activation_conditions": {
-        "required_arguments": [
-          "philosophical_inquiry_valuable",
-          "scientific_method_valid"
-        ]
-      }
-    },
-    {
-      "id": "scientific_realism_about_theories",
-      "title": "Scientific theories refer to real entities",
-      "description": "If natural kinds exist and universal rationality is possible, then successful scientific theories genuinely refer to real structures and entities in nature.",
-      "conclusion": "Theoretical entities postulated by science likely exist",
-      "category": "epistemology",
-      "level": 3,
-      "metadata": {
-        "tags": [
-          "scientific realism",
-          "theoretical entities",
-          "reference"
+        "required_axioms": [
+          "reason_discovers_truth"
         ],
-        "strength": 0.6,
-        "source": "Philosophy of science",
-        "attribution": [
-          "empiricism",
-          "materialism"
-        ],
-        "controversy": 0.5
-      },
-      "dependencies": [
-        "natural_kinds_exist",
-        "universal_rationality_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "natural_kinds_exist",
-          "universal_rationality_possible"
-        ]
-      }
-    },
-    {
-      "id": "secular_humanism_viable",
-      "title": "Secular humanism is a viable worldview",
-      "description": "If universal human rights exist and naturalism is well-supported, then a non-religious humanistic worldview can provide adequate moral and meaning frameworks.",
-      "conclusion": "Religious belief is not necessary for moral living and human flourishing",
-      "category": "ethics",
-      "level": 3,
-      "metadata": {
-        "tags": [
-          "secular humanism",
-          "non-religious ethics",
-          "meaning"
-        ],
-        "strength": 0.6,
-        "source": "Humanist philosophy",
-        "attribution": [
-          "utilitarianism",
-          "empiricism",
-          "voltaire"
-        ],
-        "controversy": 0.6
-      },
-      "dependencies": [
-        "ethical_obligations_exist",
-        "naturalism_well_supported"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "ethical_obligations_exist",
-          "naturalism_well_supported"
-        ]
-      }
-    },
-    {
-      "id": "democratic_governance_of_technology",
-      "title": "Technology should be democratically governed",
-      "description": "If constitutional democracy is optimal and technology must serve humanity, then democratic institutions should guide technological development and regulation.",
-      "conclusion": "Citizens should have democratic input into technological choices affecting society",
-      "category": "political",
-      "level": 3,
-      "metadata": {
-        "tags": [
-          "democratic governance",
-          "technology policy",
-          "citizen participation"
-        ],
-        "strength": 0.7,
-        "source": "Democratic theory",
-        "attribution": [
-          "social_contract",
-          "dimon"
-        ],
-        "controversy": 0.4
-      },
-      "dependencies": [
-        "constitutional_democracy_optimal",
-        "technology_must_serve_humanity"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "constitutional_democracy_optimal",
-          "technology_must_serve_humanity"
-        ]
-      }
-    },
-    {
-      "id": "practical_wisdom_cultivation",
-      "title": "Practical wisdom should be cultivated",
-      "description": "If virtue ethics provides moral guidance and interdisciplinary inquiry enhances understanding, then developing practical wisdom through broad learning is essential for good living.",
-      "conclusion": "Education should aim at developing practical wisdom, not just technical skills",
-      "category": "ethics",
-      "level": 3,
-      "dependencies": [
-        "virtue_ethics_valid",
-        "interdisciplinary_inquiry_valuable"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "virtue_ethics_valid",
-          "interdisciplinary_inquiry_valuable"
+        "forbidden_arguments": [
+          "infinite_regress_impossible"
         ]
       },
+      "dependencies": [],
       "metadata": {
         "tags": [
-          "practical wisdom",
-          "education",
-          "integrated learning"
-        ],
-        "strength": 0.7,
-        "source": "Aristotelian practical philosophy",
-        "attribution": [
-          "virtue_ethics",
-          "aristotle"
-        ],
-        "controversy": 0.3
-      }
-    },
-    {
-      "id": "artificial_consciousness_possible",
-      "title": "Artificial consciousness is theoretically possible",
-      "description": "If naturalism is well-supported and prediction/control are possible, then consciousness could theoretically be replicated in artificial systems.",
-      "conclusion": "Machines could potentially be conscious",
-      "category": "consciousness",
-      "level": 3,
-      "dependencies": [
-        "naturalism_well_supported",
-        "prediction_and_control_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "naturalism_well_supported",
-          "prediction_and_control_possible"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "artificial consciousness",
-          "AI",
-          "philosophy of mind"
-        ],
-        "strength": 0.5,
-        "source": "Computational philosophy of mind",
-        "attribution": [
-          "materialism",
-          "simons"
-        ],
-        "controversy": 0.8
-      }
-    },
-    {
-      "id": "technological_intervention_permissible",
-      "title": "Technological intervention in human nature is ethically permissible",
-      "description": "If technology must serve humanity and moral progress is possible, then using technology to improve human capabilities can be ethically justified.",
-      "conclusion": "Human enhancement through technology can be moral",
-      "category": "ethics",
-      "level": 3,
-      "dependencies": [
-        "technology_must_serve_humanity",
-        "moral_progress_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "technology_must_serve_humanity",
-          "moral_progress_possible"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "human enhancement",
-          "bioethics",
-          "technological ethics"
-        ],
-        "strength": 0.6,
-        "source": "Bioethics",
-        "attribution": [
-          "utilitarianism",
-          "mill"
-        ],
-        "controversy": 0.7
-      }
-    },
-    {
-      "id": "liberal_democracy_optimal",
-      "title": "Liberal democracy is the optimal political system",
-      "description": "If constitutional democracy is optimal and human rights are universal, then liberal democratic systems best protect individual rights while enabling collective governance.",
-      "conclusion": "Liberal democracy optimally balances individual freedom with collective coordination",
-      "category": "political",
-      "level": 3,
-      "dependencies": [
-        "constitutional_democracy_optimal",
-        "human_rights_universal"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "constitutional_democracy_optimal",
-          "human_rights_universal"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "liberal democracy",
-          "individual rights",
-          "political systems"
-        ],
-        "strength": 0.7,
-        "source": "Liberal political theory",
-        "attribution": [
-          "social_contract",
-          "locke",
-          "rawls"
-        ],
-        "controversy": 0.4
-      }
-    },
-    {
-      "id": "technological_progress_beneficial",
-      "title": "Technological progress is generally beneficial",
-      "description": "If prediction and control are possible and moral progress is achievable, then technological advancement generally improves human welfare when properly guided.",
-      "conclusion": "Technology, when ethically guided, improves human conditions",
-      "category": "epistemology",
-      "level": 3,
-      "dependencies": [
-        "prediction_and_control_possible",
-        "moral_progress_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "prediction_and_control_possible",
-          "moral_progress_possible"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "technological progress",
-          "human welfare",
-          "innovation"
-        ],
-        "strength": 0.7,
-        "source": "Philosophy of technology",
-        "attribution": [
-          "empiricism",
-          "utilitarianism",
-          "simons"
-        ],
-        "controversy": 0.3
-      }
-    },
-    {
-      "id": "effective_institutions_achievable",
-      "title": "Effective institutions are achievable",
-      "description": "If legitimate government is possible and philosophical inquiry is valuable, then human societies can design and implement effective institutions through reasoned analysis.",
-      "conclusion": "Good institutional design is possible through rational inquiry",
-      "category": "political",
-      "level": 3,
-      "dependencies": [
-        "legitimate_government_possible",
-        "philosophical_inquiry_valuable"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "legitimate_government_possible",
-          "philosophical_inquiry_valuable"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "institutional design",
-          "governance",
-          "rational planning"
-        ],
-        "strength": 0.7,
-        "source": "Institutional economics",
-        "attribution": [
-          "social_contract",
-          "dimon",
-          "rawls"
-        ],
-        "controversy": 0.3
-      }
-    },
-    {
-      "id": "objective_moral_knowledge_possible",
-      "title": "Objective moral knowledge is possible",
-      "description": "If objective values exist and universal rationality is possible, then humans can gain genuine knowledge about moral truths through rational inquiry.",
-      "conclusion": "Moral truths can be discovered through reason",
-      "category": "ethics",
-      "level": 3,
-      "dependencies": [
-        "objective_values_exist",
-        "universal_rationality_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "objective_values_exist",
-          "universal_rationality_possible"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "moral epistemology",
-          "moral knowledge",
-          "rational ethics"
-        ],
-        "strength": 0.6,
-        "source": "Moral epistemology",
-        "attribution": [
-          "virtue_ethics",
-          "natural_law",
-          "kant"
-        ],
-        "controversy": 0.5
-      }
-    },
-    {
-      "id": "mind_body_problem_solvable",
-      "title": "The mind-body problem is solvable",
-      "description": "If naturalism is well-supported and scientific method is valid, then the relationship between consciousness and physical processes can eventually be scientifically understood.",
-      "conclusion": "Science can eventually explain consciousness",
-      "category": "consciousness",
-      "level": 3,
-      "dependencies": [
-        "naturalism_well_supported",
-        "scientific_method_valid"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "naturalism_well_supported",
-          "scientific_method_valid"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "mind-body problem",
-          "consciousness",
-          "neuroscience"
-        ],
-        "strength": 0.6,
-        "source": "Philosophy of mind",
-        "attribution": [
-          "materialism",
-          "empiricism"
-        ],
-        "controversy": 0.8
-      }
-    },
-    {
-      "id": "global_cooperation_achievable",
-      "title": "Global cooperation is achievable",
-      "description": "If effective institutions are achievable and enlightenment project is valid, then international cooperation on global challenges is possible through rational institution building.",
-      "conclusion": "Humanity can cooperate effectively on global challenges",
-      "category": "political",
-      "level": 3,
-      "dependencies": [
-        "effective_institutions_achievable",
-        "enlightenment_project_valid"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "effective_institutions_achievable",
-          "enlightenment_project_valid"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "global cooperation",
-          "international institutions",
-          "collective action"
-        ],
-        "strength": 0.6,
-        "source": "International relations theory",
-        "attribution": [
-          "social_contract",
-          "utilitarianism",
-          "dimon"
-        ],
-        "controversy": 0.5
-      }
-    },
-    {
-      "id": "technological_singularity_possible",
-      "title": "Technological singularity is conceptually possible",
-      "description": "If scientific method is valid and prediction/control are possible, then rapid technological acceleration leading to superintelligence could theoretically occur.",
-      "conclusion": "Accelerating technological progress could lead to transformative AI",
-      "category": "consciousness",
-      "level": 4,
-      "dependencies": [
-        "scientific_method_valid",
-        "prediction_and_control_possible",
-        "artificial_consciousness_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "scientific_method_valid",
-          "prediction_and_control_possible",
-          "artificial_consciousness_possible"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "singularity",
-          "AI",
-          "technological acceleration"
-        ],
-        "strength": 0.5,
-        "source": "Futurism, AI research",
-        "attribution": [
-          "materialism",
-          "simons"
-        ],
-        "controversy": 0.8
-      }
-    },
-    {
-      "id": "moral_enhancement_justified",
-      "title": "Moral enhancement through technology is justified",
-      "description": "If moral progress is possible and technological intervention is permissible, then using technology to improve human moral capacities is ethically justified.",
-      "conclusion": "We should use technology to make humans more moral",
-      "category": "ethics",
-      "level": 4,
-      "dependencies": [
-        "moral_progress_possible",
-        "technological_intervention_permissible",
-        "human_nature_improvable"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "moral_progress_possible",
-          "technological_intervention_permissible"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "moral enhancement",
-          "bioethics",
-          "human improvement"
-        ],
-        "strength": 0.6,
-        "source": "Bioethics, moral psychology",
-        "attribution": [
-          "utilitarianism",
-          "mill"
-        ],
-        "controversy": 0.7
-      }
-    },
-    {
-      "id": "simulation_hypothesis_plausible",
-      "title": "Simulation hypothesis is plausible",
-      "description": "If artificial consciousness is possible and computational power grows exponentially, then advanced civilizations likely run ancestor simulations.",
-      "conclusion": "We might be living in a computer simulation",
-      "category": "metaphysics",
-      "level": 4,
-      "dependencies": [
-        "artificial_consciousness_possible",
-        "technological_singularity_possible",
-        "computational_theory_mind_correct"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "artificial_consciousness_possible",
-          "technological_singularity_possible"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "simulation hypothesis",
-          "virtual reality",
-          "computational metaphysics"
+          "infinite regress",
+          "causation",
+          "atheism",
+          "skepticism"
         ],
         "strength": 0.4,
-        "source": "Computational philosophy",
+        "source": "Modern metaphysics",
         "attribution": [
-          "materialism",
-          "simons"
-        ],
-        "controversy": 0.9
+          "hume",
+          "russell"
+        ]
       }
     },
     {
-      "id": "death_optional_future",
-      "title": "Death becomes optional through technology",
-      "description": "If scientific method is valid and biological limitations are surmountable, then aging and death could become technologically preventable.",
-      "conclusion": "Radical life extension or immortality may become achievable",
-      "category": "consciousness",
-      "level": 4,
-      "dependencies": [
-        "scientific_method_valid",
-        "biological_limitations_surmountable",
-        "technological_intervention_permissible"
-      ],
+      "id": "evil_disproves_perfect_god",
+      "title": "The existence of evil disproves a perfect God",
+      "description": "If we observe suffering and evil in the world, and a perfect God would prevent gratuitous evil, then a perfectly good and omnipotent God does not exist.",
+      "conclusion": "The reality of evil is incompatible with God's existence",
+      "category": "philosophy",
+      "level": 3,
       "activation_conditions": {
-        "required_arguments": [
-          "scientific_method_valid",
-          "technological_intervention_permissible"
+        "required_axioms": [
+          "senses_reliable",
+          "reason_discovers_truth"
+        ],
+        "forbidden_arguments": [
+          "god_exists_perfect_being"
         ]
       },
+      "dependencies": [],
       "metadata": {
         "tags": [
-          "life extension",
+          "problem of evil",
+          "suffering",
+          "atheism",
+          "theodicy"
+        ],
+        "strength": 0.7,
+        "source": "Problem of evil tradition",
+        "attribution": [
+          "epicurus",
+          "hume",
+          "mackie"
+        ]
+      }
+    },
+    {
+      "id": "design_appearance_explained_naturally",
+      "title": "Apparent design explained by natural selection",
+      "description": "If natural processes like evolution can account for apparent teleological order without intelligent design, then an intelligent designer is unnecessary.",
+      "conclusion": "Apparent design in nature results from natural processes, not intelligence",
+      "category": "philosophy",
+      "level": 3,
+      "activation_conditions": {
+        "required_axioms": [
+          "senses_reliable",
+          "reason_discovers_truth"
+        ],
+        "forbidden_arguments": [
+          "intelligent_designer_exists"
+        ]
+      },
+      "dependencies": [],
+      "metadata": {
+        "tags": [
+          "evolution",
+          "natural selection",
+          "atheism",
+          "design"
+        ],
+        "strength": 0.75,
+        "source": "Evolutionary theory",
+        "attribution": [
+          "darwin",
+          "dawkins",
+          "dennett"
+        ]
+      }
+    },
+    {
+      "id": "contingency_unexplained_acceptable",
+      "title": "Contingent existence may require no explanation",
+      "description": "If the principle of sufficient reason is not universally valid, or if existence itself is a brute fact, then contingent reality need not require explanation by a necessary being.",
+      "conclusion": "Contingent existence can be accepted as a brute fact without explanation",
+      "category": "philosophy",
+      "level": 3,
+      "activation_conditions": {
+        "required_axioms": [
+          "reason_discovers_truth"
+        ],
+        "forbidden_arguments": [
+          "contingency_requires_explanation"
+        ]
+      },
+      "dependencies": [],
+      "metadata": {
+        "tags": [
+          "brute fact",
+          "contingency",
+          "atheism",
+          "skepticism"
+        ],
+        "strength": 0.5,
+        "source": "Logical positivism",
+        "attribution": [
+          "russell",
+          "hume",
+          "ayer"
+        ]
+      }
+    },
+    {
+      "id": "divine_providence_governs",
+      "title": "Divine providence governs the universe",
+      "description": "If God exists as the intelligent governor and perfect being, then divine providence directs all events toward their proper ends according to divine wisdom.",
+      "conclusion": "All events are ultimately ordered by divine providence toward good ends",
+      "category": "theology",
+      "level": 4,
+      "activation_conditions": {
+        "required_arguments": [
+          "god_exists_intelligent_governor",
+          "god_exists_perfect_being"
+        ]
+      },
+      "dependencies": [
+        "god_exists_intelligent_governor",
+        "god_exists_perfect_being"
+      ],
+      "metadata": {
+        "tags": [
+          "providence",
+          "divine governance",
+          "teleology",
+          "theism"
+        ],
+        "strength": 0.8,
+        "source": "Thomistic theology",
+        "attribution": [
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "natural_law_from_eternal_law",
+      "title": "Natural law derives from eternal law",
+      "description": "If God exists as the intelligent governor and natural teleology is real, then moral principles accessible to human reason derive from God's eternal law.",
+      "conclusion": "Objective moral law has its foundation in divine eternal law",
+      "category": "ethics",
+      "level": 4,
+      "activation_conditions": {
+        "required_arguments": [
+          "god_exists_intelligent_governor",
+          "natural_teleology"
+        ]
+      },
+      "dependencies": [
+        "god_exists_intelligent_governor"
+      ],
+      "metadata": {
+        "tags": [
+          "natural law",
+          "eternal law",
+          "moral theology",
+          "objective morality"
+        ],
+        "strength": 0.75,
+        "source": "Thomistic moral theory",
+        "attribution": [
+          "aquinas"
+        ]
+      }
+    },
+    {
+      "id": "human_soul_immortal",
+      "title": "The human soul is immortal",
+      "description": "If God exists as perfect being and humans have rational capacities transcending material processes, then the human soul, being spiritual, is naturally immortal.",
+      "conclusion": "Human souls survive bodily death and are naturally immortal",
+      "category": "anthropology",
+      "level": 4,
+      "activation_conditions": {
+        "required_arguments": [
+          "god_exists_perfect_being",
+          "material_insufficient_explanation"
+        ]
+      },
+      "dependencies": [
+        "god_exists_perfect_being",
+        "material_insufficient_explanation"
+      ],
+      "metadata": {
+        "tags": [
           "immortality",
-          "transhumanism"
-        ],
-        "strength": 0.5,
-        "source": "Transhumanist philosophy",
-        "attribution": [
-          "materialism",
-          "simons"
-        ],
-        "controversy": 0.8
-      }
-    },
-    {
-      "id": "human_nature_improvable",
-      "title": "Human nature is improvable through technology",
-      "description": "If technological intervention is permissible and scientific method is valid, then human biological and psychological limitations can be technologically overcome.",
-      "conclusion": "Humans can transcend natural limitations through technology",
-      "category": "consciousness",
-      "level": 4,
-      "dependencies": [
-        "technological_intervention_permissible",
-        "scientific_method_valid"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "technological_intervention_permissible",
-          "scientific_method_valid"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "human enhancement",
-          "transhumanism",
-          "biological limits"
-        ],
-        "strength": 0.6,
-        "source": "Transhumanist philosophy",
-        "attribution": [
-          "materialism",
-          "simons"
-        ],
-        "controversy": 0.7
-      }
-    },
-    {
-      "id": "technological_unemployment_inevitable",
-      "title": "Technological unemployment becomes inevitable",
-      "description": "If artificial consciousness is possible and technological progress is beneficial, then advanced AI will eventually automate most human jobs.",
-      "conclusion": "Most current jobs will be automated by advanced AI",
-      "category": "political",
-      "level": 4,
-      "dependencies": [
-        "artificial_consciousness_possible",
-        "technological_progress_beneficial"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "artificial_consciousness_possible",
-          "technological_progress_beneficial"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "automation",
-          "unemployment",
-          "economic disruption"
+          "soul",
+          "human nature",
+          "spiritual substance"
         ],
         "strength": 0.7,
-        "source": "Economics of automation",
+        "source": "Thomistic anthropology",
         "attribution": [
-          "empiricism",
-          "simons"
-        ],
-        "controversy": 0.5
+          "aquinas"
+        ]
       }
     },
     {
-      "id": "economic_systems_reformable",
-      "title": "Economic systems can be reformed",
-      "description": "If effective institutions are achievable and global cooperation is possible, then economic systems can be reformed to address technological disruption.",
-      "conclusion": "Economic institutions can adapt to technological change",
-      "category": "political",
+      "id": "ultimate_purpose_exists",
+      "title": "Human life has ultimate purpose",
+      "description": "If God exists as the intelligent governor and natural teleology is real, then human existence is directed toward union with God as its ultimate end.",
+      "conclusion": "Human life finds its ultimate purpose in relationship with God",
+      "category": "anthropology",
       "level": 4,
-      "dependencies": [
-        "effective_institutions_achievable",
-        "global_cooperation_achievable"
-      ],
       "activation_conditions": {
         "required_arguments": [
-          "effective_institutions_achievable",
-          "global_cooperation_achievable"
+          "god_exists_intelligent_governor",
+          "natural_teleology"
         ]
       },
+      "dependencies": [
+        "god_exists_intelligent_governor"
+      ],
       "metadata": {
         "tags": [
-          "economic reform",
-          "institutional change",
-          "adaptation"
+          "ultimate purpose",
+          "human destiny",
+          "beatific vision",
+          "teleology"
         ],
-        "strength": 0.7,
-        "source": "Institutional economics",
+        "strength": 0.75,
+        "source": "Thomistic theology",
         "attribution": [
-          "social_contract",
-          "dimon"
-        ],
-        "controversy": 0.4
+          "aquinas"
+        ]
       }
     },
     {
-      "id": "consequentialist_ethics_correct",
-      "title": "Consequentialist ethics is fundamentally correct",
-      "description": "If objective moral knowledge is possible and suffering matters morally, then moral rightness depends primarily on outcomes and consequences.",
-      "conclusion": "Actions should be judged primarily by their consequences",
-      "category": "ethics",
+      "id": "evil_permits_greater_good",
+      "title": "God permits evil for greater good",
+      "description": "If God exists as perfect being and divine providence governs, then evil is permitted only insofar as it serves some greater good that could not otherwise be achieved.",
+      "conclusion": "All evil permitted by God ultimately serves a greater good",
+      "category": "theology",
       "level": 4,
-      "dependencies": [
-        "objective_moral_knowledge_possible",
-        "harm_prevention_matters"
-      ],
       "activation_conditions": {
         "required_arguments": [
-          "objective_moral_knowledge_possible",
-          "harm_prevention_matters"
+          "god_exists_perfect_being",
+          "divine_providence_governs"
+        ],
+        "forbidden_arguments": [
+          "evil_disproves_perfect_god"
         ]
       },
+      "dependencies": [
+        "divine_providence_governs"
+      ],
       "metadata": {
         "tags": [
-          "consequentialism",
-          "moral theory",
-          "utilitarian ethics"
+          "theodicy",
+          "greater good",
+          "divine permission",
+          "evil"
         ],
-        "strength": 0.6,
-        "source": "Utilitarian moral theory",
+        "strength": 0.65,
+        "source": "Thomistic theodicy",
         "attribution": [
-          "utilitarianism",
-          "mill"
-        ],
-        "controversy": 0.6
+          "aquinas"
+        ]
       }
     },
     {
-      "id": "future_generations_matter",
-      "title": "Future generations have moral worth",
-      "description": "If universal human rights exist and consequentialist ethics is correct, then future people have equal moral standing to present people.",
-      "conclusion": "We have moral obligations to future generations",
-      "category": "ethics",
+      "id": "reality_purely_material",
+      "title": "Reality is purely material",
+      "description": "If naturalism is sufficient and design appears naturally explained, then reality consists entirely of material substances governed by natural laws without supernatural elements.",
+      "conclusion": "The universe is entirely material with no spiritual or supernatural reality",
+      "category": "metaphysics",
       "level": 4,
-      "dependencies": [
-        "human_rights_universal",
-        "consequentialist_ethics_correct"
-      ],
       "activation_conditions": {
         "required_arguments": [
-          "human_rights_universal",
-          "consequentialist_ethics_correct"
+          "naturalism_sufficient",
+          "design_appearance_explained_naturally"
         ]
       },
-      "metadata": {
-        "tags": [
-          "intergenerational justice",
-          "future ethics",
-          "moral worth"
-        ],
-        "strength": 0.8,
-        "source": "Intergenerational ethics",
-        "attribution": [
-          "utilitarianism",
-          "rawls"
-        ],
-        "controversy": 0.3
-      }
-    },
-    {
-      "id": "long_term_consequences_knowable",
-      "title": "Long-term consequences are partially knowable",
-      "description": "If scientific method is valid and prediction/control are possible, then we can make reasonable predictions about long-term consequences of present actions.",
-      "conclusion": "Long-term planning based on evidence is possible",
-      "category": "epistemology",
-      "level": 4,
       "dependencies": [
-        "scientific_method_valid",
-        "prediction_and_control_possible"
+        "naturalism_sufficient"
       ],
-      "activation_conditions": {
-        "required_arguments": [
-          "scientific_method_valid",
-          "prediction_and_control_possible"
-        ]
-      },
       "metadata": {
         "tags": [
-          "long-term prediction",
-          "forecasting",
-          "evidence-based planning"
-        ],
-        "strength": 0.7,
-        "source": "Forecasting and planning theory",
-        "attribution": [
-          "empiricism",
-          "simons"
-        ],
-        "controversy": 0.4
-      }
-    },
-    {
-      "id": "computational_theory_mind_correct",
-      "title": "Computational theory of mind is correct",
-      "description": "If mind-body problem is solvable and artificial consciousness is possible, then mental processes are fundamentally computational in nature.",
-      "conclusion": "Minds are essentially information processing systems",
-      "category": "consciousness",
-      "level": 4,
-      "dependencies": [
-        "mind_body_problem_solvable",
-        "artificial_consciousness_possible"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "mind_body_problem_solvable",
-          "artificial_consciousness_possible"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "computational mind",
-          "cognitive science",
-          "information processing"
-        ],
-        "strength": 0.6,
-        "source": "Cognitive science",
-        "attribution": [
           "materialism",
-          "simons"
-        ],
-        "controversy": 0.7
-      }
-    },
-    {
-      "id": "global_coordination_problems",
-      "title": "Global coordination problems require institutional solutions",
-      "description": "If global cooperation is achievable but natural coordination fails, then explicit institutional mechanisms are needed for global challenges.",
-      "conclusion": "Global problems need institutional solutions",
-      "category": "political",
-      "level": 4,
-      "dependencies": [
-        "global_cooperation_achievable"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "global_cooperation_achievable"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "global governance",
-          "coordination problems",
-          "institutional solutions"
-        ],
-        "strength": 0.8,
-        "source": "International relations theory",
-        "attribution": [
-          "social_contract",
-          "dimon"
-        ],
-        "controversy": 0.3
-      }
-    },
-    {
-      "id": "international_cooperation_possible",
-      "title": "International cooperation is possible",
-      "description": "If global cooperation is achievable and liberal democracy is optimal, then democratic nations can cooperate effectively on global challenges.",
-      "conclusion": "Democratic nations can solve global problems together",
-      "category": "political",
-      "level": 4,
-      "dependencies": [
-        "global_cooperation_achievable",
-        "liberal_democracy_optimal"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "global_cooperation_achievable",
-          "liberal_democracy_optimal"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "international cooperation",
-          "democratic peace",
-          "multilateralism"
+          "physicalism",
+          "atheism",
+          "naturalism"
         ],
         "strength": 0.7,
-        "source": "Democratic peace theory",
+        "source": "Metaphysical naturalism",
         "attribution": [
-          "social_contract",
-          "locke"
-        ],
-        "controversy": 0.4
+          "dennett",
+          "churchland"
+        ]
       }
     },
     {
-      "id": "biological_limitations_surmountable",
-      "title": "Biological limitations are surmountable",
-      "description": "If human nature is improvable and scientific method is valid, then aging, disease, and death could eventually be overcome through technology.",
-      "conclusion": "Technology can overcome biological constraints",
-      "category": "consciousness",
+      "id": "no_ultimate_purpose",
+      "title": "Human existence has no ultimate purpose",
+      "description": "If reality is purely material and contingent existence requires no explanation, then human life has no inherent purpose beyond what humans create for themselves.",
+      "conclusion": "Human existence has no objective ultimate purpose or meaning",
+      "category": "philosophy",
       "level": 4,
-      "dependencies": [
-        "human_nature_improvable",
-        "scientific_method_valid"
-      ],
       "activation_conditions": {
         "required_arguments": [
-          "human_nature_improvable",
-          "scientific_method_valid"
+          "reality_purely_material",
+          "contingency_unexplained_acceptable"
         ]
       },
-      "metadata": {
-        "tags": [
-          "life extension",
-          "biological enhancement",
-          "medical technology"
-        ],
-        "strength": 0.5,
-        "source": "Medical futurism",
-        "attribution": [
-          "materialism",
-          "empiricism"
-        ],
-        "controversy": 0.8
-      }
-    },
-    {
-      "id": "cosmic_purpose_absent",
-      "title": "The universe lacks inherent purpose",
-      "description": "If naturalism is well-supported and scientific method reveals no cosmic teleology, then the universe operates without inherent purpose or meaning.",
-      "conclusion": "The universe is purposeless at the cosmic level",
-      "category": "consciousness",
-      "level": 4,
       "dependencies": [
-        "naturalism_well_supported",
-        "scientific_method_valid"
+        "reality_purely_material"
       ],
-      "activation_conditions": {
-        "required_arguments": [
-          "naturalism_well_supported",
-          "scientific_method_valid"
-        ]
-      },
       "metadata": {
         "tags": [
-          "cosmic purpose",
-          "nihilism",
-          "naturalistic worldview"
-        ],
-        "strength": 0.7,
-        "source": "Naturalistic philosophy",
-        "attribution": [
-          "materialism",
-          "empiricism"
-        ],
-        "controversy": 0.6
-      }
-    },
-    {
-      "id": "existential_authenticity_possible",
-      "title": "Existential authenticity is possible",
-      "description": "If choices exist and values guide choices, then individuals can live authentically according to their self-chosen values and commitments.",
-      "conclusion": "People can live authentic, self-directed lives",
-      "category": "consciousness",
-      "level": 4,
-      "dependencies": [
-        "values_guide_choices"
-      ],
-      "activation_conditions": {
-        "required_arguments": [
-          "values_guide_choices"
-        ]
-      },
-      "metadata": {
-        "tags": [
-          "authenticity",
+          "meaninglessness",
           "existentialism",
-          "self-direction"
+          "atheism",
+          "nihilism"
         ],
-        "strength": 0.8,
+        "strength": 0.65,
         "source": "Existentialist philosophy",
         "attribution": [
-          "existentialism"
-        ],
-        "controversy": 0.3
+          "sartre",
+          "camus"
+        ]
       }
     },
     {
-      "id": "consciousness_causal_powers",
-      "title": "Consciousness has causal powers",
-      "description": "If artificial consciousness is possible and mind-body problem is solvable, then conscious states can causally influence physical processes.",
-      "conclusion": "Consciousness makes a causal difference in the world",
-      "category": "consciousness",
+      "id": "morality_socially_constructed",
+      "title": "Morality is socially constructed",
+      "description": "If reality is purely material and no ultimate purpose exists, then moral principles are human constructions rather than objective features of reality.",
+      "conclusion": "Moral values are social conventions without objective foundation",
+      "category": "ethics",
       "level": 4,
-      "dependencies": [
-        "artificial_consciousness_possible",
-        "mind_body_problem_solvable"
-      ],
       "activation_conditions": {
         "required_arguments": [
-          "artificial_consciousness_possible",
-          "mind_body_problem_solvable"
+          "reality_purely_material",
+          "no_ultimate_purpose"
+        ],
+        "forbidden_arguments": [
+          "natural_law_from_eternal_law"
         ]
       },
+      "dependencies": [
+        "reality_purely_material"
+      ],
       "metadata": {
         "tags": [
-          "consciousness",
-          "causal efficacy",
-          "mental causation"
+          "moral relativism",
+          "social construction",
+          "atheistic ethics"
         ],
         "strength": 0.6,
-        "source": "Philosophy of mind",
+        "source": "Moral relativism",
         "attribution": [
-          "materialism"
-        ],
-        "controversy": 0.7
+          "nietzsche",
+          "ayer"
+        ]
       }
     },
     {
-      "id": "physical_processes_sufficient_consciousness",
-      "title": "Physical processes are sufficient for consciousness",
-      "description": "If computational theory of mind is correct and naturalism is well-supported, then appropriate physical processes are sufficient to generate consciousness.",
-      "conclusion": "Consciousness emerges from purely physical processes",
-      "category": "consciousness",
+      "id": "consciousness_eliminable",
+      "title": "Consciousness is reducible to brain states",
+      "description": "If reality is purely material and naturalism is sufficient, then consciousness and mental phenomena are entirely reducible to physical brain processes.",
+      "conclusion": "Consciousness has no independent reality beyond material brain states",
+      "category": "philosophy",
       "level": 4,
-      "dependencies": [
-        "computational_theory_mind_correct",
-        "naturalism_well_supported"
-      ],
       "activation_conditions": {
         "required_arguments": [
-          "computational_theory_mind_correct",
-          "naturalism_well_supported"
+          "reality_purely_material",
+          "naturalism_sufficient"
         ]
       },
+      "dependencies": [
+        "reality_purely_material"
+      ],
       "metadata": {
         "tags": [
-          "physicalism",
           "consciousness",
-          "emergence"
+          "reductionism",
+          "materialism",
+          "mind-brain identity"
         ],
-        "strength": 0.7,
-        "source": "Physicalist philosophy of mind",
+        "strength": 0.6,
+        "source": "Eliminative materialism",
         "attribution": [
-          "materialism"
+          "churchland",
+          "dennett"
+        ]
+      }
+    },
+    {
+      "id": "death_is_final",
+      "title": "Death is the final end of personal existence",
+      "description": "If consciousness is reducible to brain states and reality is purely material, then personal existence ends completely with biological death.",
+      "conclusion": "There is no survival of personal identity after death",
+      "category": "anthropology",
+      "level": 4,
+      "activation_conditions": {
+        "required_arguments": [
+          "consciousness_eliminable",
+          "reality_purely_material"
         ],
-        "controversy": 0.6
+        "forbidden_arguments": [
+          "human_soul_immortal"
+        ]
+      },
+      "dependencies": [
+        "consciousness_eliminable"
+      ],
+      "metadata": {
+        "tags": [
+          "mortality",
+          "finitude",
+          "personal identity",
+          "atheism"
+        ],
+        "strength": 0.75,
+        "source": "Materialist anthropology",
+        "attribution": [
+          "epicurus",
+          "lucretius"
+        ]
+      }
+    },
+    {
+      "id": "ultimate_questions_unanswerable",
+      "title": "Ultimate metaphysical questions are unanswerable",
+      "description": "If both theistic and atheistic arguments have significant weaknesses, and human reason has limitations, then ultimate questions about God's existence may be beyond human knowledge.",
+      "conclusion": "We cannot know with certainty whether God exists or not",
+      "category": "epistemology",
+      "level": 4,
+      "activation_conditions": {
+        "required_axioms": [
+          "reason_discovers_truth"
+        ],
+        "required_arguments": [
+          "evil_disproves_perfect_god",
+          "infinite_regress_permissible"
+        ],
+        "forbidden_arguments": [
+          "god_exists_first_cause",
+          "naturalism_sufficient"
+        ]
+      },
+      "dependencies": [],
+      "metadata": {
+        "tags": [
+          "agnosticism",
+          "skepticism",
+          "epistemic humility",
+          "limits of reason"
+        ],
+        "strength": 0.5,
+        "source": "Agnostic tradition",
+        "attribution": [
+          "huxley",
+          "kant"
+        ]
       }
     }
   ],
   "edges": [
     {
-      "id": "existence_logic_to_objective_reality",
+      "id": "existence_to_external_world",
       "fromNode": "something_exists",
-      "toNode": "objective_reality_exists",
+      "toNode": "external_world_exists",
       "fromType": "axiom",
       "toType": "argument",
       "relation": {
         "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "If something exists, logic suggests there's an objective reality"
-    },
-    {
-      "id": "logic_to_objective_reality",
-      "fromNode": "logic_works",
-      "toNode": "objective_reality_exists",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Logic provides the reasoning framework for objective reality"
-    },
-    {
-      "id": "patterns_to_knowledge",
-      "fromNode": "patterns_exist",
-      "toNode": "knowledge_is_possible",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Patterns provide the basis for reliable knowledge"
-    },
-    {
-      "id": "reasoning_to_knowledge",
-      "fromNode": "minds_can_reason",
-      "toNode": "knowledge_is_possible",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Reasoning ability enables knowledge acquisition"
-    },
-    {
-      "id": "differences_to_moral_facts",
-      "fromNode": "differences_matter",
-      "toNode": "moral_facts_exist",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "If differences matter, moral distinctions are real"
-    },
-    {
-      "id": "suffering_to_moral_facts",
-      "fromNode": "suffering_exists",
-      "toNode": "moral_facts_exist",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Suffering creates objective moral facts about what matters"
-    },
-    {
-      "id": "consequences_to_responsibility",
-      "fromNode": "actions_have_consequences",
-      "toNode": "moral_responsibility_exists",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Consequences make responsibility possible"
-    },
-    {
-      "id": "choice_to_responsibility",
-      "fromNode": "choice_exists",
-      "toNode": "moral_responsibility_exists",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Choice is necessary for moral responsibility"
-    },
-    {
-      "id": "communication_to_discourse",
-      "fromNode": "communication_possible",
-      "toNode": "rational_discourse_possible",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Communication enables rational discourse"
-    },
-    {
-      "id": "reasoning_to_discourse",
-      "fromNode": "minds_can_reason",
-      "toNode": "rational_discourse_possible",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Reasoning ability makes discourse rational"
-    },
-    {
-      "id": "cooperation_to_contracts",
-      "fromNode": "cooperation_possible",
-      "toNode": "social_contracts_possible",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Cooperation enables social agreements"
-    },
-    {
-      "id": "consequences_to_contracts",
-      "fromNode": "actions_have_consequences",
-      "toNode": "social_contracts_possible",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Consequences make agreements meaningful"
-    },
-    {
-      "id": "patterns_to_causal_laws",
-      "fromNode": "patterns_exist",
-      "toNode": "causal_laws_exist",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Patterns suggest underlying causal laws"
-    },
-    {
-      "id": "consequences_to_causal_laws",
-      "fromNode": "actions_have_consequences",
-      "toNode": "causal_laws_exist",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Consequences demonstrate causal relationships"
-    },
-    {
-      "id": "existence_to_stable_reality",
-      "fromNode": "something_exists",
-      "toNode": "stable_reality_exists",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Existence implies some stable structure"
-    },
-    {
-      "id": "patterns_to_stable_reality",
-      "fromNode": "patterns_exist",
-      "toNode": "stable_reality_exists",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Patterns require stable underlying reality"
-    },
-    {
-      "id": "choice_to_values",
-      "fromNode": "choice_exists",
-      "toNode": "values_guide_choices",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Choice enables value-based decision making"
-    },
-    {
-      "id": "differences_to_values",
-      "fromNode": "differences_matter",
-      "toNode": "values_guide_choices",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Meaningful differences create values"
-    },
-    {
-      "id": "suffering_to_harm_prevention",
-      "fromNode": "suffering_exists",
-      "toNode": "harm_prevention_matters",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Real suffering makes harm prevention important"
-    },
-    {
-      "id": "consequences_to_harm_prevention",
-      "fromNode": "actions_have_consequences",
-      "toNode": "harm_prevention_matters",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Consequences mean we can prevent harm"
-    },
-    {
-      "id": "logic_to_shared_reasoning",
-      "fromNode": "logic_works",
-      "toNode": "shared_reasoning_possible",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Logic provides universal reasoning standards"
-    },
-    {
-      "id": "communication_to_shared_reasoning",
-      "fromNode": "communication_possible",
-      "toNode": "shared_reasoning_possible",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Communication enables shared reasoning"
-    },
-    {
-      "id": "cooperation_to_justice",
-      "fromNode": "cooperation_possible",
-      "toNode": "justice_possible",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Cooperation enables just institutions"
-    },
-    {
-      "id": "knowledge_reality_to_science",
-      "fromNode": "knowledge_is_possible",
-      "toNode": "scientific_method_valid",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Knowledge and objective reality enable scientific method"
-    },
-    {
-      "id": "objective_reality_to_science",
-      "fromNode": "objective_reality_exists",
-      "toNode": "scientific_method_valid",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Objective reality is what science studies"
-    },
-    {
-      "id": "moral_facts_to_progress",
-      "fromNode": "moral_facts_exist",
-      "toNode": "moral_progress_possible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Moral facts enable genuine moral progress"
-    },
-    {
-      "id": "discourse_to_moral_progress",
-      "fromNode": "rational_discourse_possible",
-      "toNode": "moral_progress_possible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Rational discourse enables moral progress"
-    },
-    {
-      "id": "causal_laws_to_prediction",
-      "fromNode": "causal_laws_exist",
-      "toNode": "prediction_and_control_possible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Causal laws enable prediction and control"
-    },
-    {
-      "id": "knowledge_to_prediction",
-      "fromNode": "knowledge_is_possible",
-      "toNode": "prediction_and_control_possible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Knowledge enables prediction and control"
-    },
-    {
-      "id": "justice_to_government",
-      "fromNode": "justice_possible",
-      "toNode": "legitimate_government_possible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Justice enables legitimate government"
-    },
-    {
-      "id": "contracts_to_government",
-      "fromNode": "social_contracts_possible",
-      "toNode": "legitimate_government_possible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Social contracts create legitimate authority"
-    },
-    {
-      "id": "responsibility_to_obligations",
-      "fromNode": "moral_responsibility_exists",
-      "toNode": "ethical_obligations_exist",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Responsibility creates ethical obligations"
-    },
-    {
-      "id": "harm_prevention_to_obligations",
-      "fromNode": "harm_prevention_matters",
-      "toNode": "ethical_obligations_exist",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Harm prevention is an ethical obligation"
-    },
-    {
-      "id": "objective_stable_to_realism",
-      "fromNode": "objective_reality_exists",
-      "toNode": "metaphysical_realism_true",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.9
-      },
-      "explanation": "Objective stable reality supports metaphysical realism"
-    },
-    {
-      "id": "stable_to_realism",
-      "fromNode": "stable_reality_exists",
-      "toNode": "metaphysical_realism_true",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Stable reality supports realism"
-    },
-    {
-      "id": "values_choices_to_objective_values",
-      "fromNode": "values_guide_choices",
-      "toNode": "objective_values_exist",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.7
-      },
-      "explanation": "Value-guided choices suggest objective values"
-    },
-    {
-      "id": "moral_facts_to_objective_values",
-      "fromNode": "moral_facts_exist",
-      "toNode": "objective_values_exist",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Moral facts imply objective values"
-    },
-    {
-      "id": "shared_reasoning_to_universal",
-      "fromNode": "shared_reasoning_possible",
-      "toNode": "universal_rationality_possible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Shared reasoning enables universal rationality"
-    },
-    {
-      "id": "knowledge_to_universal_rationality",
-      "fromNode": "knowledge_is_possible",
-      "toNode": "universal_rationality_possible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.7
-      },
-      "explanation": "Knowledge supports universal rational standards"
-    },
-    {
-      "id": "discourse_to_philosophy",
-      "fromNode": "rational_discourse_possible",
-      "toNode": "philosophical_inquiry_valuable",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Rational discourse makes philosophy valuable"
-    },
-    {
-      "id": "moral_progress_to_philosophy",
-      "fromNode": "moral_progress_possible",
-      "toNode": "philosophical_inquiry_valuable",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.7
-      },
-      "explanation": "Moral progress validates philosophical inquiry"
-    },
-    {
-      "id": "stable_causal_to_natural_kinds",
-      "fromNode": "stable_reality_exists",
-      "toNode": "natural_kinds_exist",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.7
-      },
-      "explanation": "Stable reality with causal laws suggests natural kinds"
-    },
-    {
-      "id": "causal_laws_to_natural_kinds",
-      "fromNode": "causal_laws_exist",
-      "toNode": "natural_kinds_exist",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.6
-      },
-      "explanation": "Causal laws organize reality into natural kinds"
-    },
-    {
-      "id": "contracts_to_rule_of_law",
-      "fromNode": "social_contracts_possible",
-      "toNode": "rule_of_law_essential",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Social contracts require rule of law"
-    },
-    {
-      "id": "government_to_rule_of_law",
-      "fromNode": "legitimate_government_possible",
-      "toNode": "rule_of_law_essential",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Legitimate government requires rule of law"
-    },
-    {
-      "id": "obligations_to_rights",
-      "fromNode": "ethical_obligations_exist",
-      "toNode": "human_rights_universal",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Ethical obligations create universal rights"
-    },
-    {
-      "id": "government_to_rights",
-      "fromNode": "legitimate_government_possible",
-      "toNode": "human_rights_universal",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.7
-      },
-      "explanation": "Legitimate government must protect rights"
-    },
-    {
-      "id": "science_realism_to_naturalism",
-      "fromNode": "scientific_method_valid",
-      "toNode": "naturalism_well_supported",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Valid science and realism support naturalism"
-    },
-    {
-      "id": "realism_to_naturalism",
-      "fromNode": "metaphysical_realism_true",
-      "toNode": "naturalism_well_supported",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.7
-      },
-      "explanation": "Metaphysical realism supports naturalistic worldview"
-    },
-    {
-      "id": "progress_rationality_to_enlightenment",
-      "fromNode": "moral_progress_possible",
-      "toNode": "enlightenment_project_valid",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Moral progress and rationality validate Enlightenment"
-    },
-    {
-      "id": "rationality_to_enlightenment",
-      "fromNode": "universal_rationality_possible",
-      "toNode": "enlightenment_project_valid",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.7
-      },
-      "explanation": "Universal rationality enables Enlightenment project"
-    },
-    {
-      "id": "prediction_rights_to_tech_ethics",
-      "fromNode": "prediction_and_control_possible",
-      "toNode": "technology_must_serve_humanity",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Technological power must respect human rights"
-    },
-    {
-      "id": "rights_to_tech_ethics",
-      "fromNode": "human_rights_universal",
-      "toNode": "technology_must_serve_humanity",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Human rights constrain technology"
-    },
-    {
-      "id": "government_law_to_democracy",
-      "fromNode": "legitimate_government_possible",
-      "toNode": "constitutional_democracy_optimal",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8
-      },
-      "explanation": "Legitimate government with rule of law supports democracy"
-    },
-    {
-      "id": "rule_of_law_to_democracy",
-      "fromNode": "rule_of_law_essential",
-      "toNode": "constitutional_democracy_optimal",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.7
-      },
-      "explanation": "Rule of law is essential for constitutional democracy"
-    },
-    {
-      "id": "something_exists_supports_patterns",
-      "fromNode": "something_exists",
-      "toNode": "patterns_exist",
-      "fromType": "axiom",
-      "toType": "axiom",
-      "relation": {
-        "type": "supports",
-        "strength": 0.7,
-        "bidirectional": false
-      },
-      "explanation": "If something exists, then patterns and regularities can exist within that reality",
-      "metadata": {
-        "difficulty": "basic"
+        "strength": 0.8,
+        "description": "Existence of self supports external world reality"
       }
     },
     {
-      "id": "logic_supports_reasoning",
-      "fromNode": "logic_works",
-      "toNode": "minds_can_reason",
+      "id": "causation_to_causal_series",
+      "fromNode": "causation_principle",
+      "toNode": "causal_series_exist",
       "fromType": "axiom",
-      "toType": "axiom",
+      "toType": "argument",
       "relation": {
-        "type": "supports",
+        "type": "implies",
         "strength": 0.9,
-        "bidirectional": false
-      },
-      "explanation": "If logic is reliable, then minds using logic can produce better reasoning",
-      "metadata": {
-        "difficulty": "basic"
+        "description": "Principle of causation implies causal series in nature"
       }
     },
     {
-      "id": "patterns_enable_communication",
-      "fromNode": "patterns_exist",
-      "toNode": "communication_possible",
+      "id": "change_to_act_potency",
+      "fromNode": "change_occurs",
+      "toNode": "actual_vs_potential",
       "fromType": "axiom",
-      "toType": "axiom",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.85,
+        "description": "Observed change implies act/potency distinction"
+      }
+    },
+    {
+      "id": "perfection_to_hierarchy",
+      "fromNode": "degrees_of_perfection",
+      "toNode": "hierarchy_of_being",
+      "fromType": "axiom",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.8,
+        "description": "Degrees of perfection establish hierarchy of being"
+      }
+    },
+    {
+      "id": "teleology_to_natural_order",
+      "fromNode": "teleological_order",
+      "toNode": "natural_teleology",
+      "fromType": "axiom",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.75,
+        "description": "Teleological order implies natural purposiveness"
+      }
+    },
+    {
+      "id": "causation_to_no_regress",
+      "fromNode": "efficient_causation",
+      "toNode": "infinite_regress_impossible",
+      "fromType": "argument",
+      "toType": "argument",
       "relation": {
         "type": "supports",
         "strength": 0.8,
-        "bidirectional": false
-      },
-      "explanation": "Patterns and regularities in language and meaning enable communication between minds",
-      "metadata": {
-        "difficulty": "intermediate"
+        "description": "Efficient causation supports impossibility of infinite regress"
       }
     },
     {
-      "id": "reasoning_enables_choice",
-      "fromNode": "minds_can_reason",
-      "toNode": "choice_exists",
-      "fromType": "axiom",
-      "toType": "axiom",
+      "id": "act_potency_to_prime_mover",
+      "fromNode": "actual_vs_potential",
+      "toNode": "prime_mover_necessary",
+      "fromType": "argument",
+      "toType": "argument",
       "relation": {
         "type": "supports",
+        "strength": 0.8,
+        "description": "Act/potency distinction supports need for Prime Mover"
+      }
+    },
+    {
+      "id": "contingent_to_necessary",
+      "fromNode": "contingent_beings_exist",
+      "toNode": "necessary_being_exists",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.85,
+        "description": "Contingent beings imply necessary being"
+      }
+    },
+    {
+      "id": "hierarchy_to_supreme",
+      "fromNode": "hierarchy_of_being",
+      "toNode": "supreme_perfection_exists",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.75,
+        "description": "Hierarchy of being implies supreme perfection"
+      }
+    },
+    {
+      "id": "teleology_to_designer",
+      "fromNode": "natural_teleology",
+      "toNode": "intelligent_designer_exists",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
         "strength": 0.7,
-        "bidirectional": false
-      },
-      "explanation": "The ability to reason enables meaningful choices between alternatives",
-      "metadata": {
-        "difficulty": "intermediate"
+        "description": "Natural teleology implies intelligent designer"
       }
     },
     {
-      "id": "communication_enables_cooperation",
-      "fromNode": "communication_possible",
-      "toNode": "cooperation_possible",
-      "fromType": "axiom",
-      "toType": "axiom",
+      "id": "prime_mover_to_god_first_way",
+      "fromNode": "prime_mover_necessary",
+      "toNode": "god_exists_first_mover",
+      "fromType": "argument",
+      "toType": "argument",
       "relation": {
-        "type": "supports",
+        "type": "implies",
         "strength": 0.8,
-        "bidirectional": false
-      },
-      "explanation": "Communication between people enables coordination and cooperation",
-      "metadata": {
-        "difficulty": "basic"
+        "description": "Prime Mover argument leads to God (First Way)"
       }
     },
     {
-      "id": "actions_affect_others",
-      "fromNode": "actions_have_consequences",
-      "toNode": "differences_matter",
-      "fromType": "axiom",
-      "toType": "axiom",
+      "id": "first_cause_to_god_second_way",
+      "fromNode": "infinite_regress_impossible",
+      "toNode": "god_exists_first_cause",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.8,
+        "description": "First Cause argument leads to God (Second Way)"
+      }
+    },
+    {
+      "id": "necessary_to_god_third_way",
+      "fromNode": "necessary_being_exists",
+      "toNode": "god_exists_necessary_being",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.8,
+        "description": "Necessary Being argument leads to God (Third Way)"
+      }
+    },
+    {
+      "id": "perfection_to_god_fourth_way",
+      "fromNode": "supreme_perfection_exists",
+      "toNode": "god_exists_perfect_being",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.75,
+        "description": "Supreme Perfection argument leads to God (Fourth Way)"
+      }
+    },
+    {
+      "id": "designer_to_god_fifth_way",
+      "fromNode": "intelligent_designer_exists",
+      "toNode": "god_exists_intelligent_governor",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.7,
+        "description": "Intelligent Design argument leads to God (Fifth Way)"
+      }
+    },
+    {
+      "id": "naturalism_contradicts_immaterial",
+      "fromNode": "naturalism_sufficient",
+      "toNode": "material_insufficient_explanation",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "contradicts",
+        "strength": 0.9,
+        "description": "Naturalism contradicts need for immaterial explanation"
+      }
+    },
+    {
+      "id": "infinite_regress_contradicts_first_cause",
+      "fromNode": "infinite_regress_permissible",
+      "toNode": "infinite_regress_impossible",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "contradicts",
+        "strength": 0.95,
+        "description": "Permissible infinite regress contradicts impossibility"
+      }
+    },
+    {
+      "id": "evil_contradicts_perfect_god",
+      "fromNode": "evil_disproves_perfect_god",
+      "toNode": "god_exists_perfect_being",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "contradicts",
+        "strength": 0.8,
+        "description": "Problem of evil contradicts perfect God"
+      }
+    },
+    {
+      "id": "natural_design_contradicts_intelligence",
+      "fromNode": "design_appearance_explained_naturally",
+      "toNode": "intelligent_designer_exists",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "contradicts",
+        "strength": 0.8,
+        "description": "Natural design explanation contradicts intelligent designer"
+      }
+    },
+    {
+      "id": "god_governor_to_providence",
+      "fromNode": "god_exists_intelligent_governor",
+      "toNode": "divine_providence_governs",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.85,
+        "description": "God as governor implies divine providence"
+      }
+    },
+    {
+      "id": "god_perfect_to_natural_law",
+      "fromNode": "god_exists_perfect_being",
+      "toNode": "natural_law_from_eternal_law",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.8,
+        "description": "Perfect God implies natural law foundation"
+      }
+    },
+    {
+      "id": "god_perfect_to_immortality",
+      "fromNode": "god_exists_perfect_being",
+      "toNode": "human_soul_immortal",
+      "fromType": "argument",
+      "toType": "argument",
       "relation": {
         "type": "supports",
-        "strength": 0.6,
-        "bidirectional": false
-      },
-      "explanation": "If actions have consequences, then different actions lead to different outcomes that matter",
-      "metadata": {
-        "difficulty": "basic"
+        "strength": 0.75,
+        "description": "Perfect God supports human soul immortality"
+      }
+    },
+    {
+      "id": "providence_to_theodicy",
+      "fromNode": "divine_providence_governs",
+      "toNode": "evil_permits_greater_good",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.7,
+        "description": "Divine providence implies theodicy response to evil"
+      }
+    },
+    {
+      "id": "naturalism_to_materialism",
+      "fromNode": "naturalism_sufficient",
+      "toNode": "reality_purely_material",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.85,
+        "description": "Sufficient naturalism implies pure materialism"
+      }
+    },
+    {
+      "id": "materialism_to_no_purpose",
+      "fromNode": "reality_purely_material",
+      "toNode": "no_ultimate_purpose",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.8,
+        "description": "Pure materialism implies no ultimate purpose"
+      }
+    },
+    {
+      "id": "materialism_to_consciousness_reduction",
+      "fromNode": "reality_purely_material",
+      "toNode": "consciousness_eliminable",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.75,
+        "description": "Pure materialism implies consciousness reduction"
+      }
+    },
+    {
+      "id": "consciousness_reduction_to_mortality",
+      "fromNode": "consciousness_eliminable",
+      "toNode": "death_is_final",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "implies",
+        "strength": 0.9,
+        "description": "Consciousness reduction implies finality of death"
+      }
+    },
+    {
+      "id": "immortality_contradicts_mortality",
+      "fromNode": "human_soul_immortal",
+      "toNode": "death_is_final",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "contradicts",
+        "strength": 0.95,
+        "description": "Soul immortality contradicts final death"
+      }
+    },
+    {
+      "id": "natural_law_contradicts_construction",
+      "fromNode": "natural_law_from_eternal_law",
+      "toNode": "morality_socially_constructed",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "contradicts",
+        "strength": 0.9,
+        "description": "Natural law contradicts social construction of morality"
+      }
+    },
+    {
+      "id": "purpose_contradicts_meaninglessness",
+      "fromNode": "ultimate_purpose_exists",
+      "toNode": "no_ultimate_purpose",
+      "fromType": "argument",
+      "toType": "argument",
+      "relation": {
+        "type": "contradicts",
+        "strength": 0.95,
+        "description": "Ultimate purpose contradicts meaninglessness"
       }
     }
   ],

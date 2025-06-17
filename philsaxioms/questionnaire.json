@@ -1,98 +1,56 @@
 [
   {
     "axiomId": "something_exists",
-    "question": "Do you believe that something exists right now - at minimum, your thoughts or experiences?",
-    "explanation": "This is the most basic claim about reality - that there is some form of existence occurring",
+    "question": "Do you accept that something exists (at minimum, your own existence as a thinking being)?",
+    "explanation": "This is the most fundamental metaphysical principle - that existence is real and undeniable, evident in your own consciousness.",
     "category": "metaphysics"
   },
   {
-    "axiomId": "logic_works",
-    "question": "Do you think basic logic is reliable - that contradictions indicate error?",
-    "explanation": "This is about whether you trust that if something is true, its opposite cannot also be true in the same way",
+    "axiomId": "non_contradiction",
+    "question": "Do you accept the principle of non-contradiction - that something cannot both be and not be in the same respect?",
+    "explanation": "This is the foundational principle of logic - that contradictory statements cannot both be true, and consistency is required for rational thought.",
     "category": "logic"
   },
   {
-    "axiomId": "patterns_exist",
-    "question": "Do you believe that patterns and regularities exist in your experience?",
-    "explanation": "This is about whether you notice that some things happen more predictably than others",
+    "axiomId": "senses_reliable",
+    "question": "Do you believe our senses provide reliable knowledge of the external world?",
+    "explanation": "This asks whether sense experience, though sometimes mistaken, generally gives us genuine information about material reality.",
     "category": "epistemology"
   },
   {
-    "axiomId": "differences_matter",
-    "question": "Do you think some differences matter more than others?",
-    "explanation": "This is about whether you believe that not all states, outcomes, or experiences are equivalent",
-    "category": "ethics"
+    "axiomId": "causation_principle",
+    "question": "Do you accept that every effect has a cause?",
+    "explanation": "This is the principle of sufficient reason - that nothing comes into being without an adequate explanation for its existence.",
+    "category": "metaphysics"
   },
   {
-    "axiomId": "minds_can_reason",
-    "question": "Do you believe that careful thinking can sometimes lead to more accurate conclusions than random guessing?",
-    "explanation": "This is about whether reasoning and analysis can actually discover truth",
+    "axiomId": "change_occurs",
+    "question": "Do you observe that change and motion occur in reality?",
+    "explanation": "This asks whether you accept the evident fact that things move, change, and transition from potential to actual states.",
+    "category": "metaphysics"
+  },
+  {
+    "axiomId": "contingent_necessary_distinction",
+    "question": "Can you distinguish between things that exist contingently versus necessarily?",
+    "explanation": "This asks whether you recognize that some things exist but could have not existed, while others (if they exist) must exist by their very nature.",
+    "category": "metaphysics"
+  },
+  {
+    "axiomId": "degrees_of_perfection",
+    "question": "Do you observe degrees of perfection, goodness, or excellence in reality?",
+    "explanation": "This asks whether you think some things are genuinely more perfect, good, true, or noble than others - that there are real hierarchies of value.",
+    "category": "metaphysics"
+  },
+  {
+    "axiomId": "teleological_order",
+    "question": "Do you observe that things appear ordered toward specific ends or purposes?",
+    "explanation": "This asks whether natural things seem to act for definite goals or ends, even when they lack consciousness to direct themselves.",
+    "category": "metaphysics"
+  },
+  {
+    "axiomId": "reason_discovers_truth",
+    "question": "Do you believe human reason can discover genuine truth about reality?",
+    "explanation": "This asks whether careful rational thought can attain real knowledge about the world, including knowledge of metaphysical principles.",
     "category": "epistemology"
-  },
-  {
-    "axiomId": "actions_have_consequences",
-    "question": "Do you believe that your actions affect what happens next?",
-    "explanation": "This is about whether what you do influences outcomes and whether choices lead to different results",
-    "category": "ethics"
-  },
-  {
-    "axiomId": "suffering_exists",
-    "question": "Do you believe that suffering, pain, and distress are real experiences that actually occur?",
-    "explanation": "This is about whether negative experiences like pain and emotional distress are genuine phenomena",
-    "category": "ethics"
-  },
-  {
-    "axiomId": "communication_possible",
-    "question": "Do you believe that ideas and meanings can be shared between different people?",
-    "explanation": "This is about whether meaningful communication and understanding between minds is possible",
-    "category": "epistemology"
-  },
-  {
-    "axiomId": "choice_exists",
-    "question": "Do you believe that you sometimes have different options available and can choose between them?",
-    "explanation": "This is about whether genuine choice and selection between alternatives is possible",
-    "category": "consciousness"
-  },
-  {
-    "axiomId": "cooperation_possible",
-    "question": "Do you believe that different people can work together toward shared goals for mutual benefit?",
-    "explanation": "This is about whether collaboration and mutual assistance between people is achievable",
-    "category": "political"
-  },
-  {
-    "axiomId": "ethics_reasoning_valid",
-    "question": "Do you believe that logical reasoning and inference can produce valid conclusions in the domain of ethics?",
-    "explanation": "This question explores whether you accept the foundational principle: Logical reasoning and inference can produce valid conclusions in the domain of ethics",
-    "category": "ethics"
-  },
-  {
-    "axiomId": "ethics_domain_valid",
-    "question": "Do you believe that moral reasoning can distinguish between right and wrong actions?",
-    "explanation": "This question explores whether you accept the foundational principle: Moral reasoning can distinguish between right and wrong actions",
-    "category": "ethics"
-  },
-  {
-    "axiomId": "consciousness_reasoning_valid",
-    "question": "Do you believe that logical reasoning and inference can produce valid conclusions in the domain of consciousness?",
-    "explanation": "This question explores whether you accept the foundational principle: Logical reasoning and inference can produce valid conclusions in the domain of consciousness",
-    "category": "consciousness"
-  },
-  {
-    "axiomId": "consciousness_domain_valid",
-    "question": "Do you believe that consciousness and mental phenomena are valid subjects of investigation?",
-    "explanation": "This question explores whether you accept the foundational principle: Consciousness and mental phenomena are valid subjects of investigation",
-    "category": "consciousness"
-  },
-  {
-    "axiomId": "political_reasoning_valid",
-    "question": "Do you think that logical reasoning and inference can produce valid conclusions in the domain of political?",
-    "explanation": "This question explores whether you accept the foundational principle: Logical reasoning and inference can produce valid conclusions in the domain of political",
-    "category": "political"
-  },
-  {
-    "axiomId": "political_domain_valid",
-    "question": "Do you think that political and social arrangements can be evaluated and improved?",
-    "explanation": "This question explores whether you accept the foundational principle: Political and social arrangements can be evaluated and improved",
-    "category": "political"
   }
 ]
