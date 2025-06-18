@@ -138,5 +138,110 @@
     "description": "Pain and suffering constitute real evils, not merely subjective preferences.",
     "axiomId": "20",
     "category": "ethics"
+  },
+  {
+    "id": "q_51",
+    "text": "Divine revelation is possible",
+    "description": "If God exists, it is conceivable that divine truth could be communicated to human beings through various means.",
+    "axiomId": "51",
+    "category": "theology"
+  },
+  {
+    "id": "q_52",
+    "text": "Historical testimony can convey truth",
+    "description": "Reliable witnesses can transmit knowledge of past events, including extraordinary ones, through consistent testimony.",
+    "axiomId": "52",
+    "category": "epistemology"
+  },
+  {
+    "id": "q_53",
+    "text": "Perfect being is conceivable",
+    "description": "The concept of a maximally great being - possessing all perfections - is coherent and meaningful.",
+    "axiomId": "53",
+    "category": "theology"
+  },
+  {
+    "id": "q_54",
+    "text": "Contingent beings require explanation",
+    "description": "Everything that exists but could fail to exist requires a reason for its existence rather than non-existence.",
+    "axiomId": "54",
+    "category": "metaphysics"
+  },
+  {
+    "id": "q_55",
+    "text": "Degrees of perfection exist",
+    "description": "We observe varying degrees of goodness, truth, and nobility among beings, implying a standard of comparison.",
+    "axiomId": "55",
+    "category": "metaphysics"
+  },
+  {
+    "id": "q_56",
+    "text": "Purpose guides natural processes",
+    "description": "Natural things exhibit goal-directed behavior and functions that serve ends beyond mere mechanical causation.",
+    "axiomId": "56",
+    "category": "metaphysics"
+  },
+  {
+    "id": "q_57",
+    "text": "Economic exchange creates value",
+    "description": "Voluntary trade between parties generally benefits both, creating mutual value and improving human welfare.",
+    "axiomId": "57",
+    "category": "philosophy_of_economics"
+  },
+  {
+    "id": "q_58",
+    "text": "Private property rights exist",
+    "description": "Individuals can legitimately acquire exclusive rights to use and transfer material goods through labor and exchange.",
+    "axiomId": "58",
+    "category": "philosophy_of_economics"
+  },
+  {
+    "id": "q_59",
+    "text": "Labor has intrinsic dignity",
+    "description": "Human work possesses inherent worth beyond mere economic value, contributing to personal development and social good.",
+    "axiomId": "59",
+    "category": "philosophy_of_economics"
+  },
+  {
+    "id": "q_60",
+    "text": "Competition improves outcomes",
+    "description": "When people compete to provide goods and services, this generally leads to better quality and lower prices for consumers.",
+    "axiomId": "60",
+    "category": "philosophy_of_economics"
+  },
+  {
+    "id": "q_61",
+    "text": "Religious experience is meaningful",
+    "description": "Encounters with the sacred or transcendent can provide genuine insight and spiritual knowledge, not mere subjective feeling.",
+    "axiomId": "61",
+    "category": "philosophy_of_religion"
+  },
+  {
+    "id": "q_62",
+    "text": "Multiple truth sources exist",
+    "description": "Truth can be discovered through reason, experience, testimony, and potentially divine revelation across different domains.",
+    "axiomId": "62",
+    "category": "philosophy_of_religion"
+  },
+  {
+    "id": "q_63",
+    "text": "Cultural diversity enriches understanding",
+    "description": "Different cultural perspectives and traditions can contribute valuable insights about human nature and the good life.",
+    "axiomId": "63",
+    "category": "philosophy_of_culture"
+  },
+  {
+    "id": "q_64",
+    "text": "Social cooperation enables flourishing",
+    "description": "Humans achieve greater individual and collective good through coordinated effort than through isolated action.",
+    "axiomId": "64",
+    "category": "political_philosophy"
+  },
+  {
+    "id": "q_65",
+    "text": "Innovation drives progress",
+    "description": "Creative discovery and technological development can genuinely improve human living conditions and expand possibilities.",
+    "axiomId": "65",
+    "category": "philosophy_of_technology"
   }
 ]
