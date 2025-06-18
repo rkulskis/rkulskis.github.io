@@ -50,29 +50,23 @@ export default function Questionnaire({ onComplete, onSkip, categories, existing
   const progress = ((currentIndex + 1) / questions.length) * 100;
 
   const handleAnswer = (accept: boolean) => {
-    setAnswers(prev => ({
-      ...prev,
+    const updatedAnswers = {
+      ...answers,
       [currentQuestion.axiomId]: accept
-    }));
+    };
+    setAnswers(updatedAnswers);
 
     if (currentIndex < questions.length - 1) {
       setCurrentIndex(prev => prev + 1);
     } else {
-      const accepted = Object.entries(answers)
+      // Use the updated answers (including the current question's answer)
+      const accepted = Object.entries(updatedAnswers)
         .filter(([_, value]) => value)
         .map(([axiomId]) => axiomId);
       
-      const rejected = Object.entries(answers)
+      const rejected = Object.entries(updatedAnswers)
         .filter(([_, value]) => !value)
         .map(([axiomId]) => axiomId);
-
-      if (currentQuestion.axiomId) {
-        if (accept) {
-          accepted.push(currentQuestion.axiomId);
-        } else {
-          rejected.push(currentQuestion.axiomId);
-        }
-      }
 
       onComplete(accepted, rejected);
     }
