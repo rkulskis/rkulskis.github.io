@@ -25,12 +25,6 @@
       "description": "Rational study of God, divine attributes, and religious truth"
     },
     {
-      "id": "philosophy",
-      "name": "Philosophy",
-      "color": "#6B7280",
-      "description": "General philosophical arguments including naturalistic and skeptical positions"
-    },
-    {
       "id": "ethics",
       "name": "Ethics",
       "color": "#EF4444",
@@ -43,2027 +37,669 @@
       "description": "Human nature, the soul, personal identity, and human destiny"
     }
   ],
-  "axioms": [
+  "nodes": [
     {
-      "id": "something_exists",
+      "id": "1",
       "title": "Something exists",
       "description": "At minimum, I exist as a thinking being. This is self-evident and cannot be coherently denied.",
       "category": "metaphysics",
-      "metadata": {
-        "tags": [
-          "existence",
-          "being",
-          "self-evidence"
-        ],
-        "difficulty": "basic",
-        "source": "Aristotelian-Thomistic tradition",
-        "attribution": [
-          "aquinas",
-          "aristotle",
-          "descartes"
-        ],
-        "acceptability": 0.99
-      }
+      "edges": []
     },
     {
-      "id": "non_contradiction",
+      "id": "2",
       "title": "Principle of non-contradiction",
       "description": "Something cannot both be and not be in the same respect at the same time. Contradictory statements cannot both be true.",
       "category": "logic",
-      "metadata": {
-        "tags": [
-          "logic",
-          "contradiction",
-          "truth"
-        ],
-        "difficulty": "basic",
-        "source": "Aristotelian logic",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ],
-        "acceptability": 0.95
-      }
+      "edges": []
     },
     {
-      "id": "senses_reliable",
+      "id": "3",
       "title": "Senses provide knowledge of reality",
       "description": "Our senses, though sometimes mistaken, generally provide reliable information about the external world.",
       "category": "epistemology",
-      "metadata": {
-        "tags": [
-          "sensation",
-          "knowledge",
-          "empiricism"
-        ],
-        "difficulty": "basic",
-        "source": "Aristotelian epistemology",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ],
-        "acceptability": 0.85
-      }
+      "edges": []
     },
     {
-      "id": "causation_principle",
+      "id": "4",
       "title": "Principle of causation",
       "description": "Every effect has a cause. Nothing comes into being without a sufficient reason for its existence.",
       "category": "metaphysics",
-      "metadata": {
-        "tags": [
-          "causation",
-          "sufficient reason",
-          "dependency"
-        ],
-        "difficulty": "basic",
-        "source": "Aristotelian metaphysics",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ],
-        "acceptability": 0.9
-      }
+      "edges": []
     },
     {
-      "id": "change_occurs",
+      "id": "5",
       "title": "Change and motion occur",
       "description": "We observe that things change, move, and are actualized from potency to act. This is evident to our senses.",
       "category": "metaphysics",
-      "metadata": {
-        "tags": [
-          "change",
-          "motion",
-          "actuality",
-          "potency"
-        ],
-        "difficulty": "basic",
-        "source": "Aristotelian physics",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ],
-        "acceptability": 0.95
-      }
+      "edges": []
     },
     {
-      "id": "contingent_necessary_distinction",
-      "title": "Distinction between contingent and necessary existence",
-      "description": "Some things exist but could have not existed (contingent), while other things, if they exist, must exist (necessary).",
-      "category": "metaphysics",
-      "metadata": {
-        "tags": [
-          "contingency",
-          "necessity",
-          "existence",
-          "dependency"
-        ],
-        "difficulty": "intermediate",
-        "source": "Medieval metaphysics",
-        "attribution": [
-          "aquinas",
-          "avicenna"
-        ],
-        "acceptability": 0.75
-      }
-    },
-    {
-      "id": "degrees_of_perfection",
-      "title": "Degrees of perfection exist",
-      "description": "We observe that some things are more perfect, good, true, or noble than others. There are degrees of excellence.",
-      "category": "metaphysics",
-      "metadata": {
-        "tags": [
-          "perfection",
-          "goodness",
-          "hierarchy",
-          "excellence"
-        ],
-        "difficulty": "intermediate",
-        "source": "Platonic-Aristotelian tradition",
-        "attribution": [
-          "plato",
-          "aristotle",
-          "aquinas"
-        ],
-        "acceptability": 0.7
-      }
-    },
-    {
-      "id": "teleological_order",
-      "title": "Things are ordered toward ends",
-      "description": "Natural things appear to act for specific purposes or ends, even when they lack intelligence to direct themselves.",
-      "category": "metaphysics",
-      "metadata": {
-        "tags": [
-          "teleology",
-          "purpose",
-          "final causation",
-          "order"
-        ],
-        "difficulty": "intermediate",
-        "source": "Aristotelian teleology",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ],
-        "acceptability": 0.65
-      }
-    },
-    {
-      "id": "reason_discovers_truth",
-      "title": "Human reason can discover truth",
-      "description": "Through careful reasoning and logic, humans can attain genuine knowledge about reality, including metaphysical truths.",
+      "id": "6",
+      "title": "Consciousness exists",
+      "description": "I am aware of my own thoughts, feelings, and experiences. This immediate awareness cannot be doubted.",
       "category": "epistemology",
-      "metadata": {
-        "tags": [
-          "reason",
-          "truth",
-          "knowledge",
-          "intellect"
-        ],
-        "difficulty": "basic",
-        "source": "Scholastic tradition",
-        "attribution": [
-          "aquinas",
-          "aristotle"
-        ],
-        "acceptability": 0.8
-      }
-    }
-  ],
-  "arguments": [
+      "edges": []
+    },
     {
-      "id": "external_world_exists",
+      "id": "7",
+      "title": "Memory is generally reliable",
+      "description": "My memories of past experiences, while not infallible, provide meaningful continuity of personal identity.",
+      "category": "epistemology",
+      "edges": []
+    },
+    {
+      "id": "8",
+      "title": "Other minds exist",
+      "description": "Other humans possess consciousness and inner experiences similar to my own.",
+      "category": "philosophy_of_mind",
+      "edges": []
+    },
+    {
+      "id": "9",
+      "title": "Language conveys meaning",
+      "description": "Words and symbols can successfully communicate ideas and concepts between minds.",
+      "category": "philosophy_of_language",
+      "edges": []
+    },
+    {
+      "id": "10",
+      "title": "Reason can discover truth",
+      "description": "Logical reasoning and rational inquiry can lead to genuine understanding of reality.",
+      "category": "epistemology",
+      "edges": []
+    },
+    {
+      "id": "11",
+      "title": "Mathematics describes reality",
+      "description": "Mathematical patterns and relationships correspond to structures in the physical world.",
+      "category": "philosophy_of_mathematics",
+      "edges": []
+    },
+    {
+      "id": "12",
+      "title": "Time exists and flows",
+      "description": "Events occur in temporal sequence, with a meaningful distinction between past, present, and future.",
+      "category": "metaphysics",
+      "edges": []
+    },
+    {
+      "id": "13",
+      "title": "Space exists as extension",
+      "description": "Physical objects exist in spatial relationships with measurable distances and dimensions.",
+      "category": "metaphysics",
+      "edges": []
+    },
+    {
+      "id": "14",
+      "title": "Moral distinctions are real",
+      "description": "Some actions are genuinely better or worse than others, not merely matters of opinion.",
+      "category": "ethics",
+      "edges": []
+    },
+    {
+      "id": "15",
+      "title": "Beauty exists objectively",
+      "description": "Some things possess genuine aesthetic value that transcends mere personal preference.",
+      "category": "aesthetics",
+      "edges": []
+    },
+    {
+      "id": "16",
+      "title": "Truth is discoverable",
+      "description": "Reality has a definite structure that can be progressively understood through inquiry.",
+      "category": "epistemology",
+      "edges": []
+    },
+    {
+      "id": "17",
+      "title": "The future is partially open",
+      "description": "While constrained by natural laws, genuine possibilities exist for different outcomes.",
+      "category": "metaphysics",
+      "edges": []
+    },
+    {
+      "id": "18",
+      "title": "Human dignity has intrinsic worth",
+      "description": "Every human being possesses inherent value that cannot be reduced to utility or function.",
+      "category": "ethics",
+      "edges": []
+    },
+    {
+      "id": "19",
+      "title": "Natural patterns exhibit order",
+      "description": "The universe displays consistent regularities and laws that govern natural phenomena.",
+      "category": "philosophy_of_science",
+      "edges": []
+    },
+    {
+      "id": "20",
+      "title": "Suffering is genuinely bad",
+      "description": "Pain and suffering constitute real evils, not merely subjective preferences.",
+      "category": "ethics",
+      "edges": []
+    },
+    {
+      "id": "21",
       "title": "An external world exists",
       "description": "Given that our senses are generally reliable and we observe consistent patterns, there exists a world of material objects external to our minds.",
       "conclusion": "Material reality exists independently of our consciousness",
       "category": "metaphysics",
-      "level": 1,
-      "activation_conditions": {
-        "required_axioms": [
-          "something_exists",
-          "senses_reliable",
-          "non_contradiction"
-        ]
-      },
-      "dependencies": [
-        "something_exists",
-        "senses_reliable"
-      ],
-      "metadata": {
-        "tags": [
-          "external world",
-          "material reality",
-          "objectivity"
-        ],
-        "strength": 0.85,
-        "source": "Aristotelian realism",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ]
-      }
+      "edges": [
+        {
+          "to": "1",
+          "description": "Builds on existence of self"
+        },
+        {
+          "to": "3",
+          "description": "Builds on reliable senses"
+        },
+        {
+          "to": "2",
+          "description": "Builds on non-contradiction principle"
+        }
+      ]
     },
     {
-      "id": "causal_series_exist",
+      "id": "22",
+      "title": "Scientific method reveals truth",
+      "description": "Systematic observation, hypothesis formation, and experimental testing provide reliable knowledge about natural phenomena.",
+      "conclusion": "Science discovers genuine facts about reality",
+      "category": "philosophy_of_science",
+      "edges": [
+        {
+          "to": "3",
+          "description": "Relies on sensory observation"
+        },
+        {
+          "to": "10",
+          "description": "Depends on reasoning ability"
+        },
+        {
+          "to": "19",
+          "description": "Assumes natural order exists"
+        }
+      ]
+    },
+    {
+      "id": "23",
+      "title": "Personal identity persists through time",
+      "description": "Despite physical and mental changes, each person maintains a continuous identity across their lifetime.",
+      "conclusion": "The self endures as a unified entity",
+      "category": "philosophy_of_mind",
+      "edges": [
+        {
+          "to": "6",
+          "description": "Requires conscious awareness"
+        },
+        {
+          "to": "7",
+          "description": "Depends on memory continuity"
+        },
+        {
+          "to": "12",
+          "description": "Assumes temporal flow"
+        }
+      ]
+    },
+    {
+      "id": "24",
       "title": "Causal series exist in nature",
       "description": "Since change occurs and every effect has a cause, there exist chains of causation connecting events in the natural world.",
       "conclusion": "Reality is structured by causal relationships",
       "category": "metaphysics",
-      "level": 1,
-      "activation_conditions": {
-        "required_axioms": [
-          "change_occurs",
-          "causation_principle",
-          "senses_reliable"
-        ]
-      },
-      "dependencies": [
-        "change_occurs",
-        "causation_principle"
-      ],
-      "metadata": {
-        "tags": [
-          "causation",
-          "causal series",
-          "natural order"
-        ],
-        "strength": 0.9,
-        "source": "Aristotelian metaphysics",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ]
-      }
+      "edges": [
+        {
+          "to": "5",
+          "description": "Builds on change occurring"
+        },
+        {
+          "to": "4",
+          "description": "Builds on causation principle"
+        }
+      ]
     },
     {
-      "id": "actual_vs_potential",
-      "title": "Distinction between actual and potential",
-      "description": "Since change occurs, there must be a real distinction between what something actually is and what it potentially could become.",
-      "conclusion": "Actuality and potentiality are fundamental aspects of reality",
-      "category": "metaphysics",
-      "level": 1,
-      "activation_conditions": {
-        "required_axioms": [
-          "change_occurs",
-          "non_contradiction",
-          "reason_discovers_truth"
-        ]
-      },
-      "dependencies": [
-        "change_occurs"
-      ],
-      "metadata": {
-        "tags": [
-          "actuality",
-          "potentiality",
-          "metaphysical principles"
-        ],
-        "strength": 0.8,
-        "source": "Aristotelian metaphysics",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "hierarchy_of_being",
-      "title": "Hierarchy of being exists",
-      "description": "Given degrees of perfection and the reliability of our rational judgments, there exists a real hierarchy in the order of being.",
-      "conclusion": "Some beings are more perfect or excellent than others",
-      "category": "metaphysics",
-      "level": 1,
-      "activation_conditions": {
-        "required_axioms": [
-          "degrees_of_perfection",
-          "reason_discovers_truth",
-          "something_exists"
-        ]
-      },
-      "dependencies": [
-        "degrees_of_perfection"
-      ],
-      "metadata": {
-        "tags": [
-          "hierarchy",
-          "being",
-          "perfection",
-          "excellence"
-        ],
-        "strength": 0.75,
-        "source": "Platonic-Thomistic tradition",
-        "attribution": [
-          "plato",
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "natural_teleology",
-      "title": "Natural processes are teleologically ordered",
-      "description": "Since things are ordered toward ends and our reason can discern this order, natural processes exhibit genuine purposiveness.",
-      "conclusion": "Nature displays inherent purposiveness and order",
-      "category": "metaphysics",
-      "level": 1,
-      "activation_conditions": {
-        "required_axioms": [
-          "teleological_order",
-          "reason_discovers_truth",
-          "senses_reliable"
-        ]
-      },
-      "dependencies": [
-        "teleological_order"
-      ],
-      "metadata": {
-        "tags": [
-          "teleology",
-          "natural order",
-          "purpose",
-          "design"
-        ],
-        "strength": 0.7,
-        "source": "Aristotelian teleology",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "contingent_beings_exist",
-      "title": "Contingent beings exist",
-      "description": "Using the distinction between contingent and necessary existence, and observing material things that come into being and pass away, we can identify contingent beings.",
-      "conclusion": "Some beings exist but could have not existed",
-      "category": "metaphysics",
-      "level": 1,
-      "activation_conditions": {
-        "required_axioms": [
-          "contingent_necessary_distinction",
-          "senses_reliable",
-          "change_occurs"
-        ]
-      },
-      "dependencies": [
-        "contingent_necessary_distinction",
-        "change_occurs"
-      ],
-      "metadata": {
-        "tags": [
-          "contingency",
-          "material beings",
-          "dependency"
-        ],
-        "strength": 0.85,
-        "source": "Medieval metaphysics",
-        "attribution": [
-          "aquinas",
-          "avicenna"
-        ]
-      }
-    },
-    {
-      "id": "rational_knowledge_possible",
-      "title": "Rational knowledge of reality is possible",
-      "description": "Since reason can discover truth and we can distinguish real from apparent contradictions, genuine metaphysical knowledge is attainable.",
-      "conclusion": "Human reason can know the fundamental structure of reality",
-      "category": "epistemology",
-      "level": 1,
-      "activation_conditions": {
-        "required_axioms": [
-          "reason_discovers_truth",
-          "non_contradiction",
-          "something_exists"
-        ]
-      },
-      "dependencies": [
-        "reason_discovers_truth"
-      ],
-      "metadata": {
-        "tags": [
-          "rational knowledge",
-          "metaphysical knowledge",
-          "truth"
-        ],
-        "strength": 0.8,
-        "source": "Scholastic epistemology",
-        "attribution": [
-          "aquinas",
-          "aristotle"
-        ]
-      }
-    },
-    {
-      "id": "efficient_causation",
-      "title": "Efficient causation operates in nature",
-      "description": "Given that causal series exist and we can observe agents producing effects, efficient causation is a real principle governing natural processes.",
-      "conclusion": "Agents actively cause effects in the natural world",
-      "category": "metaphysics",
-      "level": 1,
-      "activation_conditions": {
-        "required_axioms": [
-          "causation_principle",
-          "senses_reliable",
-          "change_occurs"
-        ],
-        "required_arguments": [
-          "causal_series_exist"
-        ]
-      },
-      "dependencies": [
-        "causal_series_exist"
-      ],
-      "metadata": {
-        "tags": [
-          "efficient causation",
-          "agency",
-          "natural processes"
-        ],
-        "strength": 0.85,
-        "source": "Aristotelian causation theory",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "infinite_regress_impossible",
-      "title": "Infinite regress in essential causation is impossible",
-      "description": "If causal series exist and efficient causation operates, an infinite regress of essential causes is metaphysically impossible - there must be a first cause.",
-      "conclusion": "Essential causal series require a first uncaused cause",
-      "category": "metaphysics",
-      "level": 2,
-      "activation_conditions": {
-        "required_axioms": [
-          "causation_principle",
-          "reason_discovers_truth",
-          "non_contradiction"
-        ],
-        "required_arguments": [
-          "efficient_causation",
-          "causal_series_exist"
-        ]
-      },
-      "dependencies": [
-        "efficient_causation",
-        "causal_series_exist"
-      ],
-      "metadata": {
-        "tags": [
-          "infinite regress",
-          "first cause",
-          "essential causation"
-        ],
-        "strength": 0.8,
-        "source": "Aristotelian-Thomistic metaphysics",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "prime_mover_necessary",
-      "title": "A Prime Mover is necessary",
-      "description": "Given that change occurs, actual vs potential distinction exists, and infinite regress is impossible, there must be a first unmoved mover.",
-      "conclusion": "There exists a first principle of motion that is itself unmoved",
-      "category": "metaphysics",
-      "level": 2,
-      "activation_conditions": {
-        "required_axioms": [
-          "change_occurs",
-          "non_contradiction"
-        ],
-        "required_arguments": [
-          "actual_vs_potential",
-          "infinite_regress_impossible"
-        ]
-      },
-      "dependencies": [
-        "actual_vs_potential",
-        "infinite_regress_impossible"
-      ],
-      "metadata": {
-        "tags": [
-          "prime mover",
-          "unmoved mover",
-          "first principle"
-        ],
-        "strength": 0.75,
-        "source": "Aristotelian metaphysics",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "necessary_being_exists",
-      "title": "A necessary being exists",
-      "description": "Since contingent beings exist and infinite regress is impossible, there must exist at least one being that exists necessarily.",
-      "conclusion": "There exists a being whose essence involves existence",
-      "category": "metaphysics",
-      "level": 2,
-      "activation_conditions": {
-        "required_axioms": [
-          "contingent_necessary_distinction",
-          "non_contradiction"
-        ],
-        "required_arguments": [
-          "contingent_beings_exist",
-          "infinite_regress_impossible"
-        ]
-      },
-      "dependencies": [
-        "contingent_beings_exist",
-        "infinite_regress_impossible"
-      ],
-      "metadata": {
-        "tags": [
-          "necessary being",
-          "essence",
-          "existence"
-        ],
-        "strength": 0.8,
-        "source": "Medieval metaphysics",
-        "attribution": [
-          "aquinas",
-          "avicenna"
-        ]
-      }
-    },
-    {
-      "id": "supreme_perfection_exists",
-      "title": "A supremely perfect being exists",
-      "description": "Given the hierarchy of being and degrees of perfection, there must be a most perfect being that serves as the standard for all degrees of goodness.",
-      "conclusion": "There exists a being of maximum perfection",
-      "category": "metaphysics",
-      "level": 2,
-      "activation_conditions": {
-        "required_axioms": [
-          "degrees_of_perfection",
-          "reason_discovers_truth"
-        ],
-        "required_arguments": [
-          "hierarchy_of_being",
-          "rational_knowledge_possible"
-        ]
-      },
-      "dependencies": [
-        "hierarchy_of_being"
-      ],
-      "metadata": {
-        "tags": [
-          "supreme perfection",
-          "maximum being",
-          "goodness"
-        ],
-        "strength": 0.7,
-        "source": "Platonic-Thomistic tradition",
-        "attribution": [
-          "plato",
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "intelligent_designer_exists",
-      "title": "An intelligent designer exists",
-      "description": "Since natural teleology exists and things lacking intelligence cannot direct themselves toward ends, there must be an intelligent cause ordering nature.",
-      "conclusion": "There exists an intelligence that orders natural processes toward their ends",
-      "category": "metaphysics",
-      "level": 2,
-      "activation_conditions": {
-        "required_axioms": [
-          "teleological_order",
-          "reason_discovers_truth"
-        ],
-        "required_arguments": [
-          "natural_teleology",
-          "efficient_causation"
-        ]
-      },
-      "dependencies": [
-        "natural_teleology",
-        "efficient_causation"
-      ],
-      "metadata": {
-        "tags": [
-          "intelligent design",
-          "teleological order",
-          "natural ends"
-        ],
-        "strength": 0.65,
-        "source": "Aristotelian-Thomistic teleology",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "material_insufficient_explanation",
-      "title": "Material causes alone are insufficient",
-      "description": "Given that rational knowledge is possible and we observe formal structure, final causation, and efficient agency, purely material explanations are inadequate.",
-      "conclusion": "Reality requires non-material principles of explanation",
-      "category": "metaphysics",
-      "level": 2,
-      "activation_conditions": {
-        "required_axioms": [
-          "reason_discovers_truth",
-          "causation_principle"
-        ],
-        "required_arguments": [
-          "rational_knowledge_possible",
-          "natural_teleology",
-          "efficient_causation"
-        ]
-      },
-      "dependencies": [
-        "rational_knowledge_possible",
-        "natural_teleology"
-      ],
-      "metadata": {
-        "tags": [
-          "materialism",
-          "formal causation",
-          "immaterial reality"
-        ],
-        "strength": 0.7,
-        "source": "Aristotelian four causes",
-        "attribution": [
-          "aristotle",
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "unity_of_first_principles",
-      "title": "First principles converge in unity",
-      "description": "Since rational knowledge is possible and we have identified multiple first principles (Prime Mover, First Cause, Necessary Being, etc.), reason suggests these converge in one supreme principle.",
-      "conclusion": "The various first principles are unified in one supreme being",
-      "category": "metaphysics",
-      "level": 2,
-      "activation_conditions": {
-        "required_arguments": [
-          "prime_mover_necessary",
-          "necessary_being_exists",
-          "supreme_perfection_exists",
-          "intelligent_designer_exists"
-        ]
-      },
-      "dependencies": [
-        "prime_mover_necessary",
-        "necessary_being_exists",
-        "supreme_perfection_exists"
-      ],
-      "metadata": {
-        "tags": [
-          "unity",
-          "convergence",
-          "supreme principle"
-        ],
-        "strength": 0.75,
-        "source": "Thomistic synthesis",
-        "attribution": [
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "contingency_requires_explanation",
-      "title": "Contingent existence requires explanation",
-      "description": "Since contingent beings exist and the principle of sufficient reason applies, the existence of contingent reality as a whole requires explanation by something non-contingent.",
-      "conclusion": "The totality of contingent existence requires a necessary ground",
-      "category": "metaphysics",
-      "level": 2,
-      "activation_conditions": {
-        "required_axioms": [
-          "causation_principle",
-          "contingent_necessary_distinction"
-        ],
-        "required_arguments": [
-          "contingent_beings_exist",
-          "necessary_being_exists"
-        ]
-      },
-      "dependencies": [
-        "contingent_beings_exist",
-        "necessary_being_exists"
-      ],
-      "metadata": {
-        "tags": [
-          "contingency",
-          "sufficient reason",
-          "existential dependency"
-        ],
-        "strength": 0.8,
-        "source": "Principle of sufficient reason",
-        "attribution": [
-          "aquinas",
-          "leibniz"
-        ]
-      }
-    },
-    {
-      "id": "god_exists_first_mover",
-      "title": "God exists as the First Mover (First Way)",
-      "description": "Since a Prime Mover is necessary and first principles converge in unity, this unmoved mover is what we call God - pure actuality without potency.",
-      "conclusion": "God exists as the pure actualized being who moves all things",
+      "id": "25",
+      "title": "A first cause is necessary",
+      "description": "Since infinite regress of causes is impossible, there must be a first uncaused cause that explains the existence of all other things.",
+      "conclusion": "A first uncaused cause must exist",
       "category": "theology",
-      "level": 3,
-      "activation_conditions": {
-        "required_arguments": [
-          "prime_mover_necessary",
-          "unity_of_first_principles"
-        ]
-      },
-      "dependencies": [
-        "prime_mover_necessary",
-        "unity_of_first_principles"
-      ],
-      "metadata": {
-        "tags": [
-          "God",
-          "first mover",
-          "pure actuality",
-          "theism"
-        ],
-        "strength": 0.8,
-        "source": "Aquinas First Way",
-        "attribution": [
-          "aquinas"
-        ]
-      }
+      "edges": [
+        {
+          "to": "24",
+          "description": "Builds on causal series"
+        },
+        {
+          "to": "4",
+          "description": "Builds on causation principle"
+        }
+      ]
     },
     {
-      "id": "god_exists_first_cause",
-      "title": "God exists as the First Efficient Cause (Second Way)",
-      "description": "Since infinite regress is impossible and unity of first principles holds, the uncaused first cause is God - the source of all efficient causation.",
-      "conclusion": "God exists as the first uncaused cause of all effects",
-      "category": "theology",
-      "level": 3,
-      "activation_conditions": {
-        "required_arguments": [
-          "infinite_regress_impossible",
-          "unity_of_first_principles"
-        ]
-      },
-      "dependencies": [
-        "infinite_regress_impossible",
-        "unity_of_first_principles"
-      ],
-      "metadata": {
-        "tags": [
-          "God",
-          "first cause",
-          "efficient causation",
-          "theism"
-        ],
-        "strength": 0.8,
-        "source": "Aquinas Second Way",
-        "attribution": [
-          "aquinas"
-        ]
-      }
+      "id": "26",
+      "title": "Communication enables knowledge",
+      "description": "Through language and symbols, humans can share discoveries and build cumulative understanding beyond individual experience.",
+      "conclusion": "Collective inquiry advances human knowledge",
+      "category": "philosophy_of_language",
+      "edges": [
+        {
+          "to": "8",
+          "description": "Requires other minds"
+        },
+        {
+          "to": "9",
+          "description": "Depends on meaningful language"
+        }
+      ]
     },
     {
-      "id": "god_exists_necessary_being",
-      "title": "God exists as the Necessary Being (Third Way)",
-      "description": "Since a necessary being exists and first principles converge, this necessary being whose essence is existence is God.",
-      "conclusion": "God exists as the being whose very essence is to exist",
-      "category": "theology",
-      "level": 3,
-      "activation_conditions": {
-        "required_arguments": [
-          "necessary_being_exists",
-          "unity_of_first_principles"
-        ]
-      },
-      "dependencies": [
-        "necessary_being_exists",
-        "unity_of_first_principles"
-      ],
-      "metadata": {
-        "tags": [
-          "God",
-          "necessary being",
-          "essence",
-          "existence"
-        ],
-        "strength": 0.8,
-        "source": "Aquinas Third Way",
-        "attribution": [
-          "aquinas"
-        ]
-      }
+      "id": "27",
+      "title": "Mathematical truths are universal",
+      "description": "Mathematical relationships hold necessarily and apply across all possible worlds and contexts.",
+      "conclusion": "Mathematics reveals eternal structures",
+      "category": "philosophy_of_mathematics",
+      "edges": [
+        {
+          "to": "11",
+          "description": "Assumes math describes reality"
+        },
+        {
+          "to": "10",
+          "description": "Discovered through reason"
+        }
+      ]
     },
     {
-      "id": "god_exists_perfect_being",
-      "title": "God exists as the Most Perfect Being (Fourth Way)",
-      "description": "Since a supremely perfect being exists and first principles converge, this most perfect being is God - the source of all goodness and truth.",
-      "conclusion": "God exists as the most perfect being and source of all perfection",
-      "category": "theology",
-      "level": 3,
-      "activation_conditions": {
-        "required_arguments": [
-          "supreme_perfection_exists",
-          "unity_of_first_principles"
-        ]
-      },
-      "dependencies": [
-        "supreme_perfection_exists",
-        "unity_of_first_principles"
-      ],
-      "metadata": {
-        "tags": [
-          "God",
-          "perfection",
-          "goodness",
-          "truth"
-        ],
-        "strength": 0.75,
-        "source": "Aquinas Fourth Way",
-        "attribution": [
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "god_exists_intelligent_governor",
-      "title": "God exists as the Intelligent Governor (Fifth Way)",
-      "description": "Since an intelligent designer exists and first principles converge, this supreme intelligence governing natural order is God.",
-      "conclusion": "God exists as the supreme intelligence governing all natural processes",
-      "category": "theology",
-      "level": 3,
-      "activation_conditions": {
-        "required_arguments": [
-          "intelligent_designer_exists",
-          "unity_of_first_principles"
-        ]
-      },
-      "dependencies": [
-        "intelligent_designer_exists",
-        "unity_of_first_principles"
-      ],
-      "metadata": {
-        "tags": [
-          "God",
-          "intelligence",
-          "governance",
-          "natural order"
-        ],
-        "strength": 0.7,
-        "source": "Aquinas Fifth Way",
-        "attribution": [
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "naturalism_sufficient",
-      "title": "Naturalism provides sufficient explanation",
-      "description": "If material causes and natural processes can account for observed phenomena without invoking non-material principles, then naturalistic explanations are sufficient.",
-      "conclusion": "Natural processes alone can explain reality without supernatural intervention",
-      "category": "philosophy",
-      "level": 3,
-      "activation_conditions": {
-        "required_axioms": [
-          "senses_reliable",
-          "reason_discovers_truth"
-        ],
-        "forbidden_arguments": [
-          "material_insufficient_explanation"
-        ]
-      },
-      "dependencies": [],
-      "metadata": {
-        "tags": [
-          "naturalism",
-          "materialism",
-          "atheism",
-          "scientific explanation"
-        ],
-        "strength": 0.6,
-        "source": "Modern naturalism",
-        "attribution": [
-          "hume",
-          "darwin",
-          "dennett"
-        ]
-      }
-    },
-    {
-      "id": "infinite_regress_permissible",
-      "title": "Infinite regress may be metaphysically permissible",
-      "description": "If our understanding of causation and infinity is limited, infinite causal chains might not be logically impossible, eliminating the need for a first cause.",
-      "conclusion": "Infinite causal series are metaphysically possible",
-      "category": "philosophy",
-      "level": 3,
-      "activation_conditions": {
-        "required_axioms": [
-          "reason_discovers_truth"
-        ],
-        "forbidden_arguments": [
-          "infinite_regress_impossible"
-        ]
-      },
-      "dependencies": [],
-      "metadata": {
-        "tags": [
-          "infinite regress",
-          "causation",
-          "atheism",
-          "skepticism"
-        ],
-        "strength": 0.4,
-        "source": "Modern metaphysics",
-        "attribution": [
-          "hume",
-          "russell"
-        ]
-      }
-    },
-    {
-      "id": "evil_disproves_perfect_god",
-      "title": "The existence of evil disproves a perfect God",
-      "description": "If we observe suffering and evil in the world, and a perfect God would prevent gratuitous evil, then a perfectly good and omnipotent God does not exist.",
-      "conclusion": "The reality of evil is incompatible with God's existence",
-      "category": "philosophy",
-      "level": 3,
-      "activation_conditions": {
-        "required_axioms": [
-          "senses_reliable",
-          "reason_discovers_truth"
-        ],
-        "forbidden_arguments": [
-          "god_exists_perfect_being"
-        ]
-      },
-      "dependencies": [],
-      "metadata": {
-        "tags": [
-          "problem of evil",
-          "suffering",
-          "atheism",
-          "theodicy"
-        ],
-        "strength": 0.7,
-        "source": "Problem of evil tradition",
-        "attribution": [
-          "epicurus",
-          "hume",
-          "mackie"
-        ]
-      }
-    },
-    {
-      "id": "design_appearance_explained_naturally",
-      "title": "Apparent design explained by natural selection",
-      "description": "If natural processes like evolution can account for apparent teleological order without intelligent design, then an intelligent designer is unnecessary.",
-      "conclusion": "Apparent design in nature results from natural processes, not intelligence",
-      "category": "philosophy",
-      "level": 3,
-      "activation_conditions": {
-        "required_axioms": [
-          "senses_reliable",
-          "reason_discovers_truth"
-        ],
-        "forbidden_arguments": [
-          "intelligent_designer_exists"
-        ]
-      },
-      "dependencies": [],
-      "metadata": {
-        "tags": [
-          "evolution",
-          "natural selection",
-          "atheism",
-          "design"
-        ],
-        "strength": 0.75,
-        "source": "Evolutionary theory",
-        "attribution": [
-          "darwin",
-          "dawkins",
-          "dennett"
-        ]
-      }
-    },
-    {
-      "id": "contingency_unexplained_acceptable",
-      "title": "Contingent existence may require no explanation",
-      "description": "If the principle of sufficient reason is not universally valid, or if existence itself is a brute fact, then contingent reality need not require explanation by a necessary being.",
-      "conclusion": "Contingent existence can be accepted as a brute fact without explanation",
-      "category": "philosophy",
-      "level": 3,
-      "activation_conditions": {
-        "required_axioms": [
-          "reason_discovers_truth"
-        ],
-        "forbidden_arguments": [
-          "contingency_requires_explanation"
-        ]
-      },
-      "dependencies": [],
-      "metadata": {
-        "tags": [
-          "brute fact",
-          "contingency",
-          "atheism",
-          "skepticism"
-        ],
-        "strength": 0.5,
-        "source": "Logical positivism",
-        "attribution": [
-          "russell",
-          "hume",
-          "ayer"
-        ]
-      }
-    },
-    {
-      "id": "divine_providence_governs",
-      "title": "Divine providence governs the universe",
-      "description": "If God exists as the intelligent governor and perfect being, then divine providence directs all events toward their proper ends according to divine wisdom.",
-      "conclusion": "All events are ultimately ordered by divine providence toward good ends",
-      "category": "theology",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "god_exists_intelligent_governor",
-          "god_exists_perfect_being"
-        ]
-      },
-      "dependencies": [
-        "god_exists_intelligent_governor",
-        "god_exists_perfect_being"
-      ],
-      "metadata": {
-        "tags": [
-          "providence",
-          "divine governance",
-          "teleology",
-          "theism"
-        ],
-        "strength": 0.8,
-        "source": "Thomistic theology",
-        "attribution": [
-          "aquinas"
-        ]
-      }
-    },
-    {
-      "id": "natural_law_from_eternal_law",
-      "title": "Natural law derives from eternal law",
-      "description": "If God exists as the intelligent governor and natural teleology is real, then moral principles accessible to human reason derive from God's eternal law.",
-      "conclusion": "Objective moral law has its foundation in divine eternal law",
+      "id": "28",
+      "title": "Moral progress is possible",
+      "description": "Societies can genuinely improve their ethical practices and move closer to objective moral truths.",
+      "conclusion": "Ethics involves discovery, not mere invention",
       "category": "ethics",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "god_exists_intelligent_governor",
-          "natural_teleology"
-        ]
-      },
-      "dependencies": [
-        "god_exists_intelligent_governor"
-      ],
-      "metadata": {
-        "tags": [
-          "natural law",
-          "eternal law",
-          "moral theology",
-          "objective morality"
-        ],
-        "strength": 0.75,
-        "source": "Thomistic moral theory",
-        "attribution": [
-          "aquinas"
-        ]
-      }
+      "edges": [
+        {
+          "to": "14",
+          "description": "Assumes objective moral reality"
+        },
+        {
+          "to": "16",
+          "description": "Requires truth to be discoverable"
+        }
+      ]
     },
     {
-      "id": "human_soul_immortal",
-      "title": "The human soul is immortal",
-      "description": "If God exists as perfect being and humans have rational capacities transcending material processes, then the human soul, being spiritual, is naturally immortal.",
-      "conclusion": "Human souls survive bodily death and are naturally immortal",
-      "category": "anthropology",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "god_exists_perfect_being",
-          "material_insufficient_explanation"
-        ]
-      },
-      "dependencies": [
-        "god_exists_perfect_being",
-        "material_insufficient_explanation"
-      ],
-      "metadata": {
-        "tags": [
-          "immortality",
-          "soul",
-          "human nature",
-          "spiritual substance"
-        ],
-        "strength": 0.7,
-        "source": "Thomistic anthropology",
-        "attribution": [
-          "aquinas"
-        ]
-      }
+      "id": "29",
+      "title": "Free will exists",
+      "description": "Humans possess genuine agency and can make meaningful choices that are not entirely determined by prior causes.",
+      "conclusion": "Moral responsibility is legitimate",
+      "category": "philosophy_of_mind",
+      "edges": [
+        {
+          "to": "17",
+          "description": "Requires open future"
+        },
+        {
+          "to": "6",
+          "description": "Depends on consciousness"
+        }
+      ]
     },
     {
-      "id": "ultimate_purpose_exists",
-      "title": "Human life has ultimate purpose",
-      "description": "If God exists as the intelligent governor and natural teleology is real, then human existence is directed toward union with God as its ultimate end.",
-      "conclusion": "Human life finds its ultimate purpose in relationship with God",
-      "category": "anthropology",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "god_exists_intelligent_governor",
-          "natural_teleology"
-        ]
-      },
-      "dependencies": [
-        "god_exists_intelligent_governor"
-      ],
-      "metadata": {
-        "tags": [
-          "ultimate purpose",
-          "human destiny",
-          "beatific vision",
-          "teleology"
-        ],
-        "strength": 0.75,
-        "source": "Thomistic theology",
-        "attribution": [
-          "aquinas"
-        ]
-      }
+      "id": "30",
+      "title": "Aesthetic experience reveals value",
+      "description": "The appreciation of beauty provides genuine insight into objective features of reality worth preserving and creating.",
+      "conclusion": "Art and beauty have cognitive significance",
+      "category": "aesthetics",
+      "edges": [
+        {
+          "to": "15",
+          "description": "Assumes objective beauty"
+        },
+        {
+          "to": "6",
+          "description": "Requires conscious experience"
+        }
+      ]
     },
     {
-      "id": "evil_permits_greater_good",
-      "title": "God permits evil for greater good",
-      "description": "If God exists as perfect being and divine providence governs, then evil is permitted only insofar as it serves some greater good that could not otherwise be achieved.",
-      "conclusion": "All evil permitted by God ultimately serves a greater good",
-      "category": "theology",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "god_exists_perfect_being",
-          "divine_providence_governs"
-        ],
-        "forbidden_arguments": [
-          "evil_disproves_perfect_god"
-        ]
-      },
-      "dependencies": [
-        "divine_providence_governs"
-      ],
-      "metadata": {
-        "tags": [
-          "theodicy",
-          "greater good",
-          "divine permission",
-          "evil"
-        ],
-        "strength": 0.65,
-        "source": "Thomistic theodicy",
-        "attribution": [
-          "aquinas"
-        ]
-      }
+      "id": "31",
+      "title": "Natural law governs physical events",
+      "description": "The consistent patterns observed in nature reflect genuine laws that constrain and predict physical behavior.",
+      "conclusion": "The universe operates by discoverable principles",
+      "category": "philosophy_of_science",
+      "edges": [
+        {
+          "to": "19",
+          "description": "Based on natural order"
+        },
+        {
+          "to": "22",
+          "description": "Discovered by science"
+        }
+      ]
     },
     {
-      "id": "reality_purely_material",
-      "title": "Reality is purely material",
-      "description": "If naturalism is sufficient and design appears naturally explained, then reality consists entirely of material substances governed by natural laws without supernatural elements.",
-      "conclusion": "The universe is entirely material with no spiritual or supernatural reality",
-      "category": "metaphysics",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "naturalism_sufficient",
-          "design_appearance_explained_naturally"
-        ]
-      },
-      "dependencies": [
-        "naturalism_sufficient"
-      ],
-      "metadata": {
-        "tags": [
-          "materialism",
-          "physicalism",
-          "atheism",
-          "naturalism"
-        ],
-        "strength": 0.7,
-        "source": "Metaphysical naturalism",
-        "attribution": [
-          "dennett",
-          "churchland"
-        ]
-      }
+      "id": "32",
+      "title": "Human rights are universal",
+      "description": "All humans possess fundamental rights that transcend cultural differences and political arrangements.",
+      "conclusion": "Basic moral claims apply to all persons",
+      "category": "political_philosophy",
+      "edges": [
+        {
+          "to": "18",
+          "description": "Based on human dignity"
+        },
+        {
+          "to": "14",
+          "description": "Assumes objective morality"
+        }
+      ]
     },
     {
-      "id": "no_ultimate_purpose",
-      "title": "Human existence has no ultimate purpose",
-      "description": "If reality is purely material and contingent existence requires no explanation, then human life has no inherent purpose beyond what humans create for themselves.",
-      "conclusion": "Human existence has no objective ultimate purpose or meaning",
-      "category": "philosophy",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "reality_purely_material",
-          "contingency_unexplained_acceptable"
-        ]
-      },
-      "dependencies": [
-        "reality_purely_material"
-      ],
-      "metadata": {
-        "tags": [
-          "meaninglessness",
-          "existentialism",
-          "atheism",
-          "nihilism"
-        ],
-        "strength": 0.65,
-        "source": "Existentialist philosophy",
-        "attribution": [
-          "sartre",
-          "camus"
-        ]
-      }
-    },
-    {
-      "id": "morality_socially_constructed",
-      "title": "Morality is socially constructed",
-      "description": "If reality is purely material and no ultimate purpose exists, then moral principles are human constructions rather than objective features of reality.",
-      "conclusion": "Moral values are social conventions without objective foundation",
-      "category": "ethics",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "reality_purely_material",
-          "no_ultimate_purpose"
-        ],
-        "forbidden_arguments": [
-          "natural_law_from_eternal_law"
-        ]
-      },
-      "dependencies": [
-        "reality_purely_material"
-      ],
-      "metadata": {
-        "tags": [
-          "moral relativism",
-          "social construction",
-          "atheistic ethics"
-        ],
-        "strength": 0.6,
-        "source": "Moral relativism",
-        "attribution": [
-          "nietzsche",
-          "ayer"
-        ]
-      }
-    },
-    {
-      "id": "consciousness_eliminable",
-      "title": "Consciousness is reducible to brain states",
-      "description": "If reality is purely material and naturalism is sufficient, then consciousness and mental phenomena are entirely reducible to physical brain processes.",
-      "conclusion": "Consciousness has no independent reality beyond material brain states",
-      "category": "philosophy",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "reality_purely_material",
-          "naturalism_sufficient"
-        ]
-      },
-      "dependencies": [
-        "reality_purely_material"
-      ],
-      "metadata": {
-        "tags": [
-          "consciousness",
-          "reductionism",
-          "materialism",
-          "mind-brain identity"
-        ],
-        "strength": 0.6,
-        "source": "Eliminative materialism",
-        "attribution": [
-          "churchland",
-          "dennett"
-        ]
-      }
-    },
-    {
-      "id": "death_is_final",
-      "title": "Death is the final end of personal existence",
-      "description": "If consciousness is reducible to brain states and reality is purely material, then personal existence ends completely with biological death.",
-      "conclusion": "There is no survival of personal identity after death",
-      "category": "anthropology",
-      "level": 4,
-      "activation_conditions": {
-        "required_arguments": [
-          "consciousness_eliminable",
-          "reality_purely_material"
-        ],
-        "forbidden_arguments": [
-          "human_soul_immortal"
-        ]
-      },
-      "dependencies": [
-        "consciousness_eliminable"
-      ],
-      "metadata": {
-        "tags": [
-          "mortality",
-          "finitude",
-          "personal identity",
-          "atheism"
-        ],
-        "strength": 0.75,
-        "source": "Materialist anthropology",
-        "attribution": [
-          "epicurus",
-          "lucretius"
-        ]
-      }
-    },
-    {
-      "id": "ultimate_questions_unanswerable",
-      "title": "Ultimate metaphysical questions are unanswerable",
-      "description": "If both theistic and atheistic arguments have significant weaknesses, and human reason has limitations, then ultimate questions about God's existence may be beyond human knowledge.",
-      "conclusion": "We cannot know with certainty whether God exists or not",
+      "id": "33",
+      "title": "Truth correspondence to reality",
+      "description": "True statements accurately describe how things actually are, independent of what anyone believes about them.",
+      "conclusion": "Truth is objective correspondence",
       "category": "epistemology",
-      "level": 4,
-      "activation_conditions": {
-        "required_axioms": [
-          "reason_discovers_truth"
-        ],
-        "required_arguments": [
-          "evil_disproves_perfect_god",
-          "infinite_regress_permissible"
-        ],
-        "forbidden_arguments": [
-          "god_exists_first_cause",
-          "naturalism_sufficient"
-        ]
-      },
-      "dependencies": [],
-      "metadata": {
-        "tags": [
-          "agnosticism",
-          "skepticism",
-          "epistemic humility",
-          "limits of reason"
-        ],
-        "strength": 0.5,
-        "source": "Agnostic tradition",
-        "attribution": [
-          "huxley",
-          "kant"
-        ]
-      }
+      "edges": [
+        {
+          "to": "21",
+          "description": "Assumes external world"
+        },
+        {
+          "to": "16",
+          "description": "Truth is discoverable"
+        }
+      ]
+    },
+    {
+      "id": "34",
+      "title": "Rational discourse can resolve disagreement",
+      "description": "Through careful reasoning and evidence, people with different views can sometimes reach genuine agreement about disputed questions.",
+      "conclusion": "Reason provides path to consensus",
+      "category": "epistemology",
+      "edges": [
+        {
+          "to": "10",
+          "description": "Reason discovers truth"
+        },
+        {
+          "to": "26",
+          "description": "Communication enables knowledge"
+        }
+      ]
+    },
+    {
+      "id": "35",
+      "title": "Evil problem challenges perfect being",
+      "description": "The existence of genuine suffering and moral evil creates difficulties for belief in an all-powerful, all-good creator.",
+      "conclusion": "Traditional theism faces explanatory challenges",
+      "category": "theology",
+      "edges": [
+        {
+          "to": "20",
+          "description": "Suffering is genuinely bad"
+        },
+        {
+          "to": "25",
+          "description": "Challenges first cause perfection"
+        }
+      ]
+    },
+    {
+      "id": "36",
+      "title": "Mental states affect physical states",
+      "description": "Conscious decisions and mental events can influence bodily behavior and physical processes.",
+      "conclusion": "Mind-body interaction occurs",
+      "category": "philosophy_of_mind",
+      "edges": [
+        {
+          "to": "6",
+          "description": "Consciousness exists"
+        },
+        {
+          "to": "29",
+          "description": "Free will enables causation"
+        }
+      ]
+    },
+    {
+      "id": "37",
+      "title": "Emergent properties arise from complexity",
+      "description": "When simple components organize in complex ways, genuinely new properties can emerge that were not present in the parts alone.",
+      "conclusion": "Reductionism has limits",
+      "category": "philosophy_of_science",
+      "edges": [
+        {
+          "to": "21",
+          "description": "Assumes physical complexity"
+        },
+        {
+          "to": "31",
+          "description": "Natural laws permit emergence"
+        }
+      ]
+    },
+    {
+      "id": "38",
+      "title": "Cultural evolution shapes human nature",
+      "description": "Human practices, institutions, and ways of thinking evolve through cultural transmission and collective learning.",
+      "conclusion": "Human nature is partially constructed",
+      "category": "philosophy_of_culture",
+      "edges": [
+        {
+          "to": "26",
+          "description": "Communication enables culture"
+        },
+        {
+          "to": "28",
+          "description": "Progress possible in culture"
+        }
+      ]
+    },
+    {
+      "id": "39",
+      "title": "Phenomenology reveals experience structure",
+      "description": "Careful attention to the structure of conscious experience reveals essential features of how reality appears to minds.",
+      "conclusion": "First-person investigation yields knowledge",
+      "category": "philosophy_of_mind",
+      "edges": [
+        {
+          "to": "6",
+          "description": "Consciousness is accessible"
+        },
+        {
+          "to": "16",
+          "description": "Truth can be discovered"
+        }
+      ]
+    },
+    {
+      "id": "40",
+      "title": "Social contract creates political obligation",
+      "description": "Political authority becomes legitimate when citizens consent to be governed in exchange for protection and mutual benefit.",
+      "conclusion": "Democracy has moral foundations",
+      "category": "political_philosophy",
+      "edges": [
+        {
+          "to": "29",
+          "description": "Requires free choice"
+        },
+        {
+          "to": "32",
+          "description": "Protects human rights"
+        }
+      ]
+    },
+    {
+      "id": "41",
+      "title": "Virtue enables human flourishing",
+      "description": "Developing excellent character traits leads to fulfillment and contributes to the common good of communities.",
+      "conclusion": "Character ethics provides life guidance",
+      "category": "ethics",
+      "edges": [
+        {
+          "to": "14",
+          "description": "Assumes objective good"
+        },
+        {
+          "to": "18",
+          "description": "Humans have intrinsic worth"
+        }
+      ]
+    },
+    {
+      "id": "42",
+      "title": "Evolutionary process explains biological complexity",
+      "description": "Natural selection operating over long time periods can produce the intricate adaptations observed in living organisms.",
+      "conclusion": "Life develops through natural processes",
+      "category": "philosophy_of_biology",
+      "edges": [
+        {
+          "to": "22",
+          "description": "Scientific method supports evolution"
+        },
+        {
+          "to": "12",
+          "description": "Requires extended time"
+        }
+      ]
+    },
+    {
+      "id": "43",
+      "title": "Interpretive understanding differs from explanation",
+      "description": "Human actions and cultural phenomena require interpretive understanding that goes beyond causal explanation of natural events.",
+      "conclusion": "Human sciences need distinct methods",
+      "category": "philosophy_of_social_science",
+      "edges": [
+        {
+          "to": "8",
+          "description": "Other minds have intentions"
+        },
+        {
+          "to": "38",
+          "description": "Culture shapes meaning"
+        }
+      ]
+    },
+    {
+      "id": "44",
+      "title": "Technology extends human capabilities",
+      "description": "Tools and machines amplify human powers of perception, action, and computation, enabling new forms of flourishing.",
+      "conclusion": "Technology can serve human good",
+      "category": "philosophy_of_technology",
+      "edges": [
+        {
+          "to": "11",
+          "description": "Mathematical principles enable tech"
+        },
+        {
+          "to": "41",
+          "description": "Can support virtue development"
+        }
+      ]
+    },
+    {
+      "id": "45",
+      "title": "Environmental ethics constrains human action",
+      "description": "Humans have moral obligations to preserve natural systems and consider the welfare of non-human life.",
+      "conclusion": "Nature possesses intrinsic value",
+      "category": "environmental_philosophy",
+      "edges": [
+        {
+          "to": "14",
+          "description": "Moral distinctions apply to nature"
+        },
+        {
+          "to": "42",
+          "description": "Humans evolved within nature"
+        }
+      ]
+    },
+    {
+      "id": "46",
+      "title": "Artificial intelligence raises consciousness questions",
+      "description": "As machines become more sophisticated, fundamental questions arise about whether they could possess genuine understanding or awareness.",
+      "conclusion": "Machine consciousness is conceptually possible",
+      "category": "philosophy_of_mind",
+      "edges": [
+        {
+          "to": "37",
+          "description": "Complexity enables emergence"
+        },
+        {
+          "to": "44",
+          "description": "Technology extends capabilities"
+        }
+      ]
+    },
+    {
+      "id": "47",
+      "title": "Global ethics transcends local customs",
+      "description": "In an interconnected world, moral consideration must extend beyond tribal, national, and cultural boundaries.",
+      "conclusion": "Cosmopolitan ethics is necessary",
+      "category": "ethics",
+      "edges": [
+        {
+          "to": "32",
+          "description": "Human rights are universal"
+        },
+        {
+          "to": "38",
+          "description": "Cultural evolution enables global perspective"
+        }
+      ]
+    },
+    {
+      "id": "48",
+      "title": "Meaning emerges from purpose and connection",
+      "description": "Life's meaning comes from pursuing worthwhile goals, forming relationships, and contributing to something greater than oneself.",
+      "conclusion": "Meaning can be found in finite existence",
+      "category": "existentialism",
+      "edges": [
+        {
+          "to": "29",
+          "description": "Free will enables purpose choice"
+        },
+        {
+          "to": "26",
+          "description": "Connection requires communication"
+        }
+      ]
+    },
+    {
+      "id": "49",
+      "title": "Historical understanding requires empathy",
+      "description": "To understand past events and peoples, we must imaginatively enter into their worldviews while maintaining critical perspective.",
+      "conclusion": "History involves both empathy and judgment",
+      "category": "philosophy_of_history",
+      "edges": [
+        {
+          "to": "43",
+          "description": "Interpretation differs from explanation"
+        },
+        {
+          "to": "7",
+          "description": "Memory connects to past"
+        }
+      ]
+    },
+    {
+      "id": "50",
+      "title": "Future generations have moral standing",
+      "description": "Present actions that significantly affect future persons carry moral weight, even though those people do not yet exist.",
+      "conclusion": "Intergenerational ethics matter",
+      "category": "ethics",
+      "edges": [
+        {
+          "to": "17",
+          "description": "Future is partially open"
+        },
+        {
+          "to": "47",
+          "description": "Ethics transcends temporal boundaries"
+        }
+      ]
     }
   ],
-  "edges": [
-    {
-      "id": "existence_to_external_world",
-      "fromNode": "something_exists",
-      "toNode": "external_world_exists",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8,
-        "description": "Existence of self supports external world reality"
-      }
-    },
-    {
-      "id": "causation_to_causal_series",
-      "fromNode": "causation_principle",
-      "toNode": "causal_series_exist",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.9,
-        "description": "Principle of causation implies causal series in nature"
-      }
-    },
-    {
-      "id": "change_to_act_potency",
-      "fromNode": "change_occurs",
-      "toNode": "actual_vs_potential",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.85,
-        "description": "Observed change implies act/potency distinction"
-      }
-    },
-    {
-      "id": "perfection_to_hierarchy",
-      "fromNode": "degrees_of_perfection",
-      "toNode": "hierarchy_of_being",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.8,
-        "description": "Degrees of perfection establish hierarchy of being"
-      }
-    },
-    {
-      "id": "teleology_to_natural_order",
-      "fromNode": "teleological_order",
-      "toNode": "natural_teleology",
-      "fromType": "axiom",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.75,
-        "description": "Teleological order implies natural purposiveness"
-      }
-    },
-    {
-      "id": "causation_to_no_regress",
-      "fromNode": "efficient_causation",
-      "toNode": "infinite_regress_impossible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8,
-        "description": "Efficient causation supports impossibility of infinite regress"
-      }
-    },
-    {
-      "id": "act_potency_to_prime_mover",
-      "fromNode": "actual_vs_potential",
-      "toNode": "prime_mover_necessary",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.8,
-        "description": "Act/potency distinction supports need for Prime Mover"
-      }
-    },
-    {
-      "id": "contingent_to_necessary",
-      "fromNode": "contingent_beings_exist",
-      "toNode": "necessary_being_exists",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.85,
-        "description": "Contingent beings imply necessary being"
-      }
-    },
-    {
-      "id": "hierarchy_to_supreme",
-      "fromNode": "hierarchy_of_being",
-      "toNode": "supreme_perfection_exists",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.75,
-        "description": "Hierarchy of being implies supreme perfection"
-      }
-    },
-    {
-      "id": "teleology_to_designer",
-      "fromNode": "natural_teleology",
-      "toNode": "intelligent_designer_exists",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.7,
-        "description": "Natural teleology implies intelligent designer"
-      }
-    },
-    {
-      "id": "prime_mover_to_god_first_way",
-      "fromNode": "prime_mover_necessary",
-      "toNode": "god_exists_first_mover",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.8,
-        "description": "Prime Mover argument leads to God (First Way)"
-      }
-    },
-    {
-      "id": "first_cause_to_god_second_way",
-      "fromNode": "infinite_regress_impossible",
-      "toNode": "god_exists_first_cause",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.8,
-        "description": "First Cause argument leads to God (Second Way)"
-      }
-    },
-    {
-      "id": "necessary_to_god_third_way",
-      "fromNode": "necessary_being_exists",
-      "toNode": "god_exists_necessary_being",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.8,
-        "description": "Necessary Being argument leads to God (Third Way)"
-      }
-    },
-    {
-      "id": "perfection_to_god_fourth_way",
-      "fromNode": "supreme_perfection_exists",
-      "toNode": "god_exists_perfect_being",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.75,
-        "description": "Supreme Perfection argument leads to God (Fourth Way)"
-      }
-    },
-    {
-      "id": "designer_to_god_fifth_way",
-      "fromNode": "intelligent_designer_exists",
-      "toNode": "god_exists_intelligent_governor",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.7,
-        "description": "Intelligent Design argument leads to God (Fifth Way)"
-      }
-    },
-    {
-      "id": "naturalism_contradicts_immaterial",
-      "fromNode": "naturalism_sufficient",
-      "toNode": "material_insufficient_explanation",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "contradicts",
-        "strength": 0.9,
-        "description": "Naturalism contradicts need for immaterial explanation"
-      }
-    },
-    {
-      "id": "infinite_regress_contradicts_first_cause",
-      "fromNode": "infinite_regress_permissible",
-      "toNode": "infinite_regress_impossible",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "contradicts",
-        "strength": 0.95,
-        "description": "Permissible infinite regress contradicts impossibility"
-      }
-    },
-    {
-      "id": "evil_contradicts_perfect_god",
-      "fromNode": "evil_disproves_perfect_god",
-      "toNode": "god_exists_perfect_being",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "contradicts",
-        "strength": 0.8,
-        "description": "Problem of evil contradicts perfect God"
-      }
-    },
-    {
-      "id": "natural_design_contradicts_intelligence",
-      "fromNode": "design_appearance_explained_naturally",
-      "toNode": "intelligent_designer_exists",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "contradicts",
-        "strength": 0.8,
-        "description": "Natural design explanation contradicts intelligent designer"
-      }
-    },
-    {
-      "id": "god_governor_to_providence",
-      "fromNode": "god_exists_intelligent_governor",
-      "toNode": "divine_providence_governs",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.85,
-        "description": "God as governor implies divine providence"
-      }
-    },
-    {
-      "id": "god_perfect_to_natural_law",
-      "fromNode": "god_exists_perfect_being",
-      "toNode": "natural_law_from_eternal_law",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.8,
-        "description": "Perfect God implies natural law foundation"
-      }
-    },
-    {
-      "id": "god_perfect_to_immortality",
-      "fromNode": "god_exists_perfect_being",
-      "toNode": "human_soul_immortal",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "supports",
-        "strength": 0.75,
-        "description": "Perfect God supports human soul immortality"
-      }
-    },
-    {
-      "id": "providence_to_theodicy",
-      "fromNode": "divine_providence_governs",
-      "toNode": "evil_permits_greater_good",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.7,
-        "description": "Divine providence implies theodicy response to evil"
-      }
-    },
-    {
-      "id": "naturalism_to_materialism",
-      "fromNode": "naturalism_sufficient",
-      "toNode": "reality_purely_material",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.85,
-        "description": "Sufficient naturalism implies pure materialism"
-      }
-    },
-    {
-      "id": "materialism_to_no_purpose",
-      "fromNode": "reality_purely_material",
-      "toNode": "no_ultimate_purpose",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.8,
-        "description": "Pure materialism implies no ultimate purpose"
-      }
-    },
-    {
-      "id": "materialism_to_consciousness_reduction",
-      "fromNode": "reality_purely_material",
-      "toNode": "consciousness_eliminable",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.75,
-        "description": "Pure materialism implies consciousness reduction"
-      }
-    },
-    {
-      "id": "consciousness_reduction_to_mortality",
-      "fromNode": "consciousness_eliminable",
-      "toNode": "death_is_final",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "implies",
-        "strength": 0.9,
-        "description": "Consciousness reduction implies finality of death"
-      }
-    },
-    {
-      "id": "immortality_contradicts_mortality",
-      "fromNode": "human_soul_immortal",
-      "toNode": "death_is_final",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "contradicts",
-        "strength": 0.95,
-        "description": "Soul immortality contradicts final death"
-      }
-    },
-    {
-      "id": "natural_law_contradicts_construction",
-      "fromNode": "natural_law_from_eternal_law",
-      "toNode": "morality_socially_constructed",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "contradicts",
-        "strength": 0.9,
-        "description": "Natural law contradicts social construction of morality"
-      }
-    },
-    {
-      "id": "purpose_contradicts_meaninglessness",
-      "fromNode": "ultimate_purpose_exists",
-      "toNode": "no_ultimate_purpose",
-      "fromType": "argument",
-      "toType": "argument",
-      "relation": {
-        "type": "contradicts",
-        "strength": 0.95,
-        "description": "Ultimate purpose contradicts meaninglessness"
-      }
-    }
-  ],
-  "sources": [
-    {
-      "id": "aristotle",
-      "name": "Aristotle",
-      "period": "384-322 BCE",
-      "tradition": "Ancient Greek Philosophy",
-      "key_works": [
-        "Nicomachean Ethics",
-        "Metaphysics",
-        "Politics"
-      ]
-    },
-    {
-      "id": "aquinas",
-      "name": "Thomas Aquinas",
-      "period": "1225-1274",
-      "tradition": "Scholastic Philosophy",
-      "key_works": [
-        "Summa Theologica",
-        "Summa Contra Gentiles"
-      ]
-    },
-    {
-      "id": "descartes",
-      "name": "René Descartes",
-      "period": "1596-1650",
-      "tradition": "Rationalism",
-      "key_works": [
-        "Meditations on First Philosophy",
-        "Discourse on Method"
-      ]
-    },
-    {
-      "id": "kant",
-      "name": "Immanuel Kant",
-      "period": "1724-1804",
-      "tradition": "German Idealism",
-      "key_works": [
-        "Critique of Pure Reason",
-        "Groundwork of the Metaphysics of Morals"
-      ]
-    },
-    {
-      "id": "hume",
-      "name": "David Hume",
-      "period": "1711-1776",
-      "tradition": "Scottish Enlightenment",
-      "key_works": [
-        "Treatise of Human Nature",
-        "Enquiry Concerning Human Understanding"
-      ]
-    },
-    {
-      "id": "mill",
-      "name": "John Stuart Mill",
-      "period": "1806-1873",
-      "tradition": "Utilitarianism",
-      "key_works": [
-        "On Liberty",
-        "Utilitarianism"
-      ]
-    },
-    {
-      "id": "locke",
-      "name": "John Locke",
-      "period": "1632-1704",
-      "tradition": "British Empiricism",
-      "key_works": [
-        "Essay Concerning Human Understanding",
-        "Two Treatises of Government"
-      ]
-    },
-    {
-      "id": "hobbes",
-      "name": "Thomas Hobbes",
-      "period": "1588-1679",
-      "tradition": "Social Contract Theory",
-      "key_works": [
-        "Leviathan"
-      ]
-    },
-    {
-      "id": "rousseau",
-      "name": "Jean-Jacques Rousseau",
-      "period": "1712-1778",
-      "tradition": "Social Contract Theory",
-      "key_works": [
-        "The Social Contract",
-        "Discourse on Inequality"
-      ]
-    },
-    {
-      "id": "voltaire",
-      "name": "Voltaire",
-      "period": "1694-1778",
-      "tradition": "French Enlightenment",
-      "key_works": [
-        "Candide",
-        "Letters on the English"
-      ]
-    },
-    {
-      "id": "rawls",
-      "name": "John Rawls",
-      "period": "1921-2002",
-      "tradition": "Political Philosophy",
-      "key_works": [
-        "A Theory of Justice",
-        "Political Liberalism"
-      ]
-    },
-    {
-      "id": "nozick",
-      "name": "Robert Nozick",
-      "period": "1938-2002",
-      "tradition": "Libertarian Philosophy",
-      "key_works": [
-        "Anarchy, State, and Utopia"
-      ]
-    },
-    {
-      "id": "lewis_cs",
-      "name": "C.S. Lewis",
-      "period": "1898-1963",
-      "tradition": "Christian Philosophy",
-      "key_works": [
-        "Mere Christianity",
-        "The Problem of Pain"
-      ]
-    },
-    {
-      "id": "jesus",
-      "name": "Jesus of Nazareth",
-      "period": "c. 4 BCE - 30/33 CE",
-      "tradition": "Christianity",
-      "key_works": [
-        "Gospel Teachings"
-      ]
-    },
-    {
-      "id": "therese",
-      "name": "Saint Thérèse of Lisieux",
-      "period": "1873-1897",
-      "tradition": "Catholic Mysticism",
-      "key_works": [
-        "Story of a Soul"
-      ]
-    },
-    {
-      "id": "dimon",
-      "name": "Jamie Dimon",
-      "period": "1956-present",
-      "tradition": "Business Leadership",
-      "perspective": "Practical capitalism and social responsibility"
-    },
-    {
-      "id": "simons",
-      "name": "Jim Simons",
-      "period": "1938-2024",
-      "tradition": "Mathematical Finance",
-      "perspective": "Quantitative reasoning and scientific method"
-    },
-    {
-      "id": "trump",
-      "name": "Donald Trump",
-      "period": "1946-present",
-      "tradition": "Populist Politics",
-      "perspective": "American nationalism and transactional politics"
-    },
-    {
-      "id": "empiricism",
-      "name": "Empiricism",
-      "description": "Knowledge comes primarily from sensory experience",
-      "key_figures": [
-        "Locke",
-        "Hume",
-        "Berkeley"
-      ]
-    },
-    {
-      "id": "rationalism",
-      "name": "Rationalism",
-      "description": "Reason is the primary source of knowledge",
-      "key_figures": [
-        "Descartes",
-        "Spinoza",
-        "Leibniz"
-      ]
-    },
-    {
-      "id": "utilitarianism",
-      "name": "Utilitarianism",
-      "description": "Actions are right if they produce the greatest good for the greatest number",
-      "key_figures": [
-        "Bentham",
-        "Mill",
-        "Singer"
-      ]
-    },
-    {
-      "id": "deontology",
-      "name": "Deontological Ethics",
-      "description": "Ethics based on duty and rules rather than consequences",
-      "key_figures": [
-        "Kant"
-      ]
-    },
-    {
-      "id": "virtue_ethics",
-      "name": "Virtue Ethics",
-      "description": "Ethics based on character traits and virtues",
-      "key_figures": [
-        "Aristotle",
-        "Aquinas"
-      ]
-    },
-    {
-      "id": "social_contract",
-      "name": "Social Contract Theory",
-      "description": "Political authority derives from agreements among people",
-      "key_figures": [
-        "Hobbes",
-        "Locke",
-        "Rousseau",
-        "Rawls"
-      ]
-    },
-    {
-      "id": "natural_law",
-      "name": "Natural Law Theory",
-      "description": "Universal moral principles discoverable by reason",
-      "key_figures": [
-        "Aquinas",
-        "Finnis"
-      ]
-    },
-    {
-      "id": "existentialism",
-      "name": "Existentialism",
-      "description": "Existence precedes essence; emphasis on individual experience",
-      "key_figures": [
-        "Kierkegaard",
-        "Sartre",
-        "Camus"
-      ]
-    },
-    {
-      "id": "materialism",
-      "name": "Philosophical Materialism",
-      "description": "Reality consists only of matter and energy",
-      "key_figures": [
-        "Democritus",
-        "Marx",
-        "Dennett"
-      ]
-    },
-    {
-      "id": "idealism",
-      "name": "Philosophical Idealism",
-      "description": "Reality is fundamentally mental or spiritual",
-      "key_figures": [
-        "Plato",
-        "Berkeley",
-        "Hegel"
-      ]
-    }
-  ]
+  "sources": []
 }

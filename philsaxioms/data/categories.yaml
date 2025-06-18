@@ -1,0 +1,30 @@
+categories:
+  - id: metaphysics
+    name: Metaphysics
+    color: "#8B5CF6"
+    description: "Being, existence, causation, and the fundamental structure of reality"
+  
+  - id: epistemology
+    name: Epistemology
+    color: "#06B6D4"
+    description: "Knowledge, truth, and the powers and limits of human reason"
+  
+  - id: logic
+    name: Logic
+    color: "#10B981"
+    description: "Principles of valid reasoning, logical demonstration, and rational inference"
+  
+  - id: theology
+    name: Theology
+    color: "#F59E0B"
+    description: "Rational study of God, divine attributes, and religious truth"
+  
+  - id: ethics
+    name: Ethics
+    color: "#EF4444"
+    description: "Moral principles, natural law, and the human good"
+  
+  - id: anthropology
+    name: Philosophical Anthropology
+    color: "#EC4899"
+    description: "Human nature, the soul, personal identity, and human destiny"

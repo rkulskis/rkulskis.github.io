@@ -1,56 +1,142 @@
 [
   {
-    "axiomId": "something_exists",
-    "question": "Do you accept that something exists (at minimum, your own existence as a thinking being)?",
-    "explanation": "This is the most fundamental metaphysical principle - that existence is real and undeniable, evident in your own consciousness.",
+    "id": "q_1",
+    "text": "Something exists",
+    "description": "At minimum, I exist as a thinking being. This is self-evident and cannot be coherently denied.",
+    "axiomId": "1",
     "category": "metaphysics"
   },
   {
-    "axiomId": "non_contradiction",
-    "question": "Do you accept the principle of non-contradiction - that something cannot both be and not be in the same respect?",
-    "explanation": "This is the foundational principle of logic - that contradictory statements cannot both be true, and consistency is required for rational thought.",
+    "id": "q_2",
+    "text": "Principle of non-contradiction",
+    "description": "Something cannot both be and not be in the same respect at the same time. Contradictory statements cannot both be true.",
+    "axiomId": "2",
     "category": "logic"
   },
   {
-    "axiomId": "senses_reliable",
-    "question": "Do you believe our senses provide reliable knowledge of the external world?",
-    "explanation": "This asks whether sense experience, though sometimes mistaken, generally gives us genuine information about material reality.",
+    "id": "q_3",
+    "text": "Senses provide knowledge of reality",
+    "description": "Our senses, though sometimes mistaken, generally provide reliable information about the external world.",
+    "axiomId": "3",
     "category": "epistemology"
   },
   {
-    "axiomId": "causation_principle",
-    "question": "Do you accept that every effect has a cause?",
-    "explanation": "This is the principle of sufficient reason - that nothing comes into being without an adequate explanation for its existence.",
+    "id": "q_4",
+    "text": "Principle of causation",
+    "description": "Every effect has a cause. Nothing comes into being without a sufficient reason for its existence.",
+    "axiomId": "4",
     "category": "metaphysics"
   },
   {
-    "axiomId": "change_occurs",
-    "question": "Do you observe that change and motion occur in reality?",
-    "explanation": "This asks whether you accept the evident fact that things move, change, and transition from potential to actual states.",
+    "id": "q_5",
+    "text": "Change and motion occur",
+    "description": "We observe that things change, move, and are actualized from potency to act. This is evident to our senses.",
+    "axiomId": "5",
     "category": "metaphysics"
   },
   {
-    "axiomId": "contingent_necessary_distinction",
-    "question": "Can you distinguish between things that exist contingently versus necessarily?",
-    "explanation": "This asks whether you recognize that some things exist but could have not existed, while others (if they exist) must exist by their very nature.",
-    "category": "metaphysics"
-  },
-  {
-    "axiomId": "degrees_of_perfection",
-    "question": "Do you observe degrees of perfection, goodness, or excellence in reality?",
-    "explanation": "This asks whether you think some things are genuinely more perfect, good, true, or noble than others - that there are real hierarchies of value.",
-    "category": "metaphysics"
-  },
-  {
-    "axiomId": "teleological_order",
-    "question": "Do you observe that things appear ordered toward specific ends or purposes?",
-    "explanation": "This asks whether natural things seem to act for definite goals or ends, even when they lack consciousness to direct themselves.",
-    "category": "metaphysics"
-  },
-  {
-    "axiomId": "reason_discovers_truth",
-    "question": "Do you believe human reason can discover genuine truth about reality?",
-    "explanation": "This asks whether careful rational thought can attain real knowledge about the world, including knowledge of metaphysical principles.",
+    "id": "q_6",
+    "text": "Consciousness exists",
+    "description": "I am aware of my own thoughts, feelings, and experiences. This immediate awareness cannot be doubted.",
+    "axiomId": "6",
     "category": "epistemology"
+  },
+  {
+    "id": "q_7",
+    "text": "Memory is generally reliable",
+    "description": "My memories of past experiences, while not infallible, provide meaningful continuity of personal identity.",
+    "axiomId": "7",
+    "category": "epistemology"
+  },
+  {
+    "id": "q_8",
+    "text": "Other minds exist",
+    "description": "Other humans possess consciousness and inner experiences similar to my own.",
+    "axiomId": "8",
+    "category": "philosophy_of_mind"
+  },
+  {
+    "id": "q_9",
+    "text": "Language conveys meaning",
+    "description": "Words and symbols can successfully communicate ideas and concepts between minds.",
+    "axiomId": "9",
+    "category": "philosophy_of_language"
+  },
+  {
+    "id": "q_10",
+    "text": "Reason can discover truth",
+    "description": "Logical reasoning and rational inquiry can lead to genuine understanding of reality.",
+    "axiomId": "10",
+    "category": "epistemology"
+  },
+  {
+    "id": "q_11",
+    "text": "Mathematics describes reality",
+    "description": "Mathematical patterns and relationships correspond to structures in the physical world.",
+    "axiomId": "11",
+    "category": "philosophy_of_mathematics"
+  },
+  {
+    "id": "q_12",
+    "text": "Time exists and flows",
+    "description": "Events occur in temporal sequence, with a meaningful distinction between past, present, and future.",
+    "axiomId": "12",
+    "category": "metaphysics"
+  },
+  {
+    "id": "q_13",
+    "text": "Space exists as extension",
+    "description": "Physical objects exist in spatial relationships with measurable distances and dimensions.",
+    "axiomId": "13",
+    "category": "metaphysics"
+  },
+  {
+    "id": "q_14",
+    "text": "Moral distinctions are real",
+    "description": "Some actions are genuinely better or worse than others, not merely matters of opinion.",
+    "axiomId": "14",
+    "category": "ethics"
+  },
+  {
+    "id": "q_15",
+    "text": "Beauty exists objectively",
+    "description": "Some things possess genuine aesthetic value that transcends mere personal preference.",
+    "axiomId": "15",
+    "category": "aesthetics"
+  },
+  {
+    "id": "q_16",
+    "text": "Truth is discoverable",
+    "description": "Reality has a definite structure that can be progressively understood through inquiry.",
+    "axiomId": "16",
+    "category": "epistemology"
+  },
+  {
+    "id": "q_17",
+    "text": "The future is partially open",
+    "description": "While constrained by natural laws, genuine possibilities exist for different outcomes.",
+    "axiomId": "17",
+    "category": "metaphysics"
+  },
+  {
+    "id": "q_18",
+    "text": "Human dignity has intrinsic worth",
+    "description": "Every human being possesses inherent value that cannot be reduced to utility or function.",
+    "axiomId": "18",
+    "category": "ethics"
+  },
+  {
+    "id": "q_19",
+    "text": "Natural patterns exhibit order",
+    "description": "The universe displays consistent regularities and laws that govern natural phenomena.",
+    "axiomId": "19",
+    "category": "philosophy_of_science"
+  },
+  {
+    "id": "q_20",
+    "text": "Suffering is genuinely bad",
+    "description": "Pain and suffering constitute real evils, not merely subjective preferences.",
+    "axiomId": "20",
+    "category": "ethics"
   }
 ]

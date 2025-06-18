@@ -1,2 +1,16 @@
 *~
 *.html
+
+# PhilsAxioms build artifacts
+philsaxioms/node_modules/
+philsaxioms/packages/*/dist/
+philsaxioms/packages/*/build/
+philsaxioms/packages/frontend/public/graph-data.json
+philsaxioms/packages/frontend/public/questionnaire.json
+philsaxioms/index.html
+philsaxioms/assets/
+philsaxioms/graph-data.json
+philsaxioms/questionnaire.json
+
+# Temporary files
+serve.py

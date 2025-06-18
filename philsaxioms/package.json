@@ -1,0 +1,26 @@
+{
+  "name": "philsaxioms",
+  "version": "1.0.0",
+  "description": "Interactive axiom graph visualization with YAML-based content management",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "npm run dev --workspace=packages/backend",
+    "dev:frontend": "npm run dev --workspace=packages/frontend",
+    "build": "npm run build --workspace=packages/shared && npm run build --workspace=packages/backend && npm run build --workspace=packages/frontend",
+    "build:static": "node scripts/build-static-data.js && npm run build --workspace=packages/shared && npm run build --workspace=packages/frontend",
+    "preview": "vite preview",
+    "type-check": "npm run type-check --workspace=packages/backend && npm run type-check --workspace=packages/frontend",
+    "test": "npm run test --workspace=packages/backend && npm run test --workspace=packages/frontend",
+    "test:coverage": "npm run test:coverage --workspace=packages/backend && npm run test:coverage --workspace=packages/frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "glob": "^8.1.0",
+    "typescript": "^5.3.3",
+    "yaml": "^1.10.2"
+  }
+}

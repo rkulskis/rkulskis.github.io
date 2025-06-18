@@ -14,6 +14,7 @@ declare -A EXCEPTIONS=(
     ["cv"]="[[file:cv/rossMikulskisResume.pdf][CV]]"
     ["images"]=""
     ["index"]="[[file:./index.html][./]]"
+    ["philsaxioms"]="[[file:philsaxioms/][PhilsAxioms]]"
 )
 
 capitalize() {
@@ -93,8 +94,8 @@ process_files() {
             done
             ;;
     esac
-    # if index.org does not exist, create a symlink for index.html
-    if [ ! -e "$dir/index.org" ]; then
+    # if index.org does not exist, create a symlink for index.html (but not if index.html already exists)
+    if [ ! -e "$dir/index.org" ] && [ ! -e "$dir/index.html" ]; then
         html_file=$(find "$dir" -maxdepth 1 -type f -name "*.html" | head -n 1)
         if [ -n "$html_file" ]; then
             ln -sf "$(basename "$html_file")" "$dir/index.html"
@@ -102,6 +103,10 @@ process_files() {
     fi		
 
     for subdir in "$dir"/*/; do
+        # Skip philsaxioms directory from org-mode processing
+        if [[ "$(basename "$subdir")" == "philsaxioms" ]]; then
+            continue
+        fi
         [ -d "$subdir" ] && process_files "$subdir" "$operation" 0
     done
 }

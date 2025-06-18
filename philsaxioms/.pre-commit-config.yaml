@@ -1,0 +1,58 @@
+repos:
+  - repo: local
+    hooks:
+      - id: yaml-structure-validation
+        name: Validate YAML Structure and Philosophical Consistency
+        entry: node scripts/validate-yaml-structure.js
+        language: node
+        files: ^data/.*\.ya?ml$
+        pass_filenames: false
+        always_run: false
+        stages: [commit]
+        verbose: true
+
+  - repo: local
+    hooks:
+      - id: auto-fix-arguments
+        name: Auto-fix Unreachable Arguments
+        entry: node scripts/auto-fix-arguments.js --auto-fix
+        language: node
+        files: ^data/.*\.ya?ml$
+        pass_filenames: false
+        always_run: false
+        stages: [commit]
+        verbose: true
+
+  - repo: local
+    hooks:
+      - id: facio-validate
+        name: Run Facio Validation (After Auto-fix)
+        entry: ./facio
+        args: [validate]
+        language: script
+        files: ^data/.*\.ya?ml$
+        pass_filenames: false
+        always_run: false
+        stages: [commit]
+        verbose: true
+
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.4.0
+    hooks:
+      - id: trailing-whitespace
+        files: \.(ya?ml|json|js|ts|tsx|md)$
+      - id: end-of-file-fixer
+        files: \.(ya?ml|json|js|ts|tsx|md)$
+      - id: check-yaml
+        files: \.ya?ml$
+      - id: check-json
+        files: \.json$
+      - id: check-merge-conflict
+      - id: check-added-large-files
+
+  - repo: https://github.com/adrienverge/yamllint
+    rev: v1.32.0
+    hooks:
+      - id: yamllint
+        files: ^data/.*\.ya?ml$
+        args: [-c=.yamllint.yaml]

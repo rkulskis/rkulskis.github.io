@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html, body, #root {
+    height: 100%;
+  }
+  
+  body {
+    @apply bg-slate-50;
+  }
+}
+
+@layer components {
+  .axiom-node {
+    @apply bg-white border-2 rounded-lg shadow-lg cursor-pointer transition-all duration-200;
+  }
+  
+  .axiom-node:hover {
+    @apply shadow-xl transform scale-105;
+  }
+  
+  .axiom-node.selected {
+    @apply ring-4 ring-blue-400 ring-opacity-50;
+  }
+  
+  .lego-connector {
+    @apply w-4 h-4 rounded-full border-2 border-gray-300 bg-white;
+    position: absolute;
+  }
+  
+  .lego-connector.top {
+    @apply -top-2 left-1/2 transform -translate-x-1/2;
+  }
+  
+  .lego-connector.bottom {
+    @apply -bottom-2 left-1/2 transform -translate-x-1/2;
+  }
+  
+  .lego-connector.left {
+    @apply -left-2 top-1/2 transform -translate-y-1/2;
+  }
+  
+  .lego-connector.right {
+    @apply -right-2 top-1/2 transform -translate-y-1/2;
+  }
+}

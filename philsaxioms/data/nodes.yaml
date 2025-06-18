@@ -1,0 +1,458 @@
+nodes:
+  # Fundamental axioms (no edges - these are the starting points)
+  - id: "1"
+    title: Something exists
+    description: At minimum, I exist as a thinking being. This is self-evident and cannot be coherently denied.
+    category: metaphysics
+    edges: []
+
+  - id: "2"
+    title: Principle of non-contradiction
+    description: Something cannot both be and not be in the same respect at the same time. Contradictory statements cannot both be true.
+    category: logic
+    edges: []
+
+  - id: "3"
+    title: Senses provide knowledge of reality
+    description: Our senses, though sometimes mistaken, generally provide reliable information about the external world.
+    category: epistemology
+    edges: []
+
+  - id: "4"
+    title: Principle of causation
+    description: Every effect has a cause. Nothing comes into being without a sufficient reason for its existence.
+    category: metaphysics
+    edges: []
+
+  - id: "5"
+    title: Change and motion occur
+    description: We observe that things change, move, and are actualized from potency to act. This is evident to our senses.
+    category: metaphysics
+    edges: []
+
+  - id: "6"
+    title: Consciousness exists
+    description: I am aware of my own thoughts, feelings, and experiences. This immediate awareness cannot be doubted.
+    category: epistemology
+    edges: []
+
+  - id: "7"
+    title: Memory is generally reliable
+    description: My memories of past experiences, while not infallible, provide meaningful continuity of personal identity.
+    category: epistemology
+    edges: []
+
+  - id: "8"
+    title: Other minds exist
+    description: Other humans possess consciousness and inner experiences similar to my own.
+    category: philosophy_of_mind
+    edges: []
+
+  - id: "9"
+    title: Language conveys meaning
+    description: Words and symbols can successfully communicate ideas and concepts between minds.
+    category: philosophy_of_language
+    edges: []
+
+  - id: "10"
+    title: Reason can discover truth
+    description: Logical reasoning and rational inquiry can lead to genuine understanding of reality.
+    category: epistemology
+    edges: []
+
+  - id: "11"
+    title: Mathematics describes reality
+    description: Mathematical patterns and relationships correspond to structures in the physical world.
+    category: philosophy_of_mathematics
+    edges: []
+
+  - id: "12"
+    title: Time exists and flows
+    description: Events occur in temporal sequence, with a meaningful distinction between past, present, and future.
+    category: metaphysics
+    edges: []
+
+  - id: "13"
+    title: Space exists as extension
+    description: Physical objects exist in spatial relationships with measurable distances and dimensions.
+    category: metaphysics
+    edges: []
+
+  - id: "14"
+    title: Moral distinctions are real
+    description: Some actions are genuinely better or worse than others, not merely matters of opinion.
+    category: ethics
+    edges: []
+
+  - id: "15"
+    title: Beauty exists objectively
+    description: Some things possess genuine aesthetic value that transcends mere personal preference.
+    category: aesthetics
+    edges: []
+
+  - id: "16"
+    title: Truth is discoverable
+    description: Reality has a definite structure that can be progressively understood through inquiry.
+    category: epistemology
+    edges: []
+
+  - id: "17"
+    title: The future is partially open
+    description: While constrained by natural laws, genuine possibilities exist for different outcomes.
+    category: metaphysics
+    edges: []
+
+  - id: "18"
+    title: Human dignity has intrinsic worth
+    description: Every human being possesses inherent value that cannot be reduced to utility or function.
+    category: ethics
+    edges: []
+
+  - id: "19"
+    title: Natural patterns exhibit order
+    description: The universe displays consistent regularities and laws that govern natural phenomena.
+    category: philosophy_of_science
+    edges: []
+
+  - id: "20"
+    title: Suffering is genuinely bad
+    description: Pain and suffering constitute real evils, not merely subjective preferences.
+    category: ethics
+    edges: []
+
+  # Complex arguments that build on the axioms
+  - id: "21"
+    title: An external world exists
+    description: Given that our senses are generally reliable and we observe consistent patterns, there exists a world of material objects external to our minds.
+    conclusion: Material reality exists independently of our consciousness
+    category: metaphysics
+    edges:
+      - to: "1"
+        description: Builds on existence of self
+      - to: "3"
+        description: Builds on reliable senses
+      - to: "2"
+        description: Builds on non-contradiction principle
+
+  - id: "22"
+    title: Scientific method reveals truth
+    description: Systematic observation, hypothesis formation, and experimental testing provide reliable knowledge about natural phenomena.
+    conclusion: Science discovers genuine facts about reality
+    category: philosophy_of_science
+    edges:
+      - to: "3"
+        description: Relies on sensory observation
+      - to: "10"
+        description: Depends on reasoning ability
+      - to: "19"
+        description: Assumes natural order exists
+
+  - id: "23"
+    title: Personal identity persists through time
+    description: Despite physical and mental changes, each person maintains a continuous identity across their lifetime.
+    conclusion: The self endures as a unified entity
+    category: philosophy_of_mind
+    edges:
+      - to: "6"
+        description: Requires conscious awareness
+      - to: "7"
+        description: Depends on memory continuity
+      - to: "12"
+        description: Assumes temporal flow
+
+  - id: "24"
+    title: Causal series exist in nature
+    description: Since change occurs and every effect has a cause, there exist chains of causation connecting events in the natural world.
+    conclusion: Reality is structured by causal relationships
+    category: metaphysics
+    edges:
+      - to: "5"
+        description: Builds on change occurring
+      - to: "4"
+        description: Builds on causation principle
+
+  - id: "25"
+    title: A first cause is necessary
+    description: Since infinite regress of causes is impossible, there must be a first uncaused cause that explains the existence of all other things.
+    conclusion: A first uncaused cause must exist
+    category: theology
+    edges:
+      - to: "24"
+        description: Builds on causal series
+      - to: "4"
+        description: Builds on causation principle
+
+  - id: "26"
+    title: Communication enables knowledge
+    description: Through language and symbols, humans can share discoveries and build cumulative understanding beyond individual experience.
+    conclusion: Collective inquiry advances human knowledge
+    category: philosophy_of_language
+    edges:
+      - to: "8"
+        description: Requires other minds
+      - to: "9"
+        description: Depends on meaningful language
+
+  - id: "27"
+    title: Mathematical truths are universal
+    description: Mathematical relationships hold necessarily and apply across all possible worlds and contexts.
+    conclusion: Mathematics reveals eternal structures
+    category: philosophy_of_mathematics
+    edges:
+      - to: "11"
+        description: Assumes math describes reality
+      - to: "10"
+        description: Discovered through reason
+
+  - id: "28"
+    title: Moral progress is possible
+    description: Societies can genuinely improve their ethical practices and move closer to objective moral truths.
+    conclusion: Ethics involves discovery, not mere invention
+    category: ethics
+    edges:
+      - to: "14"
+        description: Assumes objective moral reality
+      - to: "16"
+        description: Requires truth to be discoverable
+
+  - id: "29"
+    title: Free will exists
+    description: Humans possess genuine agency and can make meaningful choices that are not entirely determined by prior causes.
+    conclusion: Moral responsibility is legitimate
+    category: philosophy_of_mind
+    edges:
+      - to: "17"
+        description: Requires open future
+      - to: "6"
+        description: Depends on consciousness
+
+  - id: "30"
+    title: Aesthetic experience reveals value
+    description: The appreciation of beauty provides genuine insight into objective features of reality worth preserving and creating.
+    conclusion: Art and beauty have cognitive significance
+    category: aesthetics
+    edges:
+      - to: "15"
+        description: Assumes objective beauty
+      - to: "6"
+        description: Requires conscious experience
+
+  - id: "31"
+    title: Natural law governs physical events
+    description: The consistent patterns observed in nature reflect genuine laws that constrain and predict physical behavior.
+    conclusion: The universe operates by discoverable principles
+    category: philosophy_of_science
+    edges:
+      - to: "19"
+        description: Based on natural order
+      - to: "22"
+        description: Discovered by science
+
+  - id: "32"
+    title: Human rights are universal
+    description: All humans possess fundamental rights that transcend cultural differences and political arrangements.
+    conclusion: Basic moral claims apply to all persons
+    category: political_philosophy
+    edges:
+      - to: "18"
+        description: Based on human dignity
+      - to: "14"
+        description: Assumes objective morality
+
+  - id: "33"
+    title: Truth correspondence to reality
+    description: True statements accurately describe how things actually are, independent of what anyone believes about them.
+    conclusion: Truth is objective correspondence
+    category: epistemology
+    edges:
+      - to: "21"
+        description: Assumes external world
+      - to: "16"
+        description: Truth is discoverable
+
+  - id: "34"
+    title: Rational discourse can resolve disagreement
+    description: Through careful reasoning and evidence, people with different views can sometimes reach genuine agreement about disputed questions.
+    conclusion: Reason provides path to consensus
+    category: epistemology
+    edges:
+      - to: "10"
+        description: Reason discovers truth
+      - to: "26"
+        description: Communication enables knowledge
+
+  - id: "35"
+    title: Evil problem challenges perfect being
+    description: The existence of genuine suffering and moral evil creates difficulties for belief in an all-powerful, all-good creator.
+    conclusion: Traditional theism faces explanatory challenges
+    category: theology
+    edges:
+      - to: "20"
+        description: Suffering is genuinely bad
+      - to: "25"
+        description: Challenges first cause perfection
+
+  - id: "36"
+    title: Mental states affect physical states
+    description: Conscious decisions and mental events can influence bodily behavior and physical processes.
+    conclusion: Mind-body interaction occurs
+    category: philosophy_of_mind
+    edges:
+      - to: "6"
+        description: Consciousness exists
+      - to: "29"
+        description: Free will enables causation
+
+  - id: "37"
+    title: Emergent properties arise from complexity
+    description: When simple components organize in complex ways, genuinely new properties can emerge that were not present in the parts alone.
+    conclusion: Reductionism has limits
+    category: philosophy_of_science
+    edges:
+      - to: "21"
+        description: Assumes physical complexity
+      - to: "31"
+        description: Natural laws permit emergence
+
+  - id: "38"
+    title: Cultural evolution shapes human nature
+    description: Human practices, institutions, and ways of thinking evolve through cultural transmission and collective learning.
+    conclusion: Human nature is partially constructed
+    category: philosophy_of_culture
+    edges:
+      - to: "26"
+        description: Communication enables culture
+      - to: "28"
+        description: Progress possible in culture
+
+  - id: "39"
+    title: Phenomenology reveals experience structure
+    description: Careful attention to the structure of conscious experience reveals essential features of how reality appears to minds.
+    conclusion: First-person investigation yields knowledge
+    category: philosophy_of_mind
+    edges:
+      - to: "6"
+        description: Consciousness is accessible
+      - to: "16"
+        description: Truth can be discovered
+
+  - id: "40"
+    title: Social contract creates political obligation
+    description: Political authority becomes legitimate when citizens consent to be governed in exchange for protection and mutual benefit.
+    conclusion: Democracy has moral foundations
+    category: political_philosophy
+    edges:
+      - to: "29"
+        description: Requires free choice
+      - to: "32"
+        description: Protects human rights
+
+  - id: "41"
+    title: Virtue enables human flourishing
+    description: Developing excellent character traits leads to fulfillment and contributes to the common good of communities.
+    conclusion: Character ethics provides life guidance
+    category: ethics
+    edges:
+      - to: "14"
+        description: Assumes objective good
+      - to: "18"
+        description: Humans have intrinsic worth
+
+  - id: "42"
+    title: Evolutionary process explains biological complexity
+    description: Natural selection operating over long time periods can produce the intricate adaptations observed in living organisms.
+    conclusion: Life develops through natural processes
+    category: philosophy_of_biology
+    edges:
+      - to: "22"
+        description: Scientific method supports evolution
+      - to: "12"
+        description: Requires extended time
+
+  - id: "43"
+    title: Interpretive understanding differs from explanation
+    description: Human actions and cultural phenomena require interpretive understanding that goes beyond causal explanation of natural events.
+    conclusion: Human sciences need distinct methods
+    category: philosophy_of_social_science
+    edges:
+      - to: "8"
+        description: Other minds have intentions
+      - to: "38"
+        description: Culture shapes meaning
+
+  - id: "44"
+    title: Technology extends human capabilities
+    description: Tools and machines amplify human powers of perception, action, and computation, enabling new forms of flourishing.
+    conclusion: Technology can serve human good
+    category: philosophy_of_technology
+    edges:
+      - to: "11"
+        description: Mathematical principles enable tech
+      - to: "41"
+        description: Can support virtue development
+
+  - id: "45"
+    title: Environmental ethics constrains human action
+    description: Humans have moral obligations to preserve natural systems and consider the welfare of non-human life.
+    conclusion: Nature possesses intrinsic value
+    category: environmental_philosophy
+    edges:
+      - to: "14"
+        description: Moral distinctions apply to nature
+      - to: "42"
+        description: Humans evolved within nature
+
+  - id: "46"
+    title: Artificial intelligence raises consciousness questions
+    description: As machines become more sophisticated, fundamental questions arise about whether they could possess genuine understanding or awareness.
+    conclusion: Machine consciousness is conceptually possible
+    category: philosophy_of_mind
+    edges:
+      - to: "37"
+        description: Complexity enables emergence
+      - to: "44"
+        description: Technology extends capabilities
+
+  - id: "47"
+    title: Global ethics transcends local customs
+    description: In an interconnected world, moral consideration must extend beyond tribal, national, and cultural boundaries.
+    conclusion: Cosmopolitan ethics is necessary
+    category: ethics
+    edges:
+      - to: "32"
+        description: Human rights are universal
+      - to: "38"
+        description: Cultural evolution enables global perspective
+
+  - id: "48"
+    title: Meaning emerges from purpose and connection
+    description: Life's meaning comes from pursuing worthwhile goals, forming relationships, and contributing to something greater than oneself.
+    conclusion: Meaning can be found in finite existence
+    category: existentialism
+    edges:
+      - to: "29"
+        description: Free will enables purpose choice
+      - to: "26"
+        description: Connection requires communication
+
+  - id: "49"
+    title: Historical understanding requires empathy
+    description: To understand past events and peoples, we must imaginatively enter into their worldviews while maintaining critical perspective.
+    conclusion: History involves both empathy and judgment
+    category: philosophy_of_history
+    edges:
+      - to: "43"
+        description: Interpretation differs from explanation
+      - to: "7"
+        description: Memory connects to past
+
+  - id: "50"
+    title: Future generations have moral standing
+    description: Present actions that significantly affect future persons carry moral weight, even though those people do not yet exist.
+    conclusion: Intergenerational ethics matter
+    category: ethics
+    edges:
+      - to: "17"
+        description: Future is partially open
+      - to: "47"
+        description: Ethics transcends temporal boundaries
