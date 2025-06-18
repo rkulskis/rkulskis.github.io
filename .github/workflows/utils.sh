@@ -14,7 +14,7 @@ declare -A EXCEPTIONS=(
     ["cv"]="[[file:cv/rossMikulskisResume.pdf][CV]]"
     ["images"]=""
     ["index"]="[[file:./index.html][./]]"
-    ["philsaxioms"]="[[file:philsaxioms/][PhilsAxioms]]"
+    ["philsaxioms"]="[[file:philsaxioms/][Phil's Axioms]]"
 )
 
 capitalize() {

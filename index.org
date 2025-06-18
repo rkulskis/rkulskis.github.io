@@ -1,4 +1,4 @@
-| [[file:./index.html][./]] | [[file:cv/rossMikulskisResume.pdf][CV]] |  | [[file:philsaxioms/][PhilsAxioms]] | [[file:research/index.html][Research/]] | 
+| [[file:./index.html][./]] | [[file:cv/rossMikulskisResume.pdf][CV]] |  | [[file:philsaxioms/][Phil's Axioms]] | [[file:research/index.html][Research/]] | 
 #+OPTIONS: toc:nil num:nil
 * Ross A. Mikulskis
 

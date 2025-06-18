@@ -83,7 +83,12 @@ function App() {
     // Clear existing session and restart
     localStorage.removeItem('philsaxioms_session_id');
     setSession(null);
-    navigate('/');
+    
+    // Force reload to root path to ensure clean state
+    const basePath = window.location.pathname.includes('/philsaxioms') 
+      ? '/philsaxioms/' 
+      : '/';
+    window.location.href = basePath;
   };
 
   const handleSessionUpdate = async (updates: Partial<UserSession>) => {
