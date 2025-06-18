@@ -79,6 +79,13 @@ function App() {
     }
   };
 
+  const handleRestartQuestionnaire = () => {
+    // Clear existing session and restart
+    localStorage.removeItem('philsaxioms_session_id');
+    setSession(null);
+    navigate('/');
+  };
+
   const handleSessionUpdate = async (updates: Partial<UserSession>) => {
     if (!session) return;
     
@@ -121,6 +128,7 @@ function App() {
                   onComplete={handleQuestionnaireComplete}
                   onSkip={handleSkipQuestionnaire}
                   categories={graphData.categories}
+                  existingSession={session}
                 />
               </Suspense>
             }
@@ -162,6 +170,7 @@ function App() {
                     categories={graphData.categories}
                     session={session}
                     onSessionUpdate={handleSessionUpdate}
+                    onRestartQuestionnaire={handleRestartQuestionnaire}
                   />
                 </Suspense>
               )

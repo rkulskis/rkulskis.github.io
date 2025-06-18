@@ -22,7 +22,6 @@ import PhilNode from './Node';
 import PhilEdge from './Edge';
 import { calculateHierarchicalLayout } from '../utils/layout';
 import { apiClient } from '../utils/api';
-import { useNavigate } from 'react-router-dom';
 import { useDebounce } from '../hooks/useDebounce';
 
 const isLocalDevelopment = import.meta.env.DEV || window.location.hostname.includes('localhost');
@@ -41,9 +40,10 @@ interface GraphViewProps {
   categories: AxiomCategory[];
   session: UserSession;
   onSessionUpdate: (updates: Partial<UserSession>) => void;
+  onRestartQuestionnaire: () => void;
 }
 
-const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session, onSessionUpdate }: GraphViewProps) {
+const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session, onSessionUpdate, onRestartQuestionnaire }: GraphViewProps) {
   const [selectedNode, setSelectedNode] = useState<{node: Node, type: 'axiom' | 'argument'} | null>(null);
   const [showSnapshotModal, setShowSnapshotModal] = useState(false);
   const [snapshotTitle, setSnapshotTitle] = useState('');
@@ -70,7 +70,6 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
     const maxId = existingIds.length > 0 ? Math.max(...existingIds) : 0;
     return (maxId + 1).toString();
   };
-  const navigate = useNavigate();
 
   const getCategoryById = (id: string) => categories.find(c => c.id === id);
 
@@ -562,11 +561,11 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
         <div className="flex items-center justify-between bg-white shadow-lg border-b border-gray-200 px-4 py-2">
           <div className="flex items-center gap-2">
             <button
-              onClick={() => navigate('/')}
+              onClick={onRestartQuestionnaire}
               className="flex items-center gap-1 bg-gray-600 text-white px-3 py-1.5 rounded-md text-sm hover:bg-gray-700 transition-colors"
             >
               <Home className="w-3 h-3" />
-              New
+              Retake Questionnaire
             </button>
             
             <button

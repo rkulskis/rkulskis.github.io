@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronRight, ChevronLeft, Check, X } from 'lucide-react';
-import { QuestionnaireItem, AxiomCategory } from '@philsaxioms/shared';
+import { QuestionnaireItem, AxiomCategory, UserSession } from '@philsaxioms/shared';
 import { apiClient } from '../utils/api';
 
 interface QuestionnaireProps {
   onComplete: (acceptedAxioms: string[], rejectedAxioms: string[]) => void;
   onSkip: () => void;
   categories: AxiomCategory[];
+  existingSession?: UserSession | null;
 }
 
-export default function Questionnaire({ onComplete, onSkip, categories }: QuestionnaireProps) {
+export default function Questionnaire({ onComplete, onSkip, categories, existingSession }: QuestionnaireProps) {
   const [questions, setQuestions] = useState<QuestionnaireItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answers, setAnswers] = useState<Record<string, boolean>>({});
@@ -21,6 +22,19 @@ export default function Questionnaire({ onComplete, onSkip, categories }: Questi
       try {
         const questionnaire = await apiClient.fetchQuestionnaire();
         setQuestions(questionnaire);
+        
+        // Pre-fill answers if there's an existing session
+        if (existingSession) {
+          const prefilledAnswers: Record<string, boolean> = {};
+          questionnaire.forEach(q => {
+            if (existingSession.acceptedAxioms.includes(q.axiomId)) {
+              prefilledAnswers[q.axiomId] = true;
+            } else if (existingSession.rejectedAxioms.includes(q.axiomId)) {
+              prefilledAnswers[q.axiomId] = false;
+            }
+          });
+          setAnswers(prefilledAnswers);
+        }
       } catch (error) {
         console.error('Failed to load questionnaire:', error);
       } finally {
@@ -29,7 +43,7 @@ export default function Questionnaire({ onComplete, onSkip, categories }: Questi
     }
 
     loadQuestionnaire();
-  }, []);
+  }, [existingSession]);
 
   const currentQuestion = questions[currentIndex];
   const category = categories.find(c => c.id === currentQuestion?.category);
@@ -120,13 +134,19 @@ export default function Questionnaire({ onComplete, onSkip, categories }: Questi
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">PhilsAxioms</h1>
           <p className="text-gray-600 mb-4">
-            Build your philosophical framework by answering these foundational questions
+            {existingSession 
+              ? "Review and modify your philosophical framework" 
+              : "Build your philosophical framework by answering these foundational questions"
+            }
           </p>
           <button
             onClick={onSkip}
             className="text-indigo-600 hover:text-indigo-800 underline text-sm"
           >
-            Skip questionnaire and explore all axioms →
+            {existingSession 
+              ? "Continue with current framework →" 
+              : "Skip questionnaire and explore all axioms →"
+            }
           </button>
         </div>
 
