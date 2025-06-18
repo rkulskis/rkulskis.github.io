@@ -1,0 +1,20 @@
+# Jekyll configuration for GitHub Pages
+exclude:
+  - node_modules/
+  - philsaxioms/node_modules/
+  - philsaxioms/packages/*/node_modules/
+  - "*.log"
+  - .git/
+  - .gitignore
+  - README.md
+  - Makefile
+  - serve.py
+  - CLAUDE.md
+
+# Disable Jekyll processing for PhilsAxioms static files
+plugins:
+  - jekyll-sitemap
+
+# Allow Jekyll to process HTML files in the root
+include:
+  - philsaxioms/
