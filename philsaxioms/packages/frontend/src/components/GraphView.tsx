@@ -585,7 +585,7 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
               }`}
             >
               {showInvalidNodes ? <EyeOff className="w-3 h-3" /> : <Eye className="w-3 h-3" />}
-              {showInvalidNodes ? 'Hide' : 'Show All'}
+              {showInvalidNodes ? 'Hide Disagreed Arguments' : 'Show All Arguments'}
             </button>
             
             {isLocalDevelopment && (

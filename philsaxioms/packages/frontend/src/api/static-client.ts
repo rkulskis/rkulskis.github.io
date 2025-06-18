@@ -42,23 +42,46 @@ class StaticApiClient {
     }
   }
 
-  async createSession(): Promise<UserSession> {
-    // Generate a simple client-side session
-    return {
+  async createSession(acceptedAxioms: string[] = [], rejectedAxioms: string[] = []): Promise<UserSession> {
+    // Generate a client-side session with the provided axioms
+    const session: UserSession = {
       id: generateSessionId(),
-      acceptedAxioms: [],
-      rejectedAxioms: [],
+      acceptedAxioms,
+      rejectedAxioms,
       createdAt: new Date(),
     };
+    
+    // Store the session in localStorage
+    this.storeSession(session);
+    
+    return session;
+  }
+
+  async fetchSession(sessionId: string): Promise<UserSession> {
+    // Fetch session from localStorage
+    return this.getStoredSession(sessionId);
   }
 
   async updateSession(sessionId: string, updates: Partial<UserSession>): Promise<UserSession> {
     // For static deployment, we'll just return the updated session
     // In a real static app, you might save to localStorage
-    const stored = this.getStoredSession(sessionId);
-    const updated = { ...stored, ...updates };
-    this.storeSession(updated);
-    return updated;
+    try {
+      const stored = this.getStoredSession(sessionId);
+      const updated = { ...stored, ...updates };
+      this.storeSession(updated);
+      return updated;
+    } catch (error) {
+      // If session doesn't exist, create a new one with the updates
+      const newSession: UserSession = {
+        id: sessionId,
+        acceptedAxioms: [],
+        rejectedAxioms: [],
+        createdAt: new Date(),
+        ...updates
+      };
+      this.storeSession(newSession);
+      return newSession;
+    }
   }
 
   async createSnapshot(
@@ -97,16 +120,16 @@ class StaticApiClient {
   private getStoredSession(sessionId: string): UserSession {
     const stored = localStorage.getItem(`session_${sessionId}`);
     if (stored) {
-      return JSON.parse(stored);
+      try {
+        return JSON.parse(stored);
+      } catch (error) {
+        console.error('Error parsing stored session:', error);
+        throw new Error('Invalid session data');
+      }
     }
     
-    // Return default session if not found
-    return {
-      id: sessionId,
-      acceptedAxioms: [],
-      rejectedAxioms: [],
-      createdAt: new Date(),
-    };
+    // Throw error if session not found - let the caller handle it
+    throw new Error(`Session ${sessionId} not found`);
   }
 
   private storeSession(session: UserSession): void {
