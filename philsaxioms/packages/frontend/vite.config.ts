@@ -9,6 +9,7 @@ export default defineConfig(({ command }) => {
   return {
   plugins: [react()],
   base,
+  root: '.',  // Explicitly set root to current directory
   server: {
     port: 3000,
     proxy: {
