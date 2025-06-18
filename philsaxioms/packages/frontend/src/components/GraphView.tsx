@@ -404,13 +404,16 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
         selectNodesOnDrag={false}
         multiSelectionKeyCode="Meta"
         deleteKeyCode={null}
-        minZoom={0.2}
-        maxZoom={2}
+        minZoom={0.1}
+        maxZoom={3}
+        panOnDrag={true}
+        zoomOnScroll={true}
+        zoomOnPinch={true}
       >
         <Background color="#e5e7eb" gap={20} />
-        <Controls className="bg-white border border-gray-200 rounded-lg shadow-lg" />
+        <Controls className="bg-white border border-gray-200 rounded-lg shadow-lg mobile-controls" />
         <MiniMap 
-          className="bg-white border border-gray-200 rounded-lg shadow-lg"
+          className="bg-white border border-gray-200 rounded-lg shadow-lg mobile-minimap"
           nodeColor={(node) => {
             // Get category from node data
             const category = node.data.category;
@@ -421,7 +424,7 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
 
       {/* Sidebar */}
       {selectedNode && (
-        <div className="absolute top-16 right-4 w-80 bg-white rounded-xl shadow-xl border border-gray-200 p-6 z-10">
+        <div className="absolute top-16 right-4 w-80 bg-white rounded-xl shadow-xl border border-gray-200 p-6 z-10 md:w-80 mobile-sidebar">
           <div className="space-y-4">
             <div>
               <div className="flex items-center gap-2 mb-2">
@@ -451,7 +454,7 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
               <div className="flex gap-2">
                 <button
                   onClick={() => handleAxiomToggle(selectedNode.node as Axiom, true)}
-                  className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
+                  className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors touch-target ${
                     session.acceptedAxioms.includes(selectedNode.node.id)
                       ? 'bg-green-500 text-white'
                       : 'bg-green-100 text-green-700 hover:bg-green-200'
@@ -461,7 +464,7 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
                 </button>
                 <button
                   onClick={() => handleAxiomToggle(selectedNode.node as Axiom, false)}
-                  className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors ${
+                  className={`flex-1 py-2 px-4 rounded-lg font-medium transition-colors touch-target ${
                     session.rejectedAxioms.includes(selectedNode.node.id)
                       ? 'bg-red-500 text-white'
                       : 'bg-red-100 text-red-700 hover:bg-red-200'
@@ -540,7 +543,7 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
 
             <button
               onClick={() => setSelectedNode(null)}
-              className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors"
+              className="w-full py-2 px-4 bg-gray-100 text-gray-700 rounded-lg hover:bg-gray-200 transition-colors touch-target"
             >
               Close
             </button>
@@ -550,19 +553,20 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
 
       {/* Toolbar */}
       <div className="absolute top-0 left-0 right-0 z-10">
-        <div className="flex items-center justify-between bg-white shadow-lg border-b border-gray-200 px-4 py-2">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between bg-white shadow-lg border-b border-gray-200 px-4 py-2 mobile-toolbar">
+          <div className="flex items-center gap-2 mobile-toolbar-buttons">
             <button
               onClick={onRestartQuestionnaire}
-              className="flex items-center gap-1 bg-gray-600 text-white px-3 py-1.5 rounded-md text-sm hover:bg-gray-700 transition-colors"
+              className="flex items-center gap-1 bg-gray-600 text-white px-3 py-1.5 rounded-md text-sm hover:bg-gray-700 transition-colors mobile-toolbar-button touch-target"
             >
               <Home className="w-3 h-3" />
-              Retake Questionnaire
+              <span className="hidden sm:inline">Retake Questionnaire</span>
+              <span className="sm:hidden">Retake</span>
             </button>
             
             <button
               onClick={() => setShowSnapshotModal(true)}
-              className="flex items-center gap-1 bg-blue-500 text-white px-3 py-1.5 rounded-md text-sm hover:bg-blue-600 transition-colors"
+              className="flex items-center gap-1 bg-blue-500 text-white px-3 py-1.5 rounded-md text-sm hover:bg-blue-600 transition-colors mobile-toolbar-button touch-target"
             >
               <Save className="w-3 h-3" />
               Save
@@ -570,20 +574,21 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
             
             <button
               onClick={() => setShowInvalidNodes(!showInvalidNodes)}
-              className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-sm transition-colors ${
+              className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-sm transition-colors mobile-toolbar-button touch-target ${
                 showInvalidNodes 
                   ? 'bg-gray-500 text-white hover:bg-gray-600' 
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
               }`}
             >
               {showInvalidNodes ? <EyeOff className="w-3 h-3" /> : <Eye className="w-3 h-3" />}
-              {showInvalidNodes ? 'Hide Disagreed Arguments' : 'Show All Arguments'}
+              <span className="hidden sm:inline">{showInvalidNodes ? 'Hide Disagreed Arguments' : 'Show All Arguments'}</span>
+              <span className="sm:hidden">{showInvalidNodes ? 'Hide' : 'Show All'}</span>
             </button>
             
             {isLocalDevelopment && (
               <button
                 onClick={() => setShowEditPanel(!showEditPanel)}
-                className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-sm transition-colors ${
+                className={`flex items-center gap-1 px-3 py-1.5 rounded-md text-sm transition-colors mobile-toolbar-button touch-target ${
                   showEditPanel 
                     ? 'bg-purple-500 text-white hover:bg-purple-600' 
                     : 'bg-purple-100 text-purple-700 hover:bg-purple-200'
@@ -596,7 +601,7 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
           </div>
 
           {/* Compact Legend */}
-          <div className="flex items-center gap-4 text-xs">
+          <div className="hidden md:flex items-center gap-4 text-xs">
             <div className="flex items-center gap-2">
               <span className="text-gray-600">Categories:</span>
               {categories.slice(0, 4).map(category => (

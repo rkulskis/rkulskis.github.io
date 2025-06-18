@@ -107,7 +107,7 @@ export default function Questionnaire({ onComplete, onSkip, categories, existing
             </p>
             <button
               onClick={onSkip}
-              className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors"
+              className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-indigo-700 transition-colors touch-target"
             >
               Start Exploring
             </button>
@@ -195,22 +195,22 @@ export default function Questionnaire({ onComplete, onSkip, categories, existing
             <div className="flex gap-4 mb-6">
               <motion.button
                 onClick={() => handleAnswer(true)}
-                className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors"
+                className="flex-1 bg-green-500 hover:bg-green-600 text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors touch-target"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <Check className="w-5 h-5" />
-                Yes, I accept this
+                Yes
               </motion.button>
 
               <motion.button
                 onClick={() => handleAnswer(false)}
-                className="flex-1 bg-red-500 hover:bg-red-600 text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors"
+                className="flex-1 bg-red-500 hover:bg-red-600 text-white font-semibold py-4 px-6 rounded-lg flex items-center justify-center gap-2 transition-colors touch-target"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
                 <X className="w-5 h-5" />
-                No, I reject this
+                No
               </motion.button>
             </div>
 
@@ -219,7 +219,7 @@ export default function Questionnaire({ onComplete, onSkip, categories, existing
               <button
                 onClick={goBack}
                 disabled={currentIndex === 0}
-                className="flex items-center gap-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="flex items-center gap-2 text-gray-500 hover:text-gray-700 disabled:opacity-50 disabled:cursor-not-allowed touch-target"
               >
                 <ChevronLeft className="w-4 h-4" />
                 Previous
