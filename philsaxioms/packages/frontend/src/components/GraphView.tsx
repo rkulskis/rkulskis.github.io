@@ -136,12 +136,6 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
   const initialNodes: FlowNode[] = useMemo(() => {
     const flowNodes: FlowNode[] = [];
     
-    console.log('DEBUG initialNodes: input nodes length:', nodes.length);
-    console.log('DEBUG initialNodes: first node:', nodes[0]);
-    console.log('DEBUG initialNodes: layout size:', layout.size);
-    console.log('DEBUG initialNodes: validArguments:', validArguments);
-    console.log('DEBUG initialNodes: session:', debouncedSession);
-    
     // Process all nodes
     nodes.forEach(node => {
       const category = getCategoryById(node.category);
@@ -194,8 +188,6 @@ const GraphViewInner = memo(function GraphViewInner({ nodes, categories, session
       }
     });
     
-    console.log('DEBUG initialNodes: final flowNodes length:', flowNodes.length);
-    console.log('DEBUG initialNodes: flowNodes sample:', flowNodes[0]);
     return flowNodes;
   }, [nodes, categories, debouncedSession, selectedNode, layout, validArguments, showInvalidNodes]);
 

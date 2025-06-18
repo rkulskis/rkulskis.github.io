@@ -41,18 +41,15 @@ function App() {
   const handleQuestionnaireComplete = async (acceptedAxioms: string[], rejectedAxioms: string[]) => {
     try {
       const newSession = await apiClient.createSession(acceptedAxioms, rejectedAxioms);
-      console.log('Session created:', newSession);
       
       // Store session ID in localStorage
       localStorage.setItem('philsaxioms_session_id', newSession.id);
       
-      // Set session state and navigate in sequence
+      // Set session state and navigate immediately
       setSession(newSession);
       
-      // Wait for state to update before navigating
-      setTimeout(() => {
-        navigate('/explore');
-      }, 100);
+      // Navigate to graph view
+      navigate('/explore');
     } catch (error) {
       console.error('Failed to create session:', error);
     }

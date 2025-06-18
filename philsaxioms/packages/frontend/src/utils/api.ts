@@ -92,18 +92,7 @@ export class ApiClient {
 
   async fetchSession(sessionId: string): Promise<UserSession> {
     if (isStaticDeployment) {
-      // In static mode, sessions are managed client-side
-      const stored = localStorage.getItem(`session_${sessionId}`);
-      if (stored) {
-        return JSON.parse(stored);
-      }
-      // Return default session if not found
-      return {
-        id: sessionId,
-        acceptedAxioms: [],
-        rejectedAxioms: [],
-        createdAt: new Date(),
-      };
+      return await staticClient.fetchSession(sessionId);
     }
     
     return this.httpClient.get<UserSession>(`/sessions/${sessionId}`);

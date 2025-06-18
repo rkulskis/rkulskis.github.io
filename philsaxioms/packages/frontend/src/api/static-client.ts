@@ -59,7 +59,17 @@ class StaticApiClient {
 
   async fetchSession(sessionId: string): Promise<UserSession> {
     // Fetch session from localStorage
-    return this.getStoredSession(sessionId);
+    try {
+      return this.getStoredSession(sessionId);
+    } catch (error) {
+      // Return default session if not found
+      return {
+        id: sessionId,
+        acceptedAxioms: [],
+        rejectedAxioms: [],
+        createdAt: new Date(),
+      };
+    }
   }
 
   async updateSession(sessionId: string, updates: Partial<UserSession>): Promise<UserSession> {
