@@ -132,10 +132,10 @@ export default function Questionnaire({ onComplete, onSkip, categories, existing
       <div className="max-w-2xl w-full">
         {/* Header with skip option */}
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">PhilsAxioms</h1>
+          <h1 className="text-3xl font-bold text-gray-900 mb-4">Phil's Axioms</h1>
           <p className="text-gray-600 mb-4">
             {existingSession 
-              ? "Review and modify your philosophical framework" 
+              ? "Phil is a guy with the following philosophical theorem: all arguments can be attributed to a set of paths from combining axioms. Answer yes/no to the following axioms to view a diagram representing which arguments they lead to." 
               : "Build your philosophical framework by answering these foundational questions"
             }
           </p>
