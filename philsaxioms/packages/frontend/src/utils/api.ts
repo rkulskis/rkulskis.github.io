@@ -52,9 +52,15 @@ export class ApiClient {
     }
     
     if (isStaticDeployment) {
-      const data = await staticClient.getQuestionnaire();
-      this.questionnaireCache = data;
-      return data;
+      try {
+        const data = await staticClient.getQuestionnaire();
+        this.questionnaireCache = data;
+        return data;
+      } catch (error) {
+        console.error('Error loading questionnaire from static client:', error);
+        // If static client fails, try to reload data
+        throw new Error('Failed to load questionnaire. Please refresh the page.');
+      }
     }
     
     return this.httpClient.get<QuestionnaireItem[]>('/questionnaire');
@@ -70,8 +76,7 @@ export class ApiClient {
 
   async createSession(acceptedAxioms: string[] = [], rejectedAxioms: string[] = []): Promise<UserSession> {
     if (isStaticDeployment) {
-      const session = await staticClient.createSession();
-      return await staticClient.updateSession(session.id, { acceptedAxioms, rejectedAxioms });
+      return await staticClient.createSession(acceptedAxioms, rejectedAxioms);
     }
     
     return this.httpClient.post<UserSession>('/sessions', { acceptedAxioms, rejectedAxioms });
