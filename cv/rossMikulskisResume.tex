@@ -1,83 +1,80 @@
-\documentclass[10pt]{article}
-\input{formatting}
+\documentclass[10pt]{article} \input{formatting}
 \begin{document}
 \begin{FlushLeft}
 
   % ----------HEADING-----------------
-  \begin{center}
-    {\bf ROSS MIKULSKIS}
-  \end{center}
-
-  (617) 690-9816 \hfill \hspace{25pt} \href{www.linkedin.com/in/ross-mikulskis/}{\textcolor{blue}{www.linkedin.com/in/ross-mikulskis/}} \hfill \href{mailto:rkulskis@gmail.com}{\textcolor{blue}{rkulskis@gmail.com}}
+  \nameheader{ROSS MIKULSKIS}
+  \contactline{(617) 690-9816}{www.linkedin.com/in/ross-mikulskis/}{rkulskis@gmail.com}
   % -----------EDUCATION-----------------
   \section{EDUCATION}
-  \ncentry{\textbf{Boston University}}{}{}
-  \vspace{1.5em}
-  \ncentry{PhD}{\textbf{Computer Science}}{Start 09/2025}
+  \educationentry{Ph.D.}{Computer Science, Boston University}{Start 09/2025}
   \begin{itemize}{
-      \item Specialization in Real-time Operating Systems
-    }
+    \item Specialization in Real-time Operating Systems
+    \item Advisor: Richard West}            
   \end{itemize}
-  
-  \ncentry{BA/MS}{\textbf{Computer Science}}{Expected 05/2025}
+  \educationentry{B.A./M.S.}{Computer Science, Boston University}{05/2025}
   \begin{itemize}{
-    \item \textbf{Cumulative GPA:} 3.72/4.0
-    \item \textbf{Notable Courses:} Object Oriented Design (CS611), Cloud Computing (CS 528), \\
-      Operating Systems (CS 552), Databases (CS660), Algorithms (CS 630), \\
-      Machine Learning (CS542), Functional Programming (CS 320)
-    }
+    \item \textbf{Cumulative GPA:} 3.73/4.0 }
   \end{itemize}
-
+  \ncentry{Boston Latin School}{}{06/2021}
+  \resumevspace
 
   % -----------SKILLS AND INTERESTS-----------------
   \section{SKILLS}
   \vspace{-0.75em}
   \begin{itemize}{
-    \item {\bf Programming Languages:} C/C++, Python, Rust, Bash
-    \item {\bf Tools \& frameworks:} Kubernetes, Docker, Git, Emacs, Flutterflow
-    \item {\bf Specialties:} CI/CD, Real-Time Operating Systems, Kernel Development
-    }
+    \skillitem{Programming Languages}{C, Python, Bash}
+    \skillitem{Tools \& frameworks}{Kubernetes, Docker, Git, Emacs, Google Cloud Services}
+    \skillitem{Specialties}{CI/CD, Real-Time Operating Systems, Kernel Development} }
   \end{itemize}
 
   % -----------PROJECTS-----------------
-  \section{PROJECTS (\href{www.github.com/rkulskis}{www.github.com/rkulskis})}
+  \sectionwithurl{PROJECTS}{www.github.com/rkulskis}
   \ncentry{Omnitest}{}{01/2025}
   \begin{itemize}{
-    \item Built a language-agnostic testing framework for CI/CD testing
-    }
+    \item Built a language-agnostic testing framework for CI/CD
+      testing }
   \end{itemize}  
   \ncentry{Bits of CS Inc.}{}{03/2023 - Present}
   \begin{itemize}{
     \item Founded a nonprofit, free online education.
-    \item Authored a college-level curricula computer science textbook, published online (\href{www.bitsofcs.com}{www.bitsofcs.com})
-    }
+    \item Authored a college-level curricula computer science
+      textbook, published online
+      (\href{www.bitsofcs.com}{www.bitsofcs.com}) }
   \end{itemize}
   
   \ncentry{Standalone Operating System}{}{12/2023}
   \begin{itemize}
-  \item Co-developed a virtual disk in C and Assembly on intel i386 architecture with FIFO thread scheduling, inode-based file system, dual-mode system calls, and memory mapping
+  \item Co-developed a virtual disk in C and Assembly on intel i386
+    architecture with FIFO thread scheduling, inode-based file system,
+    dual-mode system calls, and memory mapping
   \end{itemize}
   
   % -----------WORK HISTORY-----------------
-\section{WORK HISTORY}
-
-\entry{BU Student Researcher under Professor Rich West, PhD}{Boston University}{07/2024 - Present}
+  \section{WORK HISTORY}
+  \workentry{ProDex Labs, Boston, MA}{Software Engineer - Contracted}{05/2025 - Present}
+  \begin{itemize}
+  \item Orchestrated AI Agentic workflows which optimize manufacturing simulations
+  \item Deployed web app to Google Cloud
+\end{itemize}
+\workentry{Red Hat, Boston, MA}{Cloud Engineer Intern}{09/2023 - 07/2024}
 \begin{itemize}
-\item \textbf{RT-DDS}: Built a pub-sub real-time data distribution service on the Quest real-time OS and Linux
-  \item Provides unparalleled timing and predictability guarantees compared to to GStreamer or ROS/ROS2.
+\item \textbf{Unikernel Linux}: Hacked Linux with Professor Orran
+  Krieger, PhD, to dynamically link applications to the kernel for
+  performance gains in industrial workloads (e.g., improved Redis
+  throughput by 22\%)
+\item \textbf{OPE Gradescope Bridge}: Implemented scalable OpenShift
+  service REST API for grading student assignment code in Open
+  Education Framework
+\item \textbf{OPE Testing}: Automated testing in container build
+  process with GitHub Actions shell and Jupyter Notebook tests;
+  reduced container build time by 70\% using mamba
 \end{itemize}
 
-\entry{Red Hat Collaboratory}{Boston}{09/2023 - 07/2024}
-\begin{itemize}
-\item \textbf{Unikernel Linux}: Hacked Linux with Professor Orran Krieger, PhD, to dynamically link applications to the kernel for performance gains in industrial workloads (e.g., improved Redis throughput by 22\%)
-\item \textbf{OPE Gradescope Bridge}: Implemented scalable OpenShift service REST API for grading student assignment code in Open Education Framework
-\item \textbf{OPE Testing}: Automated testing in container build process with GitHub Actions shell and Jupyter Notebook tests; reduced container build time by 70\% using mamba
-\end{itemize}
-
-  \entry{Teaching Assistant}{Boston University, Boston, MA}{09/2022 - Present}
+  \workentry{Boston University, Boston, MA}{Teaching Assistant}{09/2022 - 05/2025}
   \begin{itemize}{
-    \item Taught CS 131 (Combinatorics) for two semesters and CS 330 (Algorithms) for 5 semesters
-    }
+    \item Taught CS 131 (Combinatorics) for two semesters and CS 330
+      (Algorithms) for 5 semesters }
   \end{itemize}
 
   % \project{Raft consensus algorithm (Go)}{School}
@@ -86,42 +83,43 @@
   % \end{itemize}
   
   \section{PUBLICATIONS}
+  \vspace{-0.75em}  
   \begin{itemize}
-  \item Ross Mikulskis, Peter West, Rafi Syed, Zhiyuan Ruan, Richard West. \textbf{``RT-DDS: A Real-Time Data Distribution Service for Task Pipeline Processing''}.
-Manuscript in preparation.    
+  \publication{R. Mikulskis, P. West, R. Syed, Z. Ruan, and R. West. \textbf{``RT-DDS: A Real-Time Data Distribution Service for Task Pipeline Processing''}.  Manuscript in preparation.}
   \end{itemize}
   
   % -----------AWARDS-----------------
   \section{HONORS AND AWARDS}
   \vspace{-0.75em}
   \begin{itemize}{
-    \item \honor{Hariri Institute Student Excellence Award}{Boston University}{06/2024}
-    \item \honor{BU Student Academic Enhancement Fund}{Awarded \$700 for Bits of CS textbook}{10/2023}
-    \item \honor{Thomas M. Menino Scholarship recipient (full-tuition)}{Boston University}{03/2021}
-    \item \honor{All-State Jazz Trumpet - 2nd place}{MMEA All-State}{01/2021}      
-    }
+    \honorentry{Hariri Institute Student Excellence Award}{Boston University}{06/2024}
+    \honorentry{BU Student Academic Enhancement Fund}{Awarded \$700 for Bits of CS textbook}{10/2023}
+    \honorentry{Thomas M. Menino Scholarship recipient (merit, full-tuition)}{Boston University}{03/2021}
+    \honorentry{All-State Jazz Trumpet - 2nd place}{MMEA All-State}{01/2021}}
   \end{itemize}
   % -----------VOLUNTEER WORK-----------------
   \section{VOLUNTEER WORK}
 
-  \ncentry{\textbf{Big Brothers Big Sisters of Eastern Mass}}{}{10/2023 - Present}
+  \ncentry{\textbf{Big Brothers Big Sisters of Eastern
+      Mass}}{}{10/2023 - Present}
   \begin{itemize}{
-    \item Volunteer Big Brother in BU community program, meet with brother every 2 weeks
-    }
+    \item Volunteer Big Brother in BU community program, meet with
+      brother every 2 weeks }
   \end{itemize}
 
   \ncentry{\textbf{Charity Runner in Falmouth Road Race}}{}{08/2023}
   
   \begin{itemize}{
       
-    \item Raised \$850 in funds for \textit{Soccer Without Borders Boston}
-    }
+    \item Raised \$850 in funds for \textit{Soccer Without Borders
+      Boston} }
   \end{itemize}
-  \ncentry{\textbf{Fundraising Chair, Phi Kappa Tau}}{}{01/2023 - 05/2023}
+  \ncentry{\textbf{Fundraising Chair, Phi Kappa Tau}}{}{01/2023 -
+    05/2023}
   
   \begin{itemize}{
-    \item Organized a concert with Berklee student-led bands with net profit of \$800
-    }
+    \item Organized a concert with Berklee student-led bands with net
+      profit of \$800 }
   \end{itemize}
   
 

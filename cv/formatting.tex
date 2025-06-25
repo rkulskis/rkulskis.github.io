@@ -53,3 +53,56 @@
 
 \setlist[itemize]{itemsep=-0.25em, topsep=0.5em, partopsep=0.25em}
 \sloppy
+
+% Name header formatting
+\newcommand{\nameheader}[1]{%
+  \begin{center}
+    {\bf #1}
+  \end{center}
+}
+
+% Contact info line formatting
+\newcommand{\contactline}[3]{%
+  #1 \hfill \hspace{25pt}
+  \href{#2}{\textcolor{blue}{#2}}
+  \hfill
+  \href{mailto:#3}{\textcolor{blue}{#3}}
+}
+
+% Section with URL formatting
+\newcommand{\sectionwithurl}[2]{%
+  \section{#1 (\href{#2}{#2})}
+}
+
+% Education entry with specialization
+\newcommand{\educationentry}[3]{%
+  \ncentry{#1,}{\textbf{#2}}{#3}
+}
+
+% Work entry formatting
+\newcommand{\workentry}[3]{%
+  \entry{#1}{#2}{#3}
+}
+
+% Simple list item
+\newcommand{\bulletitem}[1]{%
+  \item #1
+}
+
+% Skill category item
+\newcommand{\skillitem}[2]{%
+  \item {\bf #1:} #2
+}
+
+% Honor/award entry
+\newcommand{\honorentry}[3]{%
+  \item \honor{#1}{#2}{#3}
+}
+
+% Publication entry
+\newcommand{\publication}[1]{%
+  \item #1
+}
+
+% Vertical spacing helper
+\newcommand{\resumevspace}{\vspace{1em}}
