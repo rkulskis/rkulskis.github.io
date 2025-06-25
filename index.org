@@ -1,4 +1,4 @@
-| [[file:./index.html][./]] | [[file:cv/rossMikulskisResume.pdf][CV]] |  | [[file:philsaxioms/][Phil's Axioms]] | [[file:research/index.html][Research/]] | 
+| [[file:./index.html][./]] | [[file:cv/rossMikulskisResume.pdf][CV]] |   | [[file:philsaxioms/][Phil's Axioms]] | [[file:research/index.html][Research/]] |
 #+OPTIONS: toc:nil num:nil
 * Ross A. Mikulskis
 
@@ -10,17 +10,18 @@
 
 Hello! My name is Ross, and I'm a PhD student at Boston University
 studying Computer Science with a focus in real-time operating systems
-under the advisory of Doctor Rich West, PhD.
+under the direction of professor [[https://www.cs.bu.edu/~richwest/][Richard West]].
 
-I love operating systems, my favorite things to use are Emacs and C. I
+I love operating systems, and my favorite things to use are Emacs and C. I
 also dabble in cloud engineering (e.g. Kubernetes, CI/CD). Code should
-"just work", and I build all of my projects with this in mind - as well
-as the SOLID principles.
+"just work", and I build all of my projects with this in mind - as
+well as the SOLID principles.
 
 Outside of computer science, I play the trumpet, having performed in
 the New Jazz Orchestra around Cambridge, MA. I also have been a big
-brother in the Boston Big Brothers Big Sisters program since fall 2024, and
-have a dog named Winnie (picture above).
+brother in the Boston Big Brothers Big Sisters program since fall
+2024, and I have a dog named Winnie (picture above).
 
-/"Making the simple complicated is commonplace; making the complicated/
-/simple, awesomely simple, that's creativity." - Charles Mingus/
+/"Making the simple complicated is commonplace; making the
+complicated/ /simple, awesomely simple, that's creativity." - Charles
+Mingus/
