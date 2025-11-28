@@ -1,21 +1,18 @@
-| [[file:./index.html][./]] | [[file:cv/rossMikulskisResume.pdf][CV]] |   | [[file:philsaxioms/][Phil's Axioms]] | [[file:research/index.html][Research/]] |
+| [[file:./index.html][./]] | [[file:cv/rossMikulskisResume.pdf][CV]] |  | [[file:philsaxioms/][Phil's Axioms]] | [[file:research/index.html][Research/]] | 
 #+OPTIONS: toc:nil num:nil
 * Ross A. Mikulskis
 
 #+ATTR_HTML: :width 200
 [[./images/profile.jpg]]
 
-#+ATTR_HTML: :width 200
-[[https://bitsofcs.com/][Bits of CS (my computer science textbook)]]
+Hello! My name is Ross, and I'm a computer scientist. I love operating
+systems, and my favorite things to use are Emacs and C. I dabble in
+cloud engineering (e.g. Kubernetes, CI/CD, terraform). Code should
+"just work", and I build all of my projects with this in mind.
 
-Hello! My name is Ross, and I'm a PhD student at Boston University
-studying Computer Science with a focus in real-time operating systems
-under the direction of professor [[https://www.cs.bu.edu/~richwest/][Richard West]].
-
-I love operating systems, and my favorite things to use are Emacs and C. I
-also dabble in cloud engineering (e.g. Kubernetes, CI/CD). Code should
-"just work", and I build all of my projects with this in mind - as
-well as the SOLID principles.
+I am writing a free online textbook called [[https://bitsofcs.com/][Bits of CS]] which aims to
+(1) excite people about computer science and building things and (2)
+help people exercise and develop their voice as opposed to using AI.
 
 Outside of computer science, I play the trumpet, having performed in
 the New Jazz Orchestra around Cambridge, MA. I also have been a big
