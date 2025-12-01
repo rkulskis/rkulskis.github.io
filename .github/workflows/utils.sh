@@ -14,7 +14,6 @@ declare -A EXCEPTIONS=(
     ["cv"]="[[file:cv/rossMikulskisResume.pdf][CV]]"
     ["images"]=""
     ["index"]="[[file:./index.html][./]]"
-    ["philsaxioms"]="[[file:philsaxioms/][Phil's Axioms]]"
 )
 
 capitalize() {
@@ -103,10 +102,6 @@ process_files() {
     fi		
 
     for subdir in "$dir"/*/; do
-        # Skip philsaxioms directory from org-mode processing
-        if [[ "$(basename "$subdir")" == "philsaxioms" ]]; then
-            continue
-        fi
         [ -d "$subdir" ] && process_files "$subdir" "$operation" 0
     done
 }
