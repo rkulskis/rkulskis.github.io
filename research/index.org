@@ -2,4 +2,3 @@
 #+OPTIONS: toc:nil num:nil
 
 #+TITLE: Research
-
