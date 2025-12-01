@@ -18,6 +18,8 @@ jobs:
     container:
       image: silex/emacs:29.4-ci
     steps:
+      - name: Checkout
+        uses: actions/checkout@v4    
       - name: Make html
         run: make
         env:
