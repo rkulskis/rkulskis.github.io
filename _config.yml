@@ -1,0 +1,7 @@
+# Jekyll configuration for GitHub Pages
+exclude:
+  - "*.log"
+  - .git/
+  - .gitignore
+  - README.md
+  - Makefile
