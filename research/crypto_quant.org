@@ -1,0 +1,29 @@
+| [[file:./index.html][./]] | [[file:../index.html][../]] | [[file:crypto_quant.html][CryptoQuant]] |  | [[file:parallel_hdd.html][ParallelHdd]] | 
+#+OPTIONS: toc:nil num:nil
+#+TITLE: Crypto expert
+
+* About
+Our conjecture is that no single trading algorithm fits every token
+swap pair due to the volume, volatility, and tribal knowledge specific
+to each security, so we want to train an expert that can choose a
+trading algorithm given a context which maximizes profit.
+
+* Training
+
+Given:
+ - $pair$: of two coins $(c1, c2)$
+ - $DB$: database of historical crypto trades
+ - $A$: set of stateless algorithms, each which requires their own context
+ - $C$: set of context state generators, each may be used by one or
+   more algorithms and takes the same arguments, e.g.: $$window=(t_{start}, t_{end}), DB$$
+   - can query external context on internet as necessary
+     - idea: maybe host a version controlled thing for wikipedia which
+       we use for seeing changes over that $window$
+
+Output:
+ - Simulation results of that trading strategy over time for that window
+ - Q: should we output the context that was used? what about global context?
+   
+Use this output to train AI on whether that strategy works in that context.
+   
+* Runtime

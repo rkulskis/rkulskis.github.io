@@ -13,7 +13,7 @@ clear_header() {
 declare -A EXCEPTIONS=(
     ["cv"]="[[file:cv/rossMikulskisResume.pdf][CV]]"
     ["images"]=""
-    ["index"]="[[file:./index.html][./]]"
+    ["index"]=""
 )
 
 capitalize() {
@@ -25,6 +25,8 @@ generate_header() {
     dir="$1"
     is_top="$2"
     header="$HEADER"
+
+    header+="[[file:./index.html][./]] | "
 
     if [[ "$is_top" -eq 0 ]]; then
         header+="[[file:../index.html][../]] | "
