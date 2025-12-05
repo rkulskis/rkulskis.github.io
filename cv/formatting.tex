@@ -12,7 +12,6 @@
 \usepackage{hyperref}
 \usepackage{comment}
 \usepackage{microtype}
-\usepackage{hyperref}
 \hypersetup{
     colorlinks = true,
     allcolors = blue
@@ -20,53 +19,74 @@
 
 % Adjust margins
 \usepackage[]{geometry}
- \geometry{
- a4paper,
- total={170mm,257mm},
- left=20mm,
- top=14mm,
- }
+\geometry{
+  a4paper,
+  total={170mm,257mm},
+  left=20mm,
+  top=14mm,
+}
 
 \urlstyle{rm}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
 % Sections formatting
-\titleformat{\section}{
-    \leaders\vrule width \textwidth\vskip1pt
-    \vspace{-20pt}\scshape\raggedright
-}{}{0em}{}[\color{black}\vspace{-6pt}]
-
 \newcommand\dunderline[3][-1pt]{{%
   \sbox0{#3}%
   \ooalign{\copy0\cr\rule[\dimexpr#1-#2\relax]{\wd0}{#2}}}}
+
 \titleformat{\section}
-   {\vspace{0em}\bfseries}{}{0em}{}[{\titlerule[1pt]}\vspace{0.75em}]
-\titlespacing{\section}{0em}{*1}{*1}
+  {\vspace{0.5em}\bfseries}{}{0em}{}[{\titlerule[1pt]}\vspace{0.5em}]
+\titlespacing{\section}{0em}{*0.5}{*0.5}
 
-\newcommand{\entry}[3]{\vspace{-0.75em}\textbf{#1}, #2 \hfill \textbf{#3}\\ \vspace{-0.75em}}
-\newcommand{\ncentry}[3]{\vspace{-0.75em}\textbf{#1} #2 \hfill \textbf{#3}\\ \vspace{-0.75em}}
-\newcommand{\honor}[3]{\textbf{#1}, #2 \hfill \textbf{#3}}
-\newcommand{\project}[2]{\vspace{-0.75em}\textbf{#1}\textit{ - #2}\\ \vspace{-0.75em}}
+% Entry commands with proper spacing
+\newcommand{\entry}[3]{%
+  \noindent\textbf{#1}, #2 \hfill \textbf{#3}%
+  \par\vspace{0.25em}%
+}
 
-\setlist[itemize]{itemsep=-0.25em, topsep=0.5em, partopsep=0.25em}
+\newcommand{\ncentry}[3]{%
+  \noindent\textbf{#1} #2 \hfill \textbf{#3}%
+  \par\vspace{0.25em}%
+}
+
+\newcommand{\honor}[3]{%
+  \textbf{#1}, #2 \hfill \textbf{#3}%
+}
+
+\newcommand{\project}[2]{%
+  \noindent\textbf{#1}\textit{ - #2}%
+  \par\vspace{0.25em}%
+}
+
+% List formatting with proper spacing
+\setlist[itemize]{
+  itemsep=0.1em,
+  topsep=0.25em,
+  partopsep=0em,
+  parsep=0em,
+  leftmargin=1.5em
+}
+
 \sloppy
 
 % Name header formatting
 \newcommand{\nameheader}[1]{%
   \begin{center}
-    {\bf #1}
+    {\Large\bf #1}
   \end{center}
+  \vspace{0.5em}
 }
 
 % Contact info line formatting
 \newcommand{\contactline}[3]{%
-  #1 \hfill \hspace{25pt}
-  \href{#2}{#2}
-  \hfill
-  \href{mailto:#3}{#3}
+  \begin{center}
+    #1 \hspace{1em} | \hspace{1em}
+    \href{#2}{#2} \hspace{1em} | \hspace{1em}
+    \href{mailto:#3}{#3}
+  \end{center}
+  \vspace{0.5em}
 }
 
 % Section with URL formatting
@@ -105,4 +125,4 @@
 }
 
 % Vertical spacing helper
-\newcommand{\resumevspace}{\vspace{1em}}
+\newcommand{\resumevspace}{\vspace{0.5em}}

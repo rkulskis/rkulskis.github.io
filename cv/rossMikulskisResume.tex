@@ -1,135 +1,191 @@
-\documentclass[10pt]{article} \input{formatting}
+\documentclass[10pt,letterpaper]{article}
+% Packages
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{svg}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage[left=0.75in,right=0.75in,top=0.6in,bottom=0.6in]{geometry}
+% Hyperlink setup
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=blue
+}
+% Remove paragraph indentation
+\setlength{\parindent}{0pt}
+% Custom command for red line
+\newcommand{\blackline}{\vspace{0pt}{\color{black!80!black}\rule{\textwidth}{0.4pt}}\\}
+\newcommand{\redline}{\vspace{0pt}{\color{red!80!black}\rule{\textwidth}{0.4pt}}\\}
+% List formatting
+\setlist[itemize]{leftmargin=1.2em, itemsep=2pt, topsep=4pt}
+
+% ============================================
+% REUSABLE COMMANDS
+% ============================================
+
+% Section header command
+% Usage: \sectionheader{SECTION NAME}
+\newcommand{\sectionheader}[1]{%
+\begin{minipage}[t]{0.15\textwidth}
+\vspace{0pt}
+{\bfseries\color{red!80!black}#1}
+\end{minipage}
+}
+
+% ============================================
+% DOCUMENT CONTENT
+% ============================================
+
 \begin{document}
-\begin{FlushLeft}
+% Header
+\begin{minipage}[b]{0.55\textwidth}
+    {\Large\bfseries ROSS A. MIKULSKIS}
+\end{minipage}
+\hfill
+\begin{minipage}[b]{0.4\textwidth}
+    \raggedleft
+    rkulskis@gmail.com \textbar{} 617-690-9816\\
+    279 Bellevue Street, Boston, MA 02132
+\end{minipage}
 
-  % ----------HEADING-----------------
-  \nameheader{ROSS MIKULSKIS}
-  %% \contactline{(617) 690-9816}{www.linkedin.com/in/ross-mikulskis/}{rkulskis@gmail.com}
-  \contactline{(617) 690-9816}{https://github.com/rkulskis}{rkulskis@bu.edu}
-  % -----------EDUCATION-----------------
-  \section{EDUCATION}
-  % \educationentry{Ph.D.}{Computer Science, Boston University}{Start 09/2025}
-  % \begin{itemize}{
-    % \item Specialization in Real-time Operating Systems
-    % \item Advisor: Richard West}            
-  % \end{itemize}
-  \educationentry{B.A./M.S.}{Computer Science, Boston University}{05/2025}
-  %% \educationentry{\href{./diploma-ba-cs.pdf}{B.A.}/\href{./diploma-ms-cs.pdf}{M.S.}}{Computer Science, Boston University}{05/2025}  
-  \begin{itemize}{
-    \item \textbf{Cumulative GPA:} 3.73/4.0 }
-  \end{itemize}
-  \ncentry{Boston Latin School}{}{06/2021}
-  \resumevspace
+% Education Section
+\blackline
+\begin{minipage}[t]{0.15\textwidth}
+\vspace{0pt}
+{\normalsize\bfseries\color{red!80!black}EDUCATION}
+\end{minipage}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.81\textwidth}
+  \vspace{0pt}
+  \textbf{Boston University, Boston} \hfill \textbf{September 2021 - May 2025}\\
+  \textit{M.S. Computer Science, 3.86} \\
+  \textit{B.A. Computer Science, 3.65} \\
 
-  % -----------SKILLS AND INTERESTS-----------------
-  \section{SKILLS}
-  \vspace{-0.75em}
-  \begin{itemize}{
-    \skillitem{Programming Languages}{C, Python, Bash}
-    \skillitem{Tools \& frameworks}{Kubernetes, Docker, Git, Emacs, Google Cloud Services}
-    \skillitem{Specialties}{CI/CD, Real-Time Operating Systems, Kernel Development} }
-  \end{itemize}
+\textbf{Boston Latin School, Boston} \hfill \textbf{September 2016 - June 2021}
+\end{minipage}
 
-  % -----------WORK HISTORY-----------------
-  \section{WORK HISTORY}
-  \workentry{ProDex Labs, Brooklyn, NY}{Founding Engineer}{05/2025 - 10/2025}
-  \begin{itemize}
-  \item Orchestrated AI Agentic workflows to optimize manufacturing simulations and create simulation JSONs
-  \item Deployed and managed terraform cloud infrastructure for GCP and Azure
-  \item Created core UI design for visualizing factory as a circuit with New York Subway colors theme
-\end{itemize}
-\workentry{Red Hat Collaboratory, Boston, MA}{Cloud Engineer Intern}{09/2023 - 07/2024}
+\vspace{8pt}
+% Professional Experience Section
+\redline
+\begin{minipage}[t]{0.15\textwidth}
+\vspace{0pt}
+{\bfseries\color{red!80!black}PROFESSIONAL\\EXPERIENCE}
+\includegraphics[width=0.8\linewidth]{images/prodex-labs.png}
+\end{minipage}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.81\textwidth}
+\vspace{0pt}
+\textbf{ProDex Labs} \hfill \textbf{May 2025 - October 2025}\\
+\textit{Founding Engineer} \hfill Brooklyn, NY \\ [0.5em]
+Lived and worked in startup hacker house optimizing factories with AI Monte Carlo simulations.
 \begin{itemize}
-\item \textbf{Unikernel Linux}: Hacked Linux with Professor Orran
-  Krieger, PhD, to dynamically link applications to the kernel for
-  performance gains in industrial workloads (e.g., improved Redis
-  throughput by 22\%)
-\item \textbf{OPE Gradescope Bridge}: Implemented scalable OpenShift
-  service REST API for grading student assignment code in Open
-  Education Framework
-\item \textbf{OPE Testing}: Automated testing in container build
-  process with GitHub Actions shell and Jupyter Notebook tests;
-  reduced container build time by 70\% using mamba
+\item Migrated single-container infrastructure to serverless microservice design for running thousands of parallel simulations.
+\item Created CI/CD terraform scripts to deploy to GCP and Azure client VPCs.
+\item Designed UI for visualizing factories as circuits using colors from New York MTA.
 \end{itemize}
+\end{minipage}
 
-  \workentry{Boston University, Boston, MA}{Teaching Assistant}{09/2022 - 05/2025}
-  \begin{itemize}{
-    \item Taught CS 131 (Combinatorics) for two semesters and CS 330
-      (Algorithms) for 5 semesters }
-  \end{itemize}
+\vspace{16pt}
 
-  % \project{Raft consensus algorithm (Go)}{School}
-  % \begin{itemize}
-  % \item Implemented leader election, worker failure-handling, and log compaction
-  % \end{itemize}
+% Company 2
+\begin{minipage}[t]{0.15\textwidth}
+  \vspace{0pt}
+  \includegraphics[width=0.8\linewidth]{images/redhat.jpg}
+\end{minipage}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.81\textwidth}
+\vspace{0pt}
+\textbf{Red Hat} \hfill \textbf{September 2023 - July 2024}\\
+\textit{Cloud Engineering Intern} \hfill Boston, MA \\ [0.5em]
+Work-study internship with Red Hat Collaboratory.
+\begin{itemize}
+    \item Hacked Linux with head of Mass Open Cloud, Dr. Orran Krieger, to dynamically link Redis to the kernel, improving throughput by $22\%$.
+    \item Implemented a serverless OpenShift proxy for Gradescope to
+      autograde code on the Mass Open Cloud, saving hours of time for
+      professors pulling code and manually running scripts.
+    \item Reduced container build time for the Open Education Project
+      by $70\%$ using Python Mamba and GitHub Workflow caching.
+\end{itemize}
+\end{minipage}
+
+\vspace{16pt}
+% Company 3
+\begin{minipage}[t]{0.15\textwidth}
+  \vspace{0pt}
+  \includegraphics[width=0.8\linewidth]{images/bu-logo.png}
+\end{minipage}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.81\textwidth}
+\vspace{0pt}
+\textbf{Boston University} \hfill \textbf{September 2022 - May 2025}\\
+\textit{Teaching Assistant} \hfill Boston, MA\\
+
+Taught 2 semesters of Combinatorics (CS 131), 5 semesters of Algorithms (CS 330).
+\begin{itemize}
+\item Created LaTeX problem sets, exam problems, graded work, and
+  proctored exams.
+\item Led weekly office hours and labs.
+\end{itemize}
+\end{minipage}
+
+\vspace{8pt}
+% Publications Section
+\redline
+\sectionheader{PUBLICATIONS}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.81\textwidth}
+\vspace{0pt}
+R. Mikulskis, P. West, R. Syed, and R. West. \textbf{``RT-DDS: A Real-Time Data Distribution Service for Task Pipeline Processing''}. Manuscript in preparation.
+\begin{itemize}
+\item Built a software dataflow framework in C for dispatching service
+  pipelines with hard real-time guarantees across Linux and the Quest
+  RTOS.
+\end{itemize}
+\end{minipage}
+
+\vspace{8pt}
+% Projects Section
+\redline
+\sectionheader{PROJECTS}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.81\textwidth}
+  \vspace{0pt}
   
-  \section{PUBLICATIONS}
-  \vspace{-0.75em}  
-  \begin{itemize}
-    \publication{R. Mikulskis, P. West, R. Syed, Z. Ruan, and R. West. \textbf{``RT-DDS: A Real-Time Data Distribution Service for Task Pipeline Processing''}.  Manuscript in preparation.}
-  \end{itemize}
+  \textbf{Bits of CS} \textit{bitsofcs.com}\\
+  Published a free online computer science textbook and created an educational non-profit. \\
 
-  % -----------PROJECTS-----------------
-  \section{PROJECTS}
-  % \ncentry{Omnitest}{}{01/2025}
-  % \begin{itemize}{
-    % \item Built a language-agnostic testing framework for CI/CD
-      % testing }
-      % \end{itemize}
-  \ncentry{RT-DDS}{Real-Time Data Distribution Service}{08/2024 - Present}
-  \begin{itemize}
-  \item Built a functional composition dataflow pub-sub framework with real-time QoS guarantees
-  \item Deployed to Quest-V Hypervisor to dispatch and connect services across Linux and Quest RTOS VMs
-  \item Wrote Domain Specific Language (DSL) parser for creating RT-DDS service DAGs
-  \end{itemize}    
-  \ncentry{Bits of CS Inc.}{}{03/2023 - Present}
-  \begin{itemize}{
-    \item Founded a nonprofit, free online education.
-    \item Authored a college-level curricula computer science
-      textbook, published online at \href{https://bitsofcs.com}{https://bitsofcs.com}
-      }
-  \end{itemize}
-  
-  \ncentry{Standalone Operating System}{}{12/2023}
-  \begin{itemize}
-  \item Co-developed a virtual disk in C and Assembly on intel i386
-    architecture with FIFO thread scheduling, inode-based file system,
-    dual-mode system calls, and memory mapping
-  \end{itemize}
-    
-  % -----------AWARDS-----------------
-  \section{HONORS AND AWARDS}
-  \vspace{-0.75em}
-  \begin{itemize}{
-    \honorentry{Hariri Institute Student Excellence Award (for Red Hat OPE)}{Boston University}{06/2024}
-    \honorentry{Student Academic Enhancement Fund (for Bits of CS Inc.)}{Boston University}{10/2023}
-    \honorentry{Thomas M. Menino Scholarship recipient (merit, full-tuition)}{Boston University}{03/2021}
-    \honorentry{All-State Jazz Trumpet (2nd place)}{MMEA All-State}{01/2021}}
-  \end{itemize}
-  % -----------VOLUNTEER WORK-----------------
-  \section{VOLUNTEER WORK}
+  \textbf{SubsVocab} \textit{github.com/rkulskis/subsvocab}\\
+  Built a Rust command-line utility for pulling Netflix subtitles and creating Spanish-to-English vocabulary lists sorted by appearance in the script.
 
-  \ncentry{\textbf{Big Brothers Big Sisters of Eastern
-      Mass}}{}{10/2023 - 9/2025}
-  \begin{itemize}{
-    \item Volunteer Big Brother in BU community program, meet with
-      brother every 2 weeks }
-  \end{itemize}
+\end{minipage}
 
-  \ncentry{\textbf{Charity Runner in Falmouth Road Race}}{}{08/2023}
-  
-  \begin{itemize}{
-      
-    \item Raised funds for \textit{Soccer Without Borders
-      Boston} }
-  \end{itemize}
-  \ncentry{\textbf{Fundraising Chair, Phi Kappa Tau}}{}{01/2023 -
-    05/2023}
-  
-  \begin{itemize}{
-    \item Organized a concert with Berklee student-led bands }
-  \end{itemize}
-  
+% company 4
+% \begin{minipage}[t]{0.15\textwidth}
+%   \vspace{0pt}
+% \includesvg[width=0.6\linewidth]{images/bitsofcs.svg}
+% \end{minipage}
+% \hspace{0.04\textwidth}
+% \begin{minipage}[t]{0.81\textwidth}
+% \vspace{0pt}
+% \textbf{Bits of CS Inc.} \textit{bitsofcs.com} \hfill \textbf{March 2023 - Present}\\
+% Created educational non-profit with free online computer science textbook.
+% \begin{itemize}
+% \item Received grant from Boston University.
+% \end{itemize}
+% \end{minipage}
 
-\end{FlushLeft}
+\vspace{8pt}
+% Links Section
+\redline
+\sectionheader{LINKS}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.81\textwidth}
+\vspace{0pt}
+\textbf{GitHub:} github.com/rkulskis\\
+\textbf{LinkedIn:} linkedin.com/in/rkulskis\\
+\textbf{Personal Site:} rkulskis.github.io
+\end{minipage}
 \end{document}
