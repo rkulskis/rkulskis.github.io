@@ -1,4 +1,4 @@
-| [[file:./index.html][./]] | [[file:../index.html][../]] | [[file:crypto_quant.html][CryptoQuant]] |  | [[file:parallel_hdd.html][ParallelHdd]] | 
+| [[file:./index.html][./]] | [[file:../index.html][../]] | [[file:crypto_quant.html][CryptoQuant]] |  | [[file:parallel_hdd.html][ParallelHdd]] | [[file:scheduling_visualizer.html][SchedulingVisualizer]] | 
 #+OPTIONS: toc:nil num:nil
 
 #+TITLE: Research

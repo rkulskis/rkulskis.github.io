@@ -1,0 +1,55 @@
+| [[file:./index.html][./]] | [[file:../index.html][../]] | [[file:crypto_quant.html][CryptoQuant]] |   | [[file:parallel_hdd.html][ParallelHdd]] | [[file:scheduling_visualizer.html][SchedulingVisualizer]] |
+#+OPTIONS: toc:nil num:nil
+#+TITLE: Scheduling Visualizer
+
+* NOTE
+
+I need to finish reading /Principles of Sequencing and Scheduling/
+before embarking fully on this project.
+
+* Introduction
+For my research on RT-DDS, I have no mock tests or simulations,
+everything is raw. Although the framework requires running the
+compiled functions on hardware to benchmark them with ~rdtsc~
+enclosures, it would be nice to simulate pipelines without needing to
+compile for Quest or Yocto. Furthermore, this visualizer sandbox is
+good for education in c.f. /Bits of CS/, to shed light on scheduling.
+
+* Overall Structure
+
+** Input
+From /Principles of Sequencing and Scheduling (Second Edition)/ we
+have the following variables:
+
+Jobs $J$ where for each job $j$ we have $(p, r, d)$ which is:
+ * $p=$ processing time
+ * $r=$ release date - when this job is available for processing
+ * $d=$ due date
+
+Each of these will be a void function which may change the context of
+a shared state object for that job, i.e. add to the processing time or
+change non-common state.
+
+Another input is our scheduling policy $\pi$ which, given $J$,
+allocates the jobs to resources
+
+** Output
+And from our scheduling decisions we get $(C,F,L)$ (capitalized
+because they are derivative) for each job which is:
+ * $C=$ completion time
+ * $F=$ time job spends in system: $C-r$
+ * $L=$ lateness: $C-d$
+
+Additionally, we want to have telemetry on the state of each job at
+each system tick, e.g. which resources is this job using, is it
+active, etc. There are further optimizations we may make to only
+produce events when they change state, but this is a later thing.
+
+Generally, we want visualizations of the run such as Gantts and
+graphs.
+
+** Speed
+
+For the fun of it, I want this to be distributed and consistent using
+the /Raft Consensus Algorithm/ and very fast with multiprocessing.
+
