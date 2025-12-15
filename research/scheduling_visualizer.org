@@ -1,4 +1,5 @@
-| [[file:./index.html][./]] | [[file:../index.html][../]] | [[file:crypto_quant.html][CryptoQuant]] |   | [[file:parallel_hdd.html][ParallelHdd]] | [[file:scheduling_visualizer.html][SchedulingVisualizer]] |
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../typography.css" />
+| [[file:./index.html][./]] | [[file:../index.html][../]] | [[file:crypto_quant.html][CryptoQuant]] |  | [[file:parallel_hdd.html][ParallelHdd]] | [[file:scheduling_visualizer.html][SchedulingVisualizer]] | 
 #+OPTIONS: toc:nil num:nil
 #+TITLE: Scheduling Visualizer
 
@@ -52,4 +53,3 @@ graphs.
 
 For the fun of it, I want this to be distributed and consistent using
 the /Raft Consensus Algorithm/ and very fast with multiprocessing.
-

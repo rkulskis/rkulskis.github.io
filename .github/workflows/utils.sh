@@ -1,13 +1,15 @@
 #!/bin/bash
-
 HEADER="| "
 TOP_DIR="$(pwd)"
 
 clear_header() {
     file="$1"
-		if grep -q '^#+OPTIONS: toc:nil num:nil' "$file"; then
-				sed -i '0,/^#+OPTIONS: toc:nil num:nil/d' "$file"
-		fi
+    if grep -q '^#+OPTIONS: toc:nil num:nil' "$file"; then
+        sed -i '0,/^#+OPTIONS: toc:nil num:nil/d' "$file"
+    fi
+    if grep -q '^#+HTML_HEAD: <link rel="stylesheet"' "$file"; then
+        sed -i '/^#+HTML_HEAD: <link rel="stylesheet"/d' "$file"
+    fi
 }
 
 declare -A EXCEPTIONS=(
@@ -25,13 +27,12 @@ generate_header() {
     dir="$1"
     is_top="$2"
     header="$HEADER"
-
+    
     header+="[[file:./index.html][./]] | "
-
     if [[ "$is_top" -eq 0 ]]; then
         header+="[[file:../index.html][../]] | "
     fi
-
+    
     # Files loop
     while IFS= read -r -d '' file; do
         filename=$(basename "$file" .org)
@@ -42,7 +43,7 @@ generate_header() {
             header+="[[file:$filename.html][$filename_capitalized]] | "
         fi
     done < <(find "$dir" -mindepth 1 -maxdepth 1 -type f -name "*.org" ! -name ".*" -print0 | sort -z)
-
+    
     # Directories loop
     while IFS= read -r -d '' subdir; do
         subname=$(basename "$subdir")
@@ -53,15 +54,29 @@ generate_header() {
             header+="[[file:$subname/index.html][$subname_capitalized/]] | "
         fi
     done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" -print0 | sort -z)
-
-    echo "$header\n#+OPTIONS: toc:nil num:nil"
+    
+    # Calculate relative path to typography.css
+    local depth=$(echo "$dir" | tr -cd '/' | wc -c)
+    local css_path=""
+    if [[ "$is_top" -eq 1 ]]; then
+        css_path="typography.css"
+    else
+        for ((i=1; i<depth; i++)); do
+            css_path="../$css_path"
+        done
+        css_path="${css_path}typography.css"
+    fi
+    
+    echo "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"$css_path\" />"
+    echo "$header"
+    echo "#+OPTIONS: toc:nil num:nil"
 }
 
 add_header() {
     dir="$1"
     is_top="$2"
     header=$(generate_header "$dir" "$is_top")
-
+    
     for file in "$dir"/*.org; do
         [ -e "$file" ] || continue
         echo -e "$header\n$(cat "$file")" > "$file"
@@ -77,7 +92,7 @@ process_files() {
     dir="$1"
     operation="$2"
     is_top="$3"
-
+    
     case "$operation" in
         clear_header)
             for file in "$dir"/*.org; do
@@ -95,14 +110,15 @@ process_files() {
             done
             ;;
     esac
+    
     # if index.org does not exist, create a symlink for index.html (but not if index.html already exists)
     if [ ! -e "$dir/index.org" ] && [ ! -e "$dir/index.html" ]; then
         html_file=$(find "$dir" -maxdepth 1 -type f -name "*.html" | head -n 1)
         if [ -n "$html_file" ]; then
             ln -sf "$(basename "$html_file")" "$dir/index.html"
         fi
-    fi		
-
+    fi
+    
     for subdir in "$dir"/*/; do
         [ -d "$subdir" ] && process_files "$subdir" "$operation" 0
     done
