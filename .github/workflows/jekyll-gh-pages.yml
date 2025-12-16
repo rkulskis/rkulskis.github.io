@@ -28,9 +28,6 @@ jobs:
           GITHUB_PAGES: true
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Copy assets into build
-        run: |
-          cp -an ./ build/
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:

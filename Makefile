@@ -8,6 +8,11 @@ all: build
 build:
 	@rm -rf $(BUILD_DIR) _minted-*
 	@$(SCRIPT_PATH)/utils.sh build
+	@find . -mindepth 1 -maxdepth 1 \
+		! -name build \
+		! -name .git \
+		! -name .github \
+		-exec cp -a {} build/ \;
 
 clean:
 	@rm -rf $(BUILD_DIR) _minted-*
