@@ -1,18 +1,13 @@
 SCRIPT_PATH := ./.github/workflows
 BUILD_DIR := build
 
-.PHONY: all build html_export clean submodules
+.PHONY: all build clean
 
-all: submodules build
+all: build
 
-submodules:
-	git submodule update --init --remote
-
-build: submodules
+build:
 	@rm -rf $(BUILD_DIR) _minted-*
 	@$(SCRIPT_PATH)/utils.sh build
-
-html_export: build
 
 clean:
 	@rm -rf $(BUILD_DIR) _minted-*
