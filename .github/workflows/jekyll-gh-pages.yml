@@ -28,12 +28,9 @@ jobs:
           GITHUB_PAGES: true
       - name: Setup Pages
         uses: actions/configure-pages@v5
-      - name: Copy non-org assets into build
+      - name: Copy assets into build
         run: |
-          rsync -av \
-            --exclude='*.org' \
-            --ignore-existing \
-            ./ build/
+          cp -an ./ build/
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
