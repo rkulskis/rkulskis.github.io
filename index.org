@@ -1,7 +1,3 @@
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="typography.css" />
-| [[file:./index.html][./]] |  | [[file:cv/rossMikulskisResume.pdf][CV]] |  | [[file:research/index.html][Research/]] | 
-#+OPTIONS: toc:nil num:nil
-
 #+TITLE: Ross A. Mikulskis
 
 #+ATTR_HTML: :width 200

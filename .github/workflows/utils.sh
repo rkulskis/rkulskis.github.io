@@ -1,21 +1,13 @@
 #!/bin/bash
 HEADER="| "
 TOP_DIR="$(pwd)"
-
-clear_header() {
-    file="$1"
-    if grep -q '^#+OPTIONS: toc:nil num:nil' "$file"; then
-        sed -i '0,/^#+OPTIONS: toc:nil num:nil/d' "$file"
-    fi
-    if grep -q '^#+HTML_HEAD: <link rel="stylesheet"' "$file"; then
-        sed -i '/^#+HTML_HEAD: <link rel="stylesheet"/d' "$file"
-    fi
-}
+BUILD_DIR="build"
 
 declare -A EXCEPTIONS=(
-    ["cv"]="[[file:cv/rossMikulskisResume.pdf][CV]]"
+    ["cv"]="[[file:../cv/rossMikulskisResume.pdf][CV]]"
     ["images"]=""
     ["index"]=""
+    ["build"]=""
 )
 
 capitalize() {
@@ -27,7 +19,6 @@ generate_header() {
     dir="$1"
     is_top="$2"
     header="$HEADER"
-    
     header+="[[file:./index.html][./]] | "
     if [[ "$is_top" -eq 0 ]]; then
         header+="[[file:../index.html][../]] | "
@@ -50,10 +41,14 @@ generate_header() {
         if [[ ${EXCEPTIONS[$subname]+_} ]]; then
             header+="${EXCEPTIONS[$subname]} | "
         else
+            # Skip if no .org files in this directory
+            if ! compgen -G "$subdir"/*.org > /dev/null; then
+                continue
+            fi
             subname_capitalized=$(capitalize "$subname")
             header+="[[file:$subname/index.html][$subname_capitalized/]] | "
         fi
-    done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" -print0 | sort -z)
+    done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" ! -name "$BUILD_DIR" -print0 | sort -z)
     
     # Calculate relative path to typography.css
     local depth=$(echo "$dir" | tr -cd '/' | wc -c)
@@ -72,15 +67,24 @@ generate_header() {
     echo "#+OPTIONS: toc:nil num:nil"
 }
 
-add_header() {
-    dir="$1"
-    is_top="$2"
+create_build_file() {
+    source_file="$1"
+    build_file="$2"
+    dir="$3"
+    is_top="$4"
+    
+    # Calculate relative path from build file to source file
+    local rel_path=$(realpath --relative-to="$(dirname "$build_file")" "$source_file")
+    
+    # Generate header for this directory context
     header=$(generate_header "$dir" "$is_top")
     
-    for file in "$dir"/*.org; do
-        [ -e "$file" ] || continue
-        echo -e "$header\n$(cat "$file")" > "$file"
-    done
+    # Create the build file with header and include directive
+    {
+        echo "$header"
+        echo ""
+        echo "#+INCLUDE: \"$rel_path\""
+    } > "$build_file"
 }
 
 export_html() {
@@ -90,48 +94,56 @@ export_html() {
 
 process_files() {
     dir="$1"
-    operation="$2"
-    is_top="$3"
+    is_top="$2"
     
-    case "$operation" in
-        clear_header)
-            for file in "$dir"/*.org; do
-                [ -e "$file" ] || continue
-                clear_header "$file"
-            done
-            ;;
-        add_header)
-            add_header "$dir" "$is_top"
-            ;;
-        html_export)
-            for file in "$dir"/*.org; do
-                [ -e "$file" ] || continue
-                export_html "$file"
-            done
-            ;;
-    esac
+    # Calculate corresponding build directory
+    if [[ "$is_top" -eq 1 ]]; then
+        build_subdir="$BUILD_DIR"
+    else
+        rel_dir="${dir#./}"
+        build_subdir="$BUILD_DIR/$rel_dir"
+    fi
     
-    # if index.org does not exist, create a symlink for index.html (but not if index.html already exists)
-    if [ ! -e "$dir/index.org" ] && [ ! -e "$dir/index.html" ]; then
-        html_file=$(find "$dir" -maxdepth 1 -type f -name "*.html" | head -n 1)
+    # Create build subdirectory
+    mkdir -p "$build_subdir"
+    
+    # Process each .org file in the directory
+    for source_file in "$dir"/*.org; do
+        [ -e "$source_file" ] || continue
+        
+        filename=$(basename "$source_file")
+        build_file="$build_subdir/$filename"
+        
+        create_build_file "$source_file" "$build_file" "$dir" "$is_top"
+        export_html "$build_file"
+    done
+    
+    # Create index.html symlink if needed in build directory
+    if [ ! -e "$build_subdir/index.org" ] && [ ! -e "$build_subdir/index.html" ]; then
+        html_file=$(find "$build_subdir" -maxdepth 1 -type f -name "*.html" ! -name "index.html" | head -n 1)
         if [ -n "$html_file" ]; then
-            ln -sf "$(basename "$html_file")" "$dir/index.html"
+            ln -sf "$(basename "$html_file")" "$build_subdir/index.html"
         fi
     fi
     
+    # Recurse into subdirectories
     for subdir in "$dir"/*/; do
-        [ -d "$subdir" ] && process_files "$subdir" "$operation" 0
+        [ -d "$subdir" ] && [[ "$(basename "$subdir")" != "$BUILD_DIR" ]] && process_files "$subdir" 0
     done
 }
 
-if [[ $# -ne 1 ]]; then
-    echo "Usage: $0 {clear_header|add_header|html_export}"
+if [[ $# -ne 1 ]] || [[ "$1" != "build" ]]; then
+    echo "Usage: $0 build"
     exit 1
 fi
 
-rm -rf _minted-index
+# Clean up old artifacts
+rm -rf _minted-index "$BUILD_DIR"
 
-case "$1" in
-    clear_header|add_header|html_export) process_files "." "$1" 1 ;;
-    *) echo "Invalid argument. Use clear_header, add_header, or html_export."; exit 1 ;;
-esac
+# Create build directory
+mkdir -p "$BUILD_DIR"
+
+# Process all files
+process_files "." 1
+
+echo "Build complete. Output in $BUILD_DIR/"
