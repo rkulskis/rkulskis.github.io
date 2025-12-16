@@ -63,6 +63,8 @@ generate_header() {
     fi
     
     echo "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"$css_path\" />"
+    echo "#+HTML_HEAD: <link rel=\"stylesheet\""
+    echo "#+HTML_HEAD:       href=\"https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@400;700&display=swap\">"
     echo "$header"
     echo "#+OPTIONS: toc:nil num:nil"
 }
