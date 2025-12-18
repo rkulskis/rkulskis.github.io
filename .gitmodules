@@ -1,3 +1,4 @@
 [submodule "projects/raft"]
 	path = projects/raft
 	url = git@github.com:rkulskis/raft.git
+	branch = main
