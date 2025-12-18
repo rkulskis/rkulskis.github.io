@@ -1,0 +1,36 @@
+#+TITLE: Thought List
+
+* Thoughts
+
+ * Map RT-DDS functional framework to a philosophical way of
+   presenting work, e.g. every doc has a ~#+INCLUDE~ for e.g.:
+   * ~one_liner.org~
+   * ~problem_statemenet.org~
+   * ~solution_statement.org~
+   * etc.
+ * Prove through logic that everything can be done in RT-DDS
+   (including O.S. stuff and interaction with existing APIs)
+   * Next: prove that this significantly reduces LOC and increases
+     flexibility e.g. because we don't have to worry about
+     communication -> handled by the framework
+ * Prove wrong "ends justify the means", but possibly explore the
+   limit as means become mini-ends for saying:
+   $$ \forall mini\_ends == good \rightarrow end == good$$
+   * On this point, maybe write essay to explore whether AI is good
+     and if so, how? My preconceived theory is that AI in the context
+     of coding is good in compiler land, and that functional land
+     should be delegated to the programmer so that they still have an
+     intimacy with the code, but the inherent "this is what I want"
+     mapping to machine bytecode can be done by AI. LLMs do this (sort
+     of) with natural language, but I think programmers should be able
+     to understand the inputs and outputs of every piece of code, even
+     if some of it is black-boxed in an e.g. "function depot".
+   
+
+* Background
+
+This is public not because I'm trying to broadcast my thoughts, but
+because I want a way to remember my thoughts through emacs and see
+them on my iPhone without setting a bunch of stuff up. I also have
+nothing to hide. I think hiding things usually means that something
+must be bad.
