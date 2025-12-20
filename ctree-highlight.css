@@ -1,0 +1,7 @@
+.ctree-dir { color: #0000ff; font-weight: bold; }
+.ctree-link { color: #008b8b; font-weight: bold; }
+.ctree-socket { color: #800080; font-weight: bold; }
+.ctree-fifo { color: #808000; }
+.ctree-device { color: #808000; font-weight: bold; }
+.ctree-exec { color: #008000; font-weight: bold; }
+.ctree-comment { color: #b22222; }
