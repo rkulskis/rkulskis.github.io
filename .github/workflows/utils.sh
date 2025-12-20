@@ -50,23 +50,31 @@ generate_header() {
         fi
     done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" ! -name "$BUILD_DIR" -print0 | sort -z)
     
-    # Calculate relative path to typography.css
-    local depth=$(echo "$dir" | tr -cd '/' | wc -c)
-    local css_path=""
-    if [[ "$is_top" -eq 1 ]]; then
-        css_path="typography.css"
-    else
-        for ((i=1; i<depth; i++)); do
-            css_path="../$css_path"
-        done
-        css_path="${css_path}typography.css"
-    fi
-    
-    echo "#+HTML_HEAD: <link rel=\"stylesheet\""
-    echo "#+HTML_HEAD:       href=\"https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@400;700&display=swap\">"
-    echo "#+HTML_HEAD: <link rel=\"stylesheet\""
-    echo "#+HTML_HEAD: href=\"https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap\">"
-    echo "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"$css_path\" />"
+    # Calculate relative path to typography.css and ctree-highlight files
+local depth=$(echo "$dir" | tr -cd '/' | wc -c)
+local css_path=""
+local ctree_css_path=""
+local ctree_js_path=""
+if [[ "$is_top" -eq 1 ]]; then
+    css_path="typography.css"
+    ctree_css_path="ctree-highlight.css"
+    ctree_js_path="ctree-highlight.js"
+else
+    for ((i=1; i<depth; i++)); do
+        css_path="../$css_path"
+    done
+    css_path="${css_path}typography.css"
+    ctree_css_path="${css_path%typography.css}ctree-highlight.css"
+    ctree_js_path="${css_path%typography.css}ctree-highlight.js"
+fi
+
+echo "#+HTML_HEAD: <link rel=\"stylesheet\""
+echo "#+HTML_HEAD:       href=\"https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@400;700&display=swap\">"
+echo "#+HTML_HEAD: <link rel=\"stylesheet\""
+echo "#+HTML_HEAD: href=\"https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap\">"
+echo "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"$css_path\" />"
+echo "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"$ctree_css_path\" />"
+echo "#+HTML_HEAD: <script src=\"$ctree_js_path\"></script>"
     
     echo "$header"
     echo "#+OPTIONS: toc:nil num:nil"
