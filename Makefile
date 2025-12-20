@@ -8,11 +8,14 @@ all: build
 build:
 	@rm -rf $(BUILD_DIR) _minted-*
 	@$(SCRIPT_PATH)/utils.sh build
-	@find . -mindepth 1 -maxdepth 1 \
-		! -name build \
-		! -name .git \
-		! -name .github \
-		-exec cp -a {} build/ \;
+	@# Copy non-.org files and directories without .org files
+	@for item in * .*; do \
+		[ "$$item" = "." ] || [ "$$item" = ".." ] || \
+		[ "$$item" = "build" ] || [ "$$item" = ".git" ] || [ "$$item" = ".github" ] || \
+		[ "$${item##*.}" = "org" ] || \
+		{ [ -d "$$item" ] && find "$$item" -name "*.org" -print -quit | grep -q .; } || \
+		cp -a "$$item" build/; \
+	done
 
 clean:
 	@rm -rf $(BUILD_DIR) _minted-*

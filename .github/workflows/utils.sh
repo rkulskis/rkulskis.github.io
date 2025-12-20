@@ -86,18 +86,27 @@ create_build_file() {
     dir="$3"
     is_top="$4"
     
-    # Calculate relative path from build file to source file
-    local rel_path=$(realpath --relative-to="$(dirname "$build_file")" "$source_file")
+    # Ensure the parent directory exists
+    mkdir -p "$(dirname "$build_file")"
     
-    # Generate header for this directory context
+    # Get absolute paths for reliable relative path calculation
+    local abs_source=$(realpath "$source_file")
+    local abs_build_dir=$(realpath "$(dirname "$build_file")")
+    local rel_path=$(realpath --relative-to="$abs_build_dir" "$abs_source")
+    
     header=$(generate_header "$dir" "$is_top")
     
-    # Create the build file with header and include directive
     {
         echo "$header"
         echo ""
         echo "#+INCLUDE: \"$rel_path\""
     } > "$build_file"
+    
+    # Debug: show what was created
+    echo "Created $build_file:"
+    echo "  Source: $source_file"
+    echo "  Relative path: $rel_path"
+    echo "---"
 }
 
 export_html() {
@@ -113,7 +122,9 @@ process_files() {
     if [[ "$is_top" -eq 1 ]]; then
         build_subdir="$BUILD_DIR"
     else
+        # Remove ./ prefix and trailing slash
         rel_dir="${dir#./}"
+        rel_dir="${rel_dir%/}"
         build_subdir="$BUILD_DIR/$rel_dir"
     fi
     
