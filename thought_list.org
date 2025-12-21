@@ -31,6 +31,4 @@
 
 This is public not because I'm trying to broadcast my thoughts, but
 because I want a way to remember my thoughts through emacs and see
-them on my iPhone without setting a bunch of stuff up. I also have
-nothing to hide. I think hiding things usually means that something
-must be bad.
+them on my iPhone without setting a bunch of stuff up.
