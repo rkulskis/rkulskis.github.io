@@ -1,5 +1,6 @@
 \documentclass[10pt,letterpaper]{article}
 % Packages
+% \usepackage[none]{hyphenat}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
 \usepackage{svg}
@@ -7,7 +8,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{xcolor}
-\usepackage[left=0.75in,right=0.75in,top=0.6in,bottom=0.6in]{geometry}
+\usepackage[left=0.6in,right=0.6in,top=0.6in,bottom=0.6in]{geometry}
 % Hyperlink setup
 \hypersetup{
     colorlinks=true,
@@ -42,17 +43,39 @@
 \begin{document}
 % Header
 \begin{minipage}[b]{0.55\textwidth}
-    {\Large\bfseries ROSS A. MIKULSKIS}
+    {\LARGE\bfseries ROSS A. MIKULSKIS}
 \end{minipage}
 \hfill
 \begin{minipage}[b]{0.4\textwidth}
     \raggedleft
-    rkulskis@bu.edu \textbar{} 617-690-9816\\
-    Boston, MA 02132
-\end{minipage}
+    rkulskis@bu.edu \\
+    Boston, MA\\
+    \href{https://linkedin.com/in/rkulskis}{linkedin.com/in/rkulskis} \\
+\end{minipage}\\
+
+Ross Mikulskis is a kernel engineer specializing in real-time and
+distributed systems, with 2 years of experience.
 
 \blackline
+\sectionheader{SKILLS}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.8\textwidth}
+  \vspace{0pt}
+
+  \begin{itemize}
+  \item \textbf{Languages}: C, Python, Assembly (x86), Rust, OCaml,
+    Java, TypeScript, SQL, Terraform
+  \item \textbf{Frameworks}: Docker, QEMU, Linux, Kubernetes /
+    OpenShift, CI/CD, Kernel Modules, Cloud Infrastructure (GCP,
+    Azure), Serverless, ROS 2
+\item \textbf{Tools}: Emacs, GNU Debugger (gdb), Python Debugger
+  (pdb), Make, GitHub Actions
+  \end{itemize}
+  \end{minipage}
+
+\vspace{8pt}
 % Education Section
+\redline
 \begin{minipage}[t]{0.15\textwidth}
 \vspace{0pt}
 {\normalsize\bfseries\color{red!80!black}EDUCATION}
@@ -60,18 +83,17 @@
 \hspace{0.04\textwidth}
 \begin{minipage}[t]{0.8\textwidth}
   \vspace{0pt}
-  \textbf{Boston University, Boston} \hfill \textbf{September 2021 - May 2025}\\
-  \textit{M.S. Computer Science, 3.86} \\
-  \textit{B.A. Computer Science, 3.65} \\ [0.5em]
-\textbf{Boston Latin School, Boston} \hfill \textbf{September 2015 - June 2021}
+  \textbf{Boston University} - Full Tuition Merit Scholarship\hfill \textbf{September 2021 - May 2025}\\
+  \textit{M.S. Computer Science, GPA: 3.86} \\
+  \textit{B.A. Computer Science, GPA: 3.65}
 \end{minipage}
 
 \vspace{8pt}
-% Professional Experience Section
+% Experience Section
 \redline
 \begin{minipage}[t]{0.15\textwidth}
 \vspace{0pt}
-{\bfseries\color{red!80!black}PROFESSIONAL\\EXPERIENCE}
+{\bfseries\color{red!80!black}EXPERIENCE}
 \includegraphics[width=0.8\linewidth]{images/prodex-labs.png}
 \end{minipage}
 \hspace{0.04\textwidth}
@@ -80,13 +102,34 @@
   \textbf{ProDex Labs} \hfill \textbf{May 2025 - October 2025}\\
   \textit{Founding Engineer} \hfill Brooklyn, NY \\ [0.5em]
   Optimized factory workflows using LangGraph AI-driven Monte Carlo simulations.
+  \begin{itemize}
+\item Overhauled a single-container simulation system into a
+  serverless microservice architecture to capture stochacitiy by
+  running thousands of simulations in parallel.
+\item Minimized customer onboarding time by developing CI/CD Terraform
+  pipelines to deploy into customer-owned GCP and Azure VPCs.
+\end{itemize}
+\end{minipage}
+
+\vspace{16pt}
+
+% Company 1.5
+\begin{minipage}[t]{0.15\textwidth}
+  \vspace{0pt}
+  \includegraphics[width=0.8\linewidth]{images/bu-logo.png}
+\end{minipage}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.8\textwidth}
+\vspace{0pt}
+\textbf{Boston University} \hfill \textbf{July 2024 - May 2025}\\
+\textit{Researcher} \hfill Boston, MA\\ [0.5em]
+Developed kernel drivers and real-time applications for the Quest RTOS and Linux.
 \begin{itemize}
-\item Migrated a single-container system to a serverless microservices
-  architecture capable of running thousands of parallel simulations.
-\item Built CI/CD Terraform pipelines to deploy into GCP and Azure
-  client VPCs.
-\item Designed the React Flow factory-as-circuits visualization UI using a color
-  scheme inspired by the NYC MTA.
+\item Built a pub/sub framework to dispatch task pipelines with
+  end-to-end real-time QoS guarantees across Linux and an RTOS running on
+  a partitioning hypervisor.
+\item Enhanced system stability by fixing Sound Blaster 16 audio
+  drivers and file system drivers.
 \end{itemize}
 \end{minipage}
 
@@ -104,50 +147,30 @@
   \textit{Cloud Engineering Intern} \hfill Boston, MA \\ [0.5em]
   Conducted research and worked with the Mass Open Cloud team.
 \begin{itemize}
-\item Enhanced the Linux kernel with Dr. Orran Krieger (head of the
-  Mass Open Cloud) to dynamically link with Redis, improving throughput by
-  $22\%$.
+\item Revised the Linux kernel to dynamically link with Redis,
+  improving throughput by $22\%$.
 \item Implemented a serverless OpenShift proxy for Gradescope to
-  autograde code on the Mass Open Cloud, saving professors hours of
-  manual grading time.
+  autograde code requiring specific kernel versions on the Mass Open
+  Cloud, saving professors hours of manual grading.
 \item Reduced container build times for the Open Education Project by
   $70\%$ using Python Mamba and GitHub Actions caching.
 \end{itemize}
 \end{minipage}
 
-\vspace{16pt}
-% Company 3
-\begin{minipage}[t]{0.15\textwidth}
-  \vspace{0pt}
-  \includegraphics[width=0.8\linewidth]{images/bu-logo.png}
-\end{minipage}
-\hspace{0.04\textwidth}
-\begin{minipage}[t]{0.8\textwidth}
-\vspace{0pt}
-\textbf{Boston University} \hfill \textbf{September 2022 - May 2025}\\
-\textit{Teaching Assistant} \hfill Boston, MA\\ [0.5em]
-Taught 2 semesters of Combinatorics (CS 131) and 5 semesters of Algorithms (CS 330).
-\begin{itemize}
-\item Wrote LaTeX problem sets, exam questions, and grading materials;
-  proctored exams.
-\item Led weekly office hours and lab sessions.
-\end{itemize}
-\end{minipage}
-
-\vspace{8pt}
-% Publications Section
-\redline
-\sectionheader{PUBLICATIONS}
-\hspace{0.04\textwidth}
-\begin{minipage}[t]{0.8\textwidth}
-\vspace{0pt}
-R. Mikulskis, P. West, R. Syed, and R. West. \textbf{``RT-DDS: A Real-Time Data Distribution Service for Task Pipeline Processing''}. Manuscript in preparation.
-\begin{itemize}
-\item Built a C-based software dataflow framework for dispatching
-  service pipelines with hard real-time guarantees across Linux and
-  the Quest RTOS.
-\end{itemize}
-\end{minipage}
+% \vspace{8pt}
+% % Publications Section
+% \redline
+% \sectionheader{PUBLICATIONS}
+% \hspace{0.04\textwidth}
+% \begin{minipage}[t]{0.8\textwidth}
+% \vspace{0pt}
+% R. Mikulskis, P. West, R. Syed, and R. West. \textbf{``RT-DDS: A Real-Time Data Distribution Service for Task Pipeline Processing''}. Manuscript in preparation.
+% \begin{itemize}
+% \item Built a C-based software dataflow framework for dispatching
+%   service pipelines with hard real-time guarantees across Linux and
+%   the Quest RTOS.
+% \end{itemize}
+% \end{minipage}
 
 \vspace{8pt}
 % Projects Section
@@ -156,24 +179,18 @@ R. Mikulskis, P. West, R. Syed, and R. West. \textbf{``RT-DDS: A Real-Time Data 
 \hspace{0.04\textwidth}
 \begin{minipage}[t]{0.8\textwidth}
   \vspace{0pt}
+
+  \textbf{Distributed Consensus} \href{https://github.com/rkulskis/raft}{github.com/rkulskis/raft}\\ [0.5em]
+  Implemented the Raft consensus algorithm within ROS 2 to ensure state durability and fault tolerance in real-time robotic systems.\\
   
-  \textbf{Bits of CS} \textit{\href{https://bitsofcs.com}{bitsofcs.com}}\\ [0.5em]
+  \textbf{Bits of CS} \href{https://bitsofcs.com}{bitsofcs.com}\\ [0.5em]
   Published a free online computer science textbook and founded an educational non-profit with a grant from Boston University.\\
 
-  \textbf{SubsVocab} \textit{\href{https://github.com/rkulskis/subsvocab}{github.com/rkulskis/subsvocab}}\\ [0.5em]
-  Built a Rust command-line utility for extracting Netflix subtitles and generating Spanish-to-English vocabulary lists sorted by first appearance in the script.
+  \textbf{SubsVocab} \href{https://github.com/rkulskis/subsvocab}{github.com/rkulskis/subsvocab}\\ [0.5em]
+  Developed a Rust CLI tool to parse Netflix
+  subtitles and generate frequency-sorted Spanish-to-English
+  vocabulary lists.
 
 \end{minipage}
 
-\vspace{8pt}
-% Links Section
-\redline
-\sectionheader{LINKS}
-\hspace{0.04\textwidth}
-\begin{minipage}[t]{0.8\textwidth}
-  \vspace{0pt}
-  \textbf{GitHub:} \href{https://github.com/rkulskis}{github.com/rkulskis}\\
-  \textbf{LinkedIn:} \href{https://linkedin.com/in/rkulskis}{linkedin.com/in/rkulskis}\\
-  \textbf{Personal Site:} \href{https://rkulskis.github.io}{rkulskis.github.io}
-\end{minipage}
 \end{document}
