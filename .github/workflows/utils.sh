@@ -116,6 +116,18 @@ generate_header() {
     
     items_order+=("${items_sorted[@]}")
     
+    # Calculate max item length for column width
+    local max_len=0
+    for item in "${items_order[@]}"; do
+        local len=${#item}
+        if (( len > max_len )); then
+            max_len=$len
+        fi
+    done
+    
+    # Add padding for column spacing
+    local col_width=$((max_len + 2))
+    
     # Calculate relative path to CSS and JS files
     local depth=$(echo "$dir" | tr -cd '/' | wc -c)
     local css_path=""
@@ -153,9 +165,9 @@ generate_header() {
     echo "<div style=\"background: #000000; color: #FFFFFF; font-family: 'Ubuntu Sans Mono', monospace; font-size: 16px; padding: 8px; border-radius: 0; margin-bottom: 20px; overflow-wrap: normal;\">"
     echo "<div style=\"margin-bottom: 10px;\">visitor@rkulskis.github.io:$cwd\$ echo Links: \$(ls -a)</div>"
 
-    echo "<div style=\"display: flex; flex-wrap: wrap; gap: 15px; border-left: 4px solid #00CED1; padding-left: 18px;\">Links: "
+    echo "<div style=\"border-left: 4px solid #00FFFF; padding-left: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(${col_width}ch, 1fr)); gap: 0;\">Links: "
     
-    # Generate clickable items in order
+    # Generate clickable items in order with column alignment
     for item in "${items_order[@]}"; do
         IFS='|' read -r link type orig_name <<< "${items_map[$item]}"
         
@@ -168,12 +180,17 @@ generate_header() {
             underline_style="text-decoration: none;"
         fi
         
+        # Calculate padding needed
+        local item_len=${#item}
+        local padding=$((col_width - item_len))
+        local padding_str=$(printf '%*s' "$padding" '')
+        
         if [[ "$type" == "dir" ]]; then
             # Directory - bold cyan (ANSI cyan #00FFFF)
-            echo "<a href=\"$link\" style=\"color: #00FFFF; font-weight: bold; ${underline_style} white-space: nowrap;\">$item</a>"
+            echo "<span style=\"white-space: pre;\"><a href=\"$link\" style=\"color: #00FFFF; font-weight: bold; ${underline_style}\">${item}</a>${padding_str}</span>"
         else
             # File - white (ANSI white #FFFFFF)
-            echo "<a href=\"$link\" style=\"color: #FFFFFF; ${underline_style} white-space: nowrap;\">$item</a>"
+            echo "<span style=\"white-space: pre;\"><a href=\"$link\" style=\"color: #FFFFFF; ${underline_style}\">${item}</a>${padding_str}</span>"
         fi
     done
     
@@ -214,7 +231,6 @@ create_build_file() {
     echo "  Relative path: $rel_path"
     echo "---"
 }
-
 export_html() {
     local org_file="$1"
     emacs --batch --load ./.github/workflows/elisp/batch-htmlize.el "$org_file"
