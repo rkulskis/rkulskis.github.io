@@ -12,21 +12,21 @@ img {
   display: block;    /* remove inline spacing below image */
   margin: 0 auto;    /* optional: center image */
 }
-/* RGB Square Banner Pattern */
-body::before,
-body::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1em;
-    background-color: #CC0000;
-    /* background-image:  */
-    /*     linear-gradient(90deg,  */
-    /*         #FF0000 0%, #FF0000 33.33%,  */
-    /*         #00FF00 33.33%, #00FF00 66.66%,  */
-    /*         #0000FF 66.66%, #0000FF 100%); */
-    background-size: 100% 1em;
-    background-repeat: repeat-x;
-    margin: 0;
-    padding: 0;
-}
+/* /\* RGB Square Banner Pattern *\/ */
+/* body::before, */
+/* body::after { */
+/*     content: ''; */
+/*     display: block; */
+/*     width: 100%; */
+/*     height: 1em; */
+/*     background-color: #CC0000; */
+/*     /\* background-image:  *\/ */
+/*     /\*     linear-gradient(90deg,  *\/ */
+/*     /\*         #FF0000 0%, #FF0000 33.33%,  *\/ */
+/*     /\*         #00FF00 33.33%, #00FF00 66.66%,  *\/ */
+/*     /\*         #0000FF 66.66%, #0000FF 100%); *\/ */
+/*     background-size: 100% 1em; */
+/*     background-repeat: repeat-x; */
+/*     margin: 0; */
+/*     padding: 0; */
+/* } */
