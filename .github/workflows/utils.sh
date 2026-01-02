@@ -163,9 +163,9 @@ generate_header() {
     # Generate terminal-style header with clickable links
     echo "#+BEGIN_EXPORT html"
     echo "<div style=\"background: #000000; color: #FFFFFF; font-family: 'Ubuntu Sans Mono', monospace; font-size: 16px; padding: 8px; border-radius: 0; margin-bottom: 20px; overflow-wrap: normal;\">"
-    echo "<div style=\"margin-bottom: 10px;\">visitor@rkulskis.github.io:$cwd\$ echo Links: \$(ls -a)</div>"
+    echo "<div style=\"margin-bottom: 10px;\">visitor@rkulskis.github.io:$cwd\$ echo LINKS: \$(ls -a)</div>"
 
-    echo "<div style=\"border-left: 4px solid #00FFFF; padding-left: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(${col_width}ch, 1fr)); gap: 0;\">Links: "
+    echo "<div style=\"border-left: 4px solid #00FFFF; padding-left: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(${col_width}ch, 1fr)); gap: 0;\">LINKS: "
     
     # Generate clickable items in order with column alignment
     for item in "${items_order[@]}"; do
