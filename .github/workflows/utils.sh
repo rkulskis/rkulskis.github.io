@@ -150,8 +150,9 @@ generate_header() {
     
     # Generate terminal-style header with clickable links
     echo "#+BEGIN_EXPORT html"
-    echo "<div style=\"background: #000000; color: #FFFFFF; font-family: 'Ubuntu Sans Mono', monospace; font-size: 16px; padding: 15px; border-radius: 0; margin-bottom: 20px; overflow: hidden;\">"
-    echo "<div style=\"margin-bottom: 10px;\">visitor@rkulskis.github.io:$cwd\$ ls -a <span style=\"color: #808080;\"># all items below are clickable links</span></div>"
+    echo "<div style=\"background: #000000; color: #FFFFFF; font-family: 'Ubuntu Sans Mono', monospace; font-size: 16px; padding: 15px; border-radius: 0; margin-bottom: 20px; overflow-wrap: normal;\">"
+    echo "<div style=\"margin-bottom: 10px;\">visitor@rkulskis.github.io:$cwd\$ ls -a$( [ "$is_top" -eq 1 ] && echo ' <span style="color: #808080;"># all items below are clickable links</span>' )</div>"
+
     echo "<div style=\"display: flex; flex-wrap: wrap; gap: 15px;\">"
     
     # Generate clickable items in order
