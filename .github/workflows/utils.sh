@@ -15,69 +15,171 @@ capitalize() {
     echo "$input" | sed -E 's/(^|_)([a-z])/\U\2/g'
 }
 
+# Function to determine the current page name for highlighting
+# Set this variable before calling generate_header to underline the current item
+# Example: CURRENT_PAGE="projects" or CURRENT_PAGE="./" or CURRENT_PAGE="CV"
+get_current_page() {
+    local file="$1"
+    local basename_file=$(basename "$file" .org)
+    
+    # If it's index.org or README.org, return "./" to highlight the current directory
+    if [[ "$basename_file" == "index" || "$basename_file" == "README" ]]; then
+        echo "./"
+    else
+        echo "$basename_file"
+    fi
+}
+
 generate_header() {
     dir="$1"
     is_top="$2"
-    header="$HEADER"
-    header+="[[file:./index.html][./]] | "
-    if [[ "$is_top" -eq 0 ]]; then
-        header+="[[file:../index.html][../]] | "
+    
+    # Get current working directory relative path
+    if [[ "$is_top" -eq 1 ]]; then
+        cwd="~"
+    else
+        # Remove leading ./ and clean up double slashes, prepend with ~
+        cwd="~/"$(echo "$dir" | sed 's|^\./||' | sed 's|//*|/|g' | sed 's|/$||')
     fi
     
-    # Files loop
+    # Collect all files and directories
+    declare -A items_map
+    declare -a items_temp
+    
+    # Files loop - only process .org files (excluding index.org)
     while IFS= read -r -d '' file; do
         filename=$(basename "$file" .org)
+        
+        # Skip index.org
+        if [[ "$filename" == "index" ]]; then
+            continue
+        fi
+        
         if [[ ${EXCEPTIONS[$filename]+_} ]]; then
-            header+="${EXCEPTIONS[$filename]} | "
+            # Use the exception mapping
+            exception_value="${EXCEPTIONS[$filename]}"
+            # Extract the actual filename from org-mode link syntax if present
+            if [[ "$exception_value" =~ \[\[file:([^\]]+)\]\[([^\]]+)\]\] ]]; then
+                actual_file="${BASH_REMATCH[1]}"
+                display_name="${BASH_REMATCH[2]}"
+                items_map["$display_name"]="$actual_file|file|$filename"
+                items_temp+=("$display_name")
+            else
+                items_map["$filename"]="$exception_value|file|$filename"
+                items_temp+=("$filename")
+            fi
         else
-            filename_capitalized=$(capitalize "$filename")
-            header+="[[file:$filename.html][$filename_capitalized]] | "
+            items_map["$filename"]="$filename.html|file|$filename"
+            items_temp+=("$filename")
         fi
     done < <(find "$dir" -mindepth 1 -maxdepth 1 -type f -name "*.org" ! -name ".*" -print0 | sort -z)
     
-    # Directories loop
+    # Directories loop - only include directories with .org files
     while IFS= read -r -d '' subdir; do
         subname=$(basename "$subdir")
+        
+        # Skip if no .org files in this directory
+        if ! compgen -G "$subdir"/*.org > /dev/null; then
+            continue
+        fi
+        
         if [[ ${EXCEPTIONS[$subname]+_} ]]; then
-            header+="${EXCEPTIONS[$subname]} | "
-        else
-            # Skip if no .org files in this directory
-            if ! compgen -G "$subdir"/*.org > /dev/null; then
-                continue
+            exception_value="${EXCEPTIONS[$subname]}"
+            if [[ "$exception_value" =~ \[\[file:([^\]]+)\]\[([^\]]+)\]\] ]]; then
+                actual_file="${BASH_REMATCH[1]}"
+                display_name="${BASH_REMATCH[2]}"
+                items_map["$display_name/"]="$actual_file|dir|$subname"
+                items_temp+=("$display_name/")
+            else
+                items_map["$subname/"]="$exception_value|dir|$subname"
+                items_temp+=("$subname/")
             fi
-            subname_capitalized=$(capitalize "$subname")
-            header+="[[file:$subname/index.html][$subname_capitalized/]] | "
+        else
+            items_map["$subname/"]="$subname/index.html|dir|$subname"
+            items_temp+=("$subname/")
         fi
     done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" ! -name "$BUILD_DIR" -print0 | sort -z)
     
-    # Calculate relative path to typography.css and ctree-highlight files
-local depth=$(echo "$dir" | tr -cd '/' | wc -c)
-local css_path=""
-local ctree_css_path=""
-local ctree_js_path=""
-if [[ "$is_top" -eq 1 ]]; then
-    css_path="typography.css"
-    ctree_css_path="ctree-highlight.css"
-    ctree_js_path="ctree-highlight.js"
-else
-    for ((i=1; i<depth; i++)); do
-        css_path="../$css_path"
-    done
-    css_path="${css_path}typography.css"
-    ctree_css_path="${css_path%typography.css}ctree-highlight.css"
-    ctree_js_path="${css_path%typography.css}ctree-highlight.js"
-fi
-
-echo "#+HTML_HEAD: <link rel=\"stylesheet\""
-echo "#+HTML_HEAD:       href=\"https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@400;700&display=swap\">"
-echo "#+HTML_HEAD: <link rel=\"stylesheet\""
-echo "#+HTML_HEAD: href=\"https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap\">"
-echo "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"$css_path\" />"
-echo "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"$ctree_css_path\" />"
-echo "#+HTML_HEAD: <script src=\"$ctree_js_path\"></script>"
+    # Sort items alphabetically (case-insensitive)
+    IFS=$'\n' items_sorted=($(sort -f <<<"${items_temp[*]}"))
+    unset IFS
     
-    echo "$header"
-    echo "#+OPTIONS: toc:nil num:nil"
+    # Build final order: ./, ../ (if exists), then sorted items
+    declare -a items_order
+    items_map["./"]="./index.html|dir|./"
+    items_order+=("./")
+    
+    if [[ "$is_top" -eq 0 ]]; then
+        items_map["../"]="../index.html|dir|../"
+        items_order+=("../")
+    fi
+    
+    items_order+=("${items_sorted[@]}")
+    
+    # Calculate relative path to CSS and JS files
+    local depth=$(echo "$dir" | tr -cd '/' | wc -c)
+    local css_path=""
+    local ctree_css_path=""
+    local ctree_js_path=""
+    if [[ "$is_top" -eq 1 ]]; then
+        css_path="typography.css"
+        ctree_css_path="ctree-highlight.css"
+        ctree_js_path="ctree-highlight.js"
+    else
+        for ((i=1; i<depth; i++)); do
+            css_path="../$css_path"
+        done
+        css_path="${css_path}typography.css"
+        ctree_css_path="${css_path%typography.css}ctree-highlight.css"
+        ctree_js_path="${css_path%typography.css}ctree-highlight.js"
+    fi
+    
+    # Output HTML head
+    echo "#+HTML_HEAD: <link rel=\"stylesheet\""
+    echo "#+HTML_HEAD:       href=\"https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:wght@400;700&display=swap\">"
+    echo "#+HTML_HEAD: <link rel=\"stylesheet\""
+    echo "#+HTML_HEAD: href=\"https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap\">"
+    echo "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"$css_path\" />"
+    echo "#+HTML_HEAD: <link rel=\"stylesheet\" type=\"text/css\" href=\"$ctree_css_path\" />"
+    echo "#+HTML_HEAD: <script src=\"$ctree_js_path\"></script>"
+    
+    # Move terminal above title by inserting it before the content starts
+    # This requires using #+BEGIN_EXPORT html at the very start
+    echo "#+OPTIONS: toc:nil num:nil html-postamble:nil"
+    echo ""
+    
+    # Generate terminal-style header with clickable links
+    echo "#+BEGIN_EXPORT html"
+    echo "<div style=\"background: #000000; color: #FFFFFF; font-family: 'Ubuntu Sans Mono', monospace; font-size: 16px; padding: 15px; border-radius: 0; margin-bottom: 20px; overflow: hidden;\">"
+    echo "<div style=\"margin-bottom: 10px;\">visitor@rkulskis.github.io:$cwd\$ ls -a <span style=\"color: #808080;\"># all items below are clickable links</span></div>"
+    echo "<div style=\"display: flex; flex-wrap: wrap; gap: 15px;\">"
+    
+    # Generate clickable items in order
+    for item in "${items_order[@]}"; do
+        IFS='|' read -r link type orig_name <<< "${items_map[$item]}"
+        
+        # Check if this is the current page (use CURRENT_PAGE variable)
+        local underline_style=""
+        # Match against the original filename (without extension or display transformation)
+        if [[ -n "${CURRENT_PAGE}" && "${CURRENT_PAGE}" == "${orig_name}" ]]; then
+            underline_style="text-decoration: underline;"
+        else
+            underline_style="text-decoration: none;"
+        fi
+        
+        if [[ "$type" == "dir" ]]; then
+            # Directory - bold cyan (ANSI cyan #00FFFF)
+            echo "<a href=\"$link\" style=\"color: #00FFFF; font-weight: bold; ${underline_style} white-space: nowrap;\">$item</a>"
+        else
+            # File - white (ANSI white #FFFFFF)
+            echo "<a href=\"$link\" style=\"color: #FFFFFF; ${underline_style} white-space: nowrap;\">$item</a>"
+        fi
+    done
+    
+    echo "</div>"
+    echo "</div>"
+    echo "#+END_EXPORT"
+    echo ""
 }
 
 create_build_file() {
@@ -93,7 +195,9 @@ create_build_file() {
     local abs_source=$(realpath "$source_file")
     local abs_build_dir=$(realpath "$(dirname "$build_file")")
     local rel_path=$(realpath --relative-to="$abs_build_dir" "$abs_source")
-    
+
+    # Set CURRENT_PAGE based on the actual file being processed
+    CURRENT_PAGE=$(get_current_page "$(basename "$source_file")")
     header=$(generate_header "$dir" "$is_top")
     
     {
@@ -105,6 +209,7 @@ create_build_file() {
     # Debug: show what was created
     echo "Created $build_file:"
     echo "  Source: $source_file"
+    echo "  Current page: $CURRENT_PAGE"
     echo "  Relative path: $rel_path"
     echo "---"
 }
