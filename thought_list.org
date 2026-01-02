@@ -32,3 +32,10 @@
 This is public not because I'm trying to broadcast my thoughts, but
 because I want a way to remember my thoughts through emacs and see
 them on my iPhone without setting a bunch of stuff up.
+
+
+* Leetcode Refresher Learnings
+
+ * binary search for sorted range with some property with ==, <, >
+   * e.g. can use for finding closest sqrt of $n$ in range $[1, n//2]$
+ * memoization: iterate from origin to dest cell

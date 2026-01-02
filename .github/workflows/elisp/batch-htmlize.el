@@ -3,6 +3,7 @@
 (require 'org)
 
 (setq org-html-htmlize-output-type 'inline-css)
+(setq org-export-babel-evaluate nil)
 
 ;; Set custom faces (optional, you can tweak colors)
 (custom-set-faces

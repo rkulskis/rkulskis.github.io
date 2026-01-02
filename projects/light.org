@@ -1,0 +1,18 @@
+#+TITLE: Audio to LED (multi-voice)
+
+I built a system that syncs LEDs to music in real-time which using the
+following steps:
+
+1. Split the audio using AI to get isolated tracks.
+2. Map each track's transients to rhythm data.
+3. Stream the rhythm data to a microcontroller, e.g. Teensy 4.1, and
+   perform an on-the-fly algorithm to flash LEDs with each track.
+
+I built this with a couple friends while at Boston University for
+fraternity purposes. If I were to roll out a V2, I'd have the AI
+process the audio online rather than apriori, with appropriate buffer
+to match the frequency of the control loop.
+
+[[~/Pictures/mr_light_circuit.png]]
+[[~/Pictures/mr_light_2.png]]
+[[~/Pictures/mr_light_1.png]]
