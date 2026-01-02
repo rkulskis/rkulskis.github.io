@@ -13,6 +13,7 @@ build:
 		[ "$$item" = "." ] || [ "$$item" = ".." ] || \
 		[ "$$item" = "build" ] || [ "$$item" = ".git" ] || [ "$$item" = ".github" ] || \
 		[ "$${item##*.}" = "org" ] || \
+		[ "$${item##*.}" = "html" ] || \
 		{ [ -d "$$item" ] && find "$$item" -name "*.org" -print -quit | grep -q .; } || \
 		cp -a "$$item" build/; \
 	done
@@ -20,7 +21,7 @@ build:
 	@for dir in */; do \
 		[ "$$dir" = "build/" ] || [ "$$dir" = ".git/" ] || [ "$$dir" = ".github/" ] || [ ! -d "$$dir" ] || \
 		{ find "$$dir" -name "*.org" -print -quit | grep -q . && \
-		  find "$$dir" -type f ! -name "*.org" -exec sh -c '\
+		  find "$$dir" -type f ! -name "*.org" ! -name "*.html" -exec sh -c '\
 		    rel="$${1#./}"; \
 		    mkdir -p "build/$$(dirname "$$rel")"; \
 		    cp -a "$$1" "build/$$rel"' _ {} \;; } || :; \

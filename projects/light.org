@@ -13,6 +13,6 @@ fraternity purposes. If I were to roll out a V2, I'd have the AI
 process the audio online rather than apriori, with appropriate buffer
 to match the frequency of the control loop.
 
-[[~/Pictures/mr_light_circuit.png]]
-[[~/Pictures/mr_light_2.png]]
-[[~/Pictures/mr_light_1.png]]
+[[./mr_light_circuit.png]]
+[[./mr_light_2.png]]
+[[./mr_light_1.png]]
