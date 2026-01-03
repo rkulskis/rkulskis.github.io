@@ -1,1 +1,3 @@
 #+TITLE: Projects
+
+These projects are for fun and practice.
