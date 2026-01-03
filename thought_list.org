@@ -1,5 +1,8 @@
 #+TITLE: Thought List
 
+I have this here so I can write things down in emacs and see them on
+my phone.
+
 * Thoughts
 
  * Map RT-DDS functional framework to a philosophical way of
@@ -26,13 +29,6 @@
      to understand the inputs and outputs of every piece of code, even
      if some of it is black-boxed in an e.g. "function depot".
    
-
-* Background
-
-This is public not because I'm trying to broadcast my thoughts, but
-because I want a way to remember my thoughts through emacs and see
-them on my iPhone without setting a bunch of stuff up.
-
 
 * Leetcode Refresher Learnings
 
