@@ -47,6 +47,24 @@ generate_header() {
     declare -A items_map
     declare -a items_temp
     
+    # LINK_ files loop - process LINK_filename files first
+    while IFS= read -r -d '' link_file; do
+        full_filename=$(basename "$link_file")
+        
+        # Extract the display name by removing LINK_ prefix
+        if [[ "$full_filename" =~ ^LINK_(.+)$ ]]; then
+            display_name="${BASH_REMATCH[1]}"
+            
+            # Read the URL from the file content (first line)
+            url=$(head -n 1 "$link_file" | tr -d '\r\n')
+            
+            if [[ -n "$url" ]]; then
+                items_map["$display_name"]="$url|link|$display_name"
+                items_temp+=("$display_name")
+            fi
+        fi
+    done < <(find "$dir" -mindepth 1 -maxdepth 1 -type f -name "LINK_*" ! -name ".*" -print0 | sort -z)
+    
     # Files loop - only process .org files (excluding index.org)
     while IFS= read -r -d '' file; do
         filename=$(basename "$file" .org)
