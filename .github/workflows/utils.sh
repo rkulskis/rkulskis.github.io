@@ -163,7 +163,7 @@ generate_header() {
     # Generate terminal-style header with clickable links
     echo "#+BEGIN_EXPORT html"
     echo "<div style=\"background: #232627; color: #ffffff; font-family: 'Ubuntu Sans Mono', monospace; font-size: 16px; padding: 8px; border-radius: 0; margin-bottom: 20px; overflow-wrap: normal;\">"
-    echo "<div style=\"margin-bottom: 10px;\">visitor@rkulskis.github.io:$cwd\$ echo LINKS: \$(ls -a)</div>"
+    echo "<div style=\"margin-bottom: 10px;\">guest@rkulskis.github.io:$cwd\$ echo LINKS: \$(ls -a)</div>"
 
     echo "<div style=\"border-left: 4px solid #1d99f3; padding-left: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(${col_width}ch, 1fr)); gap: 0;\">LINKS: "
     
