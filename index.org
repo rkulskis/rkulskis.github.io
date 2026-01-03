@@ -4,16 +4,15 @@
 [[./images/profile.jpg]]
 
 Hello! My name is Ross, and I'm a computer scientist. I love operating
-systems, and my favorite things to use are Emacs and C. I dabble in
-cloud engineering (e.g. Kubernetes, CI/CD, terraform). Code should
+systems, and my favorite things to use are Emacs and C. Code should
 "just work", and I build all of my projects with this in mind.
 
-I am writing a free online textbook called [[https://bitsofcs.com/][Bits of CS]] which aims to
+I'm writing a free online textbook called [[https://bitsofcs.com/][Bits of CS]], which aims to
 (1) excite people about computer science and building things and (2)
 help people exercise and develop their voice as opposed to using AI.
 
 Outside of computer science, I play the trumpet, having performed in
-the New Jazz Orchestra around Cambridge, MA. I also have been a big
+the New Jazz Orchestra around Cambridge, MA. I've also been a big
 brother in the Boston Big Brothers Big Sisters program since fall
 2024, and I have a dog named Winnie (picture above).
 
