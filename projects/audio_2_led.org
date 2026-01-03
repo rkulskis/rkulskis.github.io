@@ -1,4 +1,4 @@
-#+TITLE: Audio to LED (multi-voice)
+#+TITLE: Audio-to-LED
 
 I built a system that syncs LEDs to music in real-time which using the
 following steps:
