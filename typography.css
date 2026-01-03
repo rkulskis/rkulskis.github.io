@@ -11,6 +11,10 @@ img {
   display: block;    /* remove inline spacing below image */
   margin: 0 auto;    /* optional: center image */
 }
+
+.figure {
+    padding: 0em !important;
+}
 /* /\* RGB Square Banner Pattern *\/ */
 /* body::before, */
 /* body::after { */
