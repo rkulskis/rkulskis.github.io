@@ -162,10 +162,10 @@ generate_header() {
     
     # Generate terminal-style header with clickable links
     echo "#+BEGIN_EXPORT html"
-    echo "<div style=\"background: #2D2926; color: #FFFFFF; font-family: 'Ubuntu Sans Mono', monospace; font-size: 16px; padding: 8px; border-radius: 0; margin-bottom: 20px; overflow-wrap: normal;\">"
+    echo "<div style=\"background: #232627; color: #ffffff; font-family: 'Ubuntu Sans Mono', monospace; font-size: 16px; padding: 8px; border-radius: 0; margin-bottom: 20px; overflow-wrap: normal;\">"
     echo "<div style=\"margin-bottom: 10px;\">visitor@rkulskis.github.io:$cwd\$ echo LINKS: \$(ls -a)</div>"
 
-    echo "<div style=\"border-left: 4px solid #FFFFFF; padding-left: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(${col_width}ch, 1fr)); gap: 0;\">LINKS: "
+    echo "<div style=\"border-left: 4px solid #1d99f3; padding-left: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(${col_width}ch, 1fr)); gap: 0;\">LINKS: "
     
     # Generate clickable items in order with column alignment
     for item in "${items_order[@]}"; do
@@ -187,7 +187,7 @@ generate_header() {
         
         if [[ "$type" == "dir" ]]; then
             # Directory - bold cyan (ANSI cyan #CC0000)
-            echo "<span style=\"white-space: pre;\"><a href=\"$link\" style=\"color: #FFFFFF; font-weight: bold; ${underline_style}\">${item}</a>${padding_str}</span>"
+            echo "<span style=\"white-space: pre;\"><a href=\"$link\" style=\"color: #1d99f3; font-weight: bold; ${underline_style}\">${item}</a>${padding_str}</span>"
         else
             # File - white (ANSI white #FFFFFF)
             echo "<span style=\"white-space: pre;\"><a href=\"$link\" style=\"color: #FFFFFF; ${underline_style}\">${item}</a>${padding_str}</span>"
