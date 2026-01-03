@@ -6,6 +6,7 @@ BUILD_DIR="build"
 declare -A EXCEPTIONS=(
     ["cv"]="[[file:../cv/rossMikulskisResume.pdf][CV]]"
     ["images"]=""
+    ["textbook"]="[[https://bitsofcs.com/][textbook]]"
     ["index"]=""
     ["build"]=""
 )
@@ -64,6 +65,12 @@ generate_header() {
                 display_name="${BASH_REMATCH[2]}"
                 items_map["$display_name"]="$actual_file|file|$filename"
                 items_temp+=("$display_name")
+            elif [[ "$exception_value" =~ \[\[(https?://[^\]]+)\]\[([^\]]+)\]\] ]]; then
+                # Handle https:// links
+                link_url="${BASH_REMATCH[1]}"
+                display_name="${BASH_REMATCH[2]}"
+                items_map["$display_name"]="$link_url|link|$filename"
+                items_temp+=("$display_name")
             else
                 items_map["$filename"]="$exception_value|file|$filename"
                 items_temp+=("$filename")
@@ -73,6 +80,34 @@ generate_header() {
             items_temp+=("$filename")
         fi
     done < <(find "$dir" -mindepth 1 -maxdepth 1 -type f -name "*.org" ! -name ".*" -print0 | sort -z)
+    
+    # Symlinks loop - process symbolic links that point to URLs
+    while IFS= read -r -d '' symlink; do
+        symname=$(basename "$symlink")
+        
+        # Get the target of the symlink
+        target=$(readlink "$symlink")
+        
+        # Check if it's a URL symlink
+        if [[ "$target" =~ ^https?:// ]]; then
+            if [[ ${EXCEPTIONS[$symname]+_} ]]; then
+                exception_value="${EXCEPTIONS[$symname]}"
+                if [[ "$exception_value" =~ \[\[(https?://[^\]]+)\]\[([^\]]+)\]\] ]]; then
+                    link_url="${BASH_REMATCH[1]}"
+                    display_name="${BASH_REMATCH[2]}"
+                    items_map["$display_name"]="$link_url|link|$symname"
+                    items_temp+=("$display_name")
+                else
+                    items_map["$symname"]="$target|link|$symname"
+                    items_temp+=("$symname")
+                fi
+            else
+                # Use the symlink target directly
+                items_map["$symname"]="$target|link|$symname"
+                items_temp+=("$symname")
+            fi
+        fi
+    done < <(find "$dir" -mindepth 1 -maxdepth 1 -type l ! -name ".*" -print0 | sort -z)
     
     # Directories loop - only include directories with .org files
     while IFS= read -r -d '' subdir; do
@@ -89,6 +124,12 @@ generate_header() {
                 actual_file="${BASH_REMATCH[1]}"
                 display_name="${BASH_REMATCH[2]}"
                 items_map["$display_name"]="$actual_file|dir|$subname"
+                items_temp+=("$display_name")
+            elif [[ "$exception_value" =~ \[\[(https?://[^\]]+)\]\[([^\]]+)\]\] ]]; then
+                # Handle https:// links for directories
+                link_url="${BASH_REMATCH[1]}"
+                display_name="${BASH_REMATCH[2]}"
+                items_map["$display_name"]="$link_url|link|$subname"
                 items_temp+=("$display_name")
             else
                 items_map["$subname"]="$exception_value|dir|$subname"
@@ -188,6 +229,9 @@ generate_header() {
         if [[ "$type" == "dir" ]]; then
             # Directory - bold cyan (ANSI cyan #CC0000)
             echo "<span style=\"white-space: pre;\"><a href=\"$link\" style=\"color: #1d99f3; font-weight: bold; ${underline_style}\">${item}</a>${padding_str}</span>"
+        elif [[ "$type" == "link" ]]; then
+            # External link - cyan like ln -s (symlink color)
+            echo "<span style=\"white-space: pre;\"><a href=\"$link\" style=\"color: #1abc9c; font-weight: bold; ${underline_style}\">${item}</a>${padding_str}</span>"            
         else
             # File - white (ANSI white #FFFFFF)
             echo "<span style=\"white-space: pre;\"><a href=\"$link\" style=\"color: #FFFFFF; ${underline_style}\">${item}</a>${padding_str}</span>"
