@@ -186,9 +186,16 @@ generate_header() {
     done
     local col_width=$((max_len + 2))
     
-    # CSS paths
-    local prefix="" css_path="typography.css"
-    for ((i=1; i<depth; i++)); do prefix="../$prefix"; done
+    # Calculate prefix for CSS paths based on depth
+    local prefix=""
+    if [[ "$is_top" -eq 0 ]]; then
+        local actual_depth=$((depth + 1))
+        for ((i=0; i<actual_depth; i++)); do 
+            prefix="../$prefix"
+        done
+    fi
+    # Set CSS path
+    local css_path="typography.css"
     [[ -n "$prefix" ]] && css_path="${prefix}typography.css"
     
     # Output header

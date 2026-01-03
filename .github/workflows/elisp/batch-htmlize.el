@@ -1,9 +1,12 @@
 (add-to-list 'load-path (expand-file-name ".github/workflows/elisp/"))
 (require 'htmlize)
 (require 'org)
-
 (setq org-html-htmlize-output-type 'inline-css)
 (setq org-export-babel-evaluate nil)
+
+;; Force org to respect :exports header arguments
+(setq org-export-use-babel t)
+(setq org-confirm-babel-evaluate nil)
 
 ;; Set custom faces (optional, you can tweak colors)
 (custom-set-faces
@@ -17,7 +20,6 @@
  '(font-lock-type-face          ((t (:foreground "#228b22"))))
  '(font-lock-variable-name-face ((t (:foreground "#a0522d"))))
  '(font-lock-warning-face       ((t (:foreground "red")))))
-
 (setq htmlize-use-rgb-map 'force)
 
 ;; Open the org file passed as first command-line arg
