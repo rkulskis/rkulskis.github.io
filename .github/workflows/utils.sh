@@ -9,7 +9,25 @@ declare -A EXCEPTIONS=(
 
 get_current_page() {
     local file=$(basename "$1" .org)
-    [[ "$file" =~ ^(index|README)$ ]] && echo "." || echo "$file"
+    local dir="$2"
+    if [[ "$file" =~ ^(index|README)$ ]]; then
+        # Check if we're in a submodule
+        if is_submodule "$dir"; then
+            # Return submodule_name/README.org for matching
+            echo "$(basename "$dir")/README.org"
+        else
+            echo "."
+        fi
+    else
+        echo "$file"
+    fi
+}
+
+# Check if directory is a git submodule
+is_submodule() {
+    local dir="$1"
+    [[ -f "$dir/.git" ]] && return 0
+    return 1
 }
 
 # Add item with exception handling
@@ -70,21 +88,78 @@ collect_items() {
     # Directories with .org files
     while IFS= read -r -d '' subdir; do
         local name=$(basename "$subdir")
-        compgen -G "$subdir"/*.org > /dev/null && add_item "$name" "$name/index.html" "dir"
+        if compgen -G "$subdir"/*.org > /dev/null; then
+            # Check if it's a submodule
+            if is_submodule "$subdir"; then
+                # Add as README.org file with path name/README.org
+                items_temp+=("$name/README.org")
+                items_map["$name/README.org"]="$name/README.html|file|$name/README.org"
+            else
+                add_item "$name" "$name/index.html" "dir"
+            fi
+        fi
     done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" ! -name "$BUILD_DIR" -print0 | sort -z)
+}
+
+# Adjust links for submodule (prepend ../)
+adjust_links_for_submodule() {
+    declare -gA items_map
+    local -a new_temp=()
+    
+    for item in "${items_temp[@]}"; do
+        IFS='|' read -r link type orig_name <<< "${items_map[$item]}"
+        
+        # Adjust relative links (not external URLs)
+        if [[ "$type" != "link" || ! "$link" =~ ^https?:// ]]; then
+            link="../$link"
+        fi
+        
+        items_map["$item"]="$link|$type|$orig_name"
+        new_temp+=("$item")
+    done
+    
+    items_temp=("${new_temp[@]}")
 }
 
 # Generate navigation header
 generate_header() {
     local dir="$1" is_top="$2"
     local cwd="~" depth=0
+    local is_submod=0
     
-    [[ "$is_top" -eq 0 ]] && {
-        cwd="~/${dir#./}" cwd="${cwd%/}"
-        depth=$(echo "$dir" | tr -cd '/' | wc -c)
-    }
+    if [[ "$is_top" -eq 0 ]]; then
+        # Fix: Remove leading ./ and normalize path
+        local clean_dir="${dir#./}"
+        clean_dir="${clean_dir%/}"  # Remove trailing slash
+        cwd="~/${clean_dir}"
+        depth=$(echo "$clean_dir" | tr -cd '/' | wc -c)
+    fi
     
-    collect_items "$dir"
+    # Check if this is a submodule
+    if is_submodule "$dir"; then
+        is_submod=1
+        # Use parent directory's navigation
+        local parent_dir=$(dirname "$dir")
+        local submod_name=$(basename "$dir")
+        collect_items "$parent_dir"
+        adjust_links_for_submodule
+        
+        # The submodule is already added as name/README.org by collect_items
+        # Just need to adjust its link to be relative
+        for i in "${!items_temp[@]}"; do
+            if [[ "${items_temp[$i]}" == "$submod_name/README.org" ]]; then
+                items_map["$submod_name/README.org"]="./README.html|file|$submod_name/README.org"
+                break
+            fi
+        done
+        
+        # Fix the cwd path for submodules - stay in parent directory
+        local clean_parent="${parent_dir#./}"
+        clean_parent="${clean_parent%/}"
+        [[ -n "$clean_parent" ]] && cwd="~/${clean_parent}" || cwd="~"
+    else
+        collect_items "$dir"
+    fi
     
     # Build item order
     local -a items_order=(".")
@@ -92,8 +167,14 @@ generate_header() {
     readarray -t sorted < <(printf '%s\n' "${items_temp[@]}" | sort -f)
     items_order+=("${sorted[@]}")
     
-    items_map["."]="./index.html|dir|."
-    [[ "$is_top" -eq 0 ]] && items_map[".."]="../index.html|dir|.."
+    # Adjust navigation items for submodules
+    if [[ "$is_submod" -eq 1 ]]; then
+        items_map["."]="../index.html|dir|."
+        items_map[".."]="../../index.html|dir|.."
+    else
+        items_map["."]="./index.html|dir|."
+        [[ "$is_top" -eq 0 ]] && items_map[".."]="../index.html|dir|.."
+    fi
     
     # Calculate column width
     local max_len=0
@@ -147,7 +228,7 @@ create_build_file() {
     local source="$1" build="$2" dir="$3" is_top="$4"
     mkdir -p "$(dirname "$build")"
     
-    CURRENT_PAGE=$(get_current_page "$source")
+    CURRENT_PAGE=$(get_current_page "$source" "$dir")
     local rel_path=$(realpath --relative-to="$(realpath "$(dirname "$build")")" "$(realpath "$source")")
     
     { generate_header "$dir" "$is_top"; echo "#+INCLUDE: \"$rel_path\""; } > "$build"
