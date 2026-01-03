@@ -8,7 +8,6 @@ pre, code {
 }
 img {
   max-width: 100%;   /* don't exceed container width */
-  height: auto;      /* maintain aspect ratio */
   display: block;    /* remove inline spacing below image */
   margin: 0 auto;    /* optional: center image */
 }

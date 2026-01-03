@@ -1,7 +1,7 @@
 #+TITLE: Ross A. Mikulskis
 
-#+ATTR_HTML: :width 200
-[[./images/profile.jpg]]
+#+ATTR_HTML: :height 300 
+[[./images/race_pic.jpeg]]
 
 Hello! My name is Ross, and I'm a computer scientist. I love operating
 systems, and my favorite things to use are Emacs and C. Code should
@@ -14,7 +14,7 @@ help people exercise and develop their voice as opposed to using AI.
 Outside of computer science, I play the trumpet, having performed in
 the New Jazz Orchestra around Cambridge, MA. I've also been a big
 brother in the Boston Big Brothers Big Sisters program since fall
-2024, and I have a dog named Winnie (picture above).
+2024, and I have a dog named Winnie.
 
 /"Making the simple complicated is commonplace; making the
 complicated/ /simple, awesomely simple, that's creativity." - Charles
