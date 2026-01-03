@@ -24,7 +24,7 @@ get_current_page() {
     
     # If it's index.org or README.org, return "./" to highlight the current directory
     if [[ "$basename_file" == "index" || "$basename_file" == "README" ]]; then
-        echo "./"
+        echo "."
     else
         echo "$basename_file"
     fi
@@ -88,15 +88,15 @@ generate_header() {
             if [[ "$exception_value" =~ \[\[file:([^\]]+)\]\[([^\]]+)\]\] ]]; then
                 actual_file="${BASH_REMATCH[1]}"
                 display_name="${BASH_REMATCH[2]}"
-                items_map["$display_name/"]="$actual_file|dir|$subname"
-                items_temp+=("$display_name/")
+                items_map["$display_name"]="$actual_file|dir|$subname"
+                items_temp+=("$display_name")
             else
-                items_map["$subname/"]="$exception_value|dir|$subname"
-                items_temp+=("$subname/")
+                items_map["$subname"]="$exception_value|dir|$subname"
+                items_temp+=("$subname")
             fi
         else
-            items_map["$subname/"]="$subname/index.html|dir|$subname"
-            items_temp+=("$subname/")
+            items_map["$subname"]="$subname/index.html|dir|$subname"
+            items_temp+=("$subname")
         fi
     done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" ! -name "$BUILD_DIR" -print0 | sort -z)
     
@@ -106,12 +106,12 @@ generate_header() {
     
     # Build final order: ./, ../ (if exists), then sorted items
     declare -a items_order
-    items_map["./"]="./index.html|dir|./"
-    items_order+=("./")
+    items_map["."]="./index.html|dir|."
+    items_order+=(".")
     
     if [[ "$is_top" -eq 0 ]]; then
-        items_map["../"]="../index.html|dir|../"
-        items_order+=("../")
+        items_map[".."]="../index.html|dir|.."
+        items_order+=("..")
     fi
     
     items_order+=("${items_sorted[@]}")
