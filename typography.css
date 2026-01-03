@@ -1,7 +1,6 @@
 body {
     font-family: "Noto Serif";
     font-size: 18px;
-    max-width: 100vw;    
 }
 pre, code {
     font-family: "Ubuntu Sans Mono";
@@ -9,7 +8,6 @@ pre, code {
 }
 img {
     max-width: 100%;   /* don't exceed container width */
-    height: auto;
     display: block;    /* remove inline spacing below image */
     margin: 0 auto;    /* optional: center image */
 }
