@@ -4,7 +4,7 @@ BUILD_DIR="build"
 CURRENT_PAGE=""
 
 declare -A EXCEPTIONS=(
-    ["cv"]="[[file:../cv/rossMikulskisResume.pdf][CV]]"
+    ["cv"]="[[file:../cv/rossMikulskisResume.pdf][resume.pdf]]"
 )
 
 get_current_page() {
@@ -97,6 +97,9 @@ collect_items() {
             else
                 add_item "$name" "$name/index.html" "dir"
             fi
+        elif [[ -v EXCEPTIONS[$name] ]]; then
+            # Directory exists and has an exception defined
+            add_item "$name" "" "dir"
         fi
     done < <(find "$dir" -mindepth 1 -maxdepth 1 -type d ! -name ".*" ! -name "$BUILD_DIR" -print0 | sort -z)
 }
