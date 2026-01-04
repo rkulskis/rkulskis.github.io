@@ -12,9 +12,9 @@ I'm writing a free online textbook called [[https://bitsofcs.com/][Bits of CS]],
 help people exercise and develop their voice as opposed to using AI.
 
 Outside of computer science, I play the trumpet, having performed in
-the New Jazz Orchestra around Cambridge, MA. I've also been a big
-brother in the Boston Big Brothers Big Sisters program since fall
-2024, and I have a dog named Winnie.
+the New Jazz Orchestra around Cambridge, MA. I have also been a big
+brother in the Boston Big Brothers Big Sisters program since fall of
+2023, and I have a dog named Winnie.
 
 /"Making the simple complicated is commonplace; making the
 complicated/ /simple, awesomely simple, that's creativity." - Charles
