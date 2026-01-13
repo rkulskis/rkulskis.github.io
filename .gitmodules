@@ -2,3 +2,7 @@
 	path = projects/raft
 	url = git@github.com:rkulskis/raft.git
 	branch = main
+[submodule "projects/gnai"]
+	path = projects/gnai
+	url = git@github.com:rkulskis/gnai.git
+  branch = main
