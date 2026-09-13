@@ -16,25 +16,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     container:
-      image: silex/emacs:29.4-ci
+      image: ghcr.io/plumbus-tech/website_dot_org:latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Make html
-        run: make
-        env:
-          GITHUB_PAGES: true
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Build with Jekyll
-        uses: actions/jekyll-build-pages@v1
-        with:
-          source: ./build
-          destination: ./_site
+      - name: Build site
+        run: website_dot_org build . build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
+        with:
+          path: build
 
   deploy:
     environment:
