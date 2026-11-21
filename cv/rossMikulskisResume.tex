@@ -56,8 +56,8 @@
     \href{https://linkedin.com/in/rkulskis}{linkedin.com/in/rkulskis} \\
 \end{minipage}\\
 
-Software engineer with 2 years of experience building real-time and
-embedded systems, kernels, and distributed systems.
+Software engineer with 3 years of experience building embedded Linux,
+fleet infrastructure, AI agents, and distributed systems.
 
 \blackline
 \sectionheader{SKILLS}
@@ -66,13 +66,13 @@ embedded systems, kernels, and distributed systems.
   \vspace{0pt}
 
   \begin{itemize}
-  \item \textbf{Languages}: C/C++, Python, TypeScript, Terraform,
+  \item \textbf{Languages}: C/C++, Python, TypeScript, SQL, Terraform,
     Rust, OCaml, Java, Assembly (x86)
-\item \textbf{Frameworks}: Docker, Kubernetes/OpenShift, ROS 2,
-FastAPI, Flask, React, LangGraph
-\item \textbf{Tools}: Emacs, GNU Debugger (gdb), Python Debugger
-  (pdb), QEMU, Make, GitHub Actions, Cloud Infrastructure (GCP,
-  Azure), ConfZNS++, FEMU, arduino-cli, oscilloscope
+\item \textbf{Frameworks}: Docker, Yocto, ROS 2, FastAPI, Vue, React,
+  LangGraph, Kubernetes/OpenShift
+\item \textbf{Tools}: Mender OTA, MQTT, OPC UA, AWS (IoT Core,
+  ECS, DynamoDB), GCP, Azure, GitHub Actions, gdb, QEMU, Emacs,
+  oscilloscope
   \end{itemize}
   \end{minipage}
 
@@ -81,7 +81,37 @@ FastAPI, Flask, React, LangGraph
 \redline
 \begin{minipage}[t]{0.15\textwidth}
 \vspace{0pt}
-{\bfseries\color{red!80!black}EXPERIENCE}
+{\bfseries\color{red!80!black}EXPERIENCE}\\[4pt]
+\includegraphics[height=0.75in]{images/krevera.png}
+\end{minipage}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.8\textwidth}
+  \vspace{0pt}
+  \textbf{Krevera} \hfill \textbf{February 2026 - Present}\\
+  \textit{Software Engineer} \hfill Boston, MA \\ [0.5em]
+  Build the edge OS, fleet tooling, and AI agents for vision systems
+  that inspect injection-molded parts.
+  \begin{itemize}
+  \item Unified 3 hardware configs onto one Yocto Linux image built by
+    a 15-min cached CI per PR with SBOM and CVE scans, replacing a day
+    of manual builds.
+  \item Designed Fig, a git-versioned fleet config system with
+    templates and a query language: 116k LOC to 2.5k ($-98\%$),
+    rollouts from 7 days to minutes.
+  \item Built Larm and Parm, AI agents that triage alarms, diagnose
+    from device logs and code, and apply approved fixes over-the-air
+    (7 fixes in 2.5 weeks).
+  \item Built cloud-to-factory MQTT messaging in $\sim$220 LOC for
+    $<\$1$/month and a brand-agnostic OPC UA machine-setting model.
+  \item Shipped an ops dashboard with an AI assistant in 3 weeks using
+    AI coding agents; 7-day timelines load in 0.9 s.
+\end{itemize}
+\end{minipage}
+
+\vspace{10pt}
+
+\begin{minipage}[t]{0.15\textwidth}
+\vspace{0pt}
 \includegraphics[width=0.8\linewidth]{images/prodex-labs.png}
 \end{minipage}
 \hspace{0.04\textwidth}
@@ -99,12 +129,10 @@ FastAPI, Flask, React, LangGraph
     the main Docker container via a Google Cloud Function
     microservice, enabling on-demand, massively parallel simulation
     execution.
-  \item Introduced Github Actions CI/CD to run a PyTest suite then
-    Terraform deploy into customer-owned GCP and Azure VPCs.
 \end{itemize}
 \end{minipage}
 
-\vspace{16pt}
+\vspace{10pt}
 
 % Company 1.5
 \begin{minipage}[t]{0.15\textwidth}
@@ -123,12 +151,10 @@ Developed kernel drivers and real-time applications for the Quest RTOS and Linux
   running on a partitioning hypervisor.
 \item Benchmarked digital signal processing USB pipeline from RTOS to
   Teensy 4.1 with oscilloscope.
-\item Enhanced system stability by fixing Sound Blaster 16 audio
-  drivers and file system drivers.
 \end{itemize}
 \end{minipage}
 
-\vspace{16pt}
+\vspace{10pt}
 
 % Company 2
 \begin{minipage}[t]{0.15\textwidth}
@@ -144,9 +170,6 @@ Developed kernel drivers and real-time applications for the Quest RTOS and Linux
 \begin{itemize}
 \item Increased Redis throughput by $22\%$ by dynamically linking
   Redis with a Unikernel version of Linux to bypass traditional syscall overhead.
-\item Deployed a Kuberenetes/OpenShift Horizontal Pod Autoscalar API to
-  generically autograde code submissions in Open Education Docker
-  containers hosted on the Mass Open Cloud.
 \item Reduced container build time by $70\%$ using Python Mamba and
   GitHub Actions caching.
 \end{itemize}
@@ -169,20 +192,20 @@ Developed kernel drivers and real-time applications for the Quest RTOS and Linux
 
 \vspace{8pt}
 % Projects Section
-\redline
-\sectionheader{PROJECTS}
-\hspace{0.04\textwidth}
-\begin{minipage}[t]{0.8\textwidth}
-  \vspace{0pt}
+% \redline
+% \sectionheader{PROJECTS}
+% \hspace{0.04\textwidth}
+% \begin{minipage}[t]{0.8\textwidth}
+%   \vspace{0pt}
 
-  \textbf{Distributed Consensus} \href{https://github.com/rkulskis/raft}{github.com/rkulskis/raft}\\ [0.5em]
-  Implemented the Raft consensus algorithm in Python ROS 2 for real-time fault tolerance. \\
+%   \textbf{Distributed Consensus} \href{https://github.com/rkulskis/raft}{github.com/rkulskis/raft}\\ [0.5em]
+%   Implemented the Raft consensus algorithm in Python ROS 2 for real-time fault tolerance. \\
 
-  \textbf{Standalone Operating System} \href{https://youtu.be/qvlC51AeWjw}{youtu.be/qvlC51AeWjw}\\ [0.5em]
-  Developed an x86 operating system on QEMU, with interrupts, FIFO multithreading, an inode file system with SATA persistence, and dual-mode operation. \\
+%   \textbf{Standalone Operating System} \href{https://youtu.be/qvlC51AeWjw}{youtu.be/qvlC51AeWjw}\\ [0.5em]
+%   Developed an x86 operating system on QEMU, with interrupts, FIFO multithreading, an inode file system with SATA persistence, and dual-mode operation. \\
 
-  \textbf{DBMS} \href{https://github.com/rkulskis/CS660-Fall2024-pa}{github.com/rkulskis/CS660-Fall2024-pa}\\ [0.5em]
-  Built a DBMS in C++ featuring a Buffer Pool, Tuples, BTree Files, Queries, and Joins. \\
+  % \textbf{DBMS} \href{https://github.com/rkulskis/CS660-Fall2024-pa}{github.com/rkulskis/CS660-Fall2024-pa}\\ [0.5em]
+  % Built a DBMS in C++ featuring a Buffer Pool, Tuples, BTree Files, Queries, and Joins. \\
 
   % \textbf{Bits of CS} \href{https://bitsofcs.com}{bitsofcs.com}\\ [0.5em]
   % Published a free online computer science textbook with a grant from Boston University.\\
@@ -192,7 +215,7 @@ Developed kernel drivers and real-time applications for the Quest RTOS and Linux
   % subtitles and generate frequency-sorted Spanish-to-English
   % vocabulary lists.\\
 
-\end{minipage}
+% \end{minipage}
 % Education Section
 \redline
 \begin{minipage}[t]{0.15\textwidth}
