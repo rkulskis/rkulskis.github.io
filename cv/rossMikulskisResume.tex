@@ -57,7 +57,7 @@
 \end{minipage}\\
 
 Software engineer with 2 years building embedded Linux, fleet
-infrastructure, AI agents, and distributed systems.
+infrastructure, AI agents, and real-time systems.
 
 \blackline
 \sectionheader{SKILLS}
@@ -66,13 +66,14 @@ infrastructure, AI agents, and distributed systems.
   \vspace{0pt}
 
   \begin{itemize}
-  \item \textbf{Languages}: C/C++, Python, TypeScript, SQL, Rust, OCaml,
+  \item \textbf{Languages}: C, C++, Python, TypeScript, SQL, Rust, OCaml,
     Java, x86 Assembly
-\item \textbf{Frameworks}: Docker, Yocto, ROS 2, FastAPI, Vue, React,
-  LangGraph, Kubernetes/OpenShift
-\item \textbf{Tools}: Terraform, Mender OTA, MQTT, OPC UA, AWS (IoT Core,
-  ECS, DynamoDB), GCP, Azure, GitHub Actions, gdb, QEMU, Emacs,
-  oscilloscope
+  \item \textbf{Embedded \& OS}: Yocto, UEFI, eBPF, RTOS, ESP32-S3, ROS 2,
+    Mender OTA
+  \item \textbf{Cloud \& IoT}: Docker, Kubernetes/OpenShift, Terraform,
+    GitHub Actions, AWS (IoT Core, ECS, DynamoDB), GCP, Azure, MQTT, OPC UA
+  \item \textbf{AI, Web \& Tools}: LangGraph, FastAPI, React, Vue, gdb, QEMU,
+    oscilloscope
   \end{itemize}
   \end{minipage}
 
@@ -82,20 +83,25 @@ infrastructure, AI agents, and distributed systems.
 \begin{minipage}[t]{0.15\textwidth}
 \vspace{0pt}
 {\bfseries\color{red!80!black}EXPERIENCE}\\[12pt]
-\makebox[\linewidth][c]{\includegraphics[height=0.45in]{images/buu-systems.png}}
+\makebox[\linewidth][c]{\includegraphics[height=0.45in]{images/krevera.png}}
 \end{minipage}
 \hspace{0.04\textwidth}
 \begin{minipage}[t]{0.8\textwidth}
   \vspace{0pt}
-  \textbf{BUU Systems LLC} \hfill \textbf{November 2026 - Present}\\
-  \textit{Founder} \hfill Boston, MA
+  \textbf{Krevera} \hfill \textbf{February 2026 -- Present}\\
+  \textit{Software Engineer} \hfill Boston, MA \\ [0.5em]
+  Build the edge OS, fleet tooling, and AI agents for vision systems
+  inspecting molded parts.
   \begin{itemize}
-  \item Launched PestLeadWire, weekly leads on pest-cited businesses for
-    pest-control companies in 27 markets across 13 states; 1,400+
-    prospects in its CRM and self-serve Stripe checkout for pilots.
-  \item Built bpfboot, a UEFI boot stage in C with its own eBPF VM that
-    mirrors BIOS setup, edits firmware settings, and installs OSes over a
-    Wi-Fi USB dongle (ESP32-S3).
+  \item Unified 3 hardware configurations onto one Yocto Linux image, built
+    per PR by a cached \mbox{15-minute} CI with SBOM and CVE scans, replacing a
+    day of manual builds.
+  \item Designed Fig, a git-versioned fleet configuration system with
+    templates and a query language: 116k LOC to 2.5k ($-$98\%), rollouts
+    from 7 days to minutes.
+  \item Built Larm and Parm, AI agents that triage alarms, diagnose faults
+    from device logs and source code, and ship approved fixes over the
+    air (7 fixes in 2.5 weeks).
 \end{itemize}
 \end{minipage}
 
@@ -103,25 +109,20 @@ infrastructure, AI agents, and distributed systems.
 
 \begin{minipage}[t]{0.15\textwidth}
 \vspace{0pt}
-\makebox[\linewidth][c]{\includegraphics[height=0.45in]{images/krevera.png}}
+\makebox[\linewidth][c]{\includegraphics[height=0.45in]{images/buu-systems.png}}
 \end{minipage}
 \hspace{0.04\textwidth}
 \begin{minipage}[t]{0.8\textwidth}
   \vspace{0pt}
-  \textbf{Krevera} \hfill \textbf{February 2026 - Present}\\
-  \textit{Software Engineer} \hfill Boston, MA \\ [0.5em]
-  Build the edge OS, fleet tooling, and AI agents for vision systems
-  inspecting molded parts.
+  \textbf{BUU Systems LLC} \hfill \textbf{November 2026 -- Present}\\
+  \textit{Founder} \hfill Boston, MA
   \begin{itemize}
-  \item Unified 3 hardware configs onto one Yocto Linux image built by
-    a 15-min cached CI per PR with SBOM and CVE scans, replacing a day
-    of manual builds.
-  \item Designed Fig, a git-versioned fleet config system with
-    templates and a query language: 116k LOC to 2.5k ($-98\%$),
-    rollouts from 7 days to minutes.
-  \item Built Larm and Parm, AI agents that triage alarms, diagnose
-    from device logs and code, and apply approved fixes over-the-air
-    (7 fixes in 2.5 weeks).
+  \item Built bpfboot, a UEFI boot stage in C with an embedded eBPF VM; it
+    mirrors BIOS setup, edits firmware settings, and installs operating
+    systems over a Wi-Fi USB dongle (ESP32-S3).
+  \item Launched PestLeadWire, weekly leads for pest-control companies from
+    health-inspection pest citations in 27 markets across 13 states;
+    1,400+ CRM prospects, self-serve Stripe checkout.
 \end{itemize}
 \end{minipage}
 
@@ -134,61 +135,57 @@ infrastructure, AI agents, and distributed systems.
 \hspace{0.04\textwidth}
 \begin{minipage}[t]{0.8\textwidth}
   \vspace{0pt}
-  \textbf{ProDex Labs} \hfill \textbf{May 2025 - October 2025}\\
+  \textbf{ProDex Labs} \hfill \textbf{May 2025 -- October 2025}\\
   \textit{Founding Engineer} \hfill Brooklyn, NY \\ [0.5em]
   Visited factories and optimized workflows using LangGraph AI-driven
   Monte Carlo simulations.
   \begin{itemize}
-  \item Prompt-engineered a multi-agent LangGraph to generate factory
-    simulations from Operation Manager descriptions and produce custom
-    KPI visualizations from simulation runs.
-  \item Decoupled simulation APIs from core backend routing in
-    the main Docker container via a Google Cloud Function
-    microservice, enabling on-demand, massively parallel simulation
-    execution.
+  \item Built a multi-agent LangGraph pipeline that generates factory
+    simulations from operations managers' descriptions and produces
+    custom KPI visualizations from the runs.
+  \item Moved simulation execution out of the main Docker backend into a
+    Google Cloud Function service, so simulations run on demand and in
+    parallel.
 \end{itemize}
 \end{minipage}
 
 \vspace{10pt}
 
-% Company 1.5
 \begin{minipage}[t]{0.15\textwidth}
-  \vspace{0pt}
-  \makebox[\linewidth][c]{\includegraphics[height=0.45in]{images/bu-logo.png}}
-\end{minipage}
-\hspace{0.04\textwidth}
-\begin{minipage}[t]{0.8\textwidth}
 \vspace{0pt}
-\textbf{Boston University} \hfill \textbf{July 2024 - May 2025}\\
-\textit{Researcher} \hfill Boston, MA\\ [0.5em]
-Developed kernel drivers and real-time applications for the Quest RTOS and Linux.
-\begin{itemize}
-\item Built a pub/sub framework to dispatch task pipelines with
-  end-to-end real-time QoS guarantees across Yocto Linux and an RTOS
-  running on a partitioning hypervisor.
-\item Benchmarked digital signal processing USB pipeline from RTOS to
-  Teensy 4.1 with oscilloscope.
+\makebox[\linewidth][c]{\includegraphics[height=0.45in]{images/bu-logo.png}}
+\end{minipage}
+\hspace{0.04\textwidth}
+\begin{minipage}[t]{0.8\textwidth}
+  \vspace{0pt}
+  \textbf{Boston University} \hfill \textbf{July 2024 -- May 2025}\\
+  \textit{Researcher} \hfill Boston, MA \\ [0.5em]
+  Developed kernel drivers and real-time applications for the Quest RTOS and Linux.
+  \begin{itemize}
+  \item Built RT-DDS, a C pub/sub framework that dispatches task pipelines
+    with end-to-end real-time QoS guarantees across Yocto Linux and an
+    RTOS on a partitioning hypervisor.
+  \item Benchmarked an RTOS-to-Teensy 4.1 USB signal-processing pipeline
+    with an oscilloscope.
 \end{itemize}
 \end{minipage}
 
 \vspace{10pt}
 
-% Company 2
 \begin{minipage}[t]{0.15\textwidth}
-  \vspace{0pt}
-  \makebox[\linewidth][c]{\includegraphics[height=0.45in]{images/redhat.jpg}}
+\vspace{0pt}
+\makebox[\linewidth][c]{\includegraphics[height=0.45in]{images/redhat.jpg}}
 \end{minipage}
 \hspace{0.04\textwidth}
 \begin{minipage}[t]{0.8\textwidth}
   \vspace{0pt}
-  \textbf{Red Hat} \hfill \textbf{September 2023 - July 2024}\\
-  \textit{Cloud Engineering Intern} \hfill Boston, MA \\ [0.5em]
-  Conducted research and worked with the Mass Open Cloud team.
-\begin{itemize}
-\item Raised Redis throughput $22\%$ by linking it into a Linux
-  unikernel to skip syscall overhead.
-\item Reduced container build time by $70\%$ using Python Mamba and
-  GitHub Actions caching.
+  \textbf{Red Hat} \hfill \textbf{September 2023 -- July 2024}\\
+  \textit{Cloud Engineering Intern, Mass Open Cloud research team} \hfill Boston, MA
+  \begin{itemize}
+  \item Raised Redis throughput 22\% by linking it into a Linux unikernel to
+    skip syscall overhead.
+  \item Cut container build time 70\% with the Mamba package manager and
+    GitHub Actions caching.
 \end{itemize}
 \end{minipage}
 
@@ -242,8 +239,8 @@ Developed kernel drivers and real-time applications for the Quest RTOS and Linux
 \hspace{0.04\textwidth}
 \begin{minipage}[t]{0.8\textwidth}
   \vspace{0pt}
-  \textbf{Boston University} - Full Tuition Merit Scholarship\hfill \textbf{September 2021 - May 2025}\\
-  \textit{B.A., M.S. Computer Science, GPA: 3.73}
+  \textbf{Boston University} -- Full-Tuition Merit Scholarship\hfill \textbf{September 2021 -- May 2025}\\
+  \textit{B.A. and M.S. in Computer Science (in 4 years), GPA: 3.73}
 \end{minipage}
 
 \vspace{8pt}
